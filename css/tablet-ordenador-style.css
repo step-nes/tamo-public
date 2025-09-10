@@ -10,34 +10,45 @@
     .caja-titulo p {
         font-size: 1.4rem;
     }
+    .caja-titulo {
+        padding-right: 300px;
+    }
 
+    /***** contenedor principal *****/
+    .section-main-title, .main-title {
+        text-align: center;
+        font-size: 5rem;
+        margin-top: 150px;
+    }
 
-
-
-    
     /****** menu *****/
     .menu {
         display: flex;
     }
     .section-menu-toggle,
     .section-close-menu, .menu-toggle, .close-menu {
-        display: block;
+        display: none;
     }
     .section-menu li, .menu li {
         margin: 0 10px;
         position: relative;
     }
+    .submenu {
+        position: absolute;
+    }
+
+
+/* numeros de personas */
     .section-media-num, .media-num {
         display: block;
         display: flex;
     }
-
-
-
-
+    .flex-num {
+        display: none;
+    }
 
     /*******iconos yan-yin en pc*/
-    .pc-icono{
+    .pc-icono {
         display: block;
         transform: rotate(135deg);
 
@@ -58,14 +69,10 @@
     .submenu {
         position: static;
     }
-    .caja-titulo{
-        padding-right: 0px;
+    .caja-titulo {
+        padding-right: 300px;
     }
-    .flex-num {
-        display: block;
-        display: flex;
-        padding-top: 20px;
-    }
+    
     .navbar .cta-button {
         display: block;
     }

@@ -1,8 +1,14 @@
-/*************** * * * * * MOBILE * * * * * ****************/
-/* TIPOGRAFÍA */
+/******************************************/
+/***** * * MOVIL y Generales total * * ****/
+/******************************************/
+
+/*************** TIPOGRAFÍA ***************/
 @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* Variables CSS para PALETA DE COLORES */
+/******************************************/
+/***** * * * PALETA DE COLORES * * * ******/
+/******************************************/
+
 :root {
     --color-blanco: white;
     --color-rojo: #E63946;
@@ -15,7 +21,9 @@
     --backInputs:rgba(0, 0, 0, 0.1);
     --color-texto:rgb(153, 137, 130);
 }
-/* RESET */
+/******************************************/
+/***** * * * * * * RESET * * * * * * ******/
+/******************************************/
 * {
     margin: 0;
     padding: 0;        
@@ -25,6 +33,9 @@
 *::before {
     box-sizing: border-box;
 }
+/******************************************/
+/***** * * * * * * BODY * * * * * * *****/
+/******************************************/
 body {
     color: var(--color-texto);
     background-color: var(--colorFondo1);
@@ -32,7 +43,10 @@ body {
     overflow-x: hidden; 
     position: relative;
 }
-/* * * * * HEADER * * * * */
+/******************************************/
+/***** * * * * * * HEADER * * * * * * *****/
+/******************************************/
+
 header.home-header {
     padding: 20px;
     background-image: linear-gradient(
@@ -48,47 +62,63 @@ header.home-header {
 .section-header {
     padding-bottom: 100px;
 }
-.caja-titulo {
-    padding-right: 300px;
+.section-text-container, .text-container {
+    margin: 0 35px 0 15px;
+    display: flex;
+    flex-direction: column;
 }
-.caja-titulo h1 {
+h1 {
+    font-family: "Protest Revolution", sans-serif;
+    margin: 35px 0 15px;
+    font-size: 3rem;
+}
+.caja-titulo {
+    padding-right: 0;
+}
+.caja-titulo h2 {
     font-size: 2.5rem;
+    /** mirar de donde saqué este 2.5rem **/
     font-family: "Protest Revolution", sans-serif;
     font-weight: 400;
     color: var(--color-blanco);
-    margin: 35px 0 15px;
 }
-h1 > span.color-secon {
+h2 > span.color-secon {
     color: var(--color-rojo);
     font-family: arial, sans-serif;
     font-weight: 700;
 }
 .caja-titulo p {
     font-size: 0.9rem;
+    /** mirar de donde saqué este 0.9rem **/
     text-shadow: 1px 1px 2px black;
+    /** mirar de donde saqué este textshadow **/
     max-width: 560px;
     line-height: 1.5;
     margin: 15px 0 30px;
 }
 
+/******************************************/
+/****** * * CONTENEDOR PRINCIPAL * * ******/
+/******************************************/
 
+/* --- Clases del contenedor principal 
+de cada sección -- es decir, cada sección 
+tiene un contendor principal --- */
+/* -- El nav contiene adentro el LOGO (dentro del logo está el h1)
+y el MENU -- */
 
-
-
-
-/* --- Clases del contenedor principal --- */
 .section-principal-box, .principal-box {
     padding: 10px;
     margin: auto;
     max-width: 1200px;
 }
 .section-navbar, .navbar {
-    padding-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
     position: relative;
+    padding-top: 10px;
 }
 .section-logo-container, .logo-container {
     display: flex;
@@ -99,18 +129,13 @@ h1 > span.color-secon {
     height: 50px;
     margin-right: 10px;
 }
-.section-text-container, .text-container {
-    margin: 0 35px 0 15px;
-    display: flex;
-    flex-direction: column;
-}
 .section-text-container h1, .text-container h1 {
     font-family: "Protest Revolution", sans-serif;
 }
-.section-main-title {
+.section-main-title, .main-title {
     text-align: center;
-    font-size: 5rem;
-    margin-top: 150px;
+    font-size: 2.5rem;
+    margin-top: 100px;
 }
 .section-title, .title {
     margin: 0;
@@ -125,15 +150,16 @@ h1 > span.color-secon {
 .section-title-box {
     padding-right: 300px;
 }
-.section-menu-toggle,
-.section-close-menu, .menu-toggle, .close-menu {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-}
+
+/*.section-main-title span {
+    color: var(--color-rojo);
+}*/
+
+
+/******************************************/
+/****** * * * * * * MENU * * * * * * ******/
+/******************************************/
+
 .menu, .section-menu {
     overflow-x: hidden;
     display: flex;
@@ -151,10 +177,10 @@ h1 > span.color-secon {
     display: none;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 .section-menu li, .menu li {
-    margin: 10px 0;
+    margin: 15px 0;
     position: relative;
 }
 .section-menu a, .menu a {
@@ -173,16 +199,25 @@ h1 > span.color-secon {
     font-size: 16px;
     line-height: initial;
 }
+.section-menu-toggle,
+.section-close-menu, .menu-toggle, .close-menu {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
 .section-close-menu, .close-menu {
     position: absolute;
     top: 10px;
     right: 10px;
 }
-/* Submenu */
+/* ------------- ******* SUBMENU *******/
 .section-submenu, .submenu {
     background-color: #444;
     border-radius: 5px;
-    position: absolute;
+    position: static;
     padding: 10px;
     padding-left: 15px;
     margin-top: 5px;
@@ -201,24 +236,34 @@ h1 > span.color-secon {
 .menu li:hover .submenu, .section-menu li:hover .section-submenu {
     display: block;
 }
+/******************************************/
+/**** * * * * * ROTAR ICONO * * * * * *****/
+/******************************************/
+
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+/******************************************/
+/***** * * * NUMERO DE PERSONAS * * * *****/
+/******************************************/
+
+.flex-num {
+    display: block;
+    display: flex;
+    padding-top: 20px;
+}
 .section-media-num, .media-num {    
     display: none;
 }
-.students, .years-experience{
+.students, .years-experience {
     padding-right: 50px;
     color: var(--color-blanco);
 }
-.students h2,.years-experience h2{
+.students h2, .years-experience h2 {
     font-size: 3rem;
 }
-.section-main-title, .main-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 100px;
-}
-/*.section-main-title span {
-    color: var(--color-rojo);
-}*/
 .section-enroll-btn1 {
     display: block;
     margin-right: 50px;
@@ -361,12 +406,7 @@ h1 > span.color-secon {
     color: var(--color-rojo);
     transition: .5s;
 }
-/* Rotar el icono */
-.rotate {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease;
-}
-/*************** desplegable / caja de iconos ***********/
+/********* desplegable / caja de iconos ********/
 .icon-arrow {
     transform: scale(1.1);
     color: var(--color-rojo); 
@@ -481,8 +521,8 @@ line-height: 1.5em;
     display: inline-block;
     transition: transform 0.1s ease;
 }
-/* * * Fa Fa * * */
-/*  iconos  */
+/* * * Iconos Fa Fa * * */
+
 .fa-sort-down {
     margin-left: 5px;
 }
@@ -596,10 +636,7 @@ footer .enroll-btn1{
     font-size:1.2rem; 
     font-style: italic;
 }
- /* numeros de personas */
-.flex-num {
-    display: none;
-}
+
 /* * * * * * * * * * SECCION 2 / Maestros / Docentes * * * * * * * * * */
 
 .fondo_2 {
@@ -816,6 +853,7 @@ div.boton-arriba:hover > i {
 
 
 /******** ANIMACIÓN **********/
+/* Esta animación solo funciona si está activo el JS */
 .animado {
     align-items: center;
     opacity: 0;/* Ocultar inicialmente */ 
