@@ -1,0 +1,853 @@
+/*************** * * * * * MOBILE * * * * * ****************/
+/* TIPOGRAFÍA */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Variables CSS para PALETA DE COLORES */
+:root {
+    --color-blanco: white;
+    --color-rojo: #E63946;
+    --color-negro: black;
+    --transparente: transparent;
+    --color-rojo-hover: #BC0A0A;
+    --color-borde-hover: red;
+    --colorFondo1: rgb(35, 35, 35); 
+    --backForm:rgb(23,23,23);
+    --backInputs:rgba(0, 0, 0, 0.1);
+    --color-texto:rgb(153, 137, 130);
+}
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;        
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+body {
+    color: var(--color-texto);
+    background-color: var(--colorFondo1);
+    font-family: Roboto, sans-serif;
+    overflow-x: hidden; 
+    position: relative;
+}
+/* * * * * HEADER * * * * */
+header.home-header {
+    padding: 20px;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+    ), url('../img/header.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh; 
+    padding-bottom: 600px;
+    background-position: top right;
+}
+.section-header {
+    padding-bottom: 100px;
+}
+.caja-titulo {
+    padding-right: 300px;
+}
+.caja-titulo h1 {
+    font-size: 2.5rem;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    color: var(--color-blanco);
+    margin: 35px 0 15px;
+}
+h1 > span.color-secon {
+    color: var(--color-rojo);
+    font-family: arial, sans-serif;
+    font-weight: 700;
+}
+.caja-titulo p {
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px black;
+    max-width: 560px;
+    line-height: 1.5;
+    margin: 15px 0 30px;
+}
+
+
+
+
+
+
+/* --- Clases del contenedor principal --- */
+.section-principal-box, .principal-box {
+    padding: 10px;
+    margin: auto;
+    max-width: 1200px;
+}
+.section-navbar, .navbar {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+.section-logo-container, .logo-container {
+    display: flex;
+    align-items: center;
+}
+.section-logo, .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.section-text-container, .text-container {
+    margin: 0 35px 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+.section-text-container h1, .text-container h1 {
+    font-family: "Protest Revolution", sans-serif;
+}
+.section-main-title {
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 150px;
+}
+.section-title, .title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.section-subtitle, .subtitle {
+    margin: 0;
+    font-size: 12px;
+    color: #ccc;
+}
+.section-title-box {
+    padding-right: 300px;
+}
+.section-menu-toggle,
+.section-close-menu, .menu-toggle, .close-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.menu, .section-menu {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    border-left: 2px solid #444;
+    padding: 10px;
+    transition: right 0.3s ease;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.section-menu li, .menu li {
+    margin: 10px 0;
+    position: relative;
+}
+.section-menu a, .menu a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+.section-menu a:hover {
+    color: var(--color-rojo);
+}
+.menu.show, .section-menu.show {
+    right: 0;
+    display: block;
+    z-index: 100;
+    text-align: initial;
+    font-size: 16px;
+    line-height: initial;
+}
+.section-close-menu, .close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+/* Submenu */
+.section-submenu, .submenu {
+    background-color: #444;
+    border-radius: 5px;
+    position: absolute;
+    padding: 10px;
+    padding-left: 15px;
+    margin-top: 5px;
+    display: none;
+    list-style: none;
+    top: 100%;
+    left: 0;
+}
+.submenu a, .section-submenu a {
+    color: white;
+}
+.submenu li, .section-submenu li {
+    margin: 5px 0;
+    padding: 10px 50px 10px 10px;
+}
+.menu li:hover .submenu, .section-menu li:hover .section-submenu {
+    display: block;
+}
+.section-media-num, .media-num {    
+    display: none;
+}
+.students, .years-experience{
+    padding-right: 50px;
+    color: var(--color-blanco);
+}
+.students h2,.years-experience h2{
+    font-size: 3rem;
+}
+.section-main-title, .main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 100px;
+}
+/*.section-main-title span {
+    color: var(--color-rojo);
+}*/
+.section-enroll-btn1 {
+    display: block;
+    margin-right: 50px;
+}
+
+.section-button {
+    display: flex;
+}
+
+.section-flex-num {
+    display: block;
+    display: flex;
+    padding-top: 20px;
+}
+/******* fondo *******/
+.fondo{
+    background-color: var(--colorFondo1);
+}
+.fondo_2{
+    background-color: #1d1d1d;
+}
+.circulo-fondo{
+    background-color: var(--color-rojo);
+     filter: blur(240px); 
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    position:relative;
+    top: 0%;
+    bottom: auto;
+    left: 0;
+    z-index: -1;
+}
+/******************** flex y cajas de dos **************/
+/****************** caja de imagenes ****************/
+.caja-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.seccion-tipo-imgs {
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+.content-flex {
+    flex: 328px 1 1;
+    text-align: center;
+}
+.seccion-tipo-imgs .content-flex .caja-flex {
+    gap: 20px;
+}
+.seccion-tipo-imgs .content-flex .caja-flex {
+    position: relative;
+    justify-content: center;
+}
+.imagen_hrs {
+    height: 380px;
+    max-width: 139px;
+    flex: 130px 1 1;
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    overflow: hidden;
+    object-position:center ; /* Mueve la imagen hacia la derecha */
+    filter: drop-shadow(1px 2px 4px black);
+    z-index: 10;
+    }
+.img-top {
+    margin-top: 80px;
+}
+.icono-yin {
+    object-fit: cover;
+    margin-left: -90px; 
+    inset: 80% auto auto 45%; 
+    background-image: url("../img/yingArriba.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 122px;
+    height: 92px;
+    position: absolute;
+    z-index: 21;
+}
+.icono-yan {
+    object-fit: cover;
+    margin-left: -90px; 
+    inset: -1% auto auto 70%; 
+    background-image: url("../img/yangParaAbajo.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 93px;
+    height: 70px;
+    position: absolute;
+    z-index: 21;
+}
+.yin-sect2 {
+    inset: 62% auto auto 104%;
+    width: 73px;
+    height: 55px;
+    transform: rotate(244deg);
+}
+.yan-sect2{
+    inset: -13% auto auto 7%;
+    z-index: 11;
+    transform: rotate(159deg);
+}
+/************* contenido ***************/
+.titulos {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 2.8rem;
+    color: var(--color-blanco);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.blanco {
+    color: var(--color-blanco);
+    font-weight: 500;
+}
+.rojo {
+    font-weight: 400;
+    color: var(--color-rojo);
+}
+.seccion-tipo-imgs .flex-izq {
+    gap: 20px;
+    align-items: center;
+    display: flex;
+    text-align: justify;
+}
+.seccion-tipo-imgs .nums {
+    color: var(--color-blanco);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    transition: .5s;
+}
+.seccion-tipo-imgs .caja-mar:hover .nums {
+    color: var(--color-rojo);
+    transition: .5s;
+}
+/* Rotar el icono */
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+/*************** desplegable / caja de iconos ***********/
+.icon-arrow {
+    transform: scale(1.1);
+    color: var(--color-rojo); 
+    font-size: 1.7rem
+    /* 1.5rem */
+}
+.acordeon {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-out; 
+}
+.desplegable {
+    cursor: pointer;
+    width: 100%;
+}
+.img-flex {
+    flex: 310px 1 1;
+}
+.seccion-tipo-imgs .caja-mar .icon-arrow {
+    color: var(--color-rojo);
+    transition: .5s;
+}
+.seccion-tipo-imgs .caja-mar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    display: flex;
+    background-color: #2f2e2e;
+    width: 100%;    
+    cursor: pointer;
+}
+.seccion-tipo-imgs .caja-mar:hover h3,  .seccion-tipo-imgs .caja-mar:hover .icon-arrow{
+    color: var(--color-blanco);
+    transition: .5s;
+}
+.seccion-tipo-imgs .caja-mar h3 {
+    font-weight: 400;
+    color: var(--color-rojo);
+    font-size: 2rem;
+    transition: .5s;
+}
+.seccion-tipo-imgs p {
+    color: var(--color-texto);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+main i {
+    color: var(--color-rojo);
+}
+.icons-caja{
+    justify-content: space-between;
+}
+.icons-caja>span{
+    color: var(--color-blanco);
+    margin: 5px;
+    font-size: 1.5rem;
+    box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4); /* Agrega una sombra sutil */
+}
+
+/****************** caja de imagenes ****************/
+.video.img-flex{
+    width: 100%;
+    height: 370px;
+    position: relative;
+    flex: 400px 1 1;
+}
+.video-contain {
+    width: 100%;
+    margin: auto;
+    height:350px; 
+    filter: sepia(100%);
+    border: none;
+    border-radius: 5px; 
+    box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4); /* Agrega una sombra sutil */
+}
+/* * * * * * * * * SECCION SOBRE TAMO * * * * * * * * * */
+
+.seccion-tipo-video {
+    margin-bottom:  20px;
+    padding-top: 20px;
+}
+.seccion-tipo-video h2 {
+    margin-bottom: 10px;
+}
+.seccion-tipo-video .content-flex p {
+font-size: 1.6rem;
+color: var(--color-texto);
+margin-top: 10px;
+margin-bottom: 10px;
+font-size: 18px;
+font-weight: 300;
+line-height: 1.5em;
+}
+.seccion-tipo-video .content-flex {
+    margin-bottom: 20px;
+}
+.seccion-tipo-video .content-flex {
+    line-height: 30px;
+}
+/* Iconos */
+.section-header .fa {
+    margin-left: 5px;
+}
+.section-menu a .fa {
+    display: inline-block;
+    transition: transform 0.1s ease;
+}
+/* * * Fa Fa * * */
+/*  iconos  */
+.fa-sort-down {
+    margin-left: 5px;
+}
+
+.menu a .fa {
+    display: inline-block;
+    transition: transform 0.1s ease;
+}
+/************ caja de iconos ************/
+.icons-caja {
+    justify-content: space-between;
+}
+.icons-caja>span {
+    color: var(--color-blanco);
+    margin: 5px;
+    font-size: 1.5rem;
+    box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4); /* Agrega una sombra sutil */
+}
+.image-contain {
+     filter: contrast(0.5);
+    margin: auto;
+    object-fit: contain;
+    max-width: 200px;
+}
+/*<!---------titulo de la seccion video--->*/
+.cel-titulo{
+    display:none;
+}
+.desp {
+    display: block;
+}
+h3.desp {
+    margin:30px 0 60px 0;
+}
+@media (max-width: 450px) {
+    .cel-titulo{
+        display:block;
+    }
+    .desp{
+        display: none;
+    }
+}
+.cel-titulo h2.titulos {
+    margin: 30px 0 60px 0;
+}
+#seccion-sobreTa-mo .caja-flex:first-child  {
+    margin-bottom: 30px;
+}
+.pc-icono{
+    display: none;
+}
+/* rotación del icono */
+.section-rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+/* * * * * Botones * * * * */
+.boton { 
+    display: flex;
+}
+.section-cta-button, .cta-button {
+    background-color: var(--color-rojo);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid var(--color-rojo);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 50px;
+    text-decoration: none;
+}
+.section-cta-button:hover, .cta-button:hover {
+    background-color: var(--color-negro);
+    color: var(--color-rojo);
+    transform: scale(1.05);
+}
+.navbar .cta-button {
+    display: none;
+}
+.enroll-btn1 {
+    display: block;
+    margin-right: 50px;
+}
+.section-enroll-btn2, .enroll-btn2 {
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+.section-enroll-btn2:hover, .enroll-btn2:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--color-blanco);
+    transform: scale(1.05);
+    border: 1px solid var(--color-blanco);
+}
+footer .cta-button{
+   margin: 0;
+}
+
+footer .enroll-btn1{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.desp + p {
+    margin-bottom: 20px;
+}
+.animo {
+    margin-top: 5px;
+    color: var(--color-rojo);
+    font-size:1.2rem; 
+    font-style: italic;
+}
+ /* numeros de personas */
+.flex-num {
+    display: none;
+}
+/* * * * * * * * * * SECCION 2 / Maestros / Docentes * * * * * * * * * */
+
+.fondo_2 {
+    position: relative;
+    padding-bottom: 30px;
+}
+.circulo-fondo_centro{
+    overflow: auto;
+    background-color: var(--color-rojo);
+    filter: blur(200px); 
+    border-radius: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 50%;
+}
+.titulo-team-container {
+    text-align:center;
+    padding: 40px 0px;
+}
+.caja_flex_docentes {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.content-docentes {
+    flex: 1 1 150px; /* Los elementos de flex ahora se distribuyen con flexibilidad */
+    text-align: center;
+}
+.content-img {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    max-width: 200px;
+    max-height: 170px;
+    margin-bottom: 10px;
+}
+.image-cover {
+    object-fit: cover; /* Ajusta la imagen a las dimensiones del contenedor */
+    width: 100%;
+    height: 200px;
+    object-position: top;
+    transition: transform 1s, opacity 1s; /* Optimizado para que ambas transiciones tengan la misma duración */
+}
+.content-img .image-cover:hover {
+    transform: scale(1.1);
+    opacity: 1; /* Se asegura que la opacidad sea 1 durante el hover */
+}
+.nombres {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    transition: font-size 0.5s; /* Asegura que la transición afecte solo a lo necesario */
+}
+.nombres.rojo:hover {
+    color: var(--color-blanco);
+    transition: 0.5s;
+}
+/* * * * * * * * * FOOTER * * * * * * * * */
+
+footer {
+    padding-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+footer .faq-h3 {
+    font-size: 2rem;
+}
+footer .faq-p {
+    margin: 10px 0 60px 0;
+}
+footer .imagen-faq {
+    width:100%; 
+    max-width: 500px; 
+    position: relative; 
+    z-index: 11;
+}
+footer .logo-tamo-footer {
+    max-width: 300px;
+    width: 100px;
+}
+footer .container-lets {
+    padding: 0 30px;
+}
+footer .container-lets h2 {
+    font-size: 4rem;
+}
+footer .caja-mar {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+footer .desplegable {
+    background-color: #2f2e2e;
+    width: 100%;
+    padding: 30px 20px;
+}
+footer .img-flex.video {
+    text-align: center;
+}
+footer .caja-flex .content-flex {
+    height: 100%;
+}
+footer .caja-mar h3 {
+    font-weight: 500;
+    color: var(--color-rojo);
+    font-size: 1.2rem;
+}
+footer p {
+    color: var(--color-texto);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+/************* footer-logo ****************/
+footer .caja-flex.text_logo {
+    margin: 49px 0px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+footer .text_logo {
+    text-align: center;
+}
+ footer .cta-button {
+    margin-right: 0px;
+ }
+/******************** footer-copy *********/
+.footer-caja-flex {
+    border-top: 1px solid var(--color-texto);
+    padding: 70px 0px;
+    display: flex;
+    gap: 5px;
+    color: var(--color-blanco);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.foot-menu-flex {
+    list-style: none;
+    gap: 10px;
+    display: flex;
+}
+.content-copy {
+    text-align: center;
+}
+.foot-menu-flex a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--color-blanco);
+    transition: 0.4s;
+}
+.foot-menu-flex a:hover {
+    color: var(--color-rojo);
+    transition: 0.4s;
+}
+.circulo-fondo_foot {
+     filter: blur(200px); 
+    background-color: var(--color-rojo);
+   position: absolute;
+    border-radius:50%;
+    width: 300px;
+    height: 200px;
+    left: 40%;  
+}
+/************** boton *************/
+footer .cta-button {
+    margin: 16px;
+}
+
+footer .enroll-btn1 {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+/************ Botón para arriba ***********/
+div.boton-arriba {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-blanco);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+}
+div.boton-arriba:hover {
+    background-color: var(--color-rojo);
+}
+div.boton-arriba i {
+    font-size: 20px;
+    color: var(--color-negro);
+}
+div.boton-arriba:hover > i {
+    color: var(--color-blanco);
+}
+
+
+
+/******** ANIMACIÓN **********/
+/*.animado {
+    align-items: center;
+    opacity: 0;/* Ocultar inicialmente 
+    transform: translateY(50px);/* Desplazar hacia abajo 
+    transition: opacity 1s ease-out, transform 1s ease-out;/* Animación 
+}
+.animado.active {
+    opacity: 1;/* Mostrar al activarse 
+    transform: translateY(0); /*Volver a la posición original 
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

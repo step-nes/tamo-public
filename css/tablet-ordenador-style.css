@@ -1,0 +1,87 @@
+@media (min-width: 820px) {
+    header.home-header {
+        background-size: 60%;
+        padding: 0px;
+        padding-bottom: 700px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .caja-titulo p {
+        font-size: 1.4rem;
+    }
+    /****** menu *****/
+    .menu {
+        display: flex;
+    }
+    .section-menu-toggle,
+    .section-close-menu, .menu-toggle, .close-menu {
+        display: block;
+    }
+    .section-menu li, .menu li {
+        margin: 0 10px;
+        position: relative;
+    }
+    .section-media-num, .media-num {
+        display: block;
+        display: flex;
+    }
+    /*******iconos yan-yin en pc*/
+    .pc-icono{
+        display: block;
+        transform: rotate(135deg);
+
+    }
+    .students h2, .years-experience h2 {
+        font-size: 4rem;
+    }
+    .icono-yin {
+        inset: 5% auto auto 0%;
+        width: 130px;
+        height: 100px;
+    }
+    .icono-yan {
+        inset: 85% auto auto 75%; 
+        width: 133px;
+        height: 100px;
+    }
+    .submenu {
+        position: static;
+    }
+    .caja-titulo{
+        padding-right: 0px;
+    }
+    .flex-num {
+        display: block;
+        display: flex;
+        padding-top: 20px;
+    }
+    .navbar .cta-button {
+        display: block;
+    }
+
+
+
+
+
+
+    /********************footer******/
+    footer .img-flex.video{
+        text-align: initial;
+
+    }
+    .footer-caja-flex{
+        justify-content: space-between;
+
+    }
+    .content-copy{
+        text-align: initial;
+    }
+
+    .content-flex{
+        text-align: initial;
+    }
+    .horari{
+        justify-content: initial;
+    }
+}
