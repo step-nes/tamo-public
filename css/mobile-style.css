@@ -469,6 +469,10 @@ line-height: 1.5em;
 .seccion-tipo-video .content-flex {
     line-height: 30px;
 }
+#seccion-sobreTa-mo .yan-sect-tamo {
+    inset: 70% auto auto 85%;
+    z-index: 1;
+}
 /* Iconos */
 .section-header .fa {
     margin-left: 5px;
@@ -482,7 +486,6 @@ line-height: 1.5em;
 .fa-sort-down {
     margin-left: 5px;
 }
-
 .menu a .fa {
     display: inline-block;
     transition: transform 0.1s ease;
@@ -662,6 +665,9 @@ footer .enroll-btn1{
 .nombres.rojo:hover {
     color: var(--color-blanco);
     transition: 0.5s;
+}
+h3.posicion {
+    color: var(--color-texto);
 }
 /* * * * * * * * * FOOTER * * * * * * * * */
 
