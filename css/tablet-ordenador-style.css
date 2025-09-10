@@ -10,6 +10,11 @@
     .caja-titulo p {
         font-size: 1.4rem;
     }
+
+
+
+
+    
     /****** menu *****/
     .menu {
         display: flex;
@@ -26,6 +31,11 @@
         display: block;
         display: flex;
     }
+
+
+
+
+
     /*******iconos yan-yin en pc*/
     .pc-icono{
         display: block;
@@ -65,7 +75,8 @@
 
 
 
-    /********************footer******/
+
+    /* * * * * * * * * FOOTER * * * * * * * */
     footer .img-flex.video{
         text-align: initial;
 

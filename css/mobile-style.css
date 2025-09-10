@@ -816,16 +816,16 @@ div.boton-arriba:hover > i {
 
 
 /******** ANIMACIÓN **********/
-/*.animado {
+.animado {
     align-items: center;
-    opacity: 0;/* Ocultar inicialmente 
-    transform: translateY(50px);/* Desplazar hacia abajo 
-    transition: opacity 1s ease-out, transform 1s ease-out;/* Animación 
+    opacity: 0;/* Ocultar inicialmente */ 
+    transform: translateY(50px);/* Desplazar hacia abajo */
+    transition: opacity 1s ease-out, transform 1s ease-out;/* Animación */
 }
 .animado.active {
-    opacity: 1;/* Mostrar al activarse 
-    transform: translateY(0); /*Volver a la posición original 
-}*/
+    opacity: 1;/* Mostrar al activarse */
+    transform: translateY(0); /*Volver a la posición original */
+}
 
 
 
