@@ -1,8 +1,8 @@
-@media (min-width: 820px) {
+@media (min-width: 920px) {
     header.home-header {
+        background-image: url('../img/header.png');
         background-size: 60%;
-        padding: 0px;
-        padding-bottom: 700px;
+        padding: 0 0 700px;
     }
     h1 {
         font-size: 3rem;
@@ -13,15 +13,19 @@
     .caja-titulo {
         padding-right: 300px;
     }
-
-    /***** contenedor principal *****/
+    .cel-titulo{
+        display:none;
+    }
+/***** contenedor principal *****/
+    .principal-box, .section-principal-box {
+        padding: 20px;
+    }
     .section-main-title, .main-title {
         text-align: center;
         font-size: 5rem;
         margin-top: 150px;
     }
-
-    /****** menu *****/
+/****** menu *****/
     .menu {
         display: flex;
     }
@@ -36,8 +40,6 @@
     .submenu {
         position: absolute;
     }
-
-
 /* numeros de personas */
     .section-media-num, .media-num {
         display: block;
@@ -46,42 +48,38 @@
     .flex-num {
         display: none;
     }
-
-    /*******iconos yan-yin en pc*/
+/*******iconos yan-yin en pc*/
     .pc-icono {
-        display: block;
-        transform: rotate(135deg);
-
+        display: none;
     }
     .students h2, .years-experience h2 {
         font-size: 4rem;
     }
     .icono-yin {
-        inset: 5% auto auto 0%;
+        inset: 87% auto auto 40%;
         width: 130px;
         height: 100px;
     }
     .icono-yan {
-        inset: 85% auto auto 75%; 
+        inset: -9% auto auto 70%;
         width: 133px;
         height: 100px;
     }
-    .submenu {
-        position: static;
+    #seccion-sobreTa-mo .yin-sect-tamo {
+        display: none;
     }
     .caja-titulo {
         padding-right: 300px;
     }
-    
     .navbar .cta-button {
         display: block;
     }
-
-
-
-
-
-
+    .desp {
+        display: block;
+    }
+    h3.desp {
+        margin:30px 0 60px 0;
+    }
 
     /* * * * * * * * * FOOTER * * * * * * * */
     footer .img-flex.video{
