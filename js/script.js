@@ -1,221 +1,158 @@
 
-
-/////////////////////////////////////////////////////7/ Header///////////////////////////////////////////////////////
-
+////////////////////        HEADER     ///////////////////////////
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Primer bloque (menú principal)
-    const menuToggle = document.querySelector('.section-menu-toggle');
-    const closeMenu = document.querySelector('.section-close-menu');
-    const menu = document.querySelector('.section-menu');
-    const submenuToggles = document.querySelectorAll('.section-menu > li > a');
-    const submenus = document.querySelectorAll('.section-submenu');
 
-    // Verificar si los elementos existen antes de agregar eventos
-    if (menuToggle && closeMenu && menu) {
-        menuToggle.addEventListener('mouseover', () => {
-            menu.classList.add('show');
-        });
+//////////////////////////////////////////
+        //    * MENU *    //
 
-        closeMenu.addEventListener('mouseout', () => {
-            menu.classList.remove('show');
-        });
-    }
-
-    // Asegúrate de que los submenus existen antes de agregar event listeners
-    if (submenuToggles.length > 0 && submenus.length > 0) {
-        submenuToggles.forEach(toggle => {
-            toggle.addEventListener('mouseover', function (event) {
-                const submenu = this.nextElementSibling;
-                const icon = this.querySelector('.fa');
-
-                if (submenu) {
-                    submenus.forEach(sm => {
-                        if (sm !== submenu) {
-                            sm.style.display = 'none';
-                            const otherIcon = sm.previousElementSibling.querySelector('.fa');
-                            if (otherIcon) {
-                                otherIcon.classList.remove('section-rotate');
-                            }
-                        }
-                    });
-
-                    if (submenu.style.display === 'block') {
-                        submenu.style.display = 'none';
-                        if (icon) icon.classList.remove('section-rotate');
-                    } else {
-                        submenu.style.display = 'block';
-                        if (icon) icon.classList.add('section-rotate');
-                    }
-                }
-
-                event.preventDefault();
-            });
-        });
-
-        submenus.forEach(submenu => {
-            submenu.addEventListener('mouseleave', function () {
-                this.style.display = 'none';
-                const icon = this.previousElementSibling.querySelector('.fa');
-                if (icon) {
-                    icon.classList.remove('section-rotate');
-                }
-            });
-        });
-    }
-
-    // Segundo bloque (menú alternativo)
-    const menuToggleAlt = document.querySelector('.menu-toggle');
-    const closeMenuAlt = document.querySelector('.close-menu');
-    const menuAlt = document.querySelector('.menu');
-    const submenuTogglesAlt = document.querySelectorAll('.menu > li > a');
-    const submenusAlt = document.querySelectorAll('.submenu');  // Seleccionamos todos los submenús
-
-    // Verificar si los elementos existen antes de agregar eventos
-    if (menuToggleAlt && closeMenuAlt && menuAlt) {
-        menuToggleAlt.addEventListener('mouseover', () => {
-            menuAlt.classList.add('show');
-        });
-
-        closeMenuAlt.addEventListener('mouseout', () => {
-            menuAlt.classList.remove('show');
-        });
-
-        // Rotar icono y mostrar/ocultar submenú
-        submenuTogglesAlt.forEach(toggle => {
-            toggle.addEventListener('mouseover', function (event) {
-                const submenu = this.nextElementSibling;
-                const icon = this.querySelector('.fa');
-
-                // Cerrar todos los submenús y restaurar iconos
-                submenusAlt.forEach(sm => {
-                    if (sm !== submenu) {
-                        sm.style.display = 'none';
-                        const otherIcon = sm.previousElementSibling.querySelector('.fa');
-                        if (otherIcon) {
-                            otherIcon.classList.remove('rotate');
-                        }
-                    }
-                });
-
-                // Rota el icono y alternar el submenu actual
-                if (submenu.style.display === 'block') {
-                    submenu.style.display = 'none';
-                    icon.classList.remove('rotate');
-                } else {
-                    submenu.style.display = 'block';
-                    icon.classList.add('rotate');
-                }
-
-                event.preventDefault();
-            });
-        });
-
-        // Evento del sub menu cuando se sale de este
-        submenusAlt.forEach(submenu => {
-            submenu.addEventListener('mouseleave', function () {
-                this.style.display = 'none';  // Cierra el submenú cuando el mouse salga
-                const icon = this.previousElementSibling.querySelector('.fa');
-                if (icon) {
-                    icon.classList.remove('rotate');
-                }
-            });
-        });
-    }
+// Toggle menú principal
+$('.bars, .times').click(function() {
+  $('.main-menu').toggleClass('open');
 });
 
+            // Submenús
+$('.submenu-item').click(function() {
+  const arrow = $(this).find('.down');
+  const submenu = $(this).next('.sub');
 
-/////////////////////////////////////////////////////////// seccion////////////////////////////////////////////////////
+  arrow.toggleClass('rotated');
+  submenu.toggleClass('open');
+});
+            // Menú ordenador (Inyección)
+$("#menu-pc").html(`
+<nav class="main-menu-pc">
+    <ul class="list-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li>
+            <li>
+              <div class="submenu-item">
+                Kung-Fu
+                <svg class="down" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 640"><path fill="#ffffff" d="M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z"/></svg>
+              </div>
+              <ul class="sub">
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="estilos.html">Estilos</a></li>
+                <li><a href="escuela.html">Escuela</a></li>
+              </ul>
+            </li> 
+        </li>
+        <li><a href="taichi.html">Taichi</a></li>
+        <li><a href="defensa.html">Defensa personal</a></li>
+        <li>
+            <div class="submenu-item">
+                Medios
+                <svg class="down" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 640"><path fill="#ffffff" d="M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z"/></svg>
+            </div>
+            <ul class="sub">
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="descarga.html">Descargas</a></li>
+            </ul>
+        </li>                
+    </ul>
+</nav>
+`);
 
+//////////////////////////////////////////
+//////////////////////////////////////////
+        //    * SECCION *    //
+$(document).ready(function() {
+    const acordeon = $('.acordeon');
+    const boton = $('.desplegable');
+    const flecha = $('.desplegable .icon-arrow');
+    const text = $('.desplegable h3');
 
+    boton.each(function(i) {
+        $(this).on('click', function() {
+            if (acordeon.eq(i).css('max-height') === '0px' || acordeon.eq(i).css('max-height') === 'none') {
+                
+                // Cierra todos
+                acordeon.css('max-height', '0px');
 
+                // Abre el seleccionado
+                acordeon.eq(i).css('max-height', '130px');
 
+                // Flechas
+                flecha.css({
+                    'transform': 'rotate(360deg)',
+                    'color': 'var(--color-rojo)'
+                });
 
+                flecha.eq(i).css({
+                    'transform': 'rotate(180deg)',
+                    'color': 'var(--color-blanco)',
+                    'transition': 'all .5s'
+                });
 
-const acordeon = document.querySelectorAll('.acordeon');
-const boton = document.querySelectorAll('.desplegable ');
+                // Textos
+                text.css('color', 'var(--color-rojo)');
+                text.eq(i).css('color', 'var(--color-blanco)');
+            } else {
+                // Cierra el abierto
+                acordeon.eq(i).css('max-height', '0px');
 
+                // Flechas
+                flecha.eq(i).css({
+                    'transform': 'rotate(360deg)',
+                    'color': 'var(--color-rojo)'
+                });
 
-const flecha = document.querySelectorAll('.desplegable .icon-arrow');
-const text = document.querySelectorAll('.desplegable  h3')
-
-boton.forEach((e,i)=>e.addEventListener('click',function () {
-
-    if (acordeon[i].style.maxHeight === '0px' || acordeon[i].style.maxHeight ==='') {
-     acordeon.forEach(item=>item.style.maxHeight='0px')
-      acordeon[i].style.maxHeight = '130px';  // todos estan en 0 asi que cierra de nueevo y abre el que quieras
-
-
-     flecha.forEach(a => {a.style.transform = 'rotate(360deg)';a.style.color = 'var(--color-rojo)';});
-      flecha[i].style.transform='rotate(180deg)'
-      flecha[i].style.color='var(--color-blanco)'
-      flecha[i].style.transition='all .5s' // PARA LA FLECHA MUEVE ARRIBA Y ABAJO POCO A POCO
-      text.forEach(u=>u.style.color='var(--color-rojo)')
-      text[i].style.color='var(--color-blanco)'
-
-    } else {
-      acordeon[i].style.maxHeight = '0px';  // Si ya está abierto, lo cierra
-      flecha[i].style.transform='rotate(360deg)'
-      flecha[i].style.color='var(--color-rojo)'
-      text[i].style.color='var(--color-rojo)'
-    }
-}))
-
-
-
-///////////////////////////////////////////////////////animado//////////////////////////////////////////////////
-
-
-
-
-$(document).ready(function () { 
-        // $(document).ready() asegura que el código se ejecute solo cuando el DOM esté completamente cargado,
-        // es decir, después de que el HTML esté listo, pero antes de que se carguen las imágenes o recursos externos.
-
-        // Ejecutamos la lógica para cada sección inmediatamente al cargar la página
-        $('.animado').each(function () {
-            // .each() recorre todos los elementos con la clase 'principal-box'.
-            // Es como un "for" pero para jQuery.
-
-            if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
-                // $(this).offset().top obtiene la posición vertical (top) del elemento respecto al documento.
-                // $(window).scrollTop() obtiene la distancia desde el borde superior de la ventana hasta el punto donde se encuentra el scroll.
-                // $(window).height() obtiene la altura de la ventana del navegador.
-                // Si la posición superior del elemento es menor que la posición del scroll + la altura de la ventana,
-                // significa que el elemento es visible o ya ha pasado por la ventana de visualización.
-
-                $(this).addClass('active');
-                // Si la condición es verdadera (el elemento es visible en la ventana),
-                // se agrega la clase 'active' al elemento.
-                // Esta clase activa un efecto visual desde el CSS (como la transición o la animación).
+                // Texto
+                text.eq(i).css('color', 'var(--color-rojo)');
             }
         });
+    });
+});
 
-        // Luego, escuchamos el evento scroll como antes
-        $(window).on('scroll', function () {
-            // $(window).on('scroll') detecta cuando el usuario hace scroll en la página.
-            // Cada vez que el usuario desplaza la página, se ejecuta la función.
+//////////////////////////////////////////
+//////////////////////////////////////////
+        //    * ANIMADO *    //
 
-            $('.animado').each(function () {
-                // Al igual que antes, recorremos todos los elementos con la clase 'principal-box'.
+$(document).ready(function () { 
+/* $(document).ready() asegura que el código se ejecute solo cuando el DOM esté completamente cargado, 
+es decir, después de que el HTML esté listo, pero antes de que se carguen las imágenes o recursos externos.*/
 
-                if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
-                    // Verificamos si el elemento es visible en la ventana (como ya explicamos antes).
+// Ejecutamos la lógica para cada sección inmediatamente al cargar la página
+$('.animado').each(function () {
+    // .each() recorre todos los elementos con la clase 'principal-box'.
+    // Es como un "for" pero para jQuery.
 
-                    $(this).addClass('active');
-                    // Si el elemento es visible en la ventana, le agregamos la clase 'active'.
-                    // Esto activa la animación o el estilo definido en el CSS.
-                }
-            });
+    if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
+        // $(this).offset().top obtiene la posición vertical (top) del elemento respecto al documento.
+        // $(window).scrollTop() obtiene la distancia desde el borde superior de la ventana hasta el punto donde se encuentra el scroll.
+        // $(window).height() obtiene la altura de la ventana del navegador.
+        /* Si la posición superior del elemento es menor que la posición del scroll + la altura de la ventana,
+         significa que el elemento es visible o ya ha pasado por la ventana de visualización.*/
+
+        $(this).addClass('active');
+        // Si la condición es verdadera (el elemento es visible en la ventana),
+        // se agrega la clase 'active' al elemento.
+        // Esta clase activa un efecto visual desde el CSS (como la transición o la animación).
+    }
+});
+// Luego, escuchamos el evento scroll como antes
+$(window).on('scroll', function () {
+    // $(window).on('scroll') detecta cuando el usuario hace scroll en la página.
+    // Cada vez que el usuario desplaza la página, se ejecuta la función.
+
+    $('.animado').each(function () {
+        // Al igual que antes, recorremos todos los elementos con la clase 'principal-box'.
+
+        if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
+            // Verificamos si el elemento es visible en la ventana (como ya explicamos antes).
+           
+            $(this).addClass('active');
+            // Si el elemento es visible en la ventana, le agregamos la clase 'active'.
+            // Esto activa la animación o el estilo definido en el CSS.
+            }
         });
     });
-
-
-////////////////////////////////////////////// boton para ir arriba/////////////////////////////////////////
-
-
+});
+//////////////////////////////////////////
+//////////////////////////////////////////
+        //    * BOTON ARRIBA *    //
 
 $(".boton-arriba").fadeOut();
   $(document).scroll(function(){
@@ -225,8 +162,22 @@ $(".boton-arriba").fadeOut();
         $(".boton-arriba").fadeOut(1000)
       };
   });
-  
-
+j
   $(".boton-arriba").click(function(){
       $("html").animate({scrollTop:0},500);
   });
+//////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+  //////////////////////////////////////////
+        //    * BOTON ARRIBA *    //

@@ -46,7 +46,6 @@ body {
 /**************************************/
 /*** * * * * * * HEADER * * * * * * ***/
 /**************************************/
-
 header.home-header {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.2),
@@ -96,10 +95,9 @@ h2 > span.color-secon {
     line-height: 1.5;
     
 }
-
-/******************************************/
-/****** * * CONTENEDOR PRINCIPAL * * ******/
-/******************************************/
+/**************************************/
+/**** * * CONTENEDOR PRINCIPAL * * ****/
+/**************************************/
 
 /* --- Clases del contenedor principal
 de cada sección -- es decir, cada sección
@@ -111,14 +109,6 @@ y el MENU -- */
     max-width: 1200px;
     padding: 10px;
     margin: auto;
-}
-.section-navbar, .navbar {
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding-top: 10px;
-    display: flex;
-    color: white;
 }
 .section-logo-container, .logo-container {
     align-items: center;
@@ -150,101 +140,131 @@ y el MENU -- */
 /*.section-main-title span {
     color: var(--color-rojo);
 }*/
+/**************************************/
+/****** * * * * * MENU * * * * * ******/
+/**************************************/
 
-/******************************************/
-/****** * * * * * * MENU * * * * * * ******/
-/******************************************/
-
-.menu, .section-menu {
-    justify-content: space-around;
-    border-left: 2px solid #444;
-    transition: right 0.3s ease;
-    background-color: #333;
-    flex-direction: column;
-    overflow-x: hidden;
-    list-style: none;
-    position: fixed;
-    display: flex;
-    right: -300px;
-    display: none;
-    padding: 20px;
-    padding: 10px;
-    height: 100%;
-    width: 250px;
-    padding: 0;
-    margin: 0;
-    top: 0;
-}
-.section-menu li, .menu li {
-    margin: 15px 0;
-    position: relative;
-}
-.section-menu a, .menu a {
-    transition: color 0.3s ease;
-    text-decoration: none;
-    color: white;
-}
-.section-menu a:hover {
-    color: var(--color-rojo);
-}
-.menu.show, .section-menu.show {
-    right: 0;
-    display: block;
-    z-index: 100;
-    text-align: initial;
-    font-size: 16px;
-    line-height: initial;
-}
-.section-menu-toggle,
-.section-close-menu, .menu-toggle, .close-menu {
-    background: none;
-    cursor: pointer;
-    font-size: 24px;
-    display: block;
-    border: none;
-    color: white;
-}
-.section-close-menu, .close-menu {
+/*     === bars y x (abrir y cerrar) === */
+svg.bars {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 30px;
+    top: 40px;
+    z-index: 5;
 }
-/* ------------- ******* SUBMENU *******/
-.section-submenu, .submenu {
-    background-color: #444;
-    border-radius: 5px;
-    padding-left: 15px;
-    list-style: none;
-    position: static;
-    margin-top: 5px;
-    padding: 10px;
-    display: none;
-    top: 100%;
+.bars > path, .times > path {
+    fill: white;
+    cursor: pointer;
+}
+svg.bars:hover > path, svg.times:hover > path{
+    fill: var(--color-rojo);
+    transition: .5s;
+}
+/*     === Menú lateral === */
+nav.main-menu {
+    background-color: #232323;
+    color: #fff;
+    padding: 20px;
+    width: 320px;
+    position: fixed;
+    top: 0;
+    left: -320px;
+    bottom: 0;
+    transition: left 0.5s ease; /* animación de entrada/salida */
+    z-index: 50;
+}
+nav.main-menu.open {
     left: 0;
 }
-.submenu li, .section-submenu li {
-    padding: 10px 50px 10px 10px;
-    margin: 5px 0;
+.main-menu a {
+    text-decoration: none;
+    color: #fff;
 }
-.submenu a, .section-submenu a {
-    color: white;
+.main-menu a:hover {
+    color: var(--color-rojo);
 }
-.menu li:hover .submenu, .section-menu li:hover .section-submenu {
-    display: block;
+/*     === Header menú === */
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
 }
-/******************************************/
-/**** * * * * * ROTAR ICONO * * * * * *****/
-/******************************************/
+.nav-logo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.nav-logo h4 {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+.nav-logo > img {
+    width: 32px;
+}
+/*    === Lista principal === */
+ul.list-menu {
+    font-size: 1.2rem;
+    list-style: none;
+}
+ul.list-menu li {
+    margin-bottom: 20px;
+    /*padding-bottom: 10px;*/
+}
+/*    === Submenús === */
+nav.main-menu li > ul {
+    padding-left: 20px;
+    list-style: none;
+}
+/*    === Cabecera del submenú (texto + flecha) === */
+.submenu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+    color: var(--color-blanco);
+}
+.submenu-item:hover {
+    color: var(--color-rojo);
+    transition: color 0.5s;
+}
+.submenu-item > svg {
+    position: relative;
+    top: -7px;
+}
+/*    === Flecha === */
+.down {
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+.down.rotated {
+    transform: rotate(180deg);
+}
+/*    === Contenedor del submenú oculto con animación ===  */
+.sub {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+}
+.sub.open {
+    max-height: 500px; /* suficiente para mostrar todos los items */
+    
+}
+/*    === Menú para pc ===    */
+#menu-pc {
+    display: none;
+}
+/**************************************/
+/******** * * ROTAR ICONO * * *********/
+/**************************************/
 
 .rotate {
     transition: transform 0.3s ease;
     transform: rotate(180deg);
 }
-
-/******************************************/
-/***** * * * NUMERO DE PERSONAS * * * *****/
-/******************************************/
-
+/**************************************/
+/**** * * * NUMERO DE PERSONAS * * ****/
+/**************************************/
 .section-media-num, .media-num {    
     display: none;
 }
@@ -260,8 +280,9 @@ y el MENU -- */
     display: flex;
     padding-top: 20px;
 }
-
-/* * * * * Botones * * * * */
+/**************************************/
+/****** * * * * Botones * * *  * ******/
+/**************************************/
 .boton { 
     display: flex;
 }
@@ -274,7 +295,7 @@ y el MENU -- */
     border: 1px solid var(--color-rojo);
     text-decoration: none;
     padding: 15px 25px;
-    border-radius: 5px;    
+    border-radius: 5px;
     margin-right: 50px;
     font-size: 14px;
     cursor: pointer;
@@ -285,7 +306,7 @@ y el MENU -- */
     color: var(--color-rojo);
     transform: scale(1.05);
 }
-.navbar .cta-button {
+.btn-pc-only {
     display: none;
 }
 .enroll-btn1 , .section-enroll-btn1 {
@@ -304,7 +325,9 @@ y el MENU -- */
     color: var(--color-blanco);
     transform: scale(1.05);
 }
-/******* fondo *******/
+/**************************************/
+/******** * * * * FONDO * * * * *******/
+/**************************************/
 .fondo{
     background-color: var(--colorFondo1);
 }
@@ -323,8 +346,10 @@ y el MENU -- */
     left: 0;
     z-index: -1;
 }
-/******** flex y cajas de dos *********/
-/********** caja de imagenes **********/
+/**************************************/
+/***** * * flex y cajas de dos * * ****/
+/***** * * caja de imagenes * * *******/
+/**************************************/
 .caja-flex {
     display: flex;
     flex-wrap: wrap;
@@ -386,7 +411,9 @@ y el MENU -- */
     position: absolute;
     z-index: 21;
 }
-/**** mover un poco el icono antes de ser ordenador ****/
+/**************************************/
+/* mover un poco el icono antes de ser ordenador */
+/**************************************/
 @media (min-width: 690px) {
     .icono-yan {
         inset: -2% auto auto 80%;
@@ -403,7 +430,9 @@ y el MENU -- */
     z-index: 11;
     transform: rotate(159deg);
 }
-/************* contenido ***************/
+/**************************************/
+/************* CONTENIDO **************/
+/**************************************/
 .titulos {
     text-transform: capitalize;
     font-weight: 400;
@@ -437,8 +466,9 @@ y el MENU -- */
     color: var(--color-rojo);
     transition: .5s;
 }
-/********* desplegable / 
- * caja de iconos ********/
+/**************************************/
+/**** desplegable / caja de iconos ****/
+/**************************************/
 .icon-arrow {
     transform: scale(1.1);
     color: var(--color-rojo); 
@@ -500,8 +530,9 @@ main i {
     font-size: 1.5rem;
     box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4); /* Agrega una sombra sutil */
 }
-
-/****************** caja de imagenes ****************/
+/**************************************/
+/*********** caja de imagenes *********/
+/**************************************/
 .video.img-flex{
     width: 100%;
     height: 370px;
@@ -517,12 +548,16 @@ main i {
     border-radius: 5px; 
     box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4); /* Agrega una sombra sutil */
 }
-/* * * * * * * SECCION SOBRE NOSOTROS * * * * * * * */
+/**************************************/
+/*** * * SECCION SOBRE NOSOTROS * * ***/
+/**************************************/
 h2.aportan, p.aportan-concep {
     margin: 0;
     padding: 10px 0;
 }
-/* * * * * * * * SECCION SOBRE TAMO * * * * * * * * */
+/**************************************/
+/***** * * SECCION SOBRE TAMO * * *****/
+/**************************************/
 .seccion-tipo-video {
     padding: 20px 0;
 }
@@ -580,23 +615,21 @@ h2.aportan, p.aportan-concep {
     inset: 70% auto auto 85%;
     z-index: 1;
 }
-/* * * Iconos Fa Fa * * */
+/**************************************/
+/******* * * Iconos Fa Fa * * *********/
+/**************************************/
 .section-header .fa {
     margin-left: 5px;
 }
 .fa-sort-down {
     margin-left: 5px;
 }
-.menu a .fa, .section-menu a .fa {
-    transition: transform 0.1s ease;
-    display: inline-block;
-}
-/*<!---------titulo de la seccion video--->*/
-
 .pc-icono{
     display: none;
 }
-/************ caja de iconos ************/
+/**************************************/
+/*********** caja de iconos ***********/
+/**************************************/
 .icons-caja {
     justify-content: space-between;
 }
@@ -617,9 +650,9 @@ h2.aportan, p.aportan-concep {
     transform: rotate(180deg);
     transition: transform 0.3s ease;
 }
-
-/* * * * * * * * * * SECCION 2 / Maestros / Docentes * * * * * * * * * */
-
+/**************************************/
+/*** SECCION2 / Maestros / Docentes ***/
+/**************************************/
 .fondo_2 {
     position: relative;
     padding-bottom: 30px;
@@ -687,8 +720,9 @@ h2.aportan, p.aportan-concep {
 h3.posicion {
     color: var(--color-texto);
 }
-/* * * * * * * * * FOOTER * * * * * * * * */
-
+/**************************************/
+/******* * * * * FOOTER * * * * *******/
+/**************************************/
 footer {
     padding-top: 30px;
     position: relative;
@@ -745,7 +779,7 @@ footer p {
     padding: 10px 0;
     font-size: 15px;
 }
-/************* footer-logo ****************/
+            /******* footer-logo ******/
 footer .caja-flex.text_logo {
     justify-content: center;
     padding: 49px 0;
@@ -759,7 +793,7 @@ footer .text_logo {
  footer .cta-button {
     margin-right: 0px;
  }
-/******************** footer-copy *********/
+            /****** footer-copy ******/
 .footer-caja-flex {
     border-top: 1px solid var(--color-texto);
     padding: 70px 0px;
@@ -796,7 +830,7 @@ footer .text_logo {
     height: 200px;
     left: 40%;  
 }
-/************** boton *************/
+            /****** footer-boton ******/
 
 footer .cta-button{
    margin: 0;
@@ -805,7 +839,9 @@ footer .enroll-btn1{
     display: inline-block;
     margin-bottom: 20px;
 }
-/************ Botón para arriba ***********/
+/**************************************/
+/******* * * BOTON IR ARRIBA * * ******/
+/**************************************/
 div.boton-arriba {
     width: 40px;
     height: 40px;
@@ -829,10 +865,9 @@ div.boton-arriba i {
 div.boton-arriba:hover > i {
     color: var(--color-blanco);
 }
-
-
-
-/******** ANIMACIÓN **********/
+/**************************************/
+/******* * * * ANIMACIÓN * * * ********/
+/**************************************/
 /* Esta animación solo funciona si está activo el JS */
 .animado {
     align-items: center;
@@ -844,6 +879,5 @@ div.boton-arriba:hover > i {
     opacity: 1;/* Mostrar al activarse */
     transform: translateY(0); /*Volver a la posición original */
 }
-
 
 

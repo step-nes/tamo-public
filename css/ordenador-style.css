@@ -1,4 +1,4 @@
-@media (min-width: 920px) {
+@media (min-width: 846px) {
     header.home-header {
         background-image: url('../img/header.png');
         background-size: 60%;
@@ -13,10 +13,10 @@
     .caja-titulo {
         padding-right: 300px;
     }
-    .cel-titulo{
+    .cel-titulo {
         display:none;
     }
-/***** contenedor principal *****/
+/*** ===== Contenedor principal ===    */
     .principal-box, .section-principal-box {
         padding: 20px;
     }
@@ -25,22 +25,61 @@
         font-size: 5rem;
         margin-top: 150px;
     }
-/****** menu *****/
-    .menu {
-        display: flex;
-    }
-    .section-menu-toggle,
-    .section-close-menu, .menu-toggle, .close-menu {
+/*** ===== MENU PARA PC ===    */
+    .menu-container {
         display: none;
     }
-    .section-menu li, .menu li {
-        margin: 0 10px;
-        position: relative;
+    #menu-pc {
+        display: flex;
+        flex: 1;
     }
-    .submenu {
+    #header-top-container {
+        border: 2px solid white;
+        display: flex;
+        align-items: center; /* Centra verticalmente */
+        justify-content: space-between; /* Espacio entre los tres elementos */
+        padding: 10px 20px; /* Ajusta según necesidad */
+        background-color: #000; /* Cambia según tu diseño */
+        flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+    }
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .main-menu-pc .list-menu {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    /* Ajuste para el botón de contacto */
+    .cta-button {
+        white-space: nowrap;
+    }
+    .main-menu-pc {
+        display: block;
+        border: 3px solid blue;
+    }
+    .main-menu-pc a {
+        text-decoration: none;
+        color: #fff;
+    }
+    .main-menu a:hover {
+        color: var(--color-rojo);
+    }
+    .btn-pc-only {
+        display: block;
+    }
+/*** ===== Botones ===    */
+    .btn-pc-only {
+        display: inline-block;
         position: absolute;
     }
-/* numeros de personas */
+/*** ===== Numero de personas ===    */
     .section-media-num, .media-num {
         display: block;
         display: flex;
@@ -48,7 +87,7 @@
     .flex-num {
         display: none;
     }
-/*******iconos yan-yin en pc*/
+/*** ===== Iconos yan-yin en pc ===    */    
     .pc-icono {
         display: none;
     }
@@ -71,17 +110,13 @@
     .caja-titulo {
         padding-right: 300px;
     }
-    .navbar .cta-button {
-        display: block;
-    }
     .desp {
         display: block;
     }
     h3.desp {
         margin:30px 0 60px 0;
     }
-
-    /* * * * * * * * * FOOTER * * * * * * * */
+/*** ===== FOOTER ===    */ 
     footer .img-flex.video{
         text-align: initial;
 
