@@ -43,6 +43,12 @@ body {
     overflow-x: hidden; 
     position: relative;
 }
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
 /**************************************/
 /*** * * * * * * HEADER * * * * * * ***/
 /**************************************/
@@ -106,13 +112,14 @@ tiene un contendor principal --- */
 y el MENU -- */
 
 .section-principal-box, .principal-box {
-    max-width: 1200px;
+    max-width: 1500px;
     padding: 10px;
     margin: auto;
 }
 .section-logo-container, .logo-container {
     align-items: center;
     display: flex;
+    width: fit-content;
 }
 .section-logo, .logo {
     margin-right: 10px;
@@ -140,6 +147,7 @@ y el MENU -- */
 /*.section-main-title span {
     color: var(--color-rojo);
 }*/
+
 /**************************************/
 /****** * * * * * MENU * * * * * ******/
 /**************************************/
@@ -155,7 +163,7 @@ svg.bars {
     fill: white;
     cursor: pointer;
 }
-svg.bars:hover > path, svg.times:hover > path{
+svg.bars:hover > path, svg.times:hover > path {
     fill: var(--color-rojo);
     transition: .5s;
 }
@@ -245,13 +253,15 @@ nav.main-menu li > ul {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.6s ease;
+    opacity: 0;
 }
 .sub.open {
     max-height: 500px; /* suficiente para mostrar todos los items */
+    opacity: 1;
     
 }
 /*    === Menú para pc ===    */
-#menu-pc {
+#nav-container-pc {
     display: none;
 }
 /**************************************/
@@ -308,6 +318,21 @@ nav.main-menu li > ul {
 }
 .btn-pc-only {
     display: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: var(--color-rojo);
+    border: 1px solid var(--color-rojo);
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    max-width: 110px;
+}
+.btn-pc-only:hover {
+    background-color: var(--color-negro);
+    color: var(--color-rojo);
+    transform: scale(1.05);
 }
 .enroll-btn1 , .section-enroll-btn1 {
     display: block;
@@ -533,7 +558,7 @@ main i {
 /**************************************/
 /*********** caja de imagenes *********/
 /**************************************/
-.video.img-flex{
+.video.img-flex {
     width: 100%;
     height: 370px;
     position: relative;
@@ -720,6 +745,37 @@ h2.aportan, p.aportan-concep {
 h3.posicion {
     color: var(--color-texto);
 }
+            /****    ===== TITULACIONES =====    ****/
+.titulaciones h2 {
+    color: var(--color-rojo);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2.5rem;
+}
+.titulaciones a {
+    color: var(--color-rojo);
+}
+.parte-superior, .parte-inferior {
+    flex: 1; /* Mitad del alto cada una */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    text-align: center;
+    padding: 10px;
+    color: var(--color-texto);
+}
+.parte-inferior {
+    flex-direction: column; /* Para que los <p> estén uno debajo del otro */
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+}
+.parte-inferior p:last-of-type {
+    margin-top: 30px;
+}
+.beneficios {
+    text-align: center;
+    flex: 310px 1 1;
+}
 /**************************************/
 /******* * * * * FOOTER * * * * *******/
 /**************************************/
@@ -735,10 +791,9 @@ footer .faq-p {
     padding: 10px 0 60px;
 }
 footer .imagen-faq {
-    width:100%; 
+    width: 100%; 
     max-width: 500px; 
     position: relative; 
-    z-index: 11;
 }
 footer .logo-tamo-footer {
     max-width: 300px;
@@ -790,9 +845,6 @@ footer .caja-flex.text_logo {
 footer .text_logo {
     text-align: center;
 }
- footer .cta-button {
-    margin-right: 0px;
- }
             /****** footer-copy ******/
 .footer-caja-flex {
     border-top: 1px solid var(--color-texto);
@@ -832,12 +884,32 @@ footer .text_logo {
 }
             /****** footer-boton ******/
 
-footer .cta-button{
-   margin: 0;
+footer .cta-button {
+   margin: 10px 0 0 0;
 }
-footer .enroll-btn1{
+footer .enroll-btn1 {
     display: inline-block;
     margin-bottom: 20px;
+}
+/**************************************/
+/******* * * REDES SOCIALES * * ******/
+/**************************************/
+.redes-sociales {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 30px;               
+    padding: 20px;           
+}
+.redes-sociales a {
+    color: var(--color-blanco);
+    font-size: 2.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.redes-sociales a:hover {
+    color: var(--color-rojo);
+    transform: scale(1.1);
 }
 /**************************************/
 /******* * * BOTON IR ARRIBA * * ******/

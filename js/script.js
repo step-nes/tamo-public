@@ -21,40 +21,58 @@ $('.submenu-item').click(function() {
   submenu.toggleClass('open');
 });
             // Menú ordenador (Inyección)
-$("#menu-pc").html(`
+$("#nav-container-pc").html(`
 <nav class="main-menu-pc">
-    <ul class="list-menu">
+    <ul class="list-menu-pc">
         <li><a href="index.html">Inicio</a></li>
-        <li>
-            <li>
-              <div class="submenu-item">
+        <li class="li-despliegue">
+            <a href="kungfu.html" class="submenu-item-pc">
                 Kung-Fu
-                <svg class="down" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 640"><path fill="#ffffff" d="M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z"/></svg>
-              </div>
-              <ul class="sub">
+                <i class="fa-solid fa-sort-down down"></i>
+            </a>
+            <ul class="despliegue-secundario">
                 <li><a href="historia.html">Historia</a></li>
                 <li><a href="estilos.html">Estilos</a></li>
                 <li><a href="escuela.html">Escuela</a></li>
-              </ul>
-            </li> 
+            </ul>
         </li>
         <li><a href="taichi.html">Taichi</a></li>
-        <li><a href="defensa.html">Defensa personal</a></li>
-        <li>
-            <div class="submenu-item">
+        <li><a href="defensa.html">Defensa&nbsp;personal</a></li>
+        <li class="li-despliegue">
+            <a href="medios.html" class="submenu-item-pc">
                 Medios
-                <svg class="down" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 640"><path fill="#ffffff" d="M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z"/></svg>
-            </div>
-            <ul class="sub">
+                <i class="fa-solid fa-sort-down down"></i>
+            </a>
+            <ul class="despliegue-secundario">
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="video.html">Video</a></li>
                 <li><a href="descarga.html">Descargas</a></li>
             </ul>
-        </li>                
+        </li>
     </ul>
 </nav>
 `);
 
+            // Submenús
+
+$(document).ready(function(){
+    // Seleccionamos cada elemento de la lista que tiene un submenú
+    $('.li-despliegue').hover(
+        // Función que se ejecuta cuando el ratón ENTRA en el elemento
+        function() {
+            // 'this' se refiere al '.li-despliegue' sobre el que está el cursor
+            // Buscamos el submenú y la flecha dentro de él y les añadimos una clase
+            $(this).find('.despliegue-secundario').addClass('open');
+            $(this).find('.down').addClass('rotated');
+        },
+        // Función que se ejecuta cuando el ratón SALE del elemento
+        function() {
+            // Hacemos lo contrario: quitamos las clases
+            $(this).find('.despliegue-secundario').removeClass('open');
+            $(this).find('.down').removeClass('rotated');
+        }
+    );
+});
 //////////////////////////////////////////
 //////////////////////////////////////////
         //    * SECCION *    //

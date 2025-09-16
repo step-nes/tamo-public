@@ -3,12 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Stephany Estevez Sanchez, Daniel Latouche, Madalina Caran, Franca Canali, Nadine Mota Rodrigues, Chuzhe Zou, William Garcia Skinner, Jose Fernando Calizaya">
+	<meta name="author" content="Stephany Estevez Sanchez, Daniel Latouche, Madalina Caran, Nadine Mota Rodrigues, Chuzhe Zou, William Garcia Skinner, Jose Fernando Calizaya">
 	<meta name="description" content="TA-MO – Asociación Deportiva de Artes Marciales: mejora tu condición física y mental con clases de Kung-Fu, Tai-Chi, defensa personal y filosofía marcial. Accede a galería, vídeos, blog y contacto.">
 	<meta name="keywords" content="artes marciales, kung fu, tai chi, defensa personal, filosofía marcial, escuela de artes marciales, asociación deportiva, entrenamiento físico, disciplina, bienestar, meditación, equilibrio cuerpo mente, galería de artes marciales, vídeos de kung fu, blog de artes marciales">
 	<title>Inicio | Tamo</title>	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<link rel="stylesheet" href="css/mobile-tablet-style.css">
 	<link rel="stylesheet" href="css/ordenador-style.css">
 
@@ -32,25 +33,23 @@
 	    <ul class="list-menu">
 	        <li><a href="index.html">Inicio</a></li>
 	        <li>
-	        	<li>
-				  <div class="submenu-item">
-				    Kung-Fu
-				    <svg class="down" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 640"><path fill="#ffffff" d="M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z"/></svg>
-				  </div>
-				  <ul class="sub">
-				    <li><a href="historia.html">Historia</a></li>
-				    <li><a href="estilos.html">Estilos</a></li>
-				    <li><a href="escuela.html">Escuela</a></li>
-				  </ul>
-				</li> 
+			  <a class="submenu-item">
+			   Kung-Fu
+			    <svg class="down" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 640"><path fill="#ffffff" d="M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z"/></svg>
+			  </a>
+			  <ul class="sub">
+			    <li><a href="historia.html">Historia</a></li>
+			    <li><a href="estilos.html">Estilos</a></li>
+			    <li><a href="escuela.html">Escuela</a></li>
+			  </ul>
 	        </li>
 	        <li><a href="taichi.html">Taichi</a></li>
 	        <li><a href="defensa.html">Defensa personal</a></li>
 	        <li>
-	        	<div class="submenu-item">
-		        	Medios
+	        	<a class="submenu-item">
+		        Medios
 		            <svg class="down" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 640"><path fill="#ffffff" d="M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z"/></svg>
-		        </div>
+		        </a>
 	            <ul class="sub">
 	                <li><a href="galeria.html">Galeria</a></li>
 	                <li><a href="video.html">Video</a></li>
@@ -75,13 +74,11 @@
 		        </div>
 		    </div><!-- fin LOGO CONTAINER -->
 		    <!-- inicio inyección menu-pc -->
-		    <div id="menu-pc">
+		    <div id="nav-container-pc">
 		    	<!-- AQUI SE INYECTARÁ EL MENÚ PARA MODO ORDENADOR -->
 		    </div>
 		    <!-- fin inyección de menu-pc -->
-		    <div class="btn-contct-pc">
-		    	<a class="cta-button btn-pc-only" href="contacto.html">Contacto</a>
-		    </div>
+		    <a class="btn-pc-only" href="contacto.html">Contacto</a>
 	    </div> <!-- fin header-top-container -->
         <div class="media-num">
             <div class="students">
@@ -186,16 +183,10 @@
 					<h4 class="animo">"Si te atraen las artes marciales te animamos a que practiques con nosotros"</h4>
 				</div>
 			</div>
-			<div class="caja-flex icons-caja" ><!--iconos en flex-->
-				<img src="https://cdn.prod.website-files.com/63fce03a21e36b96315d0a99/63fe073ccd40df3f8b677fca_Fictional%20company%20logo.png" loading="lazy" alt="" class="image-contain">
-				<img src="https://cdn.prod.website-files.com/63fce03a21e36b96315d0a99/63fe073b107b8c06841b78da_Fictional%20company%20logo%20(1).png" loading="lazy" alt="" class="image-contain">
-				<img src="https://cdn.prod.website-files.com/63fce03a21e36b96315d0a99/63fe0739918c647ba753e0b4_Fictional%20company%20logo%20(2).png" loading="lazy" alt="" class="image-contain">
-				<img src="https://cdn.prod.website-files.com/63fce03a21e36b96315d0a99/63fe0738214a0f6fbfd7a127_Fictional%20company%20logo%20(3).png" loading="lazy" alt="" class="image-contain">
-			</div>
 		</section>
 	</div>
 </div>
-<!----------------   seccion2 --------------------->
+<!----------------   seccion2 PROFESORES --------------------->
 <div class="fondo_2" id="profesores"><!--div 100% ancho-->
 	<div class="circulo-fondo_centro"></div>
 	<div class="principal-box"> <!--div con anchura maxima con relacion al nav,con flex vertical para separar el titulo  de las imagenes de los tutores-->
@@ -211,87 +202,113 @@
 					<img src="img/sergi.jpg" alt="profesor" class="image-cover">
 				</div>
 				<h2 class="nombres rojo">S.Gayobart</h2>
-				<h3 class="posicion">POSICION</h3>
+				<h3 class="posicion">Profesor</h3>
 			</div>	
 			<div class="content-docentes">
 				<div class="content-img">
 					<img src="img/maestro_mgayobart.jpg" alt="Maestro Manolo Gayobart" class="image-cover">
 				</div>
 				<h2 class="nombres rojo">M.Gayobart</h2>
-				<h3 class="posicion">POSICION</h3>
+				<h3 class="posicion">Maestro</h3>
 			</div>
 			<div class="content-docentes">
 				<div class="content-img">
 					<img src="img/antonio.jpg" alt="profesor" class="image-cover">
 				</div>
 				<h2 class="nombres rojo">J.Antonio</h2>
-				<h3 class="posicion">Posicion</h3>
+				<h3 class="posicion">Profesor</h3>
 			</div>
 			<div class="content-docentes">
 				<div class="content-img">
 					<img src="img/_1060726.jpg" alt="profesor" class="image-cover">
 				</div>	
 				<h2 class="nombres rojo">H.L.Zhu</h2>
-				<h3 class="posicion">Posicion</h3>
+				<h3 class="posicion">Maestro</h3>
 			</div>
 			<div class="content-docentes">
 				<div class="content-img">
 					<img src="img/gonzalez.jpg" alt="profesor" class="image-cover">
 				</div>	
 				<h2 class="nombres rojo">M.González</h2>
-				<h3 class="posicion">Posicion</h3>
+				<h3 class="posicion">Profesor</h3>
 			</div>
 			<div class="content-docentes">
 				<div class="content-img">
 					<img src="img/jimenez.jpg" alt="profesor" class="image-cover">
 				</div>	
 				<h2 class="nombres rojo">S.Jimenez</h2>
-				<h3 class="posicion">Posicion</h3>
+				<h3 class="posicion">Profesor</h3>
 			</div>
 		</div>
 	</div>
+	<div class="titulaciones">
+	    <div class="parte-superior">
+	        <h2>Titulaciones</h2>
+	    </div>
+	    <div class="parte-inferior">
+	    	<div class="titulaciones-flex">
+	    		<ul>
+			        <li>Maestros Nacionales de Kung-fu (<a href="https://fckarate.es/">Federación Catalana de Karate F.C.K.</a>)</li>
+			        <li>Instructores de <a href="https://artesmarciales.org/defensa-personal/">Defensa Personal</a> (Dir. Gral. Policía)</li>
+			        <li>Maestros de <a href="https://artesmarciales.org/tai-chi-3/">Tai-Chi</a> (F.C.K., R.P.Ch.)</li>
+			        <li>Director Deportivo de Goshin</li>
+	        	</ul>
+	        	<ul>
+	        		<li>Instructor de Kempo</li>
+	        		 <li>Director Deportivo de <a href="https://artesmarciales.org/kung-fu/">Kung Fu</a></li>
+		        	<li>Entrenadores internacionales de defensa personal policial (I.P.S.D.A.)</li>
+		        	<li>Entrenador Nacional de Defensa Personal Policial (F.E.L.)</li>
+		        </ul>
+	        </div>
+	        <p>La A.D.A.M. TA-MO mantiene vínculos de amistad con: la Asociación MiZong Lohan y del Gimnasio TAO de Caracas (Venezuela).</p>
+	    </div> <!-- fin parte inferior -->
+	</div> <!-- fin titulaciones -->
 </div>
 <!--    ----- FOOTER ----- -->
 <footer class="fondo " ><!--div 100% ancho-->
 	<div class="principal-box animado"> <!--div con anchura maxima con relacion al nav,con flex vertical para separar el titulo -->
 		<div class="caja-flex"><!--div con flex-->
-			<div  class="img-flex video"><!--video y iconos---->
-				<h3 class="rojo faq-h3">How We Work / FAQ</h3>
-				<p class="text faq-p">Lorem ipsum dolor sit amet consectetur. Molestie cum ut aliquam convallis. Lacus sed velit adipiscing diam.</p>
+			<div class="beneficios"><!--video y iconos---->
+				<h3 class="rojo faq-h3">Beneficios y ámbitos de formación</h3>
+				<p class="text faq-p">Nuestra formación se extiende a varios ámbitos: desde la enseñanza tradicional de técnicas marciales, hasta la formación en liderazgo, desarrollo personal y acompañamiento social. En esta fundación, formamos personas íntegras, no solo artistas marciales.</p>
 			 	<img src="img/imagen7.jpg" alt="hombres_peleando" class="imagen-faq">
 			</div>
 			<div class="caja-flex content-flex"><!--flex botones y el texto-->
 				<div class="desplegable">
 					<div class="caja-mar">
 						<div class="flex-izq">
-							<h3> Do I have to be in shape to get started?</h3>
+							<h3>Laboral</h3>
 						</div>
 						<div class="icon-arrow">&#10132;</div>
 					</div>
 					<div class="acordeon">
-						<p class="p_active">Competiciones oficiales</p>
+						<p class="p_active">Técnico deportivo(monitor/entrenador).</p>
+						<p class="p_active">Titulación oficial.</p>
+						<p class="p_active">Especialista o director de coreografía en películas de acción.</p>
+						<p class="p_active">Aptitud física alta que capacita para superar pruebas de acceso a diferentes instituciones.</p>
 					</div>
 				</div>
 				<div class="desplegable">
 					<div class="caja-mar">
 						<div class="flex-izq">
-							<h3>Can I get first class for free?</h3>
+							<h3>Crecimiento personal</h3>
 						</div>
 						<div class="icon-arrow">&#10132;</div>
 					</div>
 					<div class="acordeon">
-						<p class="p_active">Mejora la condición física y mental.Beneficios de un deporte completo ( bilateralidad, brazos-tronco-piernas).</p>
+						<p class="p_active">Autoestima, autocontrol y optimismo.</p>
+						<p class="p_active">Desarrollo de los aspectos mentales y espirituales propios de las Artes Marciales. Mejora la condición física y mental.Beneficios de un deporte completo (bilateralidad, brazos-tronco-piernas).</p>
 					</div>
 				</div>	
 				<div class="desplegable">
 					<div class="caja-mar">
 						<div class="flex-izq">
-							<h3>Will I get hurt during the training?</h3>
+							<h3>Educativo y socio-cultural</h3>
 						</div>
 						<div class="icon-arrow">&#10132;</div>
 					</div>
 					<div class="acordeon">
-						<p class="p_active">Practicar artes marciales permite aprender técnicas de autodefensa para protegerse en situaciones de peligro.</p>
+						<p class="p_active">Amistad, respeto, esfuerzo, expresión corporal, creatividad y cultura oriental. Además practicar artes marciales permite aprender técnicas de autodefensa para protegerse en situaciones de peligro.</p>
 					</div>
 				</div>	
 			</div>
@@ -299,11 +316,16 @@
 		<div class="caja-flex text_logo animado">
 			<img src="img/logo_250px.png" alt="logo_ta-mo" class="logo-tamo-footer">
 			<div class="container-lets">
-				<h2 class="titulos">Let’s Fight Together</h2>
-				<p >Lorem ipsum dolor sit amet consectetur. Molestie cum ut aliquam convallis. Lacus sed velit adipiscing diam. Donec elementum mi lobortis vulputate fringilla duis vitae tempor at.</p>
-				<button class="cta-button">Enroll Now</button>
+				<h2 class="titulos">Luchemos Juntos</h2>
+				<p class="p-luchemos">En el camino del karate y las artes marciales no se lucha solo. Cada técnica,cada caida y cada avance son parte de un proceso compartido. "Luchemos Juntos" representa la unidad,el respeto y el espiritu de superacion que nos une como practicantes.</p>
+				<button class="cta-button">Inscríbete ahora</button>
 			</div>
 		</div>
+		<div class="redes-sociales">
+	        <a href="https://www.facebook.com/artesmarciales.tamo/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+	        <a href="https://www.instagram.com/kungfutamo/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+	        <a href="https://www.tiktok.com/@artesmarciales_tamo"><i class="fa-brands fa-tiktok"></i></a>
+	    </div> <!-- fin redes sociales -->
 		<div class="footer-caja-flex">
 			<ul class="foot-menu-flex">
 		        <li><a href="index.html">Inicio</a></li>

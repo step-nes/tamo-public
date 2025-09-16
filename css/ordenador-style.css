@@ -1,8 +1,10 @@
-@media (min-width: 846px) {
+@media (min-width: 980px) {
     header.home-header {
-        background-image: url('../img/header.png');
+        background: linear-gradient(#2225, #2225), url('../img/header.png');
+        background-repeat: no-repeat;
+        background-position: top right;
         background-size: 60%;
-        padding: 0 0 700px;
+        padding: 25px 0 700px;
     }
     h1 {
         font-size: 3rem;
@@ -29,56 +31,105 @@
     .menu-container {
         display: none;
     }
-    #menu-pc {
+    div#header-top-container {
         display: flex;
-        flex: 1;
-    }
-    #header-top-container {
-        border: 2px solid white;
-        display: flex;
-        align-items: center; /* Centra verticalmente */
-        justify-content: space-between; /* Espacio entre los tres elementos */
-        padding: 10px 20px; /* Ajusta según necesidad */
-        background-color: #000; /* Cambia según tu diseño */
-        flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
-    }
-    .logo-container {
-        display: flex;
-        align-items: center;
         gap: 10px;
-    }
-    .main-menu-pc .list-menu {
-        display: flex;
-        gap: 20px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
         justify-content: space-between;
-        flex-direction: row;
+        background-color: var(--transparente); /* para que se vea la imagen de fondo */
+        margin-bottom: 30px;
+        height: 52px;
     }
-    /* Ajuste para el botón de contacto */
-    .cta-button {
+    a.btn-pc-only {
+        display: inline-block;
         white-space: nowrap;
     }
-    .main-menu-pc {
+    div#nav-container-pc {
         display: block;
-        border: 3px solid blue;
+        height: 100%;
     }
-    .main-menu-pc a {
-        text-decoration: none;
+    ul.list-menu-pc {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav.main-menu-pc li {
+        width: fit-content;
+    }
+    .down {
+        color: var(--color-blanco);
+        font-size: 1.3rem;
+    }
+    li.li-despliegue {
+        position: relative;
+    }
+    nav.main-menu-pc a {
         color: #fff;
-    }
-    .main-menu a:hover {
-        color: var(--color-rojo);
-    }
-    .btn-pc-only {
-        display: block;
-    }
-/*** ===== Botones ===    */
-    .btn-pc-only {
         display: inline-block;
-        position: absolute;
+        text-align: center;
+        align-content: center;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
     }
+    a.submenu-item-pc {
+        width: initial;
+    }
+    nav.main-menu-pc a:hover {
+        color: var(--color-rojo);
+        transform: scale(1.08);
+        font-weight: 600;
+        border-left: 2px solid var(--color-rojo);
+        margin-left: 5px;
+    }
+        /* para el despliegue del submenu */
+    ul.list-menu-pc > li {
+        position: relative;
+    }
+    ul.despliegue-secundario {
+        padding: 20px 30px 20px 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        background-color: var(--colorFondo1);
+        transition: opacity 0.3s ease, transform 0.3s, visibility 0.3s;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    }
+    li.li-despliegue:hover > ul.despliegue-secundario {
+        opacity: 1;
+        visibility: visible;
+    }
+    ul.despliegue-secundario li a {
+        position: relative;
+        /*left: 13px;*/
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .despliegue-secundario > li {
+      position: relative;
+      padding-left: 5px; /* espacio para la flecha */
+
+
+    /* Estado inicial: sin flecha visible 
+    .despliegue-secundario > li::before {
+      content: "➤";           /* flecha 
+      position: absolute;
+      left: 0;                /* a la izquierda del texto 
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      color: var(--color-rojo); /* color de la flecha 
+      font-size: 0.8em;
+      transition: opacity 0.3s ease;
+      
+    }*/
+    /* Al hacer hover: aparece la flecha 
+    .despliegue-secundario > li:hover::before {
+      opacity: 1;
+      
+    }*/
+
+    
 /*** ===== Numero de personas ===    */
     .section-media-num, .media-num {
         display: block;
@@ -116,23 +167,33 @@
     h3.desp {
         margin:30px 0 60px 0;
     }
-/*** ===== FOOTER ===    */ 
-    footer .img-flex.video{
+/*** ===== TITULACIONES ===     */
+    .titulaciones-flex {
+        display: flex;
+        gap: 10px;
+    }
+    .titulaciones-flex ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+/*** ===== FOOTER ===       */ 
+    footer .img-flex.video {
         text-align: initial;
 
     }
-    .footer-caja-flex{
+    .footer-caja-flex {
         justify-content: space-between;
 
     }
-    .content-copy{
+    .content-copy {
         text-align: initial;
     }
 
-    .content-flex{
+    .content-flex {
         text-align: initial;
     }
-    .horari{
+    .horari {
         justify-content: initial;
     }
 }
