@@ -106,9 +106,9 @@
         transition: transform 0.3s ease, color 0.3s ease;
     }
     .despliegue-secundario > li {
-      position: relative;
-      padding-left: 5px; /* espacio para la flecha */
-
+        position: relative;
+        padding-left: 5px; /* espacio para la flecha */
+    }
 
     /* Estado inicial: sin flecha visible 
     .despliegue-secundario > li::before {
@@ -155,7 +155,7 @@
         width: 133px;
         height: 100px;
     }
-    #seccion-sobreTa-mo .yin-sect-tamo {
+    .icono-yin.yin-sect-tamo, #seccion-sobreTa-mo .yan-sect-tamo {
         display: none;
     }
     .caja-titulo {
@@ -184,7 +184,6 @@
     }
     .footer-caja-flex {
         justify-content: space-between;
-
     }
     .content-copy {
         text-align: initial;

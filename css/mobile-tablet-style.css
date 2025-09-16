@@ -54,8 +54,8 @@ a {
 /**************************************/
 header.home-header {
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2));
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5));
     background-position: top right;
     background-repeat: no-repeat;
     padding: 20px 20px 600px;
@@ -731,6 +731,9 @@ h2.aportan, p.aportan-concep {
 .content-img .image-cover:hover {
     transform: scale(1.1);
     opacity: 1; /* Se asegura que la opacidad sea 1 durante el hover */
+}
+.content-img:hover {
+    box-shadow: 0 4px 15px rgba(150, 150, 150, 0.2);
 }
 .nombres {
     font-size: 1.3rem;

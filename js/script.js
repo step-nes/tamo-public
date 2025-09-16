@@ -1,9 +1,6 @@
 
 ////////////////////        HEADER     ///////////////////////////
 
-
-
-
 //////////////////////////////////////////
         //    * MENU *    //
 
@@ -26,12 +23,12 @@ $("#nav-container-pc").html(`
     <ul class="list-menu-pc">
         <li><a href="index.html">Inicio</a></li>
         <li class="li-despliegue">
-            <a href="kungfu.html" class="submenu-item-pc">
+            <a class="submenu-item-pc">
                 Kung-Fu
                 <i class="fa-solid fa-sort-down down"></i>
             </a>
             <ul class="despliegue-secundario">
-                <li><a href="historia.html">Historia</a></li>
+                <li><a href="historia-kungfu.html">Historia</a></li>
                 <li><a href="estilos.html">Estilos</a></li>
                 <li><a href="escuela.html">Escuela</a></li>
             </ul>
@@ -39,7 +36,7 @@ $("#nav-container-pc").html(`
         <li><a href="taichi.html">Taichi</a></li>
         <li><a href="defensa.html">Defensa&nbsp;personal</a></li>
         <li class="li-despliegue">
-            <a href="medios.html" class="submenu-item-pc">
+            <a class="submenu-item-pc">
                 Medios
                 <i class="fa-solid fa-sort-down down"></i>
             </a>
@@ -73,7 +70,9 @@ $(document).ready(function(){
         }
     );
 });
-//////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////
         //    * SECCION *    //
 $(document).ready(function() {
@@ -124,7 +123,7 @@ $(document).ready(function() {
     });
 });
 
-//////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////
         //    * ANIMADO *    //
 
@@ -173,17 +172,17 @@ $(window).on('scroll', function () {
         //    * BOTON ARRIBA *    //
 
 $(".boton-arriba").fadeOut();
-  $(document).scroll(function(){
-      if($(document).scrollTop()>100){
-        $(".boton-arriba").fadeIn(1000);
-      }else if($(document).scrollTop()==0){
-        $(".boton-arriba").fadeOut(1000)
-      };
-  });
-j
-  $(".boton-arriba").click(function(){
-      $("html").animate({scrollTop:0},500);
-  });
+    $(document).scroll(function(){
+        if($(document).scrollTop()>100){
+            $(".boton-arriba").fadeIn(1000);
+        }else if($(document).scrollTop()==0){
+            $(".boton-arriba").fadeOut(1000)
+        };
+    });
+    $(".boton-arriba").click(function(){
+        $("html").animate({scrollTop:0},
+    500);
+});
 //////////////////////////////////////////
 
 
