@@ -123,7 +123,30 @@ $(document).ready(function() {
     });
 });
 
-////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////
+//Para MOSTRAR y OCULTAR los textos adicionales con botones leerMas
+    // Nativo
+const botonLeerMas = document.querySelectorAll(".leer_mas-kungfu");
+const textoMas = document.querySelectorAll(".texto_mas-kungfu");
+const cajaIntro = document.querySelector(".contenedor_intro");
+
+botonLeerMas.forEach((e,i)=>{
+    e.addEventListener("click",function(){
+        if (textoMas[i].style.maxHeight === "0px" || textoMas[i].style.maxHeight === ""){
+            textoMas[i].style.maxHeight ="initial";
+            e.innerText="Ocultar";
+        } else {
+            textoMas[i].style.maxHeight = 0;
+            e.innerText="Leer Más";
+        }
+    });
+});
+///////////////////////////////////////////////////
+
+
+
+
+
 //////////////////////////////////////////
         //    * ANIMADO *    //
 

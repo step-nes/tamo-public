@@ -15,7 +15,20 @@
 	<!--<link rel="stylesheet" href="css/style.css">-->
     <link rel="icon" href="./img/favicon.png">
     <style>
+    	header.home-header {
+    		background-image:linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+            ), url(./img/ming.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px 20px 200px;
+    		background-position: top right;
+    	}
     	
+        h1 {
+        	color: var(--color-blanco);
+        }
     </style>
 </head>
 <body>
@@ -59,7 +72,6 @@
 	        </li>	             
 	    </ul>
 	</nav>
-	<script src="js/nav.js"></script>
 </div><!-- fin MENU CONTAINER-->
 <header class="home-header animado">
 	<!-- <img class="yingArriba" src="img/yingArriba.png" alt="pngYing"> -->
@@ -81,117 +93,216 @@
 		    <!-- fin inyección de menu-pc -->
 		    <a class="btn-pc-only" href="contacto.html">Contacto</a>
 	    </div> <!-- fin header-top-container -->
-        <div class="media-num">
-            <div class="students">
-                <h2>6+</h2>
-                <h4>Maestros</h4>
-            </div>
-            <div class="years-experience">
-                <h2>30+</h2>
-                <h4>Años de experiencia</h4>
-            </div> 
-        </div>
-        <div class="caja-titulo">
-            <h2 class="header-h2">Ta-Mo<br><span class="color-secon">Escuela de Kung-Fu</span></h2>
-            <p>Desde nuestros inicios, hemos trabajado con ilusión, humildad y honestidad para desarrollar proyectos de calidad y perfeccionar nuestro arte.</p>
-            <div class="boton">
-                <button href="contacto" class="enroll-btn1 cta-button">Contacto</button>
-                <button class="enroll-btn2">Más información</button>
-            </div> 
-            <div class="flex-num">
-                <div class="students">
-                    <h2>6+</h2>
-                    <h4>Maestros</h4>
-                </div>
-                <div class="years-experience">
-                    <h2>30+</h2>
-                    <h4>Años de experiencia</h4>
-                </div> 
-            </div>
-        </div>
+ 		<h2 class="main-title header-h2-hist-kungfu">Historia <span class="color-secon">del Kung-Fu</span></h2>
     </div>
 </header>
-<main>
+<main class="hist-kungfu">
 	<!-- Historia ----Introducción -->
-    <section id="historia_intro">
+    <section id="historia_intro-kungfu">
         <div class="principal-box animado">
-            <div class="contenedor_intro">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/kPfzAX1u5ao?si=KK_5tLuMhyh3Qo1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="contenedor_texto">
+            <div class="contenedor_intro-kungfu">
+                <div class="contenedor_texto-kungfu">
                     <h4 class="rojo">¿QUÉ ES KUNG-FU?</h4>
                     <h2>Introducción</h2>
                     <p>El objetivo del conocimiento de la <a href="https://es.wikipedia.org/wiki/Kung-fu#Historia" target="_blank">historia del kung-fu</a> es que nos permita conocer su origen y comprender el porqué de su realidad actual, sin profundizar en hechos históricos controvertidos que nos alejarían de este objetivo general. Para ayudarnos a comprender con objetividad la documentación histórica deberíamos tener en cuenta una serie de consideraciones tales como:</p>
                     <!-- TEXTO OCULTO -->
-                    <div class="texto_mas">
-                        <p>-En la antigüedad la cultura (leer y escribir) solo estaba al alcance de una minoría que pudieran dejar constancia documental.<br>
-                        -Principalmente se documentaban hechos transcendentales o de interés para los poderosos.<br>
-                        -Gran parte de los documentos de la historia antigua fueron destruidos durante las guerras y sus saqueos.<br>
-                        -En varias ocasiones la práctica de las artes marciales ha sido prohibida en China, llevándose a cabo de forma oculta.</p>
+                    <div class="texto_mas-kungfu">
+                    	<ul class="lista-kungfu-intro">
+                    		<li><i class="fa-solid fa-bullseye"></i> En la antigüedad la cultura (leer y escribir) solo estaba al alcance de una minoría que pudieran dejar constancia documental.</li>
+                    		<li><i class="fa-solid fa-bullseye"></i> Principalmente se documentaban hechos transcendentales o de interés para los poderosos.</li>
+                    		<li><i class="fa-solid fa-bullseye"></i> Gran parte de los documentos de la historia antigua fueron destruidos durante las guerras y sus saqueos.</li>
+                    		<li><i class="fa-solid fa-bullseye"></i> En varias ocasiones la práctica de las artes marciales ha sido prohibida en China, llevándose a cabo de forma oculta.</li>
+                    	</ul>
                         <p>Por todo ello, gran parte de la información antigua ha sido transmitida oralmente entre generaciones, resultando difícil ratificar con exactitud hechos y legados, así como dando lugar a controvertidas interpretaciones.</p>
-                    </div><!-- FIN DEL TEXTO OCULTO -->
-                    <button class="leer_mas">Leer Más</button>
-                </div>
-            </div>
-        </div>
-    </section>
+                    </div><!-- FIN DEL TEXTO OCULTO / texto_mas-kungfu -->
+                    <button class="leer_mas-kungfu">Leer Más</button>
+                </div> <!-- contenedor_texto-kungfu -->
+                <iframe class="hist-kungfu" width="560" height="315" src="https://www.youtube.com/embed/kPfzAX1u5ao?si=KK_5tLuMhyh3Qo1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div> <!-- fin contenedor_intro-kungfu -->
+        </div> <!-- fin principal-box -->
+    </section> <!-- fin section historia_intro-kungfu -->
+    <!-- Historia----Origen -->
+    <section id="historia_origen-kungfu" class="fondo_2">
+        <div class="principal-box animado">
+            <div class="contenedor_origen-kungfu">
+                <div class="contenedor_texto-kungfu">
+                    <h4 class="rojo">HISTORIA DEL KUNG-FU</h4>
+                    <h2>Origen</h2>
+                    <p>La lucha existe desde que existe el hombre, es más, la lucha por la supervivencia es anterior al hombre. En China existe constancia de tratados antiguos de lucha y táctica militar desde hace miles de años, quizás el más conocido sea <a href="https://es.wikipedia.org/wiki/El_arte_de_la_guerra" target="_blank">"El arte de la guerra"</a> (孫子兵法 - Sun Tzu 孫子) del s. VI a.C..</p>
+                    <p>Por otra parte, la filosofía en China (confucianismo, taoísmo y budismo) también se conocía incluso antes de la construcción del Templo <a>Shaolin</a> (495 d. C.), así como la práctica del <a href="https://en.wikipedia.org/wiki/Qigong" target="_blank">Qigong</a> <a href="https://es.wikipedia.org/wiki/Chi_kung" target="_blank">(Chi-kung)</a>.</p>
+                </div> <!-- contenedor_texto-kungfu -->
+                <figure>
+                    <img src="https://artesmarciales.org/wp-content/uploads/2018/10/TemploShaolin.jpg">
+                </figure>
+            </div> <!-- contenedor_origen-kungfu -->
+            <!-- TEXTO OCULTO -->
+            <div class="texto_mas-kungfu">
+                <figure>
+                    <img src="img/sunzi.jpg" alt="El arte de la guerra">
+                </figure>
+                <p>El origen de las artes marciales chinas se basa más en la filosofía que en la lucha. Se remonta al año 527 d.C., cuando el monje budista <a href="https://es.wikipedia.org/wiki/Bodhidharma" target="_blank">Bodhidharma</a>(en chino "Damo" -pinyin-; pronunciado "Tamo") llegó al Monasterio de Shaolin. Damo enseñó a los monjes ejercicios para mejorar su salud y meditación, lo que dio lugar a los "<em>18 LuoHan</em>", que consistían en 18 ejercicios que evolucionaron hacia habilidades de lucha. De estos ejercicios se desarrollaron 24 nuevos movimientos, dando inicio a los primeros estilos, como el (羅漢拳 <a href="https://en.wikipedia.org/wiki/Luohanquan" target="_blank">Luohan quan</a>). Es posible que en Shaolin ya existieran algunas habilidades de lucha antes de la llegada de Damo.</p>
+            </div><!-- FIN DEL TEXTO OCULTO / texto_mas-kungfu -->
+            <button class="leer_mas-kungfu boton_esp">Leer Más</button>
+        </div> <!-- fin principal box -->
+    </section> <!-- fin section historia_origen-kungfu -->
+    <!-- Historia----Evolución  -->
+    <section id="historia_evolucion-kungfu">
+        <div class="principal-box animado">
+            <h4 class="rojo">DESARROLLO DEL KUNG-FU</h4>
+            <h2>Evolución</h2>
+            <p>El desarrollo del kung-fu se asocia predominantemente hoy día a dos grandes escuelas:</p>
+            <div class="contenedor_escuela-kungfu">
+                <div class="contenido_escuela-kungfu">
+                    <h3><a href="https://es.wikipedia.org/wiki/Shaolin" target="_blank">Shaolín (少林寺)</a>:</h3>
+                    <p>Filosofía budista Chan (Zen)</p>
+                    <p>Estilos externos (duros)</p>
+                </div> <!-- fin contenedor_escuela-kungfu -->
+                <div class="contenido_escuela-kungfu">
+                    <h3><a href="https://en.wikipedia.org/wiki/Wudangquan" target="_blank">Wudang (武當山)</a>:</h3>
+                    <p>Filosofía taoísta</p>
+                    <p>Estilos internos (suaves)</p>
+				</div> <!-- fin contenido_escuela-kungfu -->
+            </div> <!-- fin contenedor_escuela-kungfu -->
+            <!-- TEXTO OCULTO -->
+            <div class="texto_mas-kungfu texto_flex-kungfu">
+                <p>Existen diversos estilos de kung-fu además de los predominantes de las escuelas de Shaolin y Wudang, como los de la escuela <a href="https://en.wikipedia.org/wiki/Emeiquan" target="_blank">Emei</a>, los tibetanos, los musulmanes “hui” y los de origen militar. Estos estilos han influido entre sí a lo largo del tiempo. La conexión con escuelas populares y personajes históricos fue crucial para que los plebeyos obtuvieran reconocimiento y estabilidad en su práctica. Además, la emigración, el comercio y la difusión del <a href="https://es.wikipedia.org/wiki/Zen" target="_blank">budismo</a> en China y el extremo oriente han jugado un papel importante en la popularización y desarrollo de diferentes estilos de kung-fu.</p>
+                <figure>
+                    <img src="https://artesmarciales.org/wp-content/uploads/2018/10/shaolin_monks-1.jpg">
+                </figure>
+            </div><!-- FIN DEL TEXTO OCULTO -->
+            <button class="leer_mas-kungfu">Leer Más</button>
+            <!-- TIMELINE----Evolución -->
+            <div class="timeline-kungfu">
+                <!-- Galería de línea de tiempo -->
+                <div class="contenedor_img-kungfu">
+                    <figure>
+                        <img src="img/EvoPintura.jpg">
+                    </figure>
+                    <figure>
+                        <img src="img/EvoShaolin.jpg">
+                    </figure>
+                    <figure>
+                        <img src="img/EvoTaichi.jpg">
+                    </figure>
+                    <figure>
+                        <img src="img/EvoPanda.jpg">
+                    </figure>
+                </div> <!-- fin contenedor_img-kungfu -->
+                <!-- Indicadores/puntitos de línea de tiempo -->
+                <div class="caja_indicador-kungfu">
+                    <div class="linea-kungfu"></div>
+                    <div class="contenedor_indicador-kungfu">
+						<div class="contenido_indicador-kungfu">
+                            <div class="circulo-fuera-kungfu circ-event-pc">
+                                <div class="circulo-dentro-kungfu"></div>
+                            </div>
+                            <h3>1368 - 1644</h3>
+                            <p>Edad de Oro</p>
+                        </div>
+                        <div class="contenido_indicador-kungfu">
+                            <div class="circulo-fuera-kungfu circ-event-pc">
+                                <div class="circulo-dentro-kungfu"></div>
+                            </div> <!-- fin circulo-fuera-kungfu -->
+                            <h3>1644 - 1911</h3>
+                            <p>Monasterio de Shaolin</p>
+                            <p>Estilos del Sur</p>
+                        </div> <!-- fin contenido_indicador-kungfu -->
+                        <div class="contenido_indicador-kungfu">
+                            <div class="circulo-fuera-kungfu circ-event-pc">
+                                <div class="circulo-dentro-kungfu"></div>
+                            </div> <!-- fin circulo-fuera-kungfu -->
+                            <h3>1956 - 1958</h3>
+                            <p>Taijiquan</p>
+                            <p>Wushu</p>
+                        </div> <!-- fin contenido_indicador-kungfu -->
+                        <div class="contenido_indicador-kungfu">
+                            <div class="circulo-fuera-kungfu circ-event-pc">
+                                <div class="circulo-dentro-kungfu"></div>
+                            </div> <!-- fin circulo-fuera-kungfu -->
+                            <h3>1960s - 1970s</h3>
+                            <p>Películas de Kung-Fu</p>
+                        </div> <!-- fin contenido_indicador-kungfu -->
+                	</div> <!-- fin contenedor_indicador-kungfu -->
+                </div> <!-- fin caja_indicador-kungfu -->
+                <!-- TEXTO OCULTO -->
+                <div class="texto_mas-kungfu">
+                    <div class="mas_flex-kungfu">
+                        <p>Las artes marciales chinas comenzaron con los “18 luohan” y técnicas de bastón en Shaolin, alcanzando su auge durante la dinastía Ming <small>(1368-1644)</small>. Tras la destrucción del monasterio en la dinastía Qing<small>(1644-1911)</small>, los sobrevivientes crearon estilos del Sur, como el Hung gar, que influyeron en el desarrollo del karate en Okinawa.</p>
+                        <p>A finales del siglo XIX, el descontento en China por la colonización occidental llevó a la Rebelión de los bóxers en 1898. En 1910, Huo Yuanjia fundó la Jing Wu Athletic Association en Shanghai para promover las artes marciales. Tras la caída de la dinastía Qing, estas se convirtieron en símbolo del orgullo nacional.</p>
+                        <p>En 1949, tras la guerra civil, se fundó la República Popular China, lo que llevó a artistas marciales a emigrar a Taiwán y Hong Kong, difundiendo las artes marciales. En 1958, se introdujo el "wushu", una versión deportiva del kung-fu, que popularizó y hizo más accesibles estas prácticas.</p>
+                        <p>La Revolución Cultural China (1966-1976) destruyó el Monasterio de Shaolin y sus manuscritos. En 1980 reabrió, y el kung-fu ganó popularidad global en los años 70 gracias a Bruce Lee y películas como "<em><a href="https://es.wikipedia.org/wiki/Kung_Fu_Panda" target="_blank">Kung fu Panda</a></em>". Hoy, se utiliza en programas educativos infantiles contra el acoso.</p>
+                    </div> <!-- fin mas_flex-kungfu -->
+                    <p><small>Para saber más... <a href="https://es.wikipedia.org/wiki/Kung-fu" target="_blank">Wikipedia kung-fu</a> o en <a href="https://artesmarciales-tamo.blogspot.com/2016/03/el-kung-fu.html" target="_blank">nuestro blog</a>.</small></p>
+                    <p><small>Redactado por el equipo de expertos en kung-fu TA-MO.</small></p>
+                    <p><small>Reproducción autorizada siempre que se cite la fuente. Se ceden derechos a <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Wikipedia</a> en difusión del conocimiento del kung-fu.</small></p>
+                </div><!-- FIN DEL TEXTO OCULTO / texto_mas-kungfu -->
+                <!-- Botón para leer más -->
+                <button class="leer_mas-kungfu">Leer Más</button>
+            </div> <!-- fin timeline-kungfu -->
+		</div> <!-- fin principal-box -->
+	</section> <!-- fin section historia_evolucion-kungfu -->
 </main>
-<!--    ----- FOOTER ----- -->
-<footer class="fondo " ><!--div 100% ancho-->
+<!--  ***************************  -->
+<!--  ********** FOOTER *********  -->
+<!--  ***************************  -->
+<footer class="fondo_2"> <!--div 100% ancho-->
 	<div class="principal-box animado"> <!--div con anchura maxima con relacion al nav,con flex vertical para separar el titulo -->
 		<div class="caja-flex"><!--div con flex-->
 			<div class="beneficios"><!--video y iconos---->
 				<h3 class="rojo faq-h3">Beneficios y ámbitos de formación</h3>
 				<p class="text faq-p">Nuestra formación se extiende a varios ámbitos: desde la enseñanza tradicional de técnicas marciales, hasta la formación en liderazgo, desarrollo personal y acompañamiento social. En esta fundación, formamos personas íntegras, no solo artistas marciales.</p>
 			 	<img src="img/imagen7.jpg" alt="hombres_peleando" class="imagen-faq">
-			</div>
+                <div class="icono-yin pc-icono" style="margin-left: -90px; z-index: 3;  inset: 25% auto auto 5% ; transform: rotate(95deg);"></div>
+                <div class="icono-yan pc-icono" style="margin-left: -90px; inset: 80% auto auto 95% ; z-index: 1" ></div>
+			</div> <!-- fin beneficios -->
 			<div class="caja-flex content-flex"><!--flex botones y el texto-->
 				<div class="desplegable">
 					<div class="caja-mar">
 						<div class="flex-izq">
 							<h3>Laboral</h3>
-						</div>
+						</div> <!-- fin flex-izq -->
 						<div class="icon-arrow">&#10132;</div>
-					</div>
+					</div> <!-- fin caja-mar -->
 					<div class="acordeon">
 						<p class="p_active">Técnico deportivo(monitor/entrenador).</p>
 						<p class="p_active">Titulación oficial.</p>
 						<p class="p_active">Especialista o director de coreografía en películas de acción.</p>
 						<p class="p_active">Aptitud física alta que capacita para superar pruebas de acceso a diferentes instituciones.</p>
-					</div>
-				</div>
+					</div> <!-- fin acordeon -->
+				</div> <!-- fin desplegable -->
 				<div class="desplegable">
 					<div class="caja-mar">
 						<div class="flex-izq">
 							<h3>Crecimiento personal</h3>
-						</div>
+						</div> <!-- fin flex-izq -->
 						<div class="icon-arrow">&#10132;</div>
-					</div>
+					</div> <!-- fin caja-mar -->
 					<div class="acordeon">
 						<p class="p_active">Autoestima, autocontrol y optimismo.</p>
 						<p class="p_active">Desarrollo de los aspectos mentales y espirituales propios de las Artes Marciales. Mejora la condición física y mental.Beneficios de un deporte completo (bilateralidad, brazos-tronco-piernas).</p>
-					</div>
-				</div>	
+					</div> <!-- fin acordeon -->
+				</div> <!-- fin desplegable -->
 				<div class="desplegable">
 					<div class="caja-mar">
 						<div class="flex-izq">
 							<h3>Educativo y socio-cultural</h3>
-						</div>
+						</div> <!-- fin flex-izq -->
 						<div class="icon-arrow">&#10132;</div>
-					</div>
+					</div> <!-- fin caja-mar -->
 					<div class="acordeon">
 						<p class="p_active">Amistad, respeto, esfuerzo, expresión corporal, creatividad y cultura oriental. Además practicar artes marciales permite aprender técnicas de autodefensa para protegerse en situaciones de peligro.</p>
-					</div>
-				</div>	
-			</div>
-		</div>
+					</div> <!-- fin acordeon -->
+				</div> <!-- fin desplegable -->
+			</div> <!-- fin caja-flex content-flex -->
+		</div> <!-- fin caja-flex -->
 		<div class="caja-flex text_logo animado">
 			<img src="img/logo_250px.png" alt="logo_ta-mo" class="logo-tamo-footer">
 			<div class="container-lets">
 				<h2 class="titulos">Luchemos Juntos</h2>
 				<p class="p-luchemos">En el camino del karate y las artes marciales no se lucha solo. Cada técnica,cada caida y cada avance son parte de un proceso compartido. "Luchemos Juntos" representa la unidad,el respeto y el espiritu de superacion que nos une como practicantes.</p>
 				<button class="cta-button">Inscríbete ahora</button>
-			</div>
-		</div>
+			</div> <!-- fin container-lets -->
+		</div> <!-- fin caja-flex text_logo animado -->
 		<div class="redes-sociales">
 	        <a href="https://www.facebook.com/artesmarciales.tamo/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
 	        <a href="https://www.instagram.com/kungfutamo/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
@@ -207,10 +318,10 @@
     		</ul>
 			<div class="content-copy">
 				<small>Copyright © 2024 TA-MO | </small>
-			</div>
+			</div> <!-- fin content-copy -->
 			<div class="circulo-fondo_foot"></div>
-		</div>
-	</div>
+		</div> <!-- fin footer-caja-flex -->
+	</div> <!-- fin principal-box animado -->
 </footer>
 <!-- BOTON PARA ARRIBA -->
 <div class="boton-arriba"><i class="fa fa-angle-up"></i></div>

@@ -26,7 +26,7 @@
 /*************************************/
 * {
     margin: 0;
-    padding: 0;        
+    padding: 0;  
 }
 *,
 *::after,
@@ -48,6 +48,33 @@ ul {
 }
 a {
     text-decoration: none;
+    color: var(--color-blanco);
+}
+a:hover {
+    color: var(--color-rojo);
+}
+main.hist-kungfu {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+main.hist-kungfu h2 {
+/*  font-size: 36px;*/
+    font-size: 2em;
+    margin: 20px 0px;
+    color: var(--color-blanco);
+}
+main h3 {
+    color: var(--color-blanco);
+    margin: 10px 0px;
+}
+h4, h5, h6 {
+    color: var(--color-blanco);
+    margin: 10px 0px;
+}
+section:nth-child(odd) {
+    background-color: #292929;
+    /*Alternar colores de fondo*/
 }
 /**************************************/
 /*** * * * * * * HEADER * * * * * * ***/
@@ -58,12 +85,15 @@ header.home-header {
         rgba(0, 0, 0, 0.5));
     background-position: top right;
     background-repeat: no-repeat;
-    padding: 20px 20px 600px;
+    padding: 20px 20px 500px;
     background-size: cover;
     height: 50vh;
 }
 .section-header {
     padding-bottom: 100px;
+}
+.header-index {
+    margin-bottom: 60px;
 }
 .section-text-container, .text-container {
     flex-direction: column;
@@ -101,6 +131,9 @@ h2 > span.color-secon {
     line-height: 1.5;
     
 }
+.header-h2-hist-kungfu {
+    margin-bottom: 0px;
+}
 /**************************************/
 /**** * * CONTENEDOR PRINCIPAL * * ****/
 /**************************************/
@@ -129,7 +162,8 @@ y el MENU -- */
 .section-main-title, .main-title {
     text-align: center;
     font-size: 2.5rem;
-    margin-top: 100px;
+    padding: 100px 0;
+    color: var(--color-blanco);
 }
 .section-title, .title {
     margin: 0;
@@ -273,7 +307,7 @@ nav.main-menu li > ul {
     transform: rotate(180deg);
 }
 /**************************************/
-/**** * * * NUMERO DE PERSONAS * * ****/
+/**** * * * NUMERO DE PERSONAS * INDEX ****/
 /**************************************/
 .section-media-num, .media-num {    
     display: none;
@@ -353,7 +387,7 @@ nav.main-menu li > ul {
 /**************************************/
 /******** * * * * FONDO * * * * *******/
 /**************************************/
-.fondo{
+.fondo {
     background-color: var(--colorFondo1);
 }
 .fondo_2{
@@ -370,90 +404,6 @@ nav.main-menu li > ul {
     bottom: auto;
     left: 0;
     z-index: -1;
-}
-/**************************************/
-/***** * * flex y cajas de dos * * ****/
-/***** * * caja de imagenes * * *******/
-/**************************************/
-.caja-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-.seccion-tipo-imgs {
-    margin-top: 30px;
-    padding-bottom: 50px;
-}
-.content-flex {
-    flex: 328px 1 1;
-    text-align: center;
-}
-.seccion-tipo-imgs .content-flex .caja-flex {
-    gap: 20px;
-}
-.seccion-tipo-imgs .content-flex.caja-flex {
-    position: relative;
-    justify-content: center;
-}
-.imagen_hrs {
-    height: 380px;
-    max-width: 139px;
-    flex: 130px 1 1;
-    position: relative;
-    object-fit: cover;
-    width: 100%;
-    overflow: hidden;
-    object-position:center ; /* Mueve la imagen hacia la derecha */
-    filter: drop-shadow(1px 2px 4px black);
-    z-index: 10;
-    }
-.img-top {
-    margin-top: 80px;
-}
-.icono-yin {
-    object-fit: cover;
-    margin-left: -90px; 
-    inset: 86% auto auto 40%; 
-    background-image: url("../img/yingArriba.png");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 122px;
-    height: 92px;
-    position: absolute;
-    z-index: 21;
-}
-.icono-yan {
-    object-fit: cover;
-    margin-left: -90px; 
-    inset: -1% auto auto 70%; 
-    background-image: url("../img/yangParaAbajo.png");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 93px;
-    height: 70px;
-    position: absolute;
-    z-index: 21;
-}
-/**************************************/
-/* mover un poco el icono antes de ser ordenador */
-/**************************************/
-@media (min-width: 690px) {
-    .icono-yan {
-        inset: -2% auto auto 80%;
-    }
-}
-.yin-sect2 {
-    inset: 62% auto auto 104%;
-    width: 73px;
-    height: 55px;
-    transform: rotate(244deg);
-}
-.yan-sect2{
-    inset: -13% auto auto 7%;
-    z-index: 11;
-    transform: rotate(159deg);
 }
 /**************************************/
 /************* CONTENIDO **************/
@@ -492,12 +442,56 @@ nav.main-menu li > ul {
     transition: .5s;
 }
 /**************************************/
-/**** desplegable / caja de iconos ****/
+/***** * * flex y cajas de dos * * ****/
+/**************************************/
+.caja-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.img-flex {
+    flex: 310px 1 1;
+}
+.content-flex {
+    flex: 328px 1 1; /* flex: 450px 1 1; hist kung fu */
+    text-align: center;
+}
+/**************************************/
+/***** * * caja de imagenes * * *******/
+/**************************************/
+.seccion-tipo-imgs {
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+.seccion-tipo-imgs .content-flex .caja-flex {
+    gap: 20px;
+}
+.seccion-tipo-imgs .content-flex.caja-flex {
+    position: relative;
+    justify-content: center;
+}
+.imagen_hrs {
+    height: 380px;
+    max-width: 139px;
+    flex: 130px 1 1;
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    overflow: hidden;
+    object-position:center ; /* Mueve la imagen hacia la derecha */
+    filter: drop-shadow(1px 2px 4px black);
+    z-index: 10;
+    }
+.img-top {
+    margin-top: 80px;
+}
+/**************************************/
+/************* desplegable ************/
 /**************************************/
 .icon-arrow {
     transform: scale(1.1);
     color: var(--color-rojo); 
-    font-size: 1.7rem
+    font-size: 1.7rem;
     /* 1.5rem */
 }
 .acordeon {
@@ -508,9 +502,6 @@ nav.main-menu li > ul {
 .desplegable {
     cursor: pointer;
     width: 100%;
-}
-.img-flex {
-    flex: 310px 1 1;
 }
 .seccion-tipo-imgs .caja-mar .icon-arrow {
     color: var(--color-rojo);
@@ -525,7 +516,7 @@ nav.main-menu li > ul {
     width: 100%;    
     cursor: pointer;
 }
-.seccion-tipo-imgs .caja-mar:hover h3,  .seccion-tipo-imgs .caja-mar:hover .icon-arrow{
+.seccion-tipo-imgs .caja-mar:hover h3,  .seccion-tipo-imgs .caja-mar:hover .icon-arrow {
     color: var(--color-blanco);
     transition: .5s;
 }
@@ -546,15 +537,6 @@ nav.main-menu li > ul {
 main i {
     color: var(--color-rojo);
 }
-.icons-caja{
-    justify-content: space-between;
-}
-.icons-caja>span{
-    color: var(--color-blanco);
-    margin: 5px;
-    font-size: 1.5rem;
-    box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4); /* Agrega una sombra sutil */
-}
 /**************************************/
 /*********** caja de imagenes *********/
 /**************************************/
@@ -574,73 +556,6 @@ main i {
     box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4); /* Agrega una sombra sutil */
 }
 /**************************************/
-/*** * * SECCION SOBRE NOSOTROS * * ***/
-/**************************************/
-h2.aportan, p.aportan-concep {
-    margin: 0;
-    padding: 10px 0;
-}
-/**************************************/
-/***** * * SECCION SOBRE TAMO * * *****/
-/**************************************/
-.seccion-tipo-video {
-    padding: 20px 0;
-}
-.caja2-flex {
-    margin: 0;
-    padding: 0 0 30px;
-}
-.seccion-tipo-video .content-flex {
-    padding-bottom: 20px;
-}
-/*.seccion-tipo-video h2 {
-    margin-bottom: 10px;
-}*/
-.cel-titulo{
-    display:block;
-}
-.titulo-cel-sobre-t {
-    color: var(--color-rojo);
-    margin: 0;
-    font-weight: 400;
-}
-.subtitulo-cel-sobre-t {
-    color: var(--color-blanco);
-    text-transform: capitalize;
-    padding: 30px 0 60px;
-    font-size: 2.8rem;
-    font-weight: 400;
-    margin: 0;  
-    /*margin-bottom: 10px;
-    margin-top: 10px;*/
-}
-.seccion-tipo-video .content-flex p {
-    color: var(--color-texto);
-    padding: 10px 0 20px;
-    line-height: 1.5em;
-    font-size: 1.6rem;
-    font-weight: 300;
-    font-size: 18px;
-    margin: 0;
-} /*esta p se queda aqui*/
-.desp {
-    display: none;
-}
-.animo {
-    color: var(--color-rojo);
-    font-style: italic;
-    padding: 5px 0 0;
-    font-size:1.2rem;
-}
-#seccion-sobreTa-mo .yin-sect-tamo {
-    inset: -40% auto auto 17%;
-    transform: rotateX(190deg);
-}
-#seccion-sobreTa-mo .yan-sect-tamo {
-    inset: 70% auto auto 85%;
-    z-index: 1;
-}
-/**************************************/
 /******* * * Iconos Fa Fa * * *********/
 /**************************************/
 .section-header .fa {
@@ -649,8 +564,32 @@ h2.aportan, p.aportan-concep {
 .fa-sort-down {
     margin-left: 5px;
 }
-.pc-icono{
-    display: none;
+.icono-yin-footer {
+    margin-left: -90%;
+    inset: 25% auto auto 5%;
+    transform: rotate(95deg);
+    background-image: url("../img/yingArriba.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 163px;
+    height: 123px;
+    position: absolute;
+    z-index: 3;
+    object-fit: cover;
+}
+.icono-yan-footer {
+    margin-left: -90px; 
+    inset: 80% auto auto 95%; 
+    background-image: url("../img/yangParaAbajo.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 163px;
+    height: 123px;
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
 }
 /**************************************/
 /*********** caja de iconos ***********/
@@ -658,7 +597,7 @@ h2.aportan, p.aportan-concep {
 .icons-caja {
     justify-content: space-between;
 }
-.icons-caja>span {
+.icons-caja > span {
     color: var(--color-blanco);
     margin: 5px;
     font-size: 1.5rem;
@@ -675,110 +614,7 @@ h2.aportan, p.aportan-concep {
     transform: rotate(180deg);
     transition: transform 0.3s ease;
 }
-/**************************************/
-/*** SECCION2 / Maestros / Docentes ***/
-/**************************************/
-.fondo_2 {
-    position: relative;
-    padding-bottom: 30px;
-}
-.circulo-fondo_centro{
-    overflow: auto;
-    background-color: var(--color-rojo);
-    filter: blur(200px); 
-    border-radius: 100%;
-    max-width: 300px;
-    max-height: 300px;
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    top: 0%;
-    bottom: auto;
-    left: 50%;
-}
-.titulo-team-container {
-    text-align:center;
-    padding: 40px 0px;
-}
-.caja_flex_docentes {
-    display: flex;
-    padding: 10px;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.content-docentes {
-    flex: 1 1 150px; /* Los elementos de flex ahora se distribuyen con flexibilidad */
-    text-align: center;
-}
-.content-img {
-    position: relative;
-    overflow: hidden;
-    margin: auto;
-    max-width: 200px;
-    max-height: 170px;
-    margin-bottom: 10px;
-}
-.image-cover {
-    object-fit: cover; /* Ajusta la imagen a las dimensiones del contenedor */
-    width: 100%;
-    height: 200px;
-    object-position: top;
-    transition: transform 1s, opacity 1s; /* Optimizado para que ambas transiciones tengan la misma duración */
-}
-.content-img .image-cover:hover {
-    transform: scale(1.1);
-    opacity: 1; /* Se asegura que la opacidad sea 1 durante el hover */
-}
-.content-img:hover {
-    box-shadow: 0 4px 15px rgba(150, 150, 150, 0.2);
-}
-.nombres {
-    font-size: 1.3rem;
-    padding-bottom: 10px;
-    font-weight: 600;
-    transition: font-size 0.5s; /* Asegura que la transición afecte solo a lo necesario */
-}
-.nombres.rojo:hover {
-    color: var(--color-blanco);
-    transition: 0.5s;
-}
-h3.posicion {
-    color: var(--color-texto);
-}
-            /****    ===== TITULACIONES =====    ****/
-.titulaciones h2 {
-    color: var(--color-rojo);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 2.5rem;
-}
-.titulaciones a {
-    color: var(--color-rojo);
-}
-.parte-superior, .parte-inferior {
-    flex: 1; /* Mitad del alto cada una */
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente */
-    text-align: center;
-    padding: 10px;
-    color: var(--color-texto);
-}
-.parte-inferior {
-    flex-direction: column; /* Para que los <p> estén uno debajo del otro */
-    line-height: 1.5rem;
-    font-size: 1.1rem;
-}
-.parte-inferior p:last-of-type {
-    margin-top: 30px;
-}
-.beneficios {
-    text-align: center;
-    flex: 310px 1 1;
-}
+
 /**************************************/
 /******* * * * * FOOTER * * * * *******/
 /**************************************/
@@ -954,5 +790,538 @@ div.boton-arriba:hover > i {
     opacity: 1;/* Mostrar al activarse */
     transform: translateY(0); /*Volver a la posición original */
 }
+
+/************************* index.html *************************/
+/**************************************************************/
+/** ========== ** ** ** ** ** INDEX ** ** ** ** ============ **/
+/**************************************************************/
+/**************************************************************/
+
+
+/************* ICONOS *****************/
+
+/* del index*/
+.icono-yin {
+    object-fit: cover;
+    margin-left: -90px; 
+    inset: 86% auto auto 40%; 
+    background-image: url("../img/yingArriba.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 122px;
+    height: 92px;
+    position: absolute;
+    z-index: 21;
+}
+/* del index*/
+.icono-yan {
+    object-fit: cover;
+    margin-left: -90px; 
+    inset: -1% auto auto 70%; 
+    background-image: url("../img/yangParaAbajo.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 93px;
+    height: 70px;
+    position: absolute;
+    z-index: 21;
+}
+/**************************************/
+/* mover un poco el icono antes de ser ordenador */
+
+@media (min-width: 690px) {
+    .icono-yan {
+        inset: -2% auto auto 80%;
+    }
+}
+.yin-sect2 {
+    inset: 62% auto auto 104%;
+    width: 73px;
+    height: 55px;
+    transform: rotate(244deg);
+}
+.yan-sect2{
+    inset: -13% auto auto 7%;
+    z-index: 11;
+    transform: rotate(159deg);
+}
+/**************************************/
+/*** * * SECCION SOBRE NOSOTROS * * INDEX ***/
+/**************************************/
+h2.aportan, p.aportan-concep {
+    margin: 0;
+    padding: 10px 0;
+}
+/**************************************/
+/***** * * SECCION SOBRE TAMO * * INDEX *****/
+/**************************************/
+.seccion-tipo-video {
+    padding: 20px 0;
+}
+.caja2-flex {
+    margin: 0;
+    padding: 0 0 30px;
+}
+.seccion-tipo-video .content-flex {
+    padding-bottom: 20px;
+}
+/*.seccion-tipo-video h2 {
+    margin-bottom: 10px;
+}*/
+.cel-titulo{
+    display:block;
+}
+.titulo-cel-sobre-t {
+    color: var(--color-rojo);
+    margin: 0;
+    font-weight: 400;
+}
+.subtitulo-cel-sobre-t {
+    color: var(--color-blanco);
+    text-transform: capitalize;
+    padding: 30px 0 60px;
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin: 0;  
+    /*margin-bottom: 10px;
+    margin-top: 10px;*/
+}
+.seccion-tipo-video .content-flex p {
+    color: var(--color-texto);
+    padding: 10px 0 20px;
+    line-height: 1.5em;
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 0;
+} /*esta p se queda aqui*/
+.desp {
+    display: none;
+}
+.animo {
+    color: var(--color-rojo);
+    font-style: italic;
+    padding: 5px 0 0;
+    font-size:1.2rem;
+}
+#seccion-sobreTa-mo .yin-sect-tamo {
+    inset: -45% auto auto 156%;
+    transform: rotateX(180deg) rotateY(180deg);
+}
+#seccion-sobreTa-mo .yan-sect-tamo {
+    inset: 70% auto auto 85%;
+    z-index: 1;
+}
+/**************************************/
+/*** SECCION2 / Maestros / Docentes ** INDEX ****/
+/**************************************/
+.fondo_2 {
+    position: relative;
+    padding-bottom: 30px;
+}
+.circulo-fondo_centro{
+    overflow: auto;
+    background-color: var(--color-rojo);
+    filter: blur(200px); 
+    border-radius: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 50%;
+}
+.titulo-team-container {
+    text-align:center;
+    padding: 40px 0px;
+}
+.caja_flex_docentes {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.content-docentes {
+    flex: 1 1 150px; /* Los elementos de flex ahora se distribuyen con flexibilidad */
+    text-align: center;
+}
+.content-img {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    max-width: 200px;
+    max-height: 170px;
+    margin-bottom: 10px;
+}
+.image-cover {
+    object-fit: cover; /* Ajusta la imagen a las dimensiones del contenedor */
+    width: 100%;
+    height: 200px;
+    object-position: top;
+    transition: transform 1s, opacity 1s; /* Optimizado para que ambas transiciones tengan la misma duración */
+}
+.content-img .image-cover:hover {
+    transform: scale(1.1);
+    opacity: 1; /* Se asegura que la opacidad sea 1 durante el hover */
+}
+.content-img:hover {
+    box-shadow: 0 4px 15px rgba(150, 150, 150, 0.2);
+}
+.nombres {
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    font-weight: 600;
+    transition: font-size 0.5s; /* Asegura que la transición afecte solo a lo necesario */
+}
+.nombres.rojo:hover {
+    color: var(--color-blanco);
+    transition: 0.5s;
+}
+h3.posicion {
+    color: var(--color-texto);
+}
+            /****    ===== TITULACIONES =====    ****/
+.titulaciones h2 {
+    color: var(--color-rojo);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2.5rem;
+}
+.titulaciones a {
+    color: var(--color-rojo);
+}
+.parte-superior, .parte-inferior {
+    flex: 1; /* Mitad del alto cada una */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    text-align: center;
+    padding: 10px;
+    color: var(--color-texto);
+}
+.parte-inferior {
+    flex-direction: column; /* Para que los <p> estén uno debajo del otro */
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+}
+.parte-inferior p:last-of-type {
+    margin-top: 30px;
+}
+.beneficios {
+    text-align: center;
+    flex: 310px 1 1;
+}
+
+
+/****************** historia-kungfu.html **********************/
+/**************************************************************/
+/** ========== ** ** HISTORIA DEL KUNG-FU ** ** ============ **/
+/**************************************************************/
+/**************************************************************/
+  
+/************ general *************/
+section.hist-kungfu:nth-child(odd) {
+    background-color: #292929; /*Alternar colores de fondo*/ 
+}
+.texto_mas-kungfu {
+    /* ocultar el texto */
+    max-height: 0px;
+    overflow: hidden;
+}
+main.hist-kungfu button {
+    padding: 16px 30px;
+    width: 150px;
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    border: 1px solid var(--color-rojo);
+    border-radius: 5px;
+    margin: 20px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+main.hist-kungfu button:hover {
+    background-color: var(--color-negro);
+    color: var(--color-rojo);
+    border: 1px solid var(--color-borde-hover);
+}
+iframe.hist-kungfu {
+    width: 100%;
+    margin: auto;
+    height:350px; 
+    filter: sepia(100%);
+    border: none;
+    border-radius: 5px; 
+    box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4); /* Agrega una sombra sutil */
+}
+/**************************************/
+/*** * Sección Historia-Introducción * * 
+ * hist kung fu * * * *****************/
+/**************************************/
+#historia_intro-kungfu .contenedor_texto-kungfu {
+    padding: 0 20px;
+}
+#historia_intro-kungfu p {
+    text-align: initial;
+}
+.contenedor_intro-kungfu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.contenedor_intro-kungfu h4 {
+    font-size: 15px !important;
+}
+.contenedor_texto-kungfu p {
+    margin: 30px 0;
+}
+ul.lista-kungfu-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+/******** ============== Modo TABLET *******/
+@media (min-width:768px) {
+    .contenedor_intro-kungfu {
+        flex-direction: row-reverse;
+    }
+    .contenedor_intro-kungfu iframe {
+    flex: 1 1 600px;
+    margin: 10px;
+    }
+    #historia_intro-kungfu .contenedor_texto-kungfu {
+    padding: 0 50px;
+    }
+    .contenedor_texto-kungfu {
+    flex: 1 1 500px;
+    }
+}
+/**************************************/
+/*** * Sección Historia-Origen * * * *
+ * hist kung fu * * * *****************/
+/**************************************/
+
+#historia_origen-kungfu .texto_mas-kungfu {
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+#historia_origen-kungfu .texto_mas-kungfu figure {
+    flex: 0 1 450px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    border-radius: 5px; 
+    display: inline-block;
+    overflow: hidden;
+}
+#historia_origen-kungfu .texto_mas-kungfu img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+}
+#historia_origen-kungfu .texto_mas-kungfu p {
+    padding: 0 20px;
+}
+#historia_origen-kungfu .contenedor_origen-kungfu .contenedor_texto-kungfu {
+    padding: 0 20px;
+}
+.contenedor_origen-kungfu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.contenedor_origen-kungfu h4 {
+    font-size: 15px !important;
+}
+.contenedor_origen-kungfu figure {
+    flex: 1 1 250px;
+    margin: 10px;
+}
+.contenedor_origen-kungfu figure img {
+    width: 100%;
+    max-width: 500px;
+    filter: sepia(50%);
+    border: none;
+    border-radius: 5px; 
+}
+/******** ============== Modo TABLET *******/
+@media (min-width:768px) {
+    #historia_origen-kungfu .contenedor_origen-kungfu .contenedor_texto-kungfu {
+        flex:1 1 600px;
+        padding: 0 50px;
+    }
+    #historia_origen-kungfu .contenedor_origen-kungfu figure {
+        flex: 1 1 400px;
+    }
+    #historia_origen-kungfu .texto_mas-kungfu figure {
+        flex-basis: 500px;
+    }
+    #historia_origen-kungfu .texto_mas-kungfu p {
+        flex: 1 1 700px;
+        padding: 0 50px;
+    }
+}
+/**************************************/
+/*** * Sección Historia-Evolución * * *
+ * ******** Línea de tiempo ******* * *
+ * hist kung fu * * * *****************/
+/**************************************/
+
+#historia_evolucion-kungfu h4 {
+    font-size: 15px !important;
+}
+#historia_evolucion-kungfu .texto_mas-kungfu.texto_flex-kungfu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#historia_evolucion-kungfu .texto_mas-kungfu.texto_flex-kungfu figure {
+    flex-basis: 400px;
+}
+#historia_evolucion-kungfu .texto_mas-kungfu.texto_flex-kungfu img {
+    width: 100%;
+}
+#historia_evolucion-kungfu .texto_mas-kungfu div.mas_flex-kungfu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#historia_evolucion-kungfu .texto_mas-kungfu div.mas_flex-kungfu p {
+    margin: 20px 0;
+}
+.linea-kungfu {
+    display: none; /* ocultar la línea dashed */
+}
+.contenedor_escuela-kungfu {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.contenido_escuela-kungfu {
+    padding: 20px;
+    margin: 10px;
+}
+.contenedor_img-kungfu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contenedor_img-kungfu figure {
+    flex: 1 1 250px;
+    padding: 10px;
+    max-width: 400px;
+    overflow: hidden;
+    width: 250px;
+    height: 167px;
+}
+.contenedor_img-kungfu figure img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contenedor_indicador-kungfu {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.contenido_indicador-kungfu {
+    color: var(--color-rojo);
+    padding: 20px 0 0;
+    flex: 1 1 300px;
+}
+.contenido_indicador-kungfu h3 {
+    margin: 16px 0 0;
+    color: var(--color-rojo);
+}
+.contenido_indicador-kungfu p {
+    color: var(--color-gris);
+    margin: 8px 0 0;
+}
+.circulo-fuera-kungfu {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border:10px solid #BC0A0A66;
+    margin: auto;
+    box-sizing: border-box;
+}
+.circulo-dentro-kungfu {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-rojo);
+    margin: auto;
+    box-sizing: border-box;
+}
+/******** ============== Modo TABLET *******/
+@media (min-width: 768px){
+    .contenedor_img-kungfu figure {
+        flex: 1 1 350px;
+    }
+    .contenedor_img-kungfu figure img {
+        width: 100%;
+    }
+    .contenedor_indicador-kungfu {
+        flex-wrap: nowrap;
+    }
+    .caja_indicador-kungfu {
+        position: relative;
+    }
+    .linea-kungfu {
+        display: block; /* aparecer la línea dashed */
+        border-bottom: 1px dashed var(--color-rojo);
+        position: absolute;
+        top: 22%;
+        right: 14%;
+        left: 14%;
+    }    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

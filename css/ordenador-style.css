@@ -1,13 +1,21 @@
 @media (min-width: 980px) {
+
+/*****************************************/
+/* * * * *   generales e index   * * * * */
+/*****************************************/
     header.home-header {
         background: linear-gradient(#2225, #2225), url('../img/header.png');
         background-repeat: no-repeat;
         background-position: top right;
         background-size: 60%;
-        padding: 25px 0 700px;
+        padding: 20px 20px;
+        height: 60vh;
     }
     h1 {
         font-size: 3rem;
+    }
+    .header-h2-hist-kungfu {
+        margin-bottom: 50px;
     }
     .caja-titulo p {
         font-size: 1.4rem;
@@ -18,14 +26,13 @@
     .cel-titulo {
         display:none;
     }
+    .section-main-title, .main-title {
+        font-size: 3rem;
+        padding: 80px 0;
+    }
 /*** ===== Contenedor principal ===    */
     .principal-box, .section-principal-box {
         padding: 20px;
-    }
-    .section-main-title, .main-title {
-        text-align: center;
-        font-size: 5rem;
-        margin-top: 150px;
     }
 /*** ===== MENU PARA PC ===    */
     .menu-container {
@@ -139,9 +146,6 @@
         display: none;
     }
 /*** ===== Iconos yan-yin en pc ===    */    
-    .pc-icono {
-        display: none;
-    }
     .students h2, .years-experience h2 {
         font-size: 4rem;
     }
@@ -195,4 +199,117 @@
     .horari {
         justify-content: initial;
     }
+/*****************************************/
+/* ============ historia-kungfu.html === */
+/*****************************************/
+/****** seccion historia introducción  ***/
+    .contenedor_intro-kungfu {
+        flex-wrap: nowrap;
+        text-align: initial;
+        align-items: flex-start;
+    }
+    .contenedor_intro-kungfu h2, .contenedor_intro-kungfu h4 {
+        text-align: initial;
+    }
+    #historia_intro-kungfu .contenedor_texto-kungfu {
+        flex: 1 1 400px;
+        margin-left: 20px;
+        padding: 0;
+    }
+    .contenedor_intro-kungfu iframe {
+        flex: 1 1 400px;
+    }
+    #historia_intro-kungfu p {
+        text-align: initial;
+    }
+/****** seccion historia origen  ***/
+    .contenedor_origen-kungfu {
+        align-items: flex-start;
+    }
+    #historia_origen-kungfu .contenedor_origen-kungfu .contenedor_texto-kungfu {
+        flex:1 1 500px;
+        text-align: initial;
+        padding: 0;
+        padding-left:10px;
+    }
+    #historia_origen-kungfu .contenedor_origen-kungfu figure{
+        max-width: 450px;
+    }
+    #historia_origen-kungfu .texto_mas-kungfu {
+        margin-top: 20px;
+    }
+    #historia_origen-kungfu p {
+        text-align: initial;
+    }
+    #historia_origen-kungfu .texto_mas-kungfu figure {
+        margin-top: 0;
+        flex-basis: 400px;
+        margin-left: 10px;
+        margin-bottom: 0;
+    }
+    #historia_origen-kungfu .texto_mas-kungfu p {
+        margin-left: 20px;
+        flex-basis: 500px;
+        padding: 0px;
+    }
+    #historia_origen-kungfu .boton_esp {
+/*      margin: -50px 0px 20px -50%;*/
+    }
+/****** seccion historia evolucion  ***/
+    #historia_evolucion-kungfu .texto_mas-kungfu.texto_flex-kungfu {
+        flex-wrap: nowrap;
+    }
+    #historia_evolucion-kungfu .texto_mas-kungfu.texto_flex-kungfu p {
+        flex-basis: 500px;
+        text-align: left;
+        margin-right: 20px;
+    }
+    #historia_evolucion-kungfu .texto_mas-kungfu p {
+        text-align: left;
+    }
+    #historia_evolucion-kungfu .texto_mas-kungfu div.mas_flex-kungfu {
+        align-items: baseline;
+    }
+    #historia_evolucion-kungfu .texto_mas-kungfu div.mas_flex-kungfu p {
+        flex-wrap: nowrap;
+        flex: 1 1 250px;
+    }
+    .contenedor_img-kungfu {
+        flex-wrap: nowrap;
+    }
+    .linea-kungfu {
+        display: block; /* aparecer la línea dashed */
+        border-bottom: 1px dashed var(--color-rojo);
+        position: absolute;
+        top: 22%;
+        right: 14%;
+        left: 14%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
