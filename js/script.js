@@ -29,12 +29,12 @@ $("#nav-container-pc").html(`
             </a>
             <ul class="despliegue-secundario">
                 <li><a href="historia-kungfu.html">Historia</a></li>
-                <li><a href="estilos.html">Estilos</a></li>
-                <li><a href="escuela.html">Escuela</a></li>
+                <li><a href="estilos-kungfu.html">Estilos</a></li>
+                <li><a href="escuela-kungfu.html">Escuela</a></li>
             </ul>
         </li>
         <li><a href="taichi.html">Taichi</a></li>
-        <li><a href="defensa.html">Defensa&nbsp;personal</a></li>
+        <li><a href="defensa-personal.html">Defensa&nbsp;personal</a></li>
         <li class="li-despliegue">
             <a class="submenu-item-pc">
                 Medios

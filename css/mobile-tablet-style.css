@@ -53,6 +53,9 @@ a {
 a:hover {
     color: var(--color-rojo);
 }
+main.index {
+    padding-top: 10px;
+}
 main.hist-kungfu {
     text-align: center;
     font-size: 18px;
@@ -75,6 +78,9 @@ h4, h5, h6 {
 section:nth-child(odd) {
     background-color: #292929;
     /*Alternar colores de fondo*/
+}
+strong {
+    color: var(--color-blanco);
 }
 /**************************************/
 /*** * * * * * * HEADER * * * * * * ***/
@@ -103,6 +109,7 @@ header.home-header {
 h1 {
     font-family: "Protest Revolution", sans-serif;
     font-size: 3rem;
+    color: var(--color-blanco);
 }
 .caja-titulo {
     padding-right: 0;
@@ -131,7 +138,7 @@ h2 > span.color-secon {
     line-height: 1.5;
     
 }
-.header-h2-hist-kungfu {
+.main-title.header-h2-hist-kungfu {
     margin-bottom: 0px;
 }
 /**************************************/
@@ -409,11 +416,14 @@ nav.main-menu li > ul {
 /************* CONTENIDO **************/
 /**************************************/
 .titulos {
-    text-transform: capitalize;
     font-weight: 400;
     font-size: 2.8rem;
     color: var(--color-blanco);
     padding: 10px 0;
+    /*
+    margin-bottom: 10px;
+    margin-top: 10px;
+    */
 }
 .blanco {
     color: var(--color-blanco);
@@ -453,7 +463,7 @@ nav.main-menu li > ul {
     flex: 310px 1 1;
 }
 .content-flex {
-    flex: 328px 1 1; /* flex: 450px 1 1; hist kung fu */
+    flex: 350px 1 1; /* flex: 450px 1 1; hist kung fu */
     text-align: center;
 }
 /**************************************/
@@ -623,6 +633,14 @@ footer {
     position: relative;
     overflow: hidden;
 }
+div.faq-tit-img-cont {
+    text-align: center;
+    flex: 310px 1 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
 footer .faq-h3 {
     font-size: 2rem;
 }
@@ -632,7 +650,8 @@ footer .faq-p {
 footer .imagen-faq {
     width: 100%; 
     max-width: 500px; 
-    position: relative; 
+    position: relative;
+    margin: auto;
 }
 footer .logo-tamo-footer {
     max-width: 300px;
@@ -660,6 +679,11 @@ footer .img-flex.video {
 }
 footer .caja-flex .content-flex {
     height: 100%;
+    flex: 380px 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
 }
 footer .caja-mar h3 {
     font-weight: 500;
@@ -841,15 +865,23 @@ div.boton-arriba:hover > i {
     width: 73px;
     height: 55px;
     transform: rotate(244deg);
+    z-index: -1;
 }
-.yan-sect2{
+.yan-sect2 {
     inset: -13% auto auto 7%;
     z-index: 11;
     transform: rotate(159deg);
+    z-index: -1;
 }
+
 /**************************************/
-/*** * * SECCION SOBRE NOSOTROS * * INDEX ***/
+/*** * * SECCION BENEFICIOS * * ******* 
+ * SOBRE NOSOTROS * * INDEX ***********/
 /**************************************/
+#seccion-beneficios {
+    padding: 80px;
+    background-color: var(--fondo1);
+}
 h2.aportan, p.aportan-concep {
     margin: 0;
     padding: 10px 0;
@@ -857,6 +889,9 @@ h2.aportan, p.aportan-concep {
 /**************************************/
 /***** * * SECCION SOBRE TAMO * * INDEX *****/
 /**************************************/
+#seccion-sobreTa-mo {
+    padding: 80px;
+}
 .seccion-tipo-video {
     padding: 20px 0;
 }
@@ -1014,11 +1049,6 @@ h3.posicion {
 .parte-inferior p:last-of-type {
     margin-top: 30px;
 }
-.beneficios {
-    text-align: center;
-    flex: 310px 1 1;
-}
-
 
 /****************** historia-kungfu.html **********************/
 /**************************************************************/
@@ -1065,8 +1095,8 @@ iframe.hist-kungfu {
 /*** * Sección Historia-Introducción * * 
  * hist kung fu * * * *****************/
 /**************************************/
-#historia_intro-kungfu .contenedor_texto-kungfu {
-    padding: 0 20px;
+#historia_intro-kungfu div.contenedor_texto-kungfu {
+    padding: 20px;
 }
 #historia_intro-kungfu p {
     text-align: initial;
@@ -1077,6 +1107,7 @@ iframe.hist-kungfu {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 20px;
 }
 .contenedor_intro-kungfu h4 {
     font-size: 15px !important;
@@ -1143,6 +1174,7 @@ ul.lista-kungfu-intro {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 20px;
 }
 .contenedor_origen-kungfu h4 {
     font-size: 15px !important;
@@ -1180,7 +1212,9 @@ ul.lista-kungfu-intro {
  * ******** Línea de tiempo ******* * *
  * hist kung fu * * * *****************/
 /**************************************/
-
+#historia_evolucion-kungfu {
+    padding: 20px
+}
 #historia_evolucion-kungfu h4 {
     font-size: 15px !important;
 }
@@ -1299,6 +1333,182 @@ ul.lista-kungfu-intro {
         left: 14%;
     }    
 }
+/******************* escuela-kungfu.html **********************/
+/**************************************************************/
+/** =========== ** ** ESCUELA DE KUNG-FU ** ** ============= **/
+/**************************************************************/
+/**************************************************************/
+
+/************ header / general *********/
+.caja-position-escue-kungfu{
+    
+    display: flex;
+    justify-content: right;
+}
+.caja-titulo-header-escue-kungfu {
+    width: 550px;
+    height: 300px;
+    padding: 0 20px;
+}
+.caja-titulo-header-escue-kungfu p {
+    color: var(--color-texto);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+.header-h2-escue-kungfu {
+    color: var(--color-blanco);
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 0px;
+}
+.segunda-linea-main-title2 {
+    display: block;
+    font-size: 3rem;
+    color: var(--color-rojo);
+    text-align: left; 
+}
+main.main-escuela-kungfu section p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+.contenedor_flex-escue-kungfu {
+    display: flex;
+    flex-wrap: wrap;
+}
+/**************************************/
+/*** * * Sección escuela-kungfu * * ***
+ * ******** seccion salud ******* * * *
+ * escue kung fu * * * ****************/
+/**************************************/
+
+#escuela-kungfu {
+    padding: 20 0 50px 0;
+}
+.seccion-salud {
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+#escuela-kungfu div.content-flex.caja-flex {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.seccion-salud .content-flex .caja-flex {
+    gap: 20px;
+}
+.seccion-salud p {
+    color: var(--color-texto);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+.seccion-salud .flex-izq {
+    gap: 20px;
+    align-items: center;
+    display: flex;
+}
+.imagen_hrs-escue-kungfu {
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
+    max-width: 210px;
+    flex: 240px 1 1;
+    height: 470px;
+    z-index: 10;
+    width: 100%;  
+}
+.icono-yan-secc-salud {
+    background-image: url("../img/yangParaAbajo.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    inset: 3% auto auto 35%;
+    background-size: cover;
+    margin-left: -90px;
+    position: absolute;
+    width: 113px;
+    height: 85px;
+    z-index: 11;
+}
+.icono-yin-secc-salud {
+    background-image: url("../img/yingArriba.png");
+    background-repeat: no-repeat;
+    inset: 80% auto auto 75%;
+    background-position: 0 0;
+    background-size: cover;
+    position: absolute;
+    margin-left: -90px;
+    width: 122px; /* 122*//*163*/
+    height: 92px; /* 92 *//* 123 */
+    z-index: 1;
+}
+#escuela-kungfu .img-top {
+    margin-top: 80px;
+}
+#escuela-kungfu .content-flex-text {
+    flex: 450px 1 1;
+}
+/**************************************/
+/*** * Sección grandes bloques * * *
+ * escue kung fu * * * ****************/
+/**************************************/
+#grandes-bloques-escue-kungfu {
+    padding: 50px 0;
+}
+#grandes-bloques-escue-kungfu h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+#grandes-bloques-escue-kungfu h2 {
+    text-align: center;
+}
+#grandes-bloques-escue-kungfu img {
+    max-width: 1061px;
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+}
+.texto-escue-kungfu {
+    flex: 1 1 400px;
+    margin:15px 5px;
+}
+.texto-escue-kungfu h3 {
+    color: var(--color-blanco);
+    text-align: left !important;
+    font-size: 1.5rem !important;
+    font-weight: 500 !important;
+    margin-bottom: 15px;
+}
+/**************************************/
+/*** * * * Sección VIDEO * * * ********
+ * escue kung fu * * * ****************/
+/**************************************/
+#video-escue-kungfu {
+    padding: 50px 0;
+}
+#video-escue-kungfu iframe {
+    max-width: 1061px;
+    width: 100%;
+}
+/******** ============== Modo TABLET *******/
+@media (min-width: 768px){
+    .texto-escue-kungfu {
+        margin:15px;
+        flex: 1 1 400px;
+    }
+    #video-escue-kungfu iframe {
+        height: 500px;
+    }
+}
 
 
 
@@ -1323,5 +1533,13 @@ ul.lista-kungfu-intro {
 
 
 
+
+
+
+
+.galeria{
+    margin-top: 20px;
+    padding-top: 20px;
+}
 
 

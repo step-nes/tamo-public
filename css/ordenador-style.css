@@ -1,4 +1,4 @@
-@media (min-width: 980px) {
+@media (min-width: 996px) {
 
 /*****************************************/
 /* * * * *   generales e index   * * * * */
@@ -14,8 +14,9 @@
     h1 {
         font-size: 3rem;
     }
-    .header-h2-hist-kungfu {
-        margin-bottom: 50px;
+    .main-title.header-h2-hist-kungfu {
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
     .caja-titulo p {
         font-size: 1.4rem;
@@ -77,6 +78,7 @@
         width: 100%;
         height: 100%;
         border-radius: 5px;
+        font-size: 1rem;
     }
     a.submenu-item-pc {
         width: initial;
@@ -87,6 +89,7 @@
         font-weight: 600;
         border-left: 2px solid var(--color-rojo);
         margin-left: 5px;
+        background-color: #5555;
     }
         /* para el despliegue del submenu */
     ul.list-menu-pc > li {
@@ -285,14 +288,41 @@
         right: 14%;
         left: 14%;
     }
+/*****************************************/
+/* ============ escuela-kungfu.html === */
+/*****************************************/
 
+/****** seccion escuela-kungfu / seccion salud***/
+    .caja-position-escue-kungfu {
+        position: relative;
+    }
+    .caja-titulo-header-escue-kungfu {
+        width: 450px;
+        height: 300px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0px 20px 0px 20px;
+    }
+    .header-h2-escue-kungfu { 
+        font-size: 3rem;
+        margin-top: 100px;
+    }
+    .segunda-linea-main-title2 {
+        font-size: 3.5rem;
+        color: var(--color-rojo);  
+    }
+    .texto-escue-kungfu {
+        margin:15px;
+    }
 
-
-
-
-
-
-
+/**** averiguar ****
+ * .titulo {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-top: 100px;
+    }
+    *****/
 
 
 
