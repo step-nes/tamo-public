@@ -1,3 +1,21 @@
+/*** Excepciones ***/
+
+/*********************************/
+/* esuela-kung-fu secc salud *****/
+@media (min-width: 980px) {
+    .icono-yin-secc-salud {
+        inset: 90% auto auto 75%;
+    }
+}
+/*********************************/
+
+
+
+
+
+
+
+
 @media (min-width: 996px) {
 
 /*****************************************/
@@ -292,21 +310,18 @@
 /* ============ escuela-kungfu.html === */
 /*****************************************/
 
-/****** seccion escuela-kungfu / seccion salud***/
+/****** seccion escuela-kungfu / seccion salud ***/
     .caja-position-escue-kungfu {
         position: relative;
+        align-items: flex-end;
     }
     .caja-titulo-header-escue-kungfu {
         width: 450px;
         height: 300px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        margin: 0px 20px 0px 20px;
     }
-    .header-h2-escue-kungfu { 
+    h2.header-h2-escue-kungfu { 
         font-size: 3rem;
-        margin-top: 100px;
+        padding: 0 0 40px;
     }
     .segunda-linea-main-title2 {
         font-size: 3.5rem;
@@ -315,7 +330,16 @@
     .texto-escue-kungfu {
         margin:15px;
     }
-
+    .icono-yan-secc-salud {
+        inset: 1% auto auto 35%;
+        width: 163px;
+        height: 123px;
+    }
+    .icono-yin-secc-salud {
+        inset: 91% auto auto 75%;
+        width: 163px;
+        height: 123px;
+    }
 /**** averiguar ****
  * .titulo {
         text-align: center;
