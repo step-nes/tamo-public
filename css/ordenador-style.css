@@ -8,18 +8,14 @@
     }
 }
 /*********************************/
-
-
-
-
-
-
+/*********************************/
+/*********************************/
 
 
 @media (min-width: 996px) {
 
 /*****************************************/
-/* * * * *   generales e index   * * * * */
+/* * * * *   GENERALES e INDEX   * * * * */
 /*****************************************/
     header.home-header {
         background: linear-gradient(#2225, #2225), url('../img/header.png');
@@ -28,6 +24,9 @@
         background-size: 60%;
         padding: 20px 20px;
         height: 60vh;
+    }
+    .header-index {
+        margin-bottom: 60px;
     }
     h1 {
         font-size: 3rem;
@@ -48,6 +47,10 @@
     .section-main-title, .main-title {
         font-size: 3rem;
         padding: 80px 0;
+    }
+    #seccion-beneficios {
+        padding-top: 80px;
+        margin-top: 20px;
     }
 /*** ===== Contenedor principal ===    */
     .principal-box, .section-principal-box {
@@ -123,6 +126,7 @@
         background-color: var(--colorFondo1);
         transition: opacity 0.3s ease, transform 0.3s, visibility 0.3s;
         box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+        z-index: 10;
     }
     li.li-despliegue:hover > ul.despliegue-secundario {
         opacity: 1;
@@ -220,6 +224,7 @@
     .horari {
         justify-content: initial;
     }
+
 /*****************************************/
 /* ============ historia-kungfu.html === */
 /*****************************************/
@@ -340,21 +345,29 @@
         width: 163px;
         height: 123px;
     }
-/**** averiguar ****
- * .titulo {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-top: 100px;
+/*****************************************/
+/* ============ contacto.html ========== */
+/*****************************************/
+    #contacto-form.form {
+        background-image: none;
     }
-    *****/
-
-
-
-
-
-
-
-
+    div.foto-form {
+        display: block;
+        background-image: url("../img/fondoForm-2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .flex-form {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+    div.inputs,
+    .titulo-form {
+        width: initial;
+    }
+    
 
 
 

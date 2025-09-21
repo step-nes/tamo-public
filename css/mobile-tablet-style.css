@@ -98,9 +98,6 @@ header.home-header {
 .section-header {
     padding-bottom: 100px;
 }
-.header-index {
-    margin-bottom: 60px;
-}
 .section-text-container, .text-container {
     flex-direction: column;
     margin: 0 35px 0 15px;
@@ -199,10 +196,10 @@ svg.bars {
     right: 30px;
     top: 40px;
     z-index: 5;
+    cursor: pointer;
 }
 .bars > path, .times > path {
     fill: white;
-    cursor: pointer;
 }
 svg.bars:hover > path, svg.times:hover > path {
     fill: var(--color-rojo);
@@ -457,7 +454,7 @@ nav.main-menu li > ul {
 .caja-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
 }
 .img-flex {
     flex: 310px 1 1;
@@ -566,7 +563,7 @@ main i {
     box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4); /* Agrega una sombra sutil */
 }
 /**************************************/
-/******* * * Iconos Fa Fa * * *********/
+/******* * * Iconos * * *********/
 /**************************************/
 .section-header .fa {
     margin-left: 5px;
@@ -842,7 +839,7 @@ div.boton-arriba:hover > i {
 .icono-yan {
     object-fit: cover;
     margin-left: -90px; 
-    inset: -1% auto auto 70%; 
+    inset: -2% auto auto 80%; 
     background-image: url("../img/yangParaAbajo.png");
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -879,8 +876,11 @@ div.boton-arriba:hover > i {
  * SOBRE NOSOTROS * * INDEX ***********/
 /**************************************/
 #seccion-beneficios {
-    padding: 80px;
+    padding: 50px;
     background-color: var(--fondo1);
+}
+.sobre-nos {
+    padding-top: 15px;
 }
 h2.aportan, p.aportan-concep {
     margin: 0;
@@ -890,7 +890,7 @@ h2.aportan, p.aportan-concep {
 /***** * * SECCION SOBRE TAMO * * INDEX *****/
 /**************************************/
 #seccion-sobreTa-mo {
-    padding: 80px;
+    padding: 50px;
 }
 .seccion-tipo-video {
     padding: 20px 0;
@@ -905,7 +905,7 @@ h2.aportan, p.aportan-concep {
 /*.seccion-tipo-video h2 {
     margin-bottom: 10px;
 }*/
-.cel-titulo{
+.cel-titulo {
     display:block;
 }
 .titulo-cel-sobre-t {
@@ -916,7 +916,7 @@ h2.aportan, p.aportan-concep {
 .subtitulo-cel-sobre-t {
     color: var(--color-blanco);
     text-transform: capitalize;
-    padding: 30px 0 60px;
+    padding: 30px 0 40px;
     font-size: 2.8rem;
     font-weight: 400;
     margin: 0;  
@@ -952,9 +952,9 @@ h2.aportan, p.aportan-concep {
 /**************************************/
 /*** SECCION2 / Maestros / Docentes ** INDEX ****/
 /**************************************/
-.fondo_2 {
+#profesores {
     position: relative;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 .circulo-fondo_centro{
     overflow: auto;
@@ -1047,7 +1047,7 @@ h3.posicion {
     font-size: 1.1rem;
 }
 .parte-inferior p:last-of-type {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 /****************** historia-kungfu.html **********************/
@@ -1471,6 +1471,7 @@ main.main-escuela-kungfu section p {
 #grandes-bloques-escue-kungfu h3.h3-tit-grandes-bloq {
     color: var(--color-rojo);
     margin-bottom: 20px;
+    margin-top: 20px;
     font-size: 1.3rem;
     text-align: center;
     font-weight: 400;
@@ -1522,34 +1523,233 @@ main.main-escuela-kungfu section p {
 
 
 
+/*********************** contacto.html ************************/
+/**************************************************************/
+/** ============ ** ** ** CONTACTO ** ** ** ============== **/
+/**************************************************************/
+/**************************************************************/
+.fondo-total {
+    background-image: linear-gradient(#000c, #000c),url(../img/fondoContacto.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15px 15px 80px;
+}
+h2.titulo-contact {
+    color: var(--color-blanco);
+    font-size: 5rem;
+    text-align: center;
+    padding: 30px 0;
+}
+#seccion-contacto {
+    display: flex
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start
+    padding: 30px 30px 50px;
+    color: var(--color-texto);
+}
+.tarjetas-container-contact {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* en vez de stretch */
+}
+.tarjeta-contacto {
+    background-color: var(--colorFondo1);
+    padding: 30px;
+    border-radius: 10px;
+    min-height: 292px;
+    height: 520px;
+    max-width: 520px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-texto);
+    flex: 350px 1 1;
+}
+.icono-titulo-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-rojo);
+}
+.icono-titulo-map {
+    display: flex;
+    align-items: center;    
+    color: var(--color-rojo);
+    margin-top: 20px;
+    margin-bottom: 7px;
+}
+.icono-contact {
+    font-size: 1.5rem;
+    color: var(--color-texto);
+}
+.info-contacto-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 7px;
+}
+.info-contacto-list a {
+    color: var(--color-texto);
+}
+.info-contacto-list a:hover {
+    color: var(--color-rojo);
+}
+.info-contacto-list li {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--color-rojo);
+}
+.info-contacto-list li:hover {
+    color: var(--color-blanco);
+}
+.info-contacto-list i {
+    color: var(--color-blanco);
+    margin-right: 0.5rem;
+}
+.mapa-container-contact iframe {
+    width: 100%;
+    height: 190px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.contenido-horario {
+    max-height: 500px;
+    padding: 10px;
+    margin-top: 15px;
+}
+.contenido-horario:hover {
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    background-color: var(--color-texto);
+    color: var(--color-negro);
+    border: 1px solid var(--color-blanco);
+    border-radius: 5px;  
+}
+.horario {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.horario:first-of-type {
+    margin-top: 5px;
+}
+p.horario {
+    padding: 5px;
+}
+.contenido-horario:hover p strong {
+    color: var(--color-blanco);
+}
+.contenido-horario:hover p.horario {
+    text-align: center;
+}
+.horario-concept {
+    line-height: 1.6rem;
+}
+.asist-opc {
+    margin-top: 5px;
+}
+@media (max-width: 1000px) {
+    #seccion-contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/********************************/
+/* ============== formulario == */
+/********************************/
+#contacto-form.form {
+    background-image: url(../img/fondoForm.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: var(--color-blanco);
+}
+.flex-form {
+    display: flex;
+    justify-content: center;
+}
+.contenedor-form {
+    padding: 80px 0;
+    width: 50%;
+}
+div.foto-form {
+    display: none;
+    width: 50%;
+}
+.form h2 {
+    margin: 10px 0;
+}
+.form p {
+    margin: 25px 0 10px;
+}
+div.inputs {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+div.inputs,
+.titulo-form {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.input-name,
+.input-email {
+    width: 50%;
+}
+.input-message {
+    width: 100%;
+}
+.input-name,
+.input-email,
+.input-message {
+    padding: 15px;
+    font-size: 14px;
+    border: 0.5px solid white;
+    border-radius: 5px;
+    background-color: var(--backInputs);
+    color: var(--color-blanco);
+    outline: none;
+    resize: none;
+}
+.submit-btn {
+    padding: 10px 16px;
+    font-size: 15px;
+    margin: 20px auto 0;
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.galeria{
+/***************************************/
+.galeria {
     margin-top: 20px;
     padding-top: 20px;
 }
+/***************************************/
+
+/*.titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 100px;
+}*/
+
+
+
+
+
+
 
 
