@@ -97,7 +97,7 @@
 							<i class="fa fa-envelope icono-contact"></i>
 							<h3>Nuestro Contacto</h3>
 						</div> <!-- fin icono-titulo -->
-						<p>Únete a nuestra comunidad hoy y comienza tu viaje hacia el dominio de las artes marciales</p>
+						<p class="p-contact">Únete a nuestra comunidad hoy y comienza tu viaje hacia el dominio de las artes marciales</p>
 						<ul class="info-contacto-list">
 							<li>
 								<i class="fa fa-phone"></i>
@@ -107,56 +107,61 @@
 								<i class="fa fa-envelope"></i>
 								<a href="mailto:aeamtamo@gmail.com">aeamtamo@gmail.com</a>
 							</li>
+							<li>
+								<i class="fa fa-map-marker"></i>
+								<a href="https://goo.gl/maps/XgGxyp3rhfdYxP1E9" target="_blank">Av. Mare de Déu de Bellvitge 80-88, Alt C-D, 08907 - I L'Hospitalet de Llobregat (Barcelona)</a>
+							</li>
 						</ul>
-						<div class="icono-titulo-map">
+					</div> <!-- fin tarjeta-contacto -->
+					<div class="tarjeta-contacto">
+						<div class="icono-titulo-contact">
 							<i class="fa fa-map-marker icono-contact"></i>
 							<h3>¿Dónde puedes encontrarnos?</h3>
-						</div> <!-- fin icono-titulo -->	
+						</div> <!-- fin icono-titulo -->
 						<div class="mapa-container-contact">
 							<figure>
 								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.1494126784846!2d2.102711176992834!3d41.34910603496506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498d64c020f8d%3A0xb61e5ac137908849!2sAv.%20Mare%20de%20D%C3%A9u%20de%20Bellvitge%2C%2080%2C%2008907%20L&#39;Hospitalet%20de%20Llobregat%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1733221803147!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-								
-								<figcaption>
-									<i class="fa fa-map-marker"></i>
-									<a href="https://goo.gl/maps/XgGxyp3rhfdYxP1E9" target="_blank">Av. Mare de Déu de Bellvitge 80-88, Alt C-D, 08907 - I L'Hospitalet de Llobregat (Barcelona)</a>
-								</figcaption>
 							</figure>
-						</div> <!-- fin mapa-container-contact -->		
+						</div> <!-- fin mapa-container-contact -->
 					</div> <!-- fin tarjeta-contacto -->
 					<div class="tarjeta-contacto">
 						<div class="icono-titulo-contact">
 							<i class="fa fa-clock icono-contact" aria-hidden="true"></i>
 							<h3 class="horario-titulo">Horarios/Practicas</h3>
 						</div> <!-- fin icono-titulo -->
-						<p class="horario-concept">Nuestro sitio web ofrece una gama de servicios relacionados con las artes marciales, incluyendo clases, sesiones privadas y talleres. Disponemos de varios horarios.</p>
-						<div class="contenido-horario">
-							<div class="horario">
-								<p><strong>Defensa personal femenina</strong></p>
-								<ul>
-									<li>Jueves: 19:30 - 20:30 hrs</li>
-									<li>Viernes: 19:30 - 21:30 hrs</li>
-								</ul>
-								<p class="asist-opc">Asistencia opcional 1 o 2 días/semana (para más información contáctanos)</p>
-							</div>
-							<div class="horario">
-								<p><strong>Practicas con el shifu Han Liang Zhu</strong></p>
-								<ul>
-									<li>Martes de : 20:30 a 21:30 hrs</li>
-									<li>Sábados de: 09 a 10 hrs</li>
-								</ul>	
-							</div>
-							<div class="horario">
-								<p><strong>Prácticas con Chi-kung</strong></p>
-								<ul>
-									<li>10 a 11 hrs. (Tai-Chi)</li>
-								</ul>
-							</div>
-							<p class="horario"><strong>Prueba 1 día GRATIS sin compromiso!!</strong></p>
-						</div>
+						<p class="horario-concept">Nuestra escuela ofrece una gama de servicios relacionados con las artes marciales, incluyendo clases, sesiones privadas y talleres. Disponemos de varios horarios.</p>
+						<button class="cta-button" id="btn-horario">Leer Más</button>
+						<div id="myModal" class="modal">
+							<div class="contenido-horario">
+								<div class="horario">
+									<p><strong>Defensa personal femenina</strong></p>
+									<ul>
+										<li>Jueves: 19:30 - 20:30 hrs</li>
+										<li>Viernes: 19:30 - 21:30 hrs</li>
+									</ul>
+									<p class="asist-opc">Asistencia opcional 1 o 2 días/semana (para más información contáctanos)</p>
+								</div> <!-- fin horario -->
+								<div class="horario">
+									<p><strong>Practicas con el shifu Han Liang Zhu</strong></p>
+									<ul>
+										<li>Martes de : 20:30 a 21:30 hrs</li>
+										<li>Sábados de: 09 a 10 hrs</li>
+									</ul>	
+								</div> <!-- fin horario -->
+								<div class="horario">
+									<p><strong>Prácticas con Chi-kung</strong></p>
+									<ul>
+										<li>10 a 11 hrs. (Tai-Chi)</li>
+									</ul>
+								</div> <!-- fin horario -->
+								<p class="gratis"><strong>Prueba 1 día <strong class="rojo-gratis">GRATIS</strong> sin compromiso!!</strong></p>
+								<button class="cta-button" id="btn-cerrar-hor">Cerrar</button>
+							</div> <!-- fin contenido-horario -->
+						</div> <!-- fin myModal -->
 					</div> <!-- fin tarjeta-contacto -->
 				</div> <!-- fin caja-flex -->
 			</div> <!-- fin principal-box -->
-		</section>
+		</section> <!-- fin #seccion-contacto -->
 	</div> <!-- fin fondo total -->
 	<!-- Sección Contacto Formulario -->
 	<section id="contacto-form" class="form">
@@ -188,7 +193,7 @@
 		<div class="caja-flex"><!--div con flex-->
 			<div class="faq-tit-img-cont"><!--video y iconos---->
 				<h3 class="rojo faq-h3">Preguntas frecuentes (FAQ)</h3>
-			 	<img src="img/imagen7.png" alt="hombres_peleando" class="imagen-faq">
+			 	<img src="img/defensaPersonal.png" alt="hombres_peleando" class="imagen-faq">
 			 	<!-- <div class="icono-yin-footer"></div>
                 <div class="icono-yan-footer"></div> -->
 			</div> <!-- fin faq-tit-img-cont -->
@@ -240,6 +245,7 @@
 	        <a href="https://www.facebook.com/artesmarciales.tamo/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
 	        <a href="https://www.instagram.com/kungfutamo/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
 	        <a href="https://www.tiktok.com/@artesmarciales_tamo"><i class="fa-brands fa-tiktok"></i></a>
+	        <a href="https://www.youtube.com/@asociacionta-mo3564" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
 	    </div> <!-- fin redes sociales -->
 		<div class="footer-caja-flex">
 			<ul class="foot-menu-flex">

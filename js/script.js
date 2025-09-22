@@ -142,8 +142,25 @@ botonLeerMas.forEach((e,i)=>{
     });
 });
 ///////////////////////////////////////////////////
+//          * BOTON SECCION CONTACTO HORARIO *          //
+$(document).ready(function () {
+    // Al hacer clic en el botón, muestra la ventana emergente
+    $("#btn-horario").click(function() {
+        $("#myModal").show();
+    });
 
+    // Al hacer clic en el botón de cerrar (la 'x'), oculta la ventana
+    $("#btn-cerrar-hor").click(function() {
+        $("#myModal").hide();
+    });
 
+    // Al hacer clic fuera de la ventana, también la oculta
+    $(window).click(function(event) {
+        if ($(event.target).is("#myModal")) {
+            $("#myModal").hide();
+        }
+    });
+});
 
 
 

@@ -86,14 +86,8 @@ strong {
 /*** * * * * * * HEADER * * * * * * ***/
 /**************************************/
 header.home-header {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5));
-    background-position: top right;
-    background-repeat: no-repeat;
-    padding: 20px 20px 500px;
-    background-size: cover;
-    height: 50vh;
+    padding: 20px 20px 400px;
+    height: 60vh;
 }
 .section-header {
     padding-bottom: 100px;
@@ -110,6 +104,14 @@ h1 {
 }
 .caja-titulo {
     padding-right: 0;
+}
+#header_img {
+    position: absolute;
+    top: 40px;
+    right: -50px;
+    z-index: -100;
+    width: 80%;
+    max-width: 1000px;
 }
 .caja-titulo h2 {
     font-family: Roboto, sans-serif;
@@ -131,7 +133,7 @@ h2 > span.color-secon {
     text-shadow: 1px 1px 2px black;
     padding: 15px 0 30px;
     font-size: 0.9rem;
-    max-width: 560px;
+    max-width: 300px;
     line-height: 1.5;
     
 }
@@ -149,7 +151,7 @@ tiene un contendor principal --- */
 y el MENU -- */
 
 .section-principal-box, .principal-box {
-    max-width: 1500px;
+    max-width: 1200px;
     padding: 10px;
     margin: auto;
 }
@@ -762,8 +764,8 @@ footer .enroll-btn1 {
     padding: 20px;           
 }
 .redes-sociales a {
-    color: var(--color-blanco);
-    font-size: 2.5rem;
+    color: var(--color-texto);
+    font-size: 1.5rem;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -1030,7 +1032,7 @@ h3.posicion {
     font-size: 2.5rem;
 }
 .titulaciones a {
-    color: var(--color-rojo);
+    color: var(--color-blanco);
 }
 .parte-superior, .parte-inferior {
     flex: 1; /* Mitad del alto cada una */
@@ -1042,14 +1044,24 @@ h3.posicion {
     color: var(--color-texto);
 }
 .parte-inferior {
-    flex-direction: column; /* Para que los <p> estén uno debajo del otro */
+    flex-direction: column;
     line-height: 1.5rem;
     font-size: 1.1rem;
 }
 .parte-inferior p:last-of-type {
     margin-top: 50px;
 }
-
+/**************************************/
+/*** SECCION 3 / Beneficios * INDEX ***/
+/**************************************/
+.caja-flex-benef {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 30px 60px;
+}
 /****************** historia-kungfu.html **********************/
 /**************************************************************/
 /** ========== ** ** HISTORIA DEL KUNG-FU ** ** ============ **/
@@ -1533,13 +1545,14 @@ main.main-escuela-kungfu section p {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 15px 15px 80px;
+    padding: 30px 15px 150px;
 }
 h2.titulo-contact {
     color: var(--color-blanco);
     font-size: 5rem;
     text-align: center;
-    padding: 30px 0;
+    padding: 50px 0;
+    margin: 30px auto;
 }
 #seccion-contacto {
     display: flex
@@ -1551,22 +1564,18 @@ h2.titulo-contact {
 }
 .tarjetas-container-contact {
     display: flex;
-    gap: 60px;
+    gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start; /* en vez de stretch */
 }
 .tarjeta-contacto {
     background-color: var(--colorFondo1);
-    padding: 30px;
-    border-radius: 10px;
-    min-height: 292px;
-    height: 520px;
-    max-width: 520px;
+    padding: 20px;
+    border-radius: 5px;
+    height: 350px;
+    max-width: 420px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     color: var(--color-texto);
     flex: 350px 1 1;
 }
@@ -1574,24 +1583,23 @@ h2.titulo-contact {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 30px;
     color: var(--color-rojo);
-}
-.icono-titulo-map {
-    display: flex;
-    align-items: center;    
-    color: var(--color-rojo);
-    margin-top: 20px;
-    margin-bottom: 7px;
 }
 .icono-contact {
     font-size: 1.5rem;
     color: var(--color-texto);
 }
-.info-contacto-list {
+.p-contact {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+ul.info-contacto-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     list-style: none;
     padding: 0;
-    margin-top: 7px;
 }
 .info-contacto-list a {
     color: var(--color-texto);
@@ -1604,50 +1612,72 @@ h2.titulo-contact {
     font-size: 0.95rem;
     color: var(--color-rojo);
 }
-.info-contacto-list li:hover {
-    color: var(--color-blanco);
-}
 .info-contacto-list i {
     color: var(--color-blanco);
     margin-right: 0.5rem;
 }
 .mapa-container-contact iframe {
     width: 100%;
-    height: 190px;
+    height: 240px;
     border: none;
     border-radius: 8px;
     margin-bottom: 15px;
 }
-.contenido-horario {
-    max-height: 500px;
-    padding: 10px;
-    margin-top: 15px;
+.horario-concept {
+    line-height: 1.6rem;
 }
-.contenido-horario:hover {
-    transition: max-height 0.5s ease, padding 0.3s ease;
+#btn-horario {
+    margin-top: 80px;
+    display: block
+}
+/***** div de horario emergente ****/
+#myModal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+
+}
+.contenido-horario {
     background-color: var(--color-texto);
     color: var(--color-negro);
     border: 1px solid var(--color-blanco);
-    border-radius: 5px;  
+    border-radius: 5px;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+}
+.modal:target {
+    display: block;
 }
 .horario {
-    margin-top: 15px;
     margin-bottom: 10px;
 }
 .horario:first-of-type {
     margin-top: 5px;
 }
-p.horario {
+p.gratis {
     padding: 5px;
-}
-.contenido-horario:hover p strong {
-    color: var(--color-blanco);
-}
-.contenido-horario:hover p.horario {
     text-align: center;
+    margin-bottom: 25px;
 }
-.horario-concept {
-    line-height: 1.6rem;
+.rojo-gratis {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--color-rojo);
+}
+#btn-cerrar-hor {
+    display: block;
+    padding: 10px 20px;
+    margin: auto;
+    text-decoration: none;
+    border-radius: 5px;
 }
 .asist-opc {
     margin-top: 5px;
@@ -1729,6 +1759,210 @@ div.inputs,
     font-size: 15px;
     margin: 20px auto 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+/*************** defensa-personal.html ************************/
+/**************************************************************/
+/** ============ ** ** DEFENSA PERSONAL ** ** ============== **/
+/**************************************************************/
+/******* Esta página Defensa Personal tiene 4 secciones:
+ * #defensa_intro, #defensa_tec, #defensa_femenina, 
+ * #defensa_video(sólo hay un vídeo)    **** */
+/**************************************************************/
+
+/******* GENERAL *******/
+
+#defensa_intro p, 
+#defensa_tec p, 
+#defensa_femenina p {
+    margin: 20px 0px;
+}
+.contenedor_flex-defensaP {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor_flex-defensaP .texto-defensaP {
+    flex: 1 1 400px;
+    padding: 20px;
+}
+.contenedor_flex-defensaP figure {
+    flex: 1 1 400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.contenedor_flex-defensaP img{
+    width: 100%;
+    max-width: 800px;
+}
+#defensa_intro .contenedor_flex-defensaP .texto-defensaP {
+    flex: 1 1 400px;
+}
+#defensa_intro .contenedor_flex-defensaP figure {
+    flex: 1 1 400px;
+}
+/* ***************  Modo Tablet ********** */
+@media (min-width768px) {
+    .texto-defensaP {
+        margin: 15px 15px 20px 15px;
+        padding: 0px 20px;
+    }
+}
+/*  ******** Flex con wrap-reverse ******* */
+.contenedor_flex-defensaP.wrapReves-defensaP {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+}
+/*  ********* Sección Defensa-femenina ******* */
+/*Esta sección tiene 4 partes: 
+div#defensa_esp, 
+div#defensa_programa(con div#defensa_horario), 
+div#defensa_aprendizaje, 
+div#defensa_ventaja*/
+
+#defensa_femenina {
+    padding: 20px;
+}
+#defensa_femenina h2, #defensa_femenina h3 {
+    margin-left: 20px;
+}
+
+div#defensa_esp h3, div#defensa_programa h3, div#defensa_aprendizaje h3, div#defensa_ventaja h3 {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+/*********** para el efecto img hover ********  */
+#defensa_femenina figure {
+    overflow: hidden;
+    width: 400px;
+    padding: 0;
+    margin: 20px;
+}
+#defensa_femenina img {
+    width: 100%;
+    max-width: 800px;
+    transition: all 0.5s;
+}
+#defensa_femenina img:hover {
+    transform: scale(1.1);
+}
+/*****Para separarse entre si cada parte****/
+.lineaBottom-defensaP {
+/*  border-bottom: 1px solid #fff3;*/
+    background-color: #39393996;
+    padding: 30px 0px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+/******Para la parte: defensa_horario*******/
+div#defensa_horario .promocion-defensaP {
+    margin-top: 20px;
+    border: 1px dashed var(--color-rojo) ;
+    width: 100%;
+    padding: 20px;
+    background-color: #E6394619;
+}
+
+div#defensa_horario span {
+    font-weight: 700;
+    color: var(--color-blanco);
+}
+div#defensa_horario a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-blanco);
+    padding-top: 20px;
+}
+div#defensa_horario a:hover {
+    color: var(--color-rojo-hover);
+}
+div#defensa_horario.fa-arrow-right {
+    font-size: 20px;
+    color: var(--color-rojo);
+    margin-left: 10px;
+}
+div#defensa_horario a:hover .fa-arrow-right {
+    color: var(--color-blanco);
+}
+.horarios-defensaP {
+    display: flex;
+    margin: 10px 0px;
+}
+.horario-defensaP {
+    display: flex;
+    flex: 0 1 100px;
+}
+.horario-defensaP img {
+    width: 32px !important;
+    margin: 10px;
+    flex: 1 1 32px;
+}
+.horario-defensaP .horario_texto-defensaP {
+    width: 60px;
+    flex: 1 1 60px;
+    color: var(--color-blanco);
+    display: flex;
+    align-items: center;
+}
+/* modo tablet y ordenador */
+@media (min-width: 480px) {
+    .horario-defensaP .horario_texto-defensaP {
+    width: 100px;
+    flex: 1 1 100px;
+    }
+    .horario-defensaP {
+    display: flex;
+    flex: initial;
+    }
+    div#defensa_horario .promocion-defensaP {
+        width: 320px;
+    }
+}
+/********* Sección Defensa-video ***********/
+#defensa_video {
+/*  text-align: center;*/
+    padding: 20px;
+}
+#defensa_video h2 {
+    margin-left: 20px;
+}
+#defensa_video h3 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#defensa_video iframe {
+    display: block;
+    margin: 50px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

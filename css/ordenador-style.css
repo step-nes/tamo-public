@@ -17,29 +17,27 @@
 /*****************************************/
 /* * * * *   GENERALES e INDEX   * * * * */
 /*****************************************/
-    header.home-header {
-        background: linear-gradient(#2225, #2225), url('../img/header.png');
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 60%;
-        padding: 20px 20px;
-        height: 60vh;
-    }
+    
     .header-index {
         margin-bottom: 60px;
     }
     h1 {
         font-size: 3rem;
     }
-    .main-title.header-h2-hist-kungfu {
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-    .caja-titulo p {
-        font-size: 1.4rem;
+    h2.header-h2 {
+        font-size: 5rem;
     }
     .caja-titulo {
         padding-right: 300px;
+    }
+    #header_img {
+        top: 40px;
+        right: 0;
+        width: 1000px;
+    }
+    .caja-titulo p {
+        font-size: 1.4rem;
+        max-width: 560px;
     }
     .cel-titulo {
         display:none;
@@ -98,19 +96,16 @@
         padding: 10px;
         width: 100%;
         height: 100%;
-        border-radius: 5px;
         font-size: 1rem;
+        border-left: 2px solid var(--transparente);
     }
     a.submenu-item-pc {
         width: initial;
     }
     nav.main-menu-pc a:hover {
         color: var(--color-rojo);
-        transform: scale(1.08);
-        font-weight: 600;
         border-left: 2px solid var(--color-rojo);
-        margin-left: 5px;
-        background-color: #5555;
+        
     }
         /* para el despliegue del submenu */
     ul.list-menu-pc > li {
@@ -199,7 +194,8 @@
 /*** ===== TITULACIONES ===     */
     .titulaciones-flex {
         display: flex;
-        gap: 10px;
+        justify-content: space-between;
+        gap: 50px;
     }
     .titulaciones-flex ul {
         display: flex;
@@ -229,6 +225,10 @@
 /* ============ historia-kungfu.html === */
 /*****************************************/
 /****** seccion historia introducción  ***/
+    .main-title.header-h2-hist-kungfu {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
     .contenedor_intro-kungfu {
         flex-wrap: nowrap;
         text-align: initial;
@@ -348,6 +348,12 @@
 /*****************************************/
 /* ============ contacto.html ========== */
 /*****************************************/
+    .contenido-horario {
+        padding: 40px;
+        width: 50%;
+    }
+
+/******* formulario *******/
     #contacto-form.form {
         background-image: none;
     }
@@ -372,8 +378,40 @@
 
 
 
-
-
+/**************************************************/
+/** ========== defensa-personal.html =========== **/
+/**************************************************/
+    .contenedor_flex-defensaP {
+        flex-wrap: nowrap;
+    }
+    .contenedor_flex-defensaP figure {
+    margin: 20px 10px;
+    }
+    #defensa_tec figure {
+        margin-right: 0px;
+    }
+    .texto-defensaP {
+    margin: 0px 50px 35px;
+    }
+    #defensa_intro .texto-defensaP {
+        margin-left: 0px;
+    }
+/******* div#defensa_esp  en ordenador *******/
+    #defensa_esp p {
+        display: inline-block;
+        margin-top: 50px;
+        line-height: 2em;
+    }
+/****** para el efecto img hover *******/
+    #defensa_femenina figure{
+        margin-right: 40px;
+        margin-top: 40px;
+         flex: 1 1 350px;
+    }
+/*****Para separarse entre si cada parte****/
+    .lineaBottom {
+        margin-bottom: 50px;
+    }
 
 
 
