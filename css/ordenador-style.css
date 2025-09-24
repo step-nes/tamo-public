@@ -311,6 +311,20 @@
         left: 14%;
     }
 /*****************************************/
+/* ============ estilos-kungfu.html === */
+/*****************************************/
+
+/****** Generales y botones *****/ 
+    .texto{
+        margin: 35px 50px;
+    }
+/********** Diagrama **********/
+    @media (min-width: 1024px) {
+        .content_box {
+            max-width: 1200px;
+        }
+    }
+/*****************************************/
 /* ============ escuela-kungfu.html === */
 /*****************************************/
 
@@ -344,21 +358,48 @@
         width: 163px;
         height: 123px;
     }
-/*****************************************/
-/* ============ estilos-kungfu.html === */
-/*****************************************/
 
-/****** Generales y botones *****/ 
-    .texto{
-        margin: 35px 50px;
-    }
-/********** Diagrama **********/
-    @media (min-width: 1024px) {
-        .content_box {
-            max-width: 1200px;
-        }
-    }
+/**********************************************/
+/** ============== taichi.html ============= **/
+/**********************************************/
 
+
+
+
+/**************************************************/
+/** ========== defensa-personal.html =========== **/
+/**************************************************/
+    .contenedor_flex-defensaP {
+        flex-wrap: nowrap;
+    }
+    .contenedor_flex-defensaP figure {
+    margin: 20px 10px;
+    }
+    #defensa_tec figure {
+        margin-right: 0px;
+    }
+    .texto-defensaP {
+    margin: 0 50px 35px;
+    }
+    #defensa_intro .texto-defensaP {
+        margin-left: 0;
+    }
+/******* div#defensa_esp  en ordenador *******/
+    #defensa_esp p {
+        display: inline-block;
+        margin-top: 50px;
+        line-height: 2em;
+    }
+/****** para el efecto img hover *******/
+    #defensa_femenina figure {
+        margin-right: 40px;
+        margin-top: 40px;
+        flex: 350px 1 1;
+    }
+/*****Para separarse entre si cada parte****/
+    .lineaBottom {
+        margin-bottom: 50px;
+    }
 
 
 /*****************************************/
@@ -393,41 +434,6 @@
 
 
 
-
-/**************************************************/
-/** ========== defensa-personal.html =========== **/
-/**************************************************/
-    .contenedor_flex-defensaP {
-        flex-wrap: nowrap;
-    }
-    .contenedor_flex-defensaP figure {
-    margin: 20px 10px;
-    }
-    #defensa_tec figure {
-        margin-right: 0px;
-    }
-    .texto-defensaP {
-    margin: 0px 50px 35px;
-    }
-    #defensa_intro .texto-defensaP {
-        margin-left: 0px;
-    }
-/******* div#defensa_esp  en ordenador *******/
-    #defensa_esp p {
-        display: inline-block;
-        margin-top: 50px;
-        line-height: 2em;
-    }
-/****** para el efecto img hover *******/
-    #defensa_femenina figure{
-        margin-right: 40px;
-        margin-top: 40px;
-         flex: 1 1 350px;
-    }
-/*****Para separarse entre si cada parte****/
-    .lineaBottom {
-        margin-bottom: 50px;
-    }
 
 
 

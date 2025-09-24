@@ -3,52 +3,55 @@
 
 //////////////////////////////////////////
         //    * MENU *    //
+$(document).ready(function(){
+    // Toggle menú principal
+    $('.bars, .times').click(function() {
+      $('.main-menu').toggleClass('open');
+    });
 
-// Toggle menú principal
-$('.bars, .times').click(function() {
-  $('.main-menu').toggleClass('open');
-});
+                // Submenús
+    $('.submenu-item').click(function() {
+      const arrow = $(this).find('.down');
+      const submenu = $(this).next('.sub');
 
-            // Submenús
-$('.submenu-item').click(function() {
-  const arrow = $(this).find('.down');
-  const submenu = $(this).next('.sub');
-
-  arrow.toggleClass('rotated');
-  submenu.toggleClass('open');
+      arrow.toggleClass('rotated');
+      submenu.toggleClass('open');
+    });
 });
             // Menú ordenador (Inyección)
-$("#nav-container-pc").html(`
-<nav class="main-menu-pc">
-    <ul class="list-menu-pc">
-        <li><a href="index.html">Inicio</a></li>
-        <li class="li-despliegue">
-            <a class="submenu-item-pc">
-                Kung-Fu
-                <i class="fa-solid fa-sort-down down"></i>
-            </a>
-            <ul class="despliegue-secundario">
-                <li><a href="historia-kungfu.html">Historia</a></li>
-                <li><a href="estilos-kungfu.html">Estilos</a></li>
-                <li><a href="escuela-kungfu.html">Escuela</a></li>
+$(document).ready(function(){
+    $("#nav-container-pc").html(`
+        <nav class="main-menu-pc">
+            <ul class="list-menu-pc">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="li-despliegue">
+                    <a class="submenu-item-pc">
+                        Kung-Fu
+                        <i class="fa-solid fa-sort-down down"></i>
+                    </a>
+                    <ul class="despliegue-secundario">
+                        <li><a href="historia-kungfu.html">Historia</a></li>
+                        <li><a href="estilos-kungfu.html">Estilos</a></li>
+                        <li><a href="escuela-kungfu.html">Escuela</a></li>
+                    </ul>
+                </li>
+                <li><a href="taichi.html">Taichi</a></li>
+                <li><a href="defensa-personal.html">Defensa&nbsp;personal</a></li>
+                <li class="li-despliegue">
+                    <a class="submenu-item-pc">
+                        Medios
+                        <i class="fa-solid fa-sort-down down"></i>
+                    </a>
+                    <ul class="despliegue-secundario">
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="video.html">Video</a></li>
+                        <li><a href="descarga.html">Descargas</a></li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-        <li><a href="taichi.html">Taichi</a></li>
-        <li><a href="defensa-personal.html">Defensa&nbsp;personal</a></li>
-        <li class="li-despliegue">
-            <a class="submenu-item-pc">
-                Medios
-                <i class="fa-solid fa-sort-down down"></i>
-            </a>
-            <ul class="despliegue-secundario">
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="video.html">Video</a></li>
-                <li><a href="descarga.html">Descargas</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
-`);
+        </nav>`
+    );
+});
 
             // Submenús
 
@@ -130,8 +133,9 @@ const botonLeerMas = document.querySelectorAll(".leer_mas-kungfu");
 const textoMas = document.querySelectorAll(".texto_mas-kungfu");
 const cajaIntro = document.querySelector(".contenedor_intro");
 
-botonLeerMas.forEach((e,i)=>{
+botonLeerMas.forEach((e,i) => {
     e.addEventListener("click",function(){
+        
         if (textoMas[i].style.maxHeight === "0px" || textoMas[i].style.maxHeight === ""){
             textoMas[i].style.maxHeight ="initial";
             e.innerText="Ocultar";
@@ -144,82 +148,39 @@ botonLeerMas.forEach((e,i)=>{
 
 ////////////////////////////////////////////////////////
 ////////// REDIMENSION DE LA IMG DEL DIAGRAMA //////////
-/*
 function cambiarImagen() {
-    const imagen = document.getElementById('imagenEsquema');
-    const botones = document.querySelectorAll('.botonStyle, .botonStylePequeño');
+    const $imagen = $("#imagenEsquema");
+    const $botones = $(".botonStyle, .botonStylePequeno");
 
-    imagen.style.opacity = 0;
+    // Ocultar con animación de opacidad
+    $imagen.css("opacity", 0);
 
-    // cambiar la imagen despues de un pequeño retraso para que la transicion sea visible
-
-    setTimeout(function() {
-
-        // Cambiar la imagen según el tamaño de la ventana
-
+    // Cambiar la imagen después de un pequeño retraso
+    setTimeout(function () {
         if (window.matchMedia("(min-width: 600px)").matches) {
-            imagen.src = "img/esquemaPc.jpg";
-            imagen.style.minWidth = "100%";
+          $imagen.attr("src", "./img/esquemaPc.jpg").css("min-width", "100%");
         } else {
-            imagen.src = "img/esquemaMovil.jpg";
-            imagen.style.minWidth = "350px";
+          $imagen.attr("src", "./img/esquemaMovil.jpg").css("min-width", "350px");
         }
 
-        // vuelve a hacer que la imagen sea visible
-
-        imagen.style.opacity = 1;
+        // Mostrar de nuevo
+        $imagen.css("opacity", 1);
     }, 300);
 
-    // obtiene el tamaño de la imagen y ajusta los botones 
-
-    const imagenWidth = imagen.clientWidth;
-    botones.forEach(boton => {
+    // Ajustar tamaño de botones según el ancho de la imagen
+    const imagenWidth = $imagen.width();
+    $botones.each(function () {
         const paddingHorizontal = imagenWidth * 0.01;
         const paddingVertical = imagenWidth * 0.0122;
         const fontSize = imagenWidth * 0.02;
 
-        boton.style.padding = `${paddingVertical}px ${paddingHorizontal}px`;
-        boton.style.fontSize = `${fontSize}px`;
+        $(this).css({
+            "padding": `${paddingVertical}px ${paddingHorizontal}px`,
+         "font-size": `${fontSize}px`
+        });
     });
 }
-
-cambiarImagen();
-window.addEventListener("resize", cambiarImagen);
-*/
-function cambiarImagen() {
-  const $imagen = $("#imagenEsquema");
-  const $botones = $(".botonStyle, .botonStylePequeno");
-
-  // Ocultar con animación de opacidad
-  $imagen.css("opacity", 0);
-
-  // Cambiar la imagen después de un pequeño retraso
-  setTimeout(function () {
-    if (window.matchMedia("(min-width: 600px)").matches) {
-      $imagen.attr("src", "./img/esquemaPc.jpg").css("min-width", "100%");
-    } else {
-      $imagen.attr("src", "./img/esquemaMovil.jpg").css("min-width", "350px");
-    }
-
-    // Mostrar de nuevo
-    $imagen.css("opacity", 1);
-  }, 300);
-
-  // Ajustar tamaño de botones según el ancho de la imagen
-  const imagenWidth = $imagen.width();
-  $botones.each(function () {
-    const paddingHorizontal = imagenWidth * 0.01;
-    const paddingVertical = imagenWidth * 0.0122;
-    const fontSize = imagenWidth * 0.02;
-
-    $(this).css({
-      "padding": `${paddingVertical}px ${paddingHorizontal}px`,
-      "font-size": `${fontSize}px`
-    });
-  });
-}
-
-// Llamada inicial y en resize
+    // Llamada inicial y en resize
 cambiarImagen();
 $(window).on("resize", cambiarImagen);
 /////////////////////////
@@ -260,6 +221,85 @@ $(document).ready(function () {
     });
   });
 });
+
+
+/////////////////////////////////////////////////////////////
+
+$(document).ready(function () {
+  $(".btn_leer_mas-defP").on("click", function () {
+    var $btn = $(this);
+    // buscamos el contenedor del bloque (asegura que cada botón actúe sobre su bloque)
+    var $root = $btn.closest(".texto-defensaP");
+
+    // elementos habituales dentro del root
+    var $textoMas = $root.find(".texto_mas-defP");
+    var $susp = $root.find(".suspensivos");
+
+    // buscamos el span.inyect-susp:
+    // preferimos el que esté inmediatamente después del span.suspensivos
+    var $inyect = $();
+    if ($susp.length) {
+      $inyect = $susp.first().nextAll(".inyect-susp").first();
+    }
+    // fallback: buscar dentro del root (por si lo colocaste ahí)
+    if (!$inyect.length) {
+      $inyect = $root.find(".inyect-susp").first();
+    }
+    // último recurso: buscar global (no recomendado, pero para asegurar)
+    if (!$inyect.length) {
+      $inyect = $(".inyect-susp").first();
+    }
+
+    // debug opcional (descomenta si no se encuentra el span)
+    // if (!$inyect.length) console.warn("inyect-susp no encontrado para este bloque", $root);
+
+    // toggle del contenido y de los spans/puntos susp.
+    if ($textoMas.is(":visible")) {
+      // Cerrar
+      $textoMas.slideUp(300);
+      if ($inyect.length) $inyect.hide();
+      if ($susp.length) $susp.show();
+      $btn.html('Leer más <i class="fa fa-caret-down"></i>');
+      $btn.find("i").css({ transform: "rotate(360deg)", transition: "all .3s" });
+    } else {
+      // Abrir
+      $textoMas.slideDown(400);
+      if ($susp.length) $susp.hide();
+      if ($inyect.length) {
+        // si el span inyect tiene un salto/espacio al principio y no quieres que se muestre salto,
+        // puedes quitar solo saltos iniciales con replace (opcional):
+        // $inyect.html($inyect.html().replace(/^\s+/, ''));
+        $inyect.show();
+      }
+      $btn.html('Leer menos <i class="fa fa-caret-up"></i>');
+      $btn.find("i").css({ transform: "rotate(180deg)", transition: "all .3s" });
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
