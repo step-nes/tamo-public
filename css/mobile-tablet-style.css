@@ -20,6 +20,7 @@
     --backForm:rgb(23,23,23);
     --backInputs:rgba(0, 0, 0, 0.1);
     --color-texto:rgb(153, 137, 130);
+    --desplegable: #2f2e2e;
 }
 /*************************************/
 /*** * * * * * * RESET * * * * * * ***/
@@ -82,12 +83,14 @@ section:nth-child(odd) {
 strong {
     color: var(--color-blanco);
 }
+span.h2-2p {
+    color: var(--color-rojo);
+}
 /**************************************/
 /*** * * * * * * HEADER * * * * * * ***/
 /**************************************/
 header.home-header {
-    padding: 20px 20px 400px;
-    height: 60vh;
+    padding: 20px;
 }
 .section-header {
     padding-bottom: 100px;
@@ -165,7 +168,7 @@ y el MENU -- */
     width: 50px;
     height: 50px;
 }
-.section-main-title, .main-title {
+h2.main-title {
     text-align: center;
     font-size: 2.5rem;
     padding: 100px 0;
@@ -429,7 +432,7 @@ nav.main-menu li > ul {
     font-weight: 500;
 }
 .rojo {
-    font-weight: 400;
+/*    font-weight: 400; */
     color: var(--color-rojo);
 }
 .seccion-tipo-imgs .flex-izq {
@@ -878,7 +881,7 @@ div.boton-arriba:hover > i {
  * SOBRE NOSOTROS * * INDEX ***********/
 /**************************************/
 #seccion-beneficios {
-    padding: 50px;
+    padding: 0 50px 50px;
     background-color: var(--fondo1);
 }
 .sobre-nos {
@@ -1054,14 +1057,106 @@ h3.posicion {
 /**************************************/
 /*** SECCION 3 / Beneficios * INDEX ***/
 /**************************************/
-.caja-flex-benef {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding: 30px 60px;
+#beneficios-final {
+   background-color: var(--colorFondo1);
 }
+.flex-invertido {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+}
+.benf-tit-img {
+    text-align: center;
+    width: 100%;
+
+    position: relative;
+    flex: 400px 1 1;
+}
+.benf-tit-img h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+.text-benf {
+    margin: 0 auto 20px;
+    text-align: center;
+    max-width: 90%;
+}
+.benf-flex-2 {
+    height: 100%;
+    flex: 328px 1 1;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+#beneficios-final img.img-benf {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 11;
+}
+.desp-benf {
+    cursor: pointer;
+    width: 100%;
+    background-color: var(--desplegable);
+    padding: 30px 20px;
+}
+.caja-mar-benf {
+    color: var(--color-rojo);
+    transition: .5s;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    display: flex;
+    background-color: #2f2e2e;
+    width: 100%;    
+    cursor: pointer;
+}
+.caja-mar-benf:hover {
+    color: var(--color-blanco);
+    transition: .5s;
+}
+.caja-mar-benf h3 {
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+.caja-mar-benf:hover .icon-arrow {
+    color: var(--color-blanco);
+    transition: .5s;
+}
+.acordeon-benf {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-out; 
+}
+ul.list-benf li {
+    color: var(--color-texto);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+/*
+.seccion-tipo-imgs .caja-mar .icon-arrow {
+    
+}
+.seccion-tipo-imgs .caja-mar {
+    
+}
+.seccion-tipo-imgs .caja-mar:hover h3,  .seccion-tipo-imgs .caja-mar:hover .icon-arrow {
+    
+}
+.seccion-tipo-imgs .caja-mar h3 {
+    
+}
+.seccion-tipo-imgs p {
+    
+}
+*/
 /****************** historia-kungfu.html **********************/
 /**************************************************************/
 /** ========== ** ** HISTORIA DEL KUNG-FU ** ** ============ **/
@@ -1092,7 +1187,7 @@ main.hist-kungfu button {
 main.hist-kungfu button:hover {
     background-color: var(--color-negro);
     color: var(--color-rojo);
-    border: 1px solid var(--color-borde-hover);
+    border: lid var(--color-borde-hover);
 }
 iframe.hist-kungfu {
     width: 100%;
@@ -1345,11 +1440,11 @@ ul.lista-kungfu-intro {
         left: 14%;
     }    
 }
-/******************* escuela-kungfu.html **********************/
-/**************************************************************/
-/** =========== ** ** ESCUELA DE KUNG-FU ** ** ============= **/
-/**************************************************************/
-/**************************************************************/
+/************* escuela-kungfu.html ***************/
+/*************************************************/
+/** ===== ** ** ESCUELA DE KUNG-FU ** ** ====== **/
+/*************************************************/
+/*************************************************/
 
 /************ header / general *********/
 .caja-position-escue-kungfu{
@@ -1394,10 +1489,21 @@ main.main-escuela-kungfu section p {
     flex-wrap: wrap;
 }
 
-/*** * * Sección escuela-kungfu * * ***
- * ******** seccion salud ******* * * *
- * escue kung fu * * * ****************/
-/**************************************/
+/*** * * Sección escuela-kungfu * ***
+ * ******** seccion salud ***** * * *
+ * escue kung fu * * * **************/
+/************************************/
+
+/****** Generales ******/
+header.home-header.header-escuela {
+    background-image:linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(img/emblema-mantis.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 #escuela-kungfu {
     padding: 20px 0 40px 0;
@@ -1510,9 +1616,9 @@ main.main-escuela-kungfu section p {
     margin-bottom: 15px;
 }
 
-/*** * * * Sección VIDEO * * * ********
- * escue kung fu * * * ****************/
-/**************************************/
+/*** * Sección VIDEO * ***
+ * escue kung fu * * * ***/
+/*************************/
 #video-escue-kungfu {
     padding: 50px 0;
     text-align: center;
@@ -1532,6 +1638,378 @@ main.main-escuela-kungfu section p {
         height: 500px;
     }
 }
+/******************* estilos-kungfu.html **********************/
+/**************************************************************/
+/** =========== ** ** ESTILOS DE KUNG-FU ** ** ============= **/
+/**************************************************************/
+/**************************************************************/
+
+/****** Todo excepto el diagrama ******/
+header.home-header.header-estilos {
+    background-image: url(../img/estiloskungfu.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+main.main-etlKF {
+    padding: 15px;
+}
+main.main-etlKF h2 {
+    color: var(--color-blanco);
+    margin: 15px 0 20px 0;
+}
+section h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+main.main-etlKF h3, main.main-etlKF h4 {
+    color: var(--color-rojo);
+    margin: 15px 0 10px 0;
+}
+main.main-etlKF p {
+    color: var(--color-texto);
+}
+#video-etlKF, 
+#tang-lang-quan, 
+#mizong-luohan-quan, 
+#bak-hok-pai, 
+#hung-gar, 
+#taijiquan {
+    padding: 20px;
+}
+#video-etlKF {
+    padding: 10px;
+}
+.video2-etlKF {
+    display: flex;
+    justify-content: center;
+}
+.contenedor_flex-etlKF {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.texto-etlKF {
+    flex: 300px 1 1;
+}
+.texto_span-etlKF {
+    color: var(--color-rojo);
+}
+.texto_mas-etlKF {
+    max-height:0 ;
+    overflow: hidden;
+}
+.btn_leer_mas-etlKF {
+    color: var(--color-texto);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: var(--color-rojo);
+    border: 1px solid var(--color-rojo);
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 15px 0;
+    font-size: 10px;
+    cursor: pointer;
+    color: white;
+}
+.imagen-etlKF {
+    flex: 1 1 200px;
+    margin: 15px 15px 20px;
+}
+.imagen-2-etlKF {
+    padding-left: 20px;
+    margin: 15px 15px 0;
+}
+.texto-2-etlKF {
+    flex: 200px 1 1;
+    margin: 30px 50px;
+}
+/* ============= TABLET === */
+@media (min-width: 768px){
+    .texto-etlKF {
+        margin: 15px 15px 20px 15px;
+    }
+}
+
+/*
+
+
+-etlKF
+
+
+*/
+/*
+.texto_span-estil-kungfu {
+    color: var(--color-blanco);
+}
+
+
+.contenedor_flex-estil-kungfu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+.texto-estil-kungfu {
+    flex: 1 1 300px;
+}
+.imagen-estil-kungfu {
+    flex: 1 1 200px;
+    margin: 15px 15px 20px;
+}
+.imagen-2-estil-kungfu {
+    padding-left: 20px;
+    margin: 15px 15px 20px;
+}
+.texto-2-estil-kungfu {
+    flex: 1 1 250px;
+    margin: 30px 50px;
+    height: 400px;
+}
+main.main-estilos-kungfu {
+    padding-top: 100px;
+}
+main.main-estilos-kungfu img {
+
+    max-width: 100%;
+    height: auto;
+}
+section.secciones-estilos-kungfu h3 {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+main.main-estilos-kungfu p {
+    color: var(--color-texto);
+}*/
+/*********** BOTONES **********/
+/*
+.btn-leer_mas-estilos-kungfu {
+   color: var(--color-texto);
+    border: transparent;
+    background-color: transparent;
+    padding-top: 5px;
+}
+.texto_mas-estilos-kungfu {
+    max-height: 0;
+    overflow: hidden;
+}*/
+/* ============= TABLET === */
+/*@media (min-width: 768px){
+    .texto-estilos-kungfu {
+        margin:15px 15px 20px 15px;
+    }
+}*/
+
+/********** DIAGRAMA **********/
+
+/*** centrado contenido de 
+ * la pagina *******/
+/*
+.content_box-estilos-kungfu {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;          
+    max-width: 1000px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+*/
+/*************** defensa-personal.html ************************/
+/**************************************************************/
+/** ============ ** ** DEFENSA PERSONAL ** ** ============== **/
+/**************************************************************/
+/******* Esta página Defensa Personal tiene 4 secciones:
+ * #defensa_intro, #defensa_tec, #defensa_femenina, 
+ * #defensa_video(sólo hay un vídeo)    **** */
+/**************************************************************/
+
+/******* HEADER *******/
+header.home-header.header-defensaP {
+    background-image: url(../img/defensaPersonal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/******* GENERAL *******/
+
+#defensa_intro p, 
+#defensa_tec p, 
+#defensa_femenina p {
+    margin: 20px 0px;
+}
+.contenedor_flex-defensaP {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor_flex-defensaP .texto-defensaP {
+    flex: 1 1 400px;
+    padding: 20px;
+}
+.contenedor_flex-defensaP figure {
+    flex: 1 1 400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.contenedor_flex-defensaP img{
+    width: 100%;
+    max-width: 800px;
+}
+#defensa_intro .contenedor_flex-defensaP .texto-defensaP {
+    flex: 1 1 400px;
+}
+#defensa_intro .contenedor_flex-defensaP figure {
+    flex: 1 1 400px;
+}
+/* ***************  Modo Tablet ********** */
+@media (min-width768px) {
+    .texto-defensaP {
+        margin: 15px 15px 20px 15px;
+        padding: 0px 20px;
+    }
+}
+/*  ******** Flex con wrap-reverse ******* */
+.contenedor_flex-defensaP.wrapReves-defensaP {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+}
+/*  ********* Sección Defensa-femenina ******* */
+/*Esta sección tiene 4 partes: 
+div#defensa_esp, 
+div#defensa_programa(con div#defensa_horario), 
+div#defensa_aprendizaje, 
+div#defensa_ventaja*/
+
+#defensa_femenina {
+    padding: 20px;
+}
+#defensa_femenina h2, #defensa_femenina h3 {
+    margin-left: 20px;
+}
+
+div#defensa_esp h3, div#defensa_programa h3, div#defensa_aprendizaje h3, div#defensa_ventaja h3 {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+/*********** para el efecto img hover ********  */
+#defensa_femenina figure {
+    overflow: hidden;
+    width: 400px;
+    padding: 0;
+    margin: 20px;
+}
+#defensa_femenina img {
+    width: 100%;
+    max-width: 800px;
+    transition: all 0.5s;
+}
+#defensa_femenina img:hover {
+    transform: scale(1.1);
+}
+/*****Para separarse entre si cada parte****/
+.lineaBottom-defensaP {
+/*  border-bottom: 1px solid #fff3;*/
+    background-color: #39393996;
+    padding: 30px 0px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+/******Para la parte: defensa_horario*******/
+div#defensa_horario .promocion-defensaP {
+    margin-top: 20px;
+    border: 1px dashed var(--color-rojo) ;
+    width: 100%;
+    padding: 20px;
+    background-color: #E6394619;
+}
+
+div#defensa_horario span {
+    font-weight: 700;
+    color: var(--color-blanco);
+}
+div#defensa_horario a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-blanco);
+    padding-top: 20px;
+}
+div#defensa_horario a:hover {
+    color: var(--color-rojo-hover);
+}
+div#defensa_horario.fa-arrow-right {
+    font-size: 20px;
+    color: var(--color-rojo);
+    margin-left: 10px;
+}
+div#defensa_horario a:hover .fa-arrow-right {
+    color: var(--color-blanco);
+}
+.horarios-defensaP {
+    display: flex;
+    margin: 10px 0px;
+}
+.horario-defensaP {
+    display: flex;
+    flex: 0 1 100px;
+}
+.horario-defensaP img {
+    width: 32px !important;
+    margin: 10px;
+    flex: 1 1 32px;
+}
+.horario-defensaP .horario_texto-defensaP {
+    width: 60px;
+    flex: 1 1 60px;
+    color: var(--color-blanco);
+    display: flex;
+    align-items: center;
+}
+/* modo tablet y ordenador */
+@media (min-width: 480px) {
+    .horario-defensaP .horario_texto-defensaP {
+    width: 100px;
+    flex: 1 1 100px;
+    }
+    .horario-defensaP {
+    display: flex;
+    flex: initial;
+    }
+    div#defensa_horario .promocion-defensaP {
+        width: 320px;
+    }
+}
+/********* Sección Defensa-video ***********/
+#defensa_video {
+/*  text-align: center;*/
+    padding: 20px;
+}
+#defensa_video h2 {
+    margin-left: 20px;
+}
+#defensa_video h3 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#defensa_video iframe {
+    display: block;
+    margin: 50px auto;
+}
+
+
+
+
+
+
 
 
 
@@ -1759,198 +2237,6 @@ div.inputs,
     font-size: 15px;
     margin: 20px auto 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-/*************** defensa-personal.html ************************/
-/**************************************************************/
-/** ============ ** ** DEFENSA PERSONAL ** ** ============== **/
-/**************************************************************/
-/******* Esta página Defensa Personal tiene 4 secciones:
- * #defensa_intro, #defensa_tec, #defensa_femenina, 
- * #defensa_video(sólo hay un vídeo)    **** */
-/**************************************************************/
-
-/******* GENERAL *******/
-
-#defensa_intro p, 
-#defensa_tec p, 
-#defensa_femenina p {
-    margin: 20px 0px;
-}
-.contenedor_flex-defensaP {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.contenedor_flex-defensaP .texto-defensaP {
-    flex: 1 1 400px;
-    padding: 20px;
-}
-.contenedor_flex-defensaP figure {
-    flex: 1 1 400px;
-    margin: 20px auto;
-    padding: 20px;
-}
-.contenedor_flex-defensaP img{
-    width: 100%;
-    max-width: 800px;
-}
-#defensa_intro .contenedor_flex-defensaP .texto-defensaP {
-    flex: 1 1 400px;
-}
-#defensa_intro .contenedor_flex-defensaP figure {
-    flex: 1 1 400px;
-}
-/* ***************  Modo Tablet ********** */
-@media (min-width768px) {
-    .texto-defensaP {
-        margin: 15px 15px 20px 15px;
-        padding: 0px 20px;
-    }
-}
-/*  ******** Flex con wrap-reverse ******* */
-.contenedor_flex-defensaP.wrapReves-defensaP {
-    display: flex;
-    flex-wrap: wrap-reverse;
-    align-items: flex-end;
-}
-/*  ********* Sección Defensa-femenina ******* */
-/*Esta sección tiene 4 partes: 
-div#defensa_esp, 
-div#defensa_programa(con div#defensa_horario), 
-div#defensa_aprendizaje, 
-div#defensa_ventaja*/
-
-#defensa_femenina {
-    padding: 20px;
-}
-#defensa_femenina h2, #defensa_femenina h3 {
-    margin-left: 20px;
-}
-
-div#defensa_esp h3, div#defensa_programa h3, div#defensa_aprendizaje h3, div#defensa_ventaja h3 {
-    font-weight: 700;
-    font-size: 20px;
-    margin: 20px 0px;
-}
-/*********** para el efecto img hover ********  */
-#defensa_femenina figure {
-    overflow: hidden;
-    width: 400px;
-    padding: 0;
-    margin: 20px;
-}
-#defensa_femenina img {
-    width: 100%;
-    max-width: 800px;
-    transition: all 0.5s;
-}
-#defensa_femenina img:hover {
-    transform: scale(1.1);
-}
-/*****Para separarse entre si cada parte****/
-.lineaBottom-defensaP {
-/*  border-bottom: 1px solid #fff3;*/
-    background-color: #39393996;
-    padding: 30px 0px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-/******Para la parte: defensa_horario*******/
-div#defensa_horario .promocion-defensaP {
-    margin-top: 20px;
-    border: 1px dashed var(--color-rojo) ;
-    width: 100%;
-    padding: 20px;
-    background-color: #E6394619;
-}
-
-div#defensa_horario span {
-    font-weight: 700;
-    color: var(--color-blanco);
-}
-div#defensa_horario a {
-    display: block;
-    text-decoration: none;
-    color: var(--color-blanco);
-    padding-top: 20px;
-}
-div#defensa_horario a:hover {
-    color: var(--color-rojo-hover);
-}
-div#defensa_horario.fa-arrow-right {
-    font-size: 20px;
-    color: var(--color-rojo);
-    margin-left: 10px;
-}
-div#defensa_horario a:hover .fa-arrow-right {
-    color: var(--color-blanco);
-}
-.horarios-defensaP {
-    display: flex;
-    margin: 10px 0px;
-}
-.horario-defensaP {
-    display: flex;
-    flex: 0 1 100px;
-}
-.horario-defensaP img {
-    width: 32px !important;
-    margin: 10px;
-    flex: 1 1 32px;
-}
-.horario-defensaP .horario_texto-defensaP {
-    width: 60px;
-    flex: 1 1 60px;
-    color: var(--color-blanco);
-    display: flex;
-    align-items: center;
-}
-/* modo tablet y ordenador */
-@media (min-width: 480px) {
-    .horario-defensaP .horario_texto-defensaP {
-    width: 100px;
-    flex: 1 1 100px;
-    }
-    .horario-defensaP {
-    display: flex;
-    flex: initial;
-    }
-    div#defensa_horario .promocion-defensaP {
-        width: 320px;
-    }
-}
-/********* Sección Defensa-video ***********/
-#defensa_video {
-/*  text-align: center;*/
-    padding: 20px;
-}
-#defensa_video h2 {
-    margin-left: 20px;
-}
-#defensa_video h3 {
-    margin-top: 20px;
-    margin-left: 20px;
-}
-#defensa_video iframe {
-    display: block;
-    margin: 50px auto;
-}
-
-
-
-
-
 
 
 

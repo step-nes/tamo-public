@@ -76,10 +76,10 @@ $(document).ready(function(){
 //////////////////////////////////////////
         //    * SECCION *    //
 $(document).ready(function() {
-    const acordeon = $('.acordeon');
-    const boton = $('.desplegable');
-    const flecha = $('.desplegable .icon-arrow');
-    const text = $('.desplegable h3');
+    const acordeon = $('.acordeon, .acordeon-benf');
+    const boton = $('.desplegable, .desp-benf');
+    const flecha = $('.desplegable .icon-arrow, .desp-benf .icon-arrow');
+    const text = $('.desplegable h3, .desp-benf h3');
 
     boton.each(function(i) {
         $(this).on('click', function() {
@@ -89,7 +89,7 @@ $(document).ready(function() {
                 acordeon.css('max-height', '0px');
 
                 // Abre el seleccionado
-                acordeon.eq(i).css('max-height', '130px');
+                acordeon.eq(i).css('max-height', 'fit-content');
 
                 // Flechas
                 flecha.css({
@@ -141,6 +141,128 @@ botonLeerMas.forEach((e,i)=>{
         }
     });
 });
+
+////////////////////////////////////////////////////////
+////////// REDIMENSION DE LA IMG DEL DIAGRAMA //////////
+/*
+function cambiarImagen() {
+    const imagen = document.getElementById('imagenEsquema');
+    const botones = document.querySelectorAll('.botonStyle, .botonStylePequeño');
+
+    imagen.style.opacity = 0;
+
+    // cambiar la imagen despues de un pequeño retraso para que la transicion sea visible
+
+    setTimeout(function() {
+
+        // Cambiar la imagen según el tamaño de la ventana
+
+        if (window.matchMedia("(min-width: 600px)").matches) {
+            imagen.src = "img/esquemaPc.jpg";
+            imagen.style.minWidth = "100%";
+        } else {
+            imagen.src = "img/esquemaMovil.jpg";
+            imagen.style.minWidth = "350px";
+        }
+
+        // vuelve a hacer que la imagen sea visible
+
+        imagen.style.opacity = 1;
+    }, 300);
+
+    // obtiene el tamaño de la imagen y ajusta los botones 
+
+    const imagenWidth = imagen.clientWidth;
+    botones.forEach(boton => {
+        const paddingHorizontal = imagenWidth * 0.01;
+        const paddingVertical = imagenWidth * 0.0122;
+        const fontSize = imagenWidth * 0.02;
+
+        boton.style.padding = `${paddingVertical}px ${paddingHorizontal}px`;
+        boton.style.fontSize = `${fontSize}px`;
+    });
+}
+
+cambiarImagen();
+window.addEventListener("resize", cambiarImagen);
+*/
+function cambiarImagen() {
+  const $imagen = $("#imagenEsquema");
+  const $botones = $(".botonStyle, .botonStylePequeno");
+
+  // Ocultar con animación de opacidad
+  $imagen.css("opacity", 0);
+
+  // Cambiar la imagen después de un pequeño retraso
+  setTimeout(function () {
+    if (window.matchMedia("(min-width: 600px)").matches) {
+      $imagen.attr("src", "./img/esquemaPc.jpg").css("min-width", "100%");
+    } else {
+      $imagen.attr("src", "./img/esquemaMovil.jpg").css("min-width", "350px");
+    }
+
+    // Mostrar de nuevo
+    $imagen.css("opacity", 1);
+  }, 300);
+
+  // Ajustar tamaño de botones según el ancho de la imagen
+  const imagenWidth = $imagen.width();
+  $botones.each(function () {
+    const paddingHorizontal = imagenWidth * 0.01;
+    const paddingVertical = imagenWidth * 0.0122;
+    const fontSize = imagenWidth * 0.02;
+
+    $(this).css({
+      "padding": `${paddingVertical}px ${paddingHorizontal}px`,
+      "font-size": `${fontSize}px`
+    });
+  });
+}
+
+// Llamada inicial y en resize
+cambiarImagen();
+$(window).on("resize", cambiarImagen);
+/////////////////////////
+    //////////////// Botones ver más de en estilos-kungfu.html /////////
+
+$(document).ready(function () {
+  const $texto_mas = $(".texto_mas-etlKF");
+  const $boton_leer_mas = $(".btn_leer_mas-etlKF");
+  const $flecha_dos = $(".btn_leer_mas-etlKF .fa-caret-down");
+
+  $boton_leer_mas.each(function (i) {
+    $(this).on("click", function () {
+      if ($texto_mas.eq(i).css("max-height") === "0px" || $texto_mas.eq(i).css("max-height") === "none") {
+        
+        // Cierra todos
+        $texto_mas.css("max-height", "0px");
+        
+        // Abre el actual
+        $texto_mas.eq(i).css({
+          "max-height": "1200px",
+          "transition": "max-height 2s"
+        });
+
+        // Rotar todas las flechas a posición inicial
+        $flecha_dos.css("transform", "rotate(360deg)");
+
+        // Rotar la flecha del actual
+        $flecha_dos.eq(i).css({
+          "transform": "rotate(180deg)",
+          "transition": "all 0.5s"
+        });
+
+      } else {
+        // Si ya está abierto, lo cierra
+        $texto_mas.eq(i).css("max-height", "0px");
+        $flecha_dos.eq(i).css("transform", "rotate(360deg)");
+      }
+    });
+  });
+});
+
+
+
 ///////////////////////////////////////////////////
 //          * BOTON SECCION CONTACTO HORARIO *          //
 $(document).ready(function () {
@@ -237,4 +359,3 @@ $(".boton-arriba").fadeOut();
 
 
   //////////////////////////////////////////
-        //    * BOTON ARRIBA *    //

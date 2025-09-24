@@ -1,0 +1,161 @@
+.content_box-etlKF {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 50px;
+}
+.esquemaMovil-etlKF {
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.esquemaMovil-etlKF img {
+	width: 100%;
+	transition: all 0.2s ease-in-out;
+}
+
+.esquemaMovil-etlKF a {
+	text-decoration: none;
+	color: white;
+}
+
+/******************************************************BOTONES*************************************************/
+.botonStyle {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	cursor: pointer;
+	transform: translate(-50%, -50%);
+}
+
+.botonRaymond {
+	left: 32%;
+	top: 44.4%;
+}
+
+.botonVzlano {
+	left: 32%;
+	top: 56.7%;
+}
+
+.botonSifu {
+	left: 32%;
+	top: 69.5%;
+}
+
+.botonEscuela {
+	left: 32%;
+	top: 81.1%;
+}
+
+.botonBak {
+	left: 84.5%;
+	top: 57.7%;
+}
+
+.botonGM {
+	left: 84.5%;
+	top: 68.5%;
+}
+
+.botonTai {
+	left: 84.5%;
+	top: 80.2%;
+}
+
+/************* BOTONES PEQUEÑOS ****************/
+
+.botonStylePequeno {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0);
+	color: white;
+	border: none;
+	cursor: pointer;
+	transform: translate(-50%, -50%);
+}
+
+.botonMizong {
+	left: 81.5%;
+	top: 40.2%;
+}
+
+.botonTaichi {
+	left: 81.5%;
+	top: 44.8%;
+}
+
+.botonHung {
+	left: 81.5%;
+	top: 49.3%;
+}
+
+/*************** mediaQuery ******************/
+@media (min-width: 600px) {
+	.esquemaMovil {
+		max-width: 1200px;
+	}
+
+	/************** BOTONES ****************/
+	.botonStyle {
+		font-size: 1.5vw;
+	}
+
+	.botonRaymond {
+		left: 50%;
+		top: 15%;
+	}
+
+	.botonVzlano {
+		left: 50%;
+		top: 38.6%;
+	}
+
+	.botonSifu {
+		left: 50%;
+		top: 62.5%;
+	}
+
+	.botonEscuela {
+		left: 50%;
+		top: 85%;
+	}
+
+	.botonBak {
+		left: 85.5%;
+		top: 41%;
+	}
+
+	.botonGM {
+		left: 85.5%;
+		top: 63%;
+	}
+
+	.botonTai {
+		left: 85.5%;
+		top: 86%;
+	}
+
+	/*********** BOTONES PEQUEÑOS **************/
+
+	.botonMizong {
+		left: 84%;
+		top: 6.7%;
+	}
+
+	.botonTaichi {
+		left: 84%;
+		top: 15.3%;
+	}
+
+	.botonHung {
+		left: 84%;
+		top: 24%;
+	}
+}
