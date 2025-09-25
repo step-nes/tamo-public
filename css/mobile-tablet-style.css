@@ -125,9 +125,6 @@ h2 > span.color-secon {
     line-height: 1.5;
     
 }
-.main-title.header-h2-hist-kungfu {
-    margin-bottom: 0px;
-}
 /**************************************/
 /**** * * CONTENEDOR PRINCIPAL * * ****/
 /**************************************/
@@ -384,16 +381,16 @@ nav.main-menu li > ul {
 .fondo {
     background-color: var(--colorFondo1);
 }
-.fondo_2{
+.fondo_2 {
     background-color: #1d1d1d;
 }
-.circulo-fondo{
+.circulo-fondo {
     background-color: var(--color-rojo);
      filter: blur(240px); 
     border-radius: 100%;
     width: 300px;
     height: 300px;
-    position:relative;
+    position: relative;
     top: 0%;
     bottom: auto;
     left: 0;
@@ -447,10 +444,10 @@ nav.main-menu li > ul {
     gap: 50px;
 }
 .img-flex {
-    flex: 310px 1 1;
+    flex: 1 1 310px;
 }
 .content-flex {
-    flex: 350px 1 1; /* flex: 450px 1 1; hist kung fu */
+    flex: 1 1 350px; /* flex: 450px 1 1; hist kung fu */
     text-align: center;
 }
 /**************************************/
@@ -470,7 +467,7 @@ nav.main-menu li > ul {
 .imagen_hrs {
     height: 380px;
     max-width: 139px;
-    flex: 130px 1 1;
+    flex: 1 1 130px;
     position: relative;
     object-fit: cover;
     width: 100%;
@@ -478,7 +475,7 @@ nav.main-menu li > ul {
     object-position:center ; /* Mueve la imagen hacia la derecha */
     filter: drop-shadow(1px 2px 4px black);
     z-index: 10;
-    }
+}
 .img-top {
     margin-top: 80px;
 }
@@ -541,7 +538,7 @@ main i {
     width: 100%;
     height: 370px;
     position: relative;
-    flex: 400px 1 1;
+    flex: 1 1 400px;
 }
 .video-contain {
     width: 100%;
@@ -601,7 +598,7 @@ main i {
     box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4); /* Agrega una sombra sutil */
 }
 .image-contain {
-     filter: contrast(0.5);
+    filter: contrast(0.5);
     margin: auto;
     object-fit: contain;
     max-width: 200px;
@@ -622,7 +619,7 @@ footer {
 }
 div.faq-tit-img-cont {
     text-align: center;
-    flex: 310px 1 1;
+    flex: 1 1 310px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -666,7 +663,7 @@ footer .img-flex.video {
 }
 footer .caja-flex .content-flex {
     height: 100%;
-    flex: 380px 1 1;
+    flex: 1 1 380px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -724,9 +721,9 @@ footer .text_logo {
     transition: 0.4s;
 }
 .circulo-fondo_foot {
-     filter: blur(200px); 
+    filter: blur(200px); 
     background-color: var(--color-rojo);
-   position: absolute;
+    position: absolute;
     border-radius:50%;
     width: 300px;
     height: 200px;
@@ -891,10 +888,11 @@ h2.aportan, p.aportan-concep {
 }
 .seccion-tipo-video .content-flex {
     padding-bottom: 20px;
+    line-height: 30px;
 }
-/*.seccion-tipo-video h2 {
+.seccion-tipo-video h2 {
     margin-bottom: 10px;
-}*/
+}
 .cel-titulo {
     display:block;
 }
@@ -988,7 +986,7 @@ h2.aportan, p.aportan-concep {
 .image-cover {
     object-fit: cover; /* Ajusta la imagen a las dimensiones del contenedor */
     width: 100%;
-    height: 200px;
+    height: auto;
     object-position: top;
     transition: transform 1s, opacity 1s; /* Optimizado para que ambas transiciones tengan la misma duración */
 }
@@ -1057,7 +1055,7 @@ h3.posicion {
     width: 100%;
 
     position: relative;
-    flex: 400px 1 1;
+    flex: 1 1 400px;
 }
 .benf-tit-img h3 {
     margin-bottom: 15px;
@@ -1070,7 +1068,7 @@ h3.posicion {
 }
 .benf-flex-2 {
     height: 100%;
-    flex: 328px 1 1;
+    flex: 1 1 328px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -1149,6 +1147,16 @@ ul.list-benf li {
 /**************************************************************/
   
 /************ general *************/
+header.home-header.header-historia {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)), 
+    url(../img/ming.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+    padding: 20px 20px 200px;
+}
 section.hist-kungfu:nth-child(odd) {
     background-color: #292929; /*Alternar colores de fondo*/ 
 }
@@ -1156,6 +1164,9 @@ main.hist-kungfu {
     text-align: center;
     font-size: 18px;
     line-height: 1.5em;
+}
+.main-title.header-h2-hist-kungfu {
+    margin-bottom: 0px;
 }
 main.hist-kungfu h2 {
 /*  font-size: 36px;*/
@@ -1249,6 +1260,7 @@ ul.lista-kungfu-intro {
  * hist kung fu * * * *****************/
 /**************************************/
 
+
 #historia_origen-kungfu .texto_mas-kungfu {
     display: flex;
     justify-content:center;
@@ -1300,7 +1312,7 @@ ul.lista-kungfu-intro {
 /******** ============== Modo TABLET *******/
 @media (min-width:768px) {
     #historia_origen-kungfu .contenedor_origen-kungfu .contenedor_texto-kungfu {
-        flex:1 1 600px;
+        flex: 1 1 600px;
         padding: 0 50px;
     }
     #historia_origen-kungfu .contenedor_origen-kungfu figure {
@@ -1488,7 +1500,7 @@ main.main-etlKF p {
 }
 #video-etlKF {
     padding: 30px 10px;
-    background-color: var(--color-negro);
+    background-color: var(--colorFondo1);
 }
 .video2-etlKF {
     display: flex;
@@ -1501,7 +1513,7 @@ main.main-etlKF p {
     gap: 20px;
 }
 .texto-etlKF {
-    flex: 300px 1 1;
+    flex: 1 1 300px;
 }
 .texto_span-etlKF {
     color: var(--color-rojo);
@@ -1532,7 +1544,7 @@ main.main-etlKF p {
     margin: 15px 15px 0;
 }
 .texto-2-etlKF {
-    flex: 200px 1 1;
+    flex: 1 1 200px;
     margin: 30px 50px;
 }
 /* ============= TABLET === */
@@ -1622,7 +1634,7 @@ header.home-header.header-escuela {
     position: relative;
     object-fit: cover;
     overflow: hidden;
-    flex: 240px 1 1;
+    flex: 1 1 240px;
     height: 470px;
     z-index: 10;
     width: 100%;
@@ -1632,7 +1644,7 @@ header.home-header.header-escuela {
     margin-top: 80px;
 }
 #escuela-kungfu .content-flex-text {
-    flex: 350px 1 1;
+    flex: 1 1 350px;
 }
 .icono-yan-secc-salud {
     background-image: url("../img/yangParaAbajo.png");
@@ -1740,10 +1752,184 @@ header.home-header.header-escuela {
     }
 }
 
-/*************** taichi.html ************************/
-/****************************************************/
-/** ============ ** ** TAI CHI ** ** ============= **/
-/****************************************************/
+/**************************************************************/
+/************************* taichi.html ************************/
+/**************************************************************/
+/** =================== ** ** TAI CHI ** ** ================ **/
+/**************************************************************/
+
+header.home-header.header-taichi {
+    background-image:linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(../img/pose77.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 100px;
+}
+header.home-header.header-taichi h2 {
+    font-size: 5rem;
+}
+main.main-taichi .fondo_2 {
+    position: relative;
+    padding-bottom: 30px;
+}
+/****** TAICHI INTRO ******/
+
+#taichi-intro h2 {
+    font-weight: 400;
+    color: var(--color-blanco);
+    margin: 30px 0 60px 0;
+    font-size: 2rem;
+}
+#taichi-intro p {
+    margin-bottom: 20px;
+    font-size: 1.13rem;
+}
+#taichi-intro .rojo {
+    font-weight: 400;
+    color: var(--color-rojo);
+}
+.iconos-taichi {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.imagen_hrs-tai {
+    height: 380px;
+    max-width: 240px;
+    flex: 1 1 130px;
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    overflow: hidden;
+    object-position: left; /* Mueve la imagen hacia la derecha */
+    filter: drop-shadow(1px 2px 4px black);
+    z-index: 10;
+}
+.centro-taichi {
+    padding: 20px 0 0;
+}
+.enroll-btn2.btn2-taichi {
+    height: 100%;
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    /*flex: 1 1 228px;*/
+    flex: 1 1 270px;
+    margin: auto;
+    max-width: none;
+}
+#seccion-clases-taichi h3 {
+    font-weight: 500;
+    font-size:1.6rem;
+    margin-bottom: 20px;
+}
+#seccion-clases-taichi p {
+    margin-bottom: 20px;
+    color: var(--color-texto);
+}
+.desplegable.despleglable-taichi {
+    margin-top: 14px;
+}
+.img-float-taichi {
+    float: right;
+}
+/***** taichi horarios ******/
+.centro-taichi {
+    margin:auto;
+    align-items: center;
+    text-align: center;
+}
+.horari-taichi {
+    justify-content: center;
+}
+.caja-flex.programs {
+    flex: 1 1 328px;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+}
+.circulo-fondo_centro {
+    overflow: auto;
+    background-color: var(--color-rojo);
+    filter: blur(200px); 
+    border-radius: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 50%;
+}
+.caja-flex.fecha {
+    gap: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+#seccion-clases .caja-flex.fecha p {
+    font-size: 0.9rem;
+}
+/***** TAICHI SLIDER - CARRUSEL *****/
+
+#seccionSliderTaichi {
+    padding: 20px;
+}
+#sliderTaichi-container {
+    position: relative;
+    overflow: hidden;  
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+.slider {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.3s ease-in;
+}
+ul.slider-nucleo {
+    display: flex;
+}
+.slider-nucleo li {
+    flex: 0 0 100%;
+    text-align: center;
+}
+/*verificar*/
+.slider-nucleo img {
+    aspect-ratio: 16 / 9;
+    object-fit: contain; /*cambio object-fit: "cover" a "contain" para las imagenes verticales*/
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;        
+}
+.btn-taichi {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+    background-color: rgba(50, 50, 50, 0.4);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    z-index: 1;
+    transition: 0.3s;
+    color: white;
+}
+.btn-taichi:hover{
+    padding: 15px;
+    transition: 0.3s;
+}
+.btn-taichi.sldr-next {
+    right: 10px;
+}
+.btn-taichi.sldr-before {
+    left: 10px;
+}
 
 
 
@@ -1770,6 +1956,11 @@ header.home-header.header-escuela {
 
 
 
+
+
+
+
+/**************************************************************/
 /*************** defensa-personal.html ************************/
 /**************************************************************/
 /** ============ ** ** DEFENSA PERSONAL ** ** ============== **/
@@ -1789,7 +1980,9 @@ header.home-header.header-defensaP {
     background-position: 50% 50%;
     padding-bottom: 100px;
 }
-
+header.home-header.header-defensaP h2 {
+    font-size: 5rem;
+}
 /******* GENERAL *******/
 
 main.main-defensaPer {
@@ -1823,11 +2016,11 @@ main.main-defensaPer h2 {
     align-items: center;
 }
 .contenedor_flex-defensaP .texto-defensaP {
-    flex: 400px 1 1;
+    flex: 1 1 400px;
     padding: 20px;
 }
 .contenedor_flex-defensaP figure {
-    flex: 400px 1 1;
+    flex: 1 1 400px;
     margin: 20px auto;
     padding: 20px;
 }
@@ -1836,7 +2029,7 @@ main.main-defensaPer h2 {
     max-width: 800px;
 }
 #defensa_intro .contenedor_flex-defensaP .texto-defensaP {
-    flex: 400px 1 1;
+    flex: 1 1 400px;
 }
 
 /* ***************  Modo Tablet ********** */
@@ -1956,16 +2149,16 @@ div#defensa_horario a:hover .fa-arrow-right {
 }
 .horario-defensaP {
     display: flex;
-    flex: 100px 0 1;
+    flex: 0 1 100px;
 }
 .horario-defensaP img {
     width: 32px !important;
     margin: 10px;
-    flex: 32px 1 1;
+    flex: 1 1 32px;
 }
 .horario-defensaP .horario_texto-defensaP {
     width: 60px;
-    flex: 60px 1 1;
+    flex: 1 1 60px;
     color: var(--color-blanco);
     display: flex;
     align-items: center;
@@ -1974,7 +2167,7 @@ div#defensa_horario a:hover .fa-arrow-right {
 @media (min-width: 480px) {
     .horario-defensaP .horario_texto-defensaP {
         width: 100px;
-        flex: 100px 1 1;
+        flex: 1 1 100px;
     }
     .horario-defensaP {
         display: flex;
@@ -2006,6 +2199,18 @@ div#defensa_horario a:hover .fa-arrow-right {
     border-radius: 5px; 
     box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2057,7 +2262,7 @@ h2.titulo-contact {
     max-width: 420px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     color: var(--color-texto);
-    flex: 350px 1 1;
+    flex: 1 1 350px;
 }
 .icono-titulo-contact {
     display: flex;

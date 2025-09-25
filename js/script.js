@@ -26,7 +26,7 @@ $(document).ready(function(){
                 <li><a href="index.html">Inicio</a></li>
                 <li class="li-despliegue">
                     <a class="submenu-item-pc">
-                        Kung-Fu
+                        Kung Fu
                         <i class="fa-solid fa-sort-down down"></i>
                     </a>
                     <ul class="despliegue-secundario">
@@ -35,8 +35,8 @@ $(document).ready(function(){
                         <li><a href="escuela-kungfu.html">Escuela</a></li>
                     </ul>
                 </li>
-                <li><a href="taichi.html">Taichi</a></li>
-                <li><a href="defensa-personal.html">Defensa&nbsp;personal</a></li>
+                <li><a href="taichi.html">Tai Chi</a></li>
+                <li><a href="defensa-personal.html">Defensa&nbsp;Personal</a></li>
                 <li class="li-despliegue">
                     <a class="submenu-item-pc">
                         Medios
@@ -127,15 +127,14 @@ $(document).ready(function() {
 });
 
 ///////////////////////////////////////////////////
+///////////// HISTORIA DEL KUNG FU 
 //Para MOSTRAR y OCULTAR los textos adicionales con botones leerMas
-    // Nativo
+
 const botonLeerMas = document.querySelectorAll(".leer_mas-kungfu");
 const textoMas = document.querySelectorAll(".texto_mas-kungfu");
-const cajaIntro = document.querySelector(".contenedor_intro");
 
 botonLeerMas.forEach((e,i) => {
     e.addEventListener("click",function(){
-        
         if (textoMas[i].style.maxHeight === "0px" || textoMas[i].style.maxHeight === ""){
             textoMas[i].style.maxHeight ="initial";
             e.innerText="Ocultar";
@@ -183,13 +182,14 @@ function cambiarImagen() {
     // Llamada inicial y en resize
 cambiarImagen();
 $(window).on("resize", cambiarImagen);
-/////////////////////////
-    //////////////// Botones ver más de en estilos-kungfu.html /////////
+///////////////////////////////////////////
+/////////////// ESTILOS DE KUNG FU 
+/////////// Botones ver más
 
 $(document).ready(function () {
   const $texto_mas = $(".texto_mas-etlKF");
-  const $boton_leer_mas = $(".btn_leer_mas-etlKF");
-  const $flecha_dos = $(".btn_leer_mas-etlKF .fa-caret-down");
+  const $boton_leer_mas = $(".btn_leer_mas-etlKF, .btn_leer_mas2-etlKF");
+  const $flecha_dos = $(".btn_leer_mas-etlKF .fa-caret-down, .btn_leer_mas2-etlKF .fa-caret-down");
 
   $boton_leer_mas.each(function (i) {
     $(this).on("click", function () {
@@ -221,9 +221,53 @@ $(document).ready(function () {
     });
   });
 });
+///////////////////////////////////////////////////////////////
+////////////////////// SLIDER TAICHI.HTML
+$(document).ready(function(){
+    const $items = $('.slider-nucleo li');
+    let currentIndex = 0;
+    let intervalo_slider = null;
+
+    function showImage(index) {
+        $items.stop(true, true).fadeOut(300);
+        return $items.eq(index).stop(true, true).fadeIn(300);
+    }
+    function imgSig() {
+        currentIndex = (currentIndex + 1) % $items.length;
+        return showImage(currentIndex);
+    }
+    function imgAnt() {
+        currentIndex = (currentIndex - 1 + $items.length) % $items.length;
+        return showImage(currentIndex);
+    }
+    $('.btn-taichi.sldr-next').click(function(){
+        imgSig();
+    });
+    $('.btn-taichi.sldr-before').click(function(){
+        imgAnt();
+    });
+
+    function startSlider(){
+        if (!intervalo_slider) {
+            return intervalo_slider = setInterval(imgSig, 3000);
+        }
+    }
+    function stopSlider(){
+        if (intervalo_slider) {
+            clearInterval(intervalo_slider);
+            return intervalo_slider = null;
+        }
+    }
+    // Inicializar mostrando solo la primera imágen
+    $items.hide().eq(currentIndex).show();
+
+    startSlider();
+    $('.btn-taichi, #sliderTaichi-container').hover(stopSlider, startSlider);
+});
 
 
 /////////////////////////////////////////////////////////////
+////////////////// DEFENSA PERSONAL
 
 $(document).ready(function () {
   $(".btn_leer_mas-defP").on("click", function () {

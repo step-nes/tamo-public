@@ -362,10 +362,36 @@
 /**********************************************/
 /** ============== taichi.html ============= **/
 /**********************************************/
-
-
-
-
+    .horari-taichi {
+        display: flex;
+        gap: 20px;
+        justify-content: initial;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .centro-tai {
+        margin: initial;
+        align-items: center;
+        text-align: left;
+    }
+    .caja-flex.programs{
+        text-align: center;
+    }
+    .enroll-btn2.btn2-taichi {
+        max-width: 300px;
+        margin: initial;
+    }
+    .imagen_hrs-tai{
+        height: 470px;
+        max-width: 140px;
+        flex: 130px 1 1;
+        position: relative;
+        object-fit: cover;
+        width: 100%;
+        overflow: hidden;
+        object-position:center ; /* Mueve la imagen hacia la derecha */
+        filter: drop-shadow(1px 2px 4px black);
+    }
 /**************************************************/
 /** ========== defensa-personal.html =========== **/
 /**************************************************/
