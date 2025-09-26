@@ -349,8 +349,7 @@ nav.main-menu li > ul {
     text-decoration: none;
     padding: 20px 30px;
     border-radius: 5px;
-    margin-right: 50px;
-    margin-top: 10px;
+    margin: 10px 10px;
     font-size: 14px;
     cursor: pointer;
     color: white;
@@ -360,19 +359,12 @@ nav.main-menu li > ul {
     color: var(--color-rojo);
     transform: scale(1.05);
 }
-.leer_mas2:hover {
-    background-color: var(--color-negro);
-    color: var(--color-rojo);
-    transform: scale(1.05);
-    border: 1px solid var(--transparente);
-}
 main .cta-button {
     padding: 16px 15px;
     background-color: var(--color-rojo);
     color: var(--color-blanco);
     border-radius: 5px;
     border: 1px solid var(--color-rojo);
-    margin: 20px 0;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -390,6 +382,12 @@ main .cta-button {
     font-size: 10px;
     cursor: pointer;
     color: white;
+}
+.leer_mas2:hover {
+    background-color: var(--color-negro);
+    color: var(--color-rojo);
+    transform: scale(1.05);
+    border: 1px solid var(--transparente);
 }
 .btn-pc-only {
     display: none;
@@ -415,9 +413,14 @@ main .cta-button {
 }
 .section-enroll-btn2, .enroll-btn2 {
     transition: background-color 0.3s ease, transform 0.2s ease;
-    padding: 15px 25px;
+    color: var(--color-negro);
+    text-decoration: none;
+    padding: 20px 30px;
     border-radius: 5px;
-    border: none;
+    margin: 10px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
 }
 .section-enroll-btn2:hover, .enroll-btn2:hover {
     border: 1px solid var(--color-blanco);
@@ -672,6 +675,8 @@ footer {
     padding-top: 30px;
     position: relative;
     overflow: hidden;
+    clear: both;
+
 }
 div.faq-tit-img-cont {
     text-align: center;
@@ -1569,11 +1574,134 @@ main.main-etlKF p {
         margin: 15px 15px 20px 15px;
     }
 }
-/************* escuela-kungfu.html ***************/
-/*************************************************/
-/** ===== ** ** ESCUELA DE KUNG-FU ** ** ====== **/
-/*************************************************/
-/*************************************************/
+/**************************/
+/*** maestros / estilos ***/
+/*** en esta parte están los 
+maestros del diagrama 
+* BAK HOK PAI 
+* SU YU CHANG
+* TAI CHI YANG
+* SIFU FERRAN
+* RAYMOND WONG
+* MAESTROS VENEZOLANOS
+* NUESTRA ESCUELA
+* MIZONG LUOHAN
+* TAICHI MANTIS
+* HUNG GAR
+*************************/
+#historia_intro .principal-box {
+    border-bottom: 1px solid #99898276;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#historia_intro .contenedor_texto {
+    padding: 0 20px;
+}
+#historia_intro p {
+    text-align: initial;
+}
+.contenedor_intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.contenedor_intro h4 {
+        font-size: 15px !important;
+    }
+
+.contenedor_texto p {
+    margin: 30px 0;
+}
+@media (min-width: 768px) {
+    .contenedor_intro iframe {
+    flex: 1 1 600px;
+    margin: 10px;
+    }
+    #historia_intro .contenedor_texto {
+    padding: 0 50px;
+    }
+    .contenedor_texto {
+    flex: 1 1 500px;
+    }
+}
+#historia_origen .principal-box {
+    border-bottom: 1px solid #99898276;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#historia_origen .texto_mas {
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+#historia_origen .texto_mas figure {
+    flex: 0 1 450px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    border-radius: 5px; 
+    display: inline-block;
+    overflow: hidden;
+}
+#historia_origen .texto_mas img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+}
+.img-bak {
+    margin-bottom: 15px;
+}
+#historia_origen .texto_mas p {
+    padding: 0 20px;
+}
+#historia_origen .contenedor_origen .contenedor_texto {
+    padding: 0 20px;
+}
+.contenedor_origen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.contenedor_origen h4 {
+    font-size: 15px !important;
+}
+.contenedor_origen figure {
+    flex: 1 1 250px;
+    margin: 10px;
+}
+.contenedor_origen figure img {
+    width: 100%;
+    max-width: 500px;
+    filter: sepia(50%);
+    border: none;
+    border-radius: 5px; 
+}
+@media (min-width: 768px) {
+    #historia_origen .contenedor_origen .contenedor_texto {
+        flex:1 1 600px;
+        padding: 0 50px;
+    }
+    #historia_origen .contenedor_origen figure {
+        flex: 1 1 400px;
+    }
+    #historia_origen .texto_mas figure {
+        flex-basis: 500px;
+    }
+    #historia_origen .texto_mas p {
+        flex: 1 1 700px;
+        padding: 0 50px;
+    }
+}
+/******************* escuela-kungfu.html *********************/
+/*************************************************************/
+/** =========== ** ** ESCUELA DE KUNG-FU ** ** ============ **/
+/*************************************************************/
+/*************************************************************/
 
 /************ header / general *********/
 .caja-position-escue-kungfu{

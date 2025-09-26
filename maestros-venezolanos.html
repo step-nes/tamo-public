@@ -1,390 +1,340 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Historial del Kung-Fu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/historia.css">
-    <link rel="stylesheet" type="text/css" href="../css/styleoriginal.css">
-    <link rel="icon" href="../img/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Stephany Estevez Sanchez, Daniel Latouche, Madalina Caran, Nadine Mota Rodrigues, Chuzhe Zou, William Garcia Skinner, Jose Fernando Calizaya">
+    <meta name="description" content="TA-MO – Asociación Deportiva de Artes Marciales: mejora tu condición física y mental con clases de Kung-Fu, Tai-Chi, defensa personal y filosofía marcial. Accede a galería, vídeos, blog y contacto.">
+    <meta name="keywords" content="artes marciales, kung fu, tai chi, defensa personal, filosofía marcial, escuela de artes marciales, asociación deportiva, entrenamiento físico, disciplina, bienestar, meditación, equilibrio cuerpo mente, galería de artes marciales, vídeos de kung fu, blog de artes marciales">
+    <title>Bak Hok Pai | Tamo</title>   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/mobile-tablet-style.css">
+    <link rel="stylesheet" href="css/ordenador-style.css">
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="icon" href="./img/favicon.png">
 </head>
 <body>
-    <header class="section-header">
-        <div class="principal-box">
-            <nav class="section-navbar">
-                <div class="section-logo-container">
-                    <img src="../img/logo_60px.png" alt="Logo" class="section-logo">
-                    <div class="section-text-container">
-                        <h1 class="section-title">Ta-Mo</h1>
-                        <p class="section-subtitle">Asociación Deportiva de Artes Marciales</p>
-                    </div>
-                </div>
-                <button class="section-menu-toggle" aria-label="Abrir menú">
-                    ☰
-                </button>
-                <ul class="section-menu">
-                    <li>
-                        <button class="section-close-menu" aria-label="Cerrar menú">✖</button>
-                    </li>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li>
-                        <a href="historia.html">kung-Fu<i class="fa fa-sort-down"></i></a>
-                        <ul class="section-submenu">
-                            <li><a href="historia.html">Historia</a></li>
-                            <li><a href="estilos-de-kung-fu.html">Estilos</a></li>
-                            <li><a href="escuela-de-kung-fu.html">Escuela</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="taichi.html">Taichi</a></li>
-                    <li><a href="defensa.html">Defensa personal</a></li>
-                    <li>
-                        <a href="galeria.html">Medios<i class="fa fa-sort-down"></i></a>
-                        <ul class="section-submenu">
-                            <li><a href="galeria.html">Galeria</a></li>
-                            <li><a href="video.html">Video</a></li>
-                            <li><a href="descargas.html">Descargas</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contacto.html">Contacto</a></li>  
+<!-- inicio MENU CONTAINER -->
+<div class="menu-container">
+    <!-- Bars menu button  -->
+    <svg class="bars" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg>
+    <nav class="main-menu">
+        <div class="nav-header">
+            <div class="nav-logo">
+                <img src="./img/logo_60px.png" alt="Logotipo Tamo">
+                <h4>Ta-Mo</h4>
+            </div> <!-- fin nav-logo -->
+            <svg class="times" xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 640 640"><path d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg> 
+        </div>  
+        <ul class="list-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+                <a class="submenu-item">
+                    Kung Fu
+                    <svg class="down" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 640"><path fill="#ffffff" d="M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z"/></svg>
+                </a>
+                <ul class="sub">
+                    <li><a href="historia-kungfu.html">Historia</a></li>
+                    <li><a href="estilos-kungfu.html">Estilos</a></li>
+                    <li><a href="escuela-kungfu.html">Escuela</a></li>
                 </ul>
-                <button class="section-cta-button">Enroll Now</button>
-            </nav>
-            <h1 class="section-main-title">Historia <span style="color: var(--color-rojo);">del Kung-Fu</span></h1>
+            </li>
+            <li><a href="taichi.html">Tai Chi</a></li>
+            <li><a href="defensa-personal.html">Defensa Personal</a></li>
+            <li>
+                <a class="submenu-item">
+                    Medios
+                    <svg class="down" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 640"><path fill="#ffffff" d="M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z"/></svg>
+                </a>
+                <ul class="sub">
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="descarga.html">Descargas</a></li>
+                </ul>
+            </li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</div><!-- fin MENU CONTAINER-->
+<header class="home-header animado header-bak">
+    <div class="principal-box header-principal-box">
+        <!-- inicio header-top-container -->
+        <div id="header-top-container">
+            <!-- inicio LOGO CONTAINER -->
+            <div class="logo-container">
+                <a href="./index.html"><img src="./img/logo.png" alt="Logo" class="logo"></a>
+                <div class="text-container">
+                    <h1 class="title"><a href="./index.html">Ta-Mo</a></h1>
+                    <p class="subtitle"><a href="./index.html">Asociación Deportiva de Artes Marciales</a></p>
+                </div> <!-- fin text-container -->
+            </div><!-- fin LOGO CONTAINER -->
+            <!-- inicio inyección menu-pc -->
+            <div id="nav-container-pc">
+                <!-- AQUI SE INYECTARÁ EL MENÚ PARA MODO ORDENADOR -->
+            </div>
+            <!-- fin inyección de menu-pc -->
+            <a class="btn-pc-only" href="contacto.html">Contacto</a>
+        </div> <!-- fin header-top-container -->
+        <h2 class="main-title header-h2-bak">Maestro <span class="h2-2p">CHU HUEN TAK</span></h2>
+    </div> <!-- principal-box header-principal-box -->
+</header>
+<main class="main-maestros-vzl">
+    <!-- Historia ----Introducción -->
+    <section id="historia_intro">
+        <div class="principal-box animado">
+            <div class="contenedor_intro">
+                <!-- NOTA AGREGARLE UNA CLASE A LA IMAGEN PARA REDUCIR EL TEMAÑO DE LA IMAGEN EN EL CSS -->
+                <img src="../img/logo-venezolano.png" alt="logo venezolano">
+                <!-- ----------------------------- -->
+                <div class="contenedor_texto">
+                    <h4 class="rojo">ESCUELA VENEZOLANA</h4>
+                    <h2>Introducción</h2>
+                    <p>La Escuela venezolana fue nuestra inmediata predecesora en el linaje. Relataremos brevemente aquí el linaje de los maestros y cómo sus aprendizajes y conocimientos se fueron transmitiendo.</p>
+                    <p>El primer punto de partida y que muchos desconocen, es un desconocido chino de la época que peleaba muy bien (<strong>Chu Huen Tak</strong>). Este dió sus primeras clases en un ático y sus primeros alumnos no fueron otros que <strong>Alejandro Fuentes, Tony Orsini y Jose Guzmán.</strong></p>
+                    <button class="leer_mas cta-button">Leer Más</button>
+                </div>
+                <!-- TEXTO OCULTO -->
+                <div class="texto_mas">
+                    <img src="../img/esc-venezolana1-1.jpg" alt="escuela" width="200px">
+                    <p>Más tarde el <strong>Maestro Chu Huen Tak</strong> compra un gran terreno y con la ayuda de sus alumnos recrea lo que es ahora es el Gimnasio TAK (Caracas, Venezuela), año 1965.</p>
+                    <p>Principalmente se documentaban hechos transcendentales o de interés para los poderosos.</p>
+                    <p>Más tarde el maestro Chu Huen Tak compra un gran terreno y con la ayuda de sus alumnos recrea lo que es ahora es el Gimnasio TAK (Caracas, Venezuela), año 1965.</p>
+                    <p>Donde se practica el <strong>estilo Bak-Hok-Pai (Grulla blanca) José Guzmán</strong> , su hermano <strong>Víctor Guzmán, Tony Orsini, Alejandro Fuentes</strong>, etc. <strong>José Guzmán era el más avanzado, obtuvo el cinturón negro en 1968 y fue maestro de la escuela, Tony Orsini lo obtuvo en 1970.</strong></p>
+                    <img src="../img/esc-venezolana3-1.jpg" alt="escuela1">
+                </div><!-- FIN DEL TEXTO OCULTO -->
+            </div> <!-- fin contenedor_intro -->
+        </div> <!-- fin principal-box animado -->
+    </section> <!-- fin sect #historia_intro -->
+    <!-- PROFESORES VENEZOLANOS -->
+    <section id="historia_origen">
+        <div class="principal-box animado">
+            <div class="contenedor_origen">
+                <div class="contenedor_texto">
+                    <h4 class="rojo">Origen de la escuela Venezolana</h4>
+                    <p><strong>Víctor Guzmán</strong>, por cuestiones de trabajo, viaja a USA donde contacta con el <strong>G.M. Raymond Wong</strong>, aprendiendo con él los estilos de <strong>kung-fu Taiji Tang-Lang, Mizong Luohan y Hung-Gar</strong> .</p>
+                    <p>En los viajes esporádicos de Víctor Guzmán a Venezuela les enseña a su hermano <strong>José Guzmán</strong> y a <strong>Tony Orsini</strong> los conocimientos que le eran transmitidos por <strong>Raymond Wong</strong>.</p>
+                </div>
+                <figure>
+                    <img src="../img/esc-venezolana4-1.jpg" alt="escuela2">
+                </figure>
+            </div>
+            <!-- TEXTO OCULTO -->
+            <div class="texto_mas">
+                <figure>
+                    <img src="../img/EscuelaVenez001-1.jpg" alt="escuela3">
+                </figure>
+                <p><strong>José Guzmán, Tony Orsini y Alejandro Fuentes</strong> fundan la <strong>Escuela TIBET</strong> en Caracas (Venezuela) . En esta Escuela comenzó su aprendizaje el <strong>sifú Fernando Mariano Luna</strong> a la edad de 16 años</p>
+                <!-- lA SEGUNDA P NO SE VE AL LADO DE SU IMAGEN LLAMADA "EscuelaVenez001-1.jpg" SE VE ABAJO, CORREGIR EN EL CSS -->
+                <p>Años más tarde los tres maestros buscan diferentes sendas. Es aquí, cuando el <strong>maestro Orsini</strong>, buscando un local para seguir trabajando y recreando su estilo en particular, se lo comenta a <strong>Fernando Mariano</strong> (mi maestro), este habla con su padre (Dr. Ferran) y le proporciona una gran sala donde poder seguir practicando kung-fu, momentáneamente.</p>
+            </div><!-- FIN DEL TEXTO OCULTO -->
+            <button class="leer_mas cta-button">Leer Más</button>
         </div>
-    </header>  
-    
-    <main>
-    
-        <!-- Historia ----Introducción -->
-        <section id="historia_intro">
-            <div class="principal-box animado">
-                <div class="contenedor_intro">
-                    <!-- NOTA AGREGARLE UNA CLASE A LA IMAGEN PARA REDUCIR EL TEMAÑO DE LA IMAGEN EN EL CSS -->
-                    <img src="../img/logo-venezolano.png" alt="logo venezolano" width="400px">
-                    <!-- ----------------------------- -->
-                    <div class="contenedor_texto">
-                        <h4 class="rojo">ESCUELA VENEZOLANA</h4>
-                        <h2>Introducción</h2>
-                        <p>La Escuela venezolana fue nuestra inmediata predecesora en el linaje. Relataremos brevemente aquí el linaje de los maestros y cómo sus aprendizajes y conocimientos se fueron transmitiendo.</p>
-                        <p>El primer punto de partida y que muchos desconocen, es un desconocido chino de la época que peleaba muy bien (<strong>Chu Huen Tak</strong>). Este dió sus primeras clases en un ático y sus primeros alumnos no fueron otros que <strong>Alejandro Fuentes, Tony Orsini y Jose Guzmán.</strong></p>
-                        <!-- TEXTO OCULTO -->
-                        <div class="texto_mas">
-                            <img src="../img/esc-venezolana1-1.jpg" alt="escuela" width="200px">
-                            <p>Más tarde el <strong>Maestro Chu Huen Tak</strong> compra un gran terreno y con la ayuda de sus alumnos recrea lo que es ahora es el Gimnasio TAK (Caracas, Venezuela), año 1965.</p>
-                            <p>Principalmente se documentaban hechos transcendentales o de interés para los poderosos.</p>
-                            <p>Más tarde el maestro Chu Huen Tak compra un gran terreno y con la ayuda de sus alumnos recrea lo que es ahora es el Gimnasio TAK (Caracas, Venezuela), año 1965.</p>
-                            <p>Donde se practica el <strong>estilo Bak-Hok-Pai (Grulla blanca) José Guzmán</strong> , su hermano <strong>Víctor Guzmán, Tony Orsini, Alejandro Fuentes</strong>, etc. <strong>José Guzmán era el más avanzado, obtuvo el cinturón negro en 1968 y fue maestro de la escuela, Tony Orsini lo obtuvo en 1970.</strong></p>
-                            <img src="../img/esc-venezolana3-1.jpg" alt="escuela1">
-                        </div><!-- FIN DEL TEXTO OCULTO -->
-                        <button class="leer_mas">Leer Más</button>
-                    </div>
+    </section>
+    <!-- SECCION VICTOR GUZMAN Y TONY -->
+            <section id="historia_intro">
+        <div class="principal-box animado">
+            <div class="contenedor_intro">
+                <img src="./img/esc-venezolana5-1.jpg" alt="logo venezolano" width="400px">
+                <!-- ----------------------------- -->
+                <div class="contenedor_texto">
+                    <h4 class="rojo">Maestro Victor Guzmán y Tony Orsini</h4>
+                    <p>Es aquí donde el <strong>Dr. Ferrán</strong> le construye un escudo cuyas partes de él son herrajes auténticos, (el que más tarde sería escudo y emblema del <strong>Maestro Orsini</strong>) para cuya realización, los conocimientos adquiridos en el taller de su padre, el abuelo de <strong>Sifú Ferrán</strong>, conocido experto en el trabajo del hierro, lámparas y similares, fue determinante.</p>
+                    <p>El nombre del centro era <strong>INSTITUT FERRAN (Medicina Biológica y Bioenergética)</strong>, solo se le puso el anexo <strong>ESCUELA DE KUNG FU</strong>.</p>
+                    <p>Aproximadamente un año después termina la cesión de la sala, ya que al final el <strong>Maestro Tony Orsini</strong> se va al centro <strong>Italo-Venezolano</strong> en el cual está actualmente.</p>
+                    <p>Fundando su propia escuela denominándola <strong>Gym TAO</strong>. Y continúa sus aprendizajes fuera del pais  con varios maestros (tales como <strong>James Cook</strong>) para seguir mejorando su sistema.El <strong>Maestro Alejandro Fuentes</strong> se va a los Cortigos con <strong>Sifú Yepes</strong>, y guarda una estrecha colaboración con <strong>Tony Orsini.</strong></p>
+                    <!-- TEXTO OCULTO -->
                 </div>
-                </div>
-        </section>
-        <!-- PROFESORES VENEZOLANOS -->
-        <section id="historia_origen">
-            <div class="principal-box animado">
-                <div class="contenedor_origen">
-                    <div class="contenedor_texto">
-                        <h4 class="rojo">Origen de la escuela Venezolana</h4>
-                        <p><strong>Víctor Guzmán</strong>, por cuestiones de trabajo, viaja a USA donde contacta con el <strong>G.M. Raymond Wong</strong>, aprendiendo con él los estilos de <strong>kung-fu Taiji Tang-Lang, Mizong Luohan y Hung-Gar</strong> .</p>
-                        <p>En los viajes esporádicos de Víctor Guzmán a Venezuela les enseña a su hermano <strong>José Guzmán</strong> y a <strong>Tony Orsini</strong> los conocimientos que le eran transmitidos por <strong>Raymond Wong</strong>.</p>
-                    </div>
-                    <figure>
-                        <img src="../img/esc-venezolana4-1.jpg" alt="escuela2">
-                    </figure>
-                </div>
-                <!-- TEXTO OCULTO -->
-                <div class="texto_mas">
-                    <figure>
-                        <img src="../img/EscuelaVenez001-1.jpg" alt="escuela3">
-                    </figure>
-                    <p><strong>José Guzmán, Tony Orsini y Alejandro Fuentes</strong> fundan la <strong>Escuela TIBET</strong> en Caracas (Venezuela) . En esta Escuela comenzó su aprendizaje el <strong>sifú Fernando Mariano Luna</strong> a la edad de 16 años</p>
-                    <!-- lA SEGUNDA P NO SE VE AL LADO DE SU IMAGEN LLAMADA "EscuelaVenez001-1.jpg" SE VE ABAJO, CORREGIR EN EL CSS -->
-                    <p>Años más tarde los tres maestros buscan diferentes sendas. Es aquí, cuando el <strong>maestro Orsini</strong>, buscando un local para seguir trabajando y recreando su estilo en particular, se lo comenta a <strong>Fernando Mariano</strong> (mi maestro), este habla con su padre (Dr. Ferran) y le proporciona una gran sala donde poder seguir practicando kung-fu, momentáneamente.</p>
-                </div><!-- FIN DEL TEXTO OCULTO -->
-                <button class="leer_mas boton_esp">Leer Más</button>
             </div>
-        </section>
-        <!-- SECCION VICTOR GUZMAN Y TONY -->
-                <section id="historia_intro">
-            <div class="principal-box animado">
-                <div class="contenedor_intro">
-                    <img src="../img/esc-venezolana5-1.jpg" alt="logo venezolano" width="400px">
-                    <!-- ----------------------------- -->
-                    <div class="contenedor_texto">
-                        <h4 class="rojo">Maestro Victor Guzmán y Tony Orsini</h4>
-                        <p>Es aquí donde el <strong>Dr. Ferrán</strong> le construye un escudo cuyas partes de él son herrajes auténticos, (el que más tarde sería escudo y emblema del <strong>Maestro Orsini</strong>) para cuya realización, los conocimientos adquiridos en el taller de su padre, el abuelo de <strong>Sifú Ferrán</strong>, conocido experto en el trabajo del hierro, lámparas y similares, fue determinante.</p>
-                        <p>El nombre del centro era <strong>INSTITUT FERRAN (Medicina Biológica y Bioenergética)</strong>, solo se le puso el anexo <strong>ESCUELA DE KUNG FU</strong>.</p>
-                        <p>Aproximadamente un año después termina la cesión de la sala, ya que al final el <strong>Maestro Tony Orsini</strong> se va al centro <strong>Italo-Venezolano</strong> en el cual está actualmente.</p>
-                        <p>Fundando su propia escuela denominándola <strong>Gym TAO</strong>. Y continúa sus aprendizajes fuera del pais  con varios maestros (tales como <strong>James Cook</strong>) para seguir mejorando su sistema.El <strong>Maestro Alejandro Fuentes</strong> se va a los Cortigos con <strong>Sifú Yepes</strong>, y guarda una estrecha colaboración con <strong>Tony Orsini.</strong></p>
-                        <!-- TEXTO OCULTO -->
-                    </div>
+    </section>
+            <!-- SECCION FERRAN -->
+    <section id="historia_origen">
+        <div class="principal-box animado">
+            <div class="contenedor_origen">
+                <div class="contenedor_texto">
+                <h4 class="rojo">Su Historia</h4>
+                <p>Es concretamente el <strong>Dr. Ferran</strong>, el que le presenta al <strong>Maestro Su Yu chang</strong>, (Fundador de la <strong>PACHI TANG LANG</strong>, reunificando los 8 estilos de <strong>Mantis Religiosa</strong>), y es delante de él cuando realiza una demostración de los trabajos técnicos que el ya sabe, para ver el nivel que tenía.
+                Queda contento con la demostración y pasa a retocarle algunas cosas, pensemos que tenía ya una base sólida de sus enseñanzas anteriores.
+                Es el mismo <strong>Su Yu Chang</strong> el que le otorga el grado de Sifu 3º Tuan en <strong>Tang-Lang-Pai</strong>, y es con esta titulación que se desplaza a España.</p>
+                <!-- CENTRAR CON CSS AL MAESTRO FERRAN Y SU FOTO -->
+                <h2>Escudo Ferran</h2>
+                <img src="../img/escudo-ferran.png" alt="escudo" width="200px">
                 </div>
-        </section>
-                <!-- SECCION FERRAN -->
-        <section id="historia_origen">
-            <div class="principal-box animado">
-                <div class="contenedor_origen">
-                    <div class="contenedor_texto">
-                    <h4 class="rojo">Su Historia</h4>
-                    <p>Es concretamente el <strong>Dr. Ferran</strong>, el que le presenta al <strong>Maestro Su Yu chang</strong>, (Fundador de la <strong>PACHI TANG LANG</strong>, reunificando los 8 estilos de <strong>Mantis Religiosa</strong>), y es delante de él cuando realiza una demostración de los trabajos técnicos que el ya sabe, para ver el nivel que tenía.
-                    Queda contento con la demostración y pasa a retocarle algunas cosas, pensemos que tenía ya una base sólida de sus enseñanzas anteriores.
-                    Es el mismo <strong>Su Yu Chang</strong> el que le otorga el grado de Sifu 3º Tuan en <strong>Tang-Lang-Pai</strong>, y es con esta titulación que se desplaza a España.</p>
-                    <!-- CENTRAR CON CSS AL MAESTRO FERRAN Y SU FOTO -->
-                    <h2>Escudo Ferran</h2>
-                    <img src="../img/escudo-ferran.png" alt="escudo" width="200px">
-                    </div>
-                    <figure>
-                        <h2>Maestro Ferran</h2>
-                        <img src="../img/FERRAN-300x166.jpg" alt="ferran" width="200px">
-                    </figure>
-                </div>
-                <!-- TEXTO OCULTO -->
-                <div class="texto_mas">
-                    <figure>
-                        <!-- CENTRAR EL TEXTO DEL MAESTRO FERRAN -->
-                    <img src="../img/EscuelaVenez007-1.jpg" alt="escuela2">
-                    </figure>
-                <p>El <strong>Maestro Fernando Mariano Luna</strong>, llega a Barcelona (España) procedente de Caracas (Venezuela)  y empieza a impartir sus enseñanzas en 1980.
-                Fundó su propia Escuela de Kung-fu " <strong>Tang Lang King</strong>" pionero en enseñar <strong>Tang-Lang-Pai</strong> en España, prueba de ello es unos de los cuadernillos publicado en 1981. Su programa de enseñanza comprendía varios estilos de kung-fu, fruto de su aprendizaje con varios maestros (tal como él mismo relata en el citado cuadernillo).</p>
-                <!-- centrar el texto y la imagen del maestro Ferran -->
-                <h2>Maestro Ferran</h2>
-                <img src="../img/esc-venezolana7-1-150x150.jpg" alt="escuela" width="30px">
-                </div><!-- FIN DEL TEXTO OCULTO -->
-                <button class="leer_mas boton_esp">Leer Más</button>
+                <figure>
+                    <h2>Maestro Ferran</h2>
+                    <img src="../img/FERRAN-300x166.jpg" alt="ferran" width="200px">
+                </figure>
             </div>
-        </section>
-        <!-- SECCION MANTIS -->
-        <section id="historia_intro">
-            <div class="principal-box animado">
-                <div class="contenedor_intro">
-                    <img src="../img/nuestra-escuela1-1.jpg" alt="escuela">
-                    <!-- ----------------------------- -->
-                    <div class="contenedor_texto">
-                        <h4 class="rojo">Estilo Mantis</h4>
-                        <p>A pesar de ampararle una titulación internacional que traía, no le sirvió de nada a la hora de oficializar sus credenciales aquí en nuestro país ya que tuvo de hacerlo ante un comité para ratificar su condición y grado. Fué en 1982 cuando se le ratifica el grado que es cuando se crea el <strong>Dpto. de Kung-fu de la F.E.K.</strong></p>
+            <!-- TEXTO OCULTO -->
+            <div class="texto_mas">
+                <figure>
+                    <!-- CENTRAR EL TEXTO DEL MAESTRO FERRAN -->
+                <img src="../img/EscuelaVenez007-1.jpg" alt="escuela2">
+                </figure>
+            <p>El <strong>Maestro Fernando Mariano Luna</strong>, llega a Barcelona (España) procedente de Caracas (Venezuela)  y empieza a impartir sus enseñanzas en 1980.
+            Fundó su propia Escuela de Kung-fu " <strong>Tang Lang King</strong>" pionero en enseñar <strong>Tang-Lang-Pai</strong> en España, prueba de ello es unos de los cuadernillos publicado en 1981. Su programa de enseñanza comprendía varios estilos de kung-fu, fruto de su aprendizaje con varios maestros (tal como él mismo relata en el citado cuadernillo).</p>
+            <!-- centrar el texto y la imagen del maestro Ferran -->
+            <h2>Maestro Ferran</h2>
+            <img src="../img/esc-venezolana7-1-150x150.jpg" alt="escuela" width="30px">
+            </div><!-- FIN DEL TEXTO OCULTO -->
+            <button class="leer_mas cta-button">Leer Más</button>
+        </div>
+    </section>
+    <!-- SECCION MANTIS -->
+    <section id="historia_intro">
+        <div class="principal-box animado">
+            <div class="contenedor_intro">
+                <img src="../img/nuestra-escuela1-1.jpg" alt="escuela">
+                <!-- ----------------------------- -->
+                <div class="contenedor_texto">
+                    <h4 class="rojo">Estilo Mantis</h4>
+                    <p>A pesar de ampararle una titulación internacional que traía, no le sirvió de nada a la hora de oficializar sus credenciales aquí en nuestro país ya que tuvo de hacerlo ante un comité para ratificar su condición y grado. Fué en 1982 cuando se le ratifica el grado que es cuando se crea el <strong>Dpto. de Kung-fu de la F.E.K.</strong></p>
+            </div>
+            </div>
+    </section>
+            <!-- SENSEI Y ALUMNO -->
+    <section id="historia_origen">
+        <div class="principal-box animado">
+            <div class="contenedor_origen">
+                <div class="contenedor_texto">
+                    <h4 class="rojo">Sensei, Alumno y una amistad de años</h4>
+                    <p>Mi Maestro Sifu Ferran hace entrega de las armas para que queden en custodia de la Asociación <strong>TA-MO</strong> </p>
                 </div>
+                <figure>
+                    <img src="../img/FERRAN-ESPADAS2-768x1009.jpg" alt="escuela2">
+                </figure>
+            </div>
+    </section>
+    
+    <!-- Historia----Evolución  -->
+    <section id="historia_evolucion">
+        <div class="principal-box animado">
+            <h4 class="rojo">DESARROLLO DEL KUNG-FU</h4>
+            <h2>Evolución</h2>
+            <p>El desarrollo del kung-fu se asocia predominantemente hoy día a dos grandes escuelas:</p>
+            <div class="contenedor_escuela">
+                <div class="contenido_escuela">
+                    <h3><a href="https://es.wikipedia.org/wiki/Shaolin" target="_blank">Shaolín (少林寺)</a>:</h3>
+                    <p>Filosofía budista Chan (Zen)</p>
+                    <p>Estilos externos (duros)</p>
                 </div>
-        </section>
-                <!-- SENSEI Y ALUMNO -->
-        <section id="historia_origen">
-            <div class="principal-box animado">
-                <div class="contenedor_origen">
-                    <div class="contenedor_texto">
-                        <h4 class="rojo">Sensei, Alumno y una amistad de años</h4>
-                        <p>Mi Maestro Sifu Ferran hace entrega de las armas para que queden en custodia de la Asociación <strong>TA-MO</strong> </p>
+                <div class="contenido_escuela">
+                    <h3><a href="https://en.wikipedia.org/wiki/Wudangquan" target="_blank">Wudang (武當山)</a>:</h3>
+                    <p>Filosofía taoísta</p>
+                    <p>Estilos internos (suaves)</p>
                     </div>
+            </div>
+            <!-- TEXTO OCULTO -->
+            <div class="texto_mas texto_flex">
+                <p>Existen diversos estilos de kung-fu además de los predominantes de las escuelas de Shaolin y Wudang, como los de la escuela <a href="https://en.wikipedia.org/wiki/Emeiquan" target="_blank">Emei</a>, los tibetanos, los musulmanes “hui” y los de origen militar. Estos estilos han influido entre sí a lo largo del tiempo. La conexión con escuelas populares y personajes históricos fue crucial para que los plebeyos obtuvieran reconocimiento y estabilidad en su práctica. Además, la emigración, el comercio y la difusión del <a href="https://es.wikipedia.org/wiki/Zen" target="_blank">budismo</a> en China y el extremo oriente han jugado un papel importante en la popularización y desarrollo de diferentes estilos de kung-fu.</p>
+                <figure>
+                    <img src="https://artesmarciales.org/wp-content/uploads/2018/10/shaolin_monks-1.jpg">
+                </figure>
+            </div><!-- FIN DEL TEXTO OCULTO -->
+            <button class="leer_mas cta-button">Leer Más</button>
+            <!-- TIMELINE----Evolución -->
+            <div class="timeline">
+                <!-- Galería de línea de tiempo -->
+                <div class="contenedor_img">
                     <figure>
-                        <img src="../img/FERRAN-ESPADAS2-768x1009.jpg" alt="escuela2">
+                        <img src="./img/EvoPintura.jpg">
+                    </figure>
+                    <figure>
+                        <img src="./img/EvoShaolin.jpg">
+                    </figure>
+                    <figure>
+                        <img src="./img/EvoTaichi.jpg">
+                    </figure>
+                    <figure>
+                        <img src="./img/EvoPanda.jpg">
                     </figure>
                 </div>
-        </section>
-        
-        <!-- Historia----Evolución  -->
-        <section id="historia_evolucion">
-            <div class="principal-box animado">
-                <h4 class="rojo">DESARROLLO DEL KUNG-FU</h4>
-                <h2>Evolución</h2>
-                <p>El desarrollo del kung-fu se asocia predominantemente hoy día a dos grandes escuelas:</p>
-                <div class="contenedor_escuela">
-                    <div class="contenido_escuela">
-                        <h3><a href="https://es.wikipedia.org/wiki/Shaolin" target="_blank">Shaolín (少林寺)</a>:</h3>
-                        <p>Filosofía budista Chan (Zen)</p>
-                        <p>Estilos externos (duros)</p>
-                    </div>
-                    <div class="contenido_escuela">
-                        <h3><a href="https://en.wikipedia.org/wiki/Wudangquan" target="_blank">Wudang (武當山)</a>:</h3>
-                        <p>Filosofía taoísta</p>
-                        <p>Estilos internos (suaves)</p>
+                <!-- Indicadores/puntitos de línea de tiempo -->
+                <div class="caja_indicador">
+                    <div class="linea"></div>
+                    <div class="contenedor_indicador">
+                        <div class="contenido_indicador">
+                            <div class="circulo-fuera">
+                                <div class="circulo-dentro"></div>
+                            </div>
+                            <h3>1368-1644</h3>
+                            <p>Edad de Oro</p>
+                        </div>
+                        <div class="contenido_indicador">
+                            <div class="circulo-fuera">
+                                <div class="circulo-dentro"></div>
+                            </div>
+                            <h3>1644-1911</h3>
+                            <p>Monasterio de Shaolin</p>
+                            <p>Estilos del Sur</p>
+                        </div>
+                        <div class="contenido_indicador">
+                            <div class="circulo-fuera">
+                                <div class="circulo-dentro"></div>
+                            </div>
+                            <h3>1956-1958</h3>
+                            <p>Taijiquan</p>
+                            <p>Wushu</p>
+                        </div>
+                        <div class="contenido_indicador">
+                            <div class="circulo-fuera">
+                                <div class="circulo-dentro"></div>
+                            </div>
+                            <h3>1960s-1970s</h3>
+                            <p>Películas de Kung-Fu</p>
                         </div>
                 </div>
-                <!-- TEXTO OCULTO -->
-                <div class="texto_mas texto_flex">
-                    <p>Existen diversos estilos de kung-fu además de los predominantes de las escuelas de Shaolin y Wudang, como los de la escuela <a href="https://en.wikipedia.org/wiki/Emeiquan" target="_blank">Emei</a>, los tibetanos, los musulmanes “hui” y los de origen militar. Estos estilos han influido entre sí a lo largo del tiempo. La conexión con escuelas populares y personajes históricos fue crucial para que los plebeyos obtuvieran reconocimiento y estabilidad en su práctica. Además, la emigración, el comercio y la difusión del <a href="https://es.wikipedia.org/wiki/Zen" target="_blank">budismo</a> en China y el extremo oriente han jugado un papel importante en la popularización y desarrollo de diferentes estilos de kung-fu.</p>
-                    <figure>
-                        <img src="https://artesmarciales.org/wp-content/uploads/2018/10/shaolin_monks-1.jpg">
-                    </figure>
+                </div>
+                <div class="texto_mas">
+                    <div class="mas_flex">
+                        <p>Las artes marciales chinas comenzaron con los “18 luohan” y técnicas de bastón en Shaolin, alcanzando su auge durante la dinastía Ming <small>(1368-1644)</small>. Tras la destrucción del monasterio en la dinastía Qing<small>(1644-1911)</small>, los sobrevivientes crearon estilos del Sur, como el Hung gar, que influyeron en el desarrollo del karate en Okinawa.</p>
+                        <p>A finales del siglo XIX, el descontento en China por la colonización occidental llevó a la Rebelión de los bóxers en 1898. En 1910, Huo Yuanjia fundó la Jing Wu Athletic Association en Shanghai para promover las artes marciales. Tras la caída de la dinastía Qing, estas se convirtieron en símbolo del orgullo nacional.</p>
+                        <p>En 1949, tras la guerra civil, se fundó la República Popular China, lo que llevó a artistas marciales a emigrar a Taiwán y Hong Kong, difundiendo las artes marciales. En 1958, se introdujo el "wushu", una versión deportiva del kung-fu, que popularizó y hizo más accesibles estas prácticas.</p>
+                        <p>La Revolución Cultural China (1966-1976) destruyó el Monasterio de Shaolin y sus manuscritos. En 1980 reabrió, y el kung-fu ganó popularidad global en los años 70 gracias a Bruce Lee y películas como "<em><a href="https://es.wikipedia.org/wiki/Kung_Fu_Panda" target="_blank">Kung fu Panda</a></em>". Hoy, se utiliza en programas educativos infantiles contra el acoso.</p>
+                    </div>
+                    <p><small>Para saber más... <a href="https://es.wikipedia.org/wiki/Kung-fu" target="_blank">Wikipedia kung-fu</a> o en <a href="https://artesmarciales-tamo.blogspot.com/2016/03/el-kung-fu.html" target="_blank">nuestro blog</a>.</small></p>
+                    <p><small>Redactado por el equipo de expertos en kung-fu TA-MO.</small></p>
+                    <p><small>Reproducción autorizada siempre que se cite la fuente. Se ceden derechos a <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Wikipedia</a> en difusión del conocimiento del kung-fu.</small></p>
                 </div><!-- FIN DEL TEXTO OCULTO -->
-                <button class="leer_mas">Leer Más</button>
-                <!-- TIMELINE----Evolución -->
-                <div class="timeline">
-                    <!-- Galería de línea de tiempo -->
-                    <div class="contenedor_img">
-                        <figure>
-                            <img src="../img/EvoPintura.jpg">
-                        </figure>
-                        <figure>
-                            <img src="../img/EvoShaolin.jpg">
-                        </figure>
-                        <figure>
-                            <img src="../img/EvoTaichi.jpg">
-                        </figure>
-                        <figure>
-                            <img src="../img/EvoPanda.jpg">
-                        </figure>
-                    </div>
-                    <!-- Indicadores/puntitos de línea de tiempo -->
-                    <div class="caja_indicador">
-                        <div class="linea"></div>
-                        <div class="contenedor_indicador">
-                            <div class="contenido_indicador">
-                                <div class="circulo-fuera">
-                                    <div class="circulo-dentro"></div>
-                                </div>
-                                <h3>1368-1644</h3>
-                                <p>Edad de Oro</p>
-                            </div>
-                            <div class="contenido_indicador">
-                                <div class="circulo-fuera">
-                                    <div class="circulo-dentro"></div>
-                                </div>
-                                <h3>1644-1911</h3>
-                                <p>Monasterio de Shaolin</p>
-                                <p>Estilos del Sur</p>
-                            </div>
-                            <div class="contenido_indicador">
-                                <div class="circulo-fuera">
-                                    <div class="circulo-dentro"></div>
-                                </div>
-                                <h3>1956-1958</h3>
-                                <p>Taijiquan</p>
-                                <p>Wushu</p>
-                            </div>
-                            <div class="contenido_indicador">
-                                <div class="circulo-fuera">
-                                    <div class="circulo-dentro"></div>
-                                </div>
-                                <h3>1960s-1970s</h3>
-                                <p>Películas de Kung-Fu</p>
-                            </div>
-                    </div>
-                    </div>
-                    <div class="texto_mas">
-                        <div class="mas_flex">
-                            <p>Las artes marciales chinas comenzaron con los “18 luohan” y técnicas de bastón en Shaolin, alcanzando su auge durante la dinastía Ming <small>(1368-1644)</small>. Tras la destrucción del monasterio en la dinastía Qing<small>(1644-1911)</small>, los sobrevivientes crearon estilos del Sur, como el Hung gar, que influyeron en el desarrollo del karate en Okinawa.</p>
-                            <p>A finales del siglo XIX, el descontento en China por la colonización occidental llevó a la Rebelión de los bóxers en 1898. En 1910, Huo Yuanjia fundó la Jing Wu Athletic Association en Shanghai para promover las artes marciales. Tras la caída de la dinastía Qing, estas se convirtieron en símbolo del orgullo nacional.</p>
-                            <p>En 1949, tras la guerra civil, se fundó la República Popular China, lo que llevó a artistas marciales a emigrar a Taiwán y Hong Kong, difundiendo las artes marciales. En 1958, se introdujo el "wushu", una versión deportiva del kung-fu, que popularizó y hizo más accesibles estas prácticas.</p>
-                            <p>La Revolución Cultural China (1966-1976) destruyó el Monasterio de Shaolin y sus manuscritos. En 1980 reabrió, y el kung-fu ganó popularidad global en los años 70 gracias a Bruce Lee y películas como "<em><a href="https://es.wikipedia.org/wiki/Kung_Fu_Panda" target="_blank">Kung fu Panda</a></em>". Hoy, se utiliza en programas educativos infantiles contra el acoso.</p>
-                        </div>
-                        <p><small>Para saber más... <a href="https://es.wikipedia.org/wiki/Kung-fu" target="_blank">Wikipedia kung-fu</a> o en <a href="https://artesmarciales-tamo.blogspot.com/2016/03/el-kung-fu.html" target="_blank">nuestro blog</a>.</small></p>
-                        <p><small>Redactado por el equipo de expertos en kung-fu TA-MO.</small></p>
-                        <p><small>Reproducción autorizada siempre que se cite la fuente. Se ceden derechos a <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Wikipedia</a> en difusión del conocimiento del kung-fu.</small></p>
-                    </div><!-- FIN DEL TEXTO OCULTO -->
-                    <!-- Botón para leer más -->
-                    <button class="leer_mas">Leer Más</button>
-                </div>
-                </div>
-            </section>
-        
-    </main>
-    <script>
-        // Nativo
-        const botonLeerMas = document.querySelectorAll(".leer_mas");
-        const textoMas = document.querySelectorAll(".texto_mas");
-        const cajaIntro = document.querySelector(".contenedor_intro");
-        
-
-        
-        //para mostrar y ocultar los textos adicionales con botones leerMas
-        botonLeerMas.forEach((e,i)=>{
-            e.addEventListener("click",function(){
-                if(textoMas[i].style.maxHeight==="0px" || textoMas[i].style.maxHeight===""){
-                    textoMas[i].style.maxHeight ="initial";
-                    e.innerText="Ocultar";
-
-                }else{
-                    textoMas[i].style.maxHeight = 0;
-                    e.innerText="Leer Más";
-                }
-                
-
-            });
-
-        });
-    </script>
-
-    <footer class="fondo" ><!--div 100% ancho-->
+                <!-- Botón para leer más -->
+                <button class="leer_mas cta-button">Leer Más</button>
+            </div>
+            </div>
+        </section>
+</main>
+<!--  ======== FOOTER ======== -->
+<footer class="fondo_2" ><!--div 100% ancho-->
     <div class="principal-box animado"> <!--div con anchura maxima con relacion al nav,con flex vertical para separar el titulo -->
-        <div class="caja-flex"><!--div con flex-->
-            <div  class="img-flex video"><!--video y iconos---->
-                <h3 class="rojo" style="font-size: 2rem;">How We Work / FAQ</h3>
-                <p class="text" style="margin:10px 0px 60px 0px ;">Lorem ipsum dolor sit amet consectetur. Molestie cum ut aliquam convallis. Lacus sed velit adipiscing diam.</p>
-                <img src="../img/imagenFAQ.jpg" alt="hombres_peleando" style="width:100%; max-width: 500px; position: relative; z-index: 11;">
-                <div class="icono-yin pc-icono" style="margin-left: -90px; z-index: 3;  inset: 25% auto auto 5% ; transform: rotate(95deg);"></div>
-                <div class="icono-yan pc-icono" style="margin-left: -90px; inset: 80% auto auto 95% ; z-index: 1" ></div>
-            </div>
-
-            <div class="caja-flex content-flex"><!--flex botones y el texto-->
-                
-                <div class="desplegable">
-                    <div class="caja-mar">
-                        <div class="flex-izq">
-                            <h3> Do I have to be in shape to get started?</h3>
-                        </div>
-                        <div class="icon-arrow">&#129131;</div>
-                    </div>
-                    <div class="acordeon">
-                        <p class="p_active">Competiciones oficiales</p>
-                    </div>
-                </div>
-
-                    <div class="desplegable">
-                        <div class="caja-mar">
-                            <div class="flex-izq">
-                                <h3>Can I get first class for free?</h3>
-                            </div>
-                            <div class="icon-arrow">&#129131;</div>
-                        </div>
-                        <div class="acordeon">
-                            <p class="p_active">Mejora la condición física y mental.Beneficios de un deporte completo ( bilateralidad, brazos-tronco-piernas).</p>
-                        </div>
-                    </div>  
-
-                    <div class="desplegable">
-                        <div class="caja-mar">
-                            <div class="flex-izq">
-                                <h3>Will I get hurt during the training?</h3>
-                            </div>
-                            <div class="icon-arrow">&#129131;</div>
-                        </div>
-                        <div class="acordeon">
-                            <p class="p_active">Practicar artes marciales permite aprender técnicas de autodefensa para protegerse en situaciones de peligro.</p>
-                        </div>
-                    </div>  
-                </div>
-        </div>
-        <div class="caja-flex text_logo">
-
-            <img src="../img/logo_250px.png" alt="logo_ta-mo" style="max-width: 300px; width: 100px;">
-            <div >
-                <h2 class="titulos" style="font-size:4rem;">Let’s Fight Together</h2>
-                <p style="padding: 0px 80px;">Lorem ipsum dolor sit amet consectetur. Molestie cum ut aliquam convallis. Lacus sed velit adipiscing diam. Donec elementum mi lobortis vulputate fringilla duis vitae tempor at.</p>
-                <button class="cta-button">Enroll Now</button>
-            </div>
-        </div>
+        <div class="caja-flex text_logo animado">
+            <img src="./img/logo_250px.png" alt="logo_ta-mo" class="logo-tamo-footer">
+            <div class="container-lets">
+                <h2 class="titulos">Luchemos Juntos</h2>
+                <p class="p-luchemos">En el camino del karate y las artes marciales no se lucha solo, cada técnica, cada caida y cada avance son parte de un proceso compartido. "Luchemos Juntos" representa la unidad, el respeto y el espíritu de superación que nos une como practicantes.</p>
+                <a class="cta-button">Inscríbete ahora</a>
+            </div> <!-- fin container-lets -->
+        </div> <!-- fin caja-flex text_logo animado -->
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/artesmarciales.tamo/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kungfutamo/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.tiktok.com/@artesmarciales_tamo"><i class="fa-brands fa-tiktok"></i></a>
+        </div> <!-- fin redes sociales -->
         <div class="footer-caja-flex">
             <ul class="foot-menu-flex">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Kung-fu</a></li>
-                <li><a href="#">Galería</a></li>
-                <li><a href="#">Tai-chi</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia-kungfu.html">Kung Fu</a></li>
+                <li><a href="taichi.html">Tai Chi</a></li>
+                <li><a href="defensa.html">Defensa Personal</a></li>
+                <li><a href="contacto.html">Contacto</a></li>  
             </ul>
             <div class="content-copy">
-                <small>Copyright © 2024 TA-MO | audioman Child por Catch Themes </small>
-            </div>
+                <small>Copyright © 2024 | TA-MO </small>
+            </div> <!-- fin content-copy -->
             <div class="circulo-fondo_foot"></div>
-        </div>
-
-    </div>
-    <!-- BOTON PARA ARRIBA -->
-        <div class="boton-arriba"><i class="fa fa-angle-up"></i></div>
-
-
-    </footer>
-    <script src="../js/script.js"></script>
-
+        </div> <!-- fin footer-caja-flex -->
+    </div> <!-- fin principal-box animado -->
+</footer>
+<!-- BOTON PARA ARRIBA -->
+<div class="boton-arriba"><i class="fa fa-angle-up"></i></div>
+<script src="./js/script.js"></script>
 </body>
 </html>

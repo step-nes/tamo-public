@@ -332,6 +332,57 @@
             max-width: 1200px;
         }
     }
+
+/********* maestros *********/
+    .contenedor_intro {
+        flex-wrap: nowrap;
+        text-align: initial;
+        align-items: flex-start;
+    }
+    .contenedor_intro h2, .contenedor_intro h4 {
+        text-align: initial;
+    }
+    #historia_intro .contenedor_texto {
+        flex: 1 1 400px;
+        margin-left: 20px;
+        padding: 0;
+    }
+    .contenedor_intro iframe {
+        flex: 1 1 400px;
+    }
+    #historia_intro p {
+        text-align: initial;
+    }
+    .contenedor_origen {
+        align-items: flex-start;
+    }
+    #historia_origen .contenedor_origen .contenedor_texto {
+        flex:1 1 500px;
+        text-align: initial;
+        padding: 0;
+        padding-left:10px;
+    }
+    #historia_origen .contenedor_origen figure {
+        max-width: 450px;
+     }
+    #historia_origen .texto_mas {
+        margin-top: 20px;
+    }
+    #historia_origen p {
+        text-align: initial;
+    }
+    #historia_origen .texto_mas figure {
+        margin-top: 0;
+        flex-basis: 400px;
+        margin-left: 10px;
+        margin-bottom: 0;
+    }
+    #historia_origen .texto_mas p {
+        margin-left: 20px;
+        flex-basis: 500px;
+        padding: 0px;
+    }
+
 /*****************************************/
 /* ============ escuela-kungfu.html === */
 /*****************************************/
