@@ -95,11 +95,28 @@ h1 {
 }
 #header_img {
     position: absolute;
-    top: 40px;
-    right: -50px;
+    top: -50px;
+    right: -30px;
     z-index: -100;
-    width: 80%;
+    width: 130%;
     max-width: 1000px;
+    opacity: 0;
+    animation: header_img_animation;
+    right: -100%;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    filter: drop-shadow(-10px 5px 10px #f002);
+}
+@keyframes header_img_animation {
+    0% {
+        opacity: 0;
+        right: -100%;
+    }
+    100% {
+        opacity: 1;
+        right: -30%;
+    }
 }
 .caja-titulo h2 {
     font-family: Roboto, sans-serif;
@@ -135,10 +152,11 @@ tiene un contendor principal --- */
 /* -- El nav contiene adentro el LOGO (dentro del logo está el h1)
 y el MENU -- */
 
-.section-principal-box, .principal-box {
+.principal-box {
     max-width: 1200px;
     padding: 10px;
     margin: auto;
+    position: relative;
 }
 .section-logo-container, .logo-container {
     align-items: center;
@@ -324,22 +342,54 @@ nav.main-menu li > ul {
 .section-button {
     display: flex;
 }
-.section-cta-button, .cta-button {
+.cta-button {
     transition: background-color 0.3s ease, transform 0.2s ease;
     background-color: var(--color-rojo);
     border: 1px solid var(--color-rojo);
     text-decoration: none;
-    padding: 15px 25px;
+    padding: 20px 30px;
     border-radius: 5px;
     margin-right: 50px;
+    margin-top: 10px;
     font-size: 14px;
     cursor: pointer;
     color: white;
 }
-.section-cta-button:hover, .cta-button:hover {
+.cta-button:hover {
     background-color: var(--color-negro);
     color: var(--color-rojo);
     transform: scale(1.05);
+}
+.leer_mas2:hover {
+    background-color: var(--color-negro);
+    color: var(--color-rojo);
+    transform: scale(1.05);
+    border: 1px solid var(--transparente);
+}
+main .cta-button {
+    padding: 16px 15px;
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    border-radius: 5px;
+    border: 1px solid var(--color-rojo);
+    margin: 20px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 150px;
+}
+.leer_mas2 {
+    color: var(--color-texto);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: var(--color-rojo);
+    border: 1px solid var(--color-rojo);
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 15px 0;
+    font-size: 10px;
+    cursor: pointer;
+    color: white;
 }
 .btn-pc-only {
     display: none;
@@ -375,6 +425,12 @@ nav.main-menu li > ul {
     color: var(--color-blanco);
     transform: scale(1.05);
 }
+/***** botones LEER MÁS contenido TEXTO MAS *****/
+.texto_mas {
+    max-height:0 ;
+    overflow: hidden;
+}
+
 /**************************************/
 /******** * * * * FONDO * * * * *******/
 /**************************************/
@@ -1178,28 +1234,6 @@ main.hist-kungfu h3 {
     color: var(--color-blanco);
     margin: 10px 0px;
 }
-.texto_mas-kungfu {
-    /* ocultar el texto */
-    max-height: 0px;
-    overflow: hidden;
-}
-main.hist-kungfu button {
-    padding: 16px 30px;
-    width: 150px;
-    background-color: var(--color-rojo);
-    color: var(--color-blanco);
-    border: 1px solid var(--color-rojo);
-    border-radius: 5px;
-    margin: 20px 0;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-main.hist-kungfu button:hover {
-    background-color: var(--color-negro);
-    color: var(--color-rojo);
-    border: lid var(--color-borde-hover);
-}
 iframe.hist-kungfu {
     width: 100%;
     margin: auto;
@@ -1260,15 +1294,14 @@ ul.lista-kungfu-intro {
  * hist kung fu * * * *****************/
 /**************************************/
 
-
-#historia_origen-kungfu .texto_mas-kungfu {
+#historia_origen-kungfu .texto_mas {
     display: flex;
     justify-content:center;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 50px;
 }
-#historia_origen-kungfu .texto_mas-kungfu figure {
+#historia_origen-kungfu .texto_mas figure {
     flex: 0 1 450px;
     margin-bottom: 10px;
     margin-top: 50px;
@@ -1276,12 +1309,12 @@ ul.lista-kungfu-intro {
     display: inline-block;
     overflow: hidden;
 }
-#historia_origen-kungfu .texto_mas-kungfu img {
+#historia_origen-kungfu .texto_mas img {
     width: 100%;
     max-width: 500px;
     display: block;
 }
-#historia_origen-kungfu .texto_mas-kungfu p {
+#historia_origen-kungfu .texto_mas p {
     padding: 0 20px;
 }
 #historia_origen-kungfu .contenedor_origen-kungfu .contenedor_texto-kungfu {
@@ -1318,10 +1351,10 @@ ul.lista-kungfu-intro {
     #historia_origen-kungfu .contenedor_origen-kungfu figure {
         flex: 1 1 400px;
     }
-    #historia_origen-kungfu .texto_mas-kungfu figure {
+    #historia_origen-kungfu .texto_mas figure {
         flex-basis: 500px;
     }
-    #historia_origen-kungfu .texto_mas-kungfu p {
+    #historia_origen-kungfu .texto_mas p {
         flex: 1 1 700px;
         padding: 0 50px;
     }
@@ -1337,27 +1370,27 @@ ul.lista-kungfu-intro {
 #historia_evolucion-kungfu h4 {
     font-size: 15px !important;
 }
-#historia_evolucion-kungfu .texto_mas-kungfu.texto_flex-kungfu {
+#historia_evolucion-kungfu .texto_mas.texto_flex-kungfu {
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-#historia_evolucion-kungfu .texto_mas-kungfu.texto_flex-kungfu figure {
+#historia_evolucion-kungfu .texto_mas.texto_flex-kungfu figure {
     flex-basis: 400px;
 }
-#historia_evolucion-kungfu .texto_mas-kungfu.texto_flex-kungfu img {
+#historia_evolucion-kungfu .texto_mas.texto_flex-kungfu img {
     width: 100%;
 }
-#historia_evolucion-kungfu .texto_mas-kungfu div.mas_flex-kungfu {
+#historia_evolucion-kungfu .texto_mas div.mas_flex-kungfu {
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-#historia_evolucion-kungfu .texto_mas-kungfu div.mas_flex-kungfu p {
+#historia_evolucion-kungfu .texto_mas div.mas_flex-kungfu p {
     margin: 20px 0;
 }
 .linea-kungfu {
@@ -1517,23 +1550,6 @@ main.main-etlKF p {
 }
 .texto_span-etlKF {
     color: var(--color-rojo);
-}
-.texto_mas-etlKF {
-    max-height:0 ;
-    overflow: hidden;
-}
-.btn_leer_mas-etlKF {
-    color: var(--color-texto);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    background-color: var(--color-rojo);
-    border: 1px solid var(--color-rojo);
-    border-radius: 5px;
-    text-decoration: none;
-    padding: 5px 15px;
-    margin: 15px 0;
-    font-size: 10px;
-    cursor: pointer;
-    color: white;
 }
 .imagen-etlKF {
     flex: 1 1 200px;

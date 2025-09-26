@@ -127,25 +127,47 @@ $(document).ready(function() {
 });
 
 ///////////////////////////////////////////////////
-///////////// HISTORIA DEL KUNG FU 
 //Para MOSTRAR y OCULTAR los textos adicionales con botones leerMas
 
-const botonLeerMas = document.querySelectorAll(".leer_mas-kungfu");
-const textoMas = document.querySelectorAll(".texto_mas-kungfu");
+$(document).ready(function () {
+  const $texto_mas = $(".texto_mas");
+  const $boton_leer_mas = $(".leer_mas, .leer_mas2");
+  const $flecha_dos = $(".leer_mas .fa-caret-down, .leer_mas2 .fa-caret-down");
 
-botonLeerMas.forEach((e,i) => {
-    e.addEventListener("click",function(){
-        if (textoMas[i].style.maxHeight === "0px" || textoMas[i].style.maxHeight === ""){
-            textoMas[i].style.maxHeight ="initial";
-            e.innerText="Ocultar";
-        } else {
-            textoMas[i].style.maxHeight = 0;
-            e.innerText="Leer Más";
-        }
+  $boton_leer_mas.each(function (i) {
+    $(this).on("click", function () {
+      if ($texto_mas.eq(i).css("max-height") === "0px" || $texto_mas.eq(i).css("max-height") === "none") {
+        
+        // Cierra todos
+        $texto_mas.css("max-height", "0px");
+        
+        // Abre el actual
+        $texto_mas.eq(i).css({
+          "max-height": "1200px",
+          "transition": "max-height 1s ease"
+        });
+
+        // Rotar todas las flechas a posición inicial
+        $flecha_dos.css("transform", "rotate(360deg)");
+
+        // Rotar la flecha del actual
+        $flecha_dos.eq(i).css({
+          "transform": "rotate(180deg)",
+          "transition": "all 0.5s"
+        });
+
+      } else {
+        // Si ya está abierto, lo cierra
+        $texto_mas.eq(i).css("max-height", "0px");
+        $flecha_dos.eq(i).css("transform", "rotate(360deg)");
+      }
     });
+  });
 });
 
-////////////////////////////////////////////////////////
+///////////////////////////////////////////
+/////////////// ESTILOS DE KUNG FU 
+
 ////////// REDIMENSION DE LA IMG DEL DIAGRAMA //////////
 function cambiarImagen() {
     const $imagen = $("#imagenEsquema");
@@ -182,45 +204,6 @@ function cambiarImagen() {
     // Llamada inicial y en resize
 cambiarImagen();
 $(window).on("resize", cambiarImagen);
-///////////////////////////////////////////
-/////////////// ESTILOS DE KUNG FU 
-/////////// Botones ver más
-
-$(document).ready(function () {
-  const $texto_mas = $(".texto_mas-etlKF");
-  const $boton_leer_mas = $(".btn_leer_mas-etlKF, .btn_leer_mas2-etlKF");
-  const $flecha_dos = $(".btn_leer_mas-etlKF .fa-caret-down, .btn_leer_mas2-etlKF .fa-caret-down");
-
-  $boton_leer_mas.each(function (i) {
-    $(this).on("click", function () {
-      if ($texto_mas.eq(i).css("max-height") === "0px" || $texto_mas.eq(i).css("max-height") === "none") {
-        
-        // Cierra todos
-        $texto_mas.css("max-height", "0px");
-        
-        // Abre el actual
-        $texto_mas.eq(i).css({
-          "max-height": "1200px",
-          "transition": "max-height 2s"
-        });
-
-        // Rotar todas las flechas a posición inicial
-        $flecha_dos.css("transform", "rotate(360deg)");
-
-        // Rotar la flecha del actual
-        $flecha_dos.eq(i).css({
-          "transform": "rotate(180deg)",
-          "transition": "all 0.5s"
-        });
-
-      } else {
-        // Si ya está abierto, lo cierra
-        $texto_mas.eq(i).css("max-height", "0px");
-        $flecha_dos.eq(i).css("transform", "rotate(360deg)");
-      }
-    });
-  });
-});
 ///////////////////////////////////////////////////////////////
 ////////////////////// SLIDER TAICHI.HTML
 $(document).ready(function(){

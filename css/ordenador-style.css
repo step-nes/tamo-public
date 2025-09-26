@@ -29,8 +29,16 @@
     }
     #header_img {
         top: 40px;
-        right: 0;
-        width: 1000px;
+        right: -100%;
+        max-width: 1000px;
+        animation: header_img_animation_computer;
+        animation-delay: 0.5s; 
+        animation-duration: 2s; 
+        animation-fill-mode: forwards;
+    }
+    @keyframes header_img_animation_computer { 
+        0% { opacity: 0; right: -100%; } 
+        100% { opacity: 1; right: 0; } 
     }
     .caja-titulo p {
         font-size: 1.4rem;
