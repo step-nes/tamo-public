@@ -236,104 +236,6 @@
         margin-bottom: 0;
         padding-bottom: 0;
     }
-    .contenedor_intro-kungfu {
-        flex-wrap: nowrap;
-        text-align: initial;
-        align-items: flex-start;
-    }
-    .contenedor_intro-kungfu h2, .contenedor_intro-kungfu h4 {
-        text-align: initial;
-    }
-    #historia_intro-kungfu .contenedor_texto-kungfu {
-        flex: 1 1 400px;
-        margin-left: 20px;
-        padding: 0;
-    }
-    .contenedor_intro-kungfu iframe {
-        flex: 1 1 400px;
-    }
-    #historia_intro-kungfu p {
-        text-align: initial;
-    }
-/****** seccion historia origen  ***/
-    .contenedor_origen-kungfu {
-        align-items: flex-start;
-    }
-    #historia_origen-kungfu .contenedor_origen-kungfu .contenedor_texto-kungfu {
-        flex:1 1 500px;
-        text-align: initial;
-        padding: 0;
-        padding-left:10px;
-    }
-    #historia_origen-kungfu .contenedor_origen-kungfu figure{
-        max-width: 450px;
-    }
-    #historia_origen-kungfu .texto_mas-kungfu {
-        margin-top: 20px;
-    }
-    #historia_origen-kungfu p {
-        text-align: initial;
-    }
-    #historia_origen-kungfu .texto_mas-kungfu figure {
-        margin-top: 0;
-        flex-basis: 400px;
-        margin-left: 10px;
-        margin-bottom: 0;
-    }
-    #historia_origen-kungfu .texto_mas-kungfu p {
-        margin-left: 20px;
-        flex-basis: 500px;
-        padding: 0px;
-    }
-    #historia_origen-kungfu .boton_esp {
-/*      margin: -50px 0px 20px -50%;*/
-    }
-/****** seccion historia evolucion  ***/
-    #historia_evolucion-kungfu .texto_mas-kungfu.texto_flex-kungfu {
-        flex-wrap: nowrap;
-    }
-    #historia_evolucion-kungfu .texto_mas-kungfu.texto_flex-kungfu p {
-        flex-basis: 500px;
-        text-align: left;
-        margin-right: 20px;
-    }
-    #historia_evolucion-kungfu .texto_mas-kungfu p {
-        text-align: left;
-    }
-    #historia_evolucion-kungfu .texto_mas-kungfu div.mas_flex-kungfu {
-        align-items: baseline;
-    }
-    #historia_evolucion-kungfu .texto_mas-kungfu div.mas_flex-kungfu p {
-        flex-wrap: nowrap;
-        flex: 1 1 250px;
-    }
-    .contenedor_img-kungfu {
-        flex-wrap: nowrap;
-    }
-    .linea-kungfu {
-        display: block; /* aparecer la línea dashed */
-        border-bottom: 1px dashed var(--color-rojo);
-        position: absolute;
-        top: 22%;
-        right: 14%;
-        left: 14%;
-    }
-/*****************************************/
-/* ============ estilos-kungfu.html === */
-/*****************************************/
-
-/****** Generales y botones *****/ 
-    .texto{
-        margin: 35px 50px;
-    }
-/********** Diagrama **********/
-    @media (min-width: 1024px) {
-        .content_box {
-            max-width: 1200px;
-        }
-    }
-
-/********* maestros *********/
     .contenedor_intro {
         flex-wrap: nowrap;
         text-align: initial;
@@ -353,18 +255,19 @@
     #historia_intro p {
         text-align: initial;
     }
+/****** seccion historia origen  ***/
     .contenedor_origen {
         align-items: flex-start;
     }
     #historia_origen .contenedor_origen .contenedor_texto {
-        flex:1 1 500px;
+        flex: 1 1 500px;
         text-align: initial;
         padding: 0;
         padding-left:10px;
     }
-    #historia_origen .contenedor_origen figure {
+    #historia_origen .contenedor_origen figure{
         max-width: 450px;
-     }
+    }
     #historia_origen .texto_mas {
         margin-top: 20px;
     }
@@ -382,7 +285,53 @@
         flex-basis: 500px;
         padding: 0px;
     }
+    #historia_origen .boton_esp {
+        /*margin: -50px 0px 20px -50%;*/
+    }
+/****** seccion historia evolucion  ***/
+    #historia_evolucion .texto_mas.texto_flex {
+        flex-wrap: nowrap;
+    }
+    #historia_evolucion .texto_mas.texto_flex p {
+        flex-basis: 500px;
+        text-align: left;
+        margin-right: 20px;
+    }
+    #historia_evolucion .texto_mas p {
+        text-align: left;
+    }
+    #historia_evolucion .texto_mas div.mas_flex {
+        align-items: baseline;
+    }
+    #historia_evolucion .texto_mas div.mas_flex p {
+        flex-wrap: nowrap;
+        flex: 1 1 250px;
+    }
+    .contenedor_img {
+        flex-wrap: nowrap;
+    }
+    .linea-kungfu {
+        display: block; /* aparecer la línea dashed */
+        border-bottom: 1px dashed var(--color-rojo);
+        position: absolute;
+        top: 22%;
+        right: 14%;
+        left: 14%;
+    }
+/*****************************************/
+/* ============ estilos-kungfu.html === */
+/*****************************************/
 
+/****** Generales y botones *****/ 
+    .texto {
+        margin: 35px 50px;
+    }
+/********** Diagrama **********/
+    @media (min-width: 1024px) {
+        .content_box {
+            max-width: 1200px;
+        }
+    }
 /*****************************************/
 /* ============ escuela-kungfu.html === */
 /*****************************************/

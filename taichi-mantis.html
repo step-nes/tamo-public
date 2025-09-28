@@ -1,336 +1,291 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Historial del Kung-Fu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/historia.css">
-    <link rel="stylesheet" type="text/css" href="../css/styleoriginal.css">
-    <link rel="icon" href="../img/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Stephany Estevez Sanchez, Daniel Latouche, Madalina Caran, Nadine Mota Rodrigues, Chuzhe Zou, William Garcia Skinner, Jose Fernando Calizaya">
+    <meta name="description" content="TA-MO – Asociación Deportiva de Artes Marciales: mejora tu condición física y mental con clases de Kung-Fu, Tai-Chi, defensa personal y filosofía marcial. Accede a galería, vídeos, blog y contacto.">
+    <meta name="keywords" content="artes marciales, kung fu, tai chi, defensa personal, filosofía marcial, escuela de artes marciales, asociación deportiva, entrenamiento físico, disciplina, bienestar, meditación, equilibrio cuerpo mente, galería de artes marciales, vídeos de kung fu, blog de artes marciales">
+    <title>Bak Hok Pai | Tamo</title>   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/mobile-tablet-style.css">
+    <link rel="stylesheet" href="css/ordenador-style.css">
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="icon" href="./img/favicon.png">
 </head>
 <body>
-    <header class="section-header">
-        <div class="principal-box">
-            <nav class="section-navbar">
-                <div class="section-logo-container">
-                    <img src="../img/logo_60px.png" alt="Logo" class="section-logo">
-                    <div class="section-text-container">
-                        <h1 class="section-title">Ta-Mo</h1>
-                        <p class="section-subtitle">Asociación Deportiva de Artes Marciales</p>
-                    </div>
-                </div>
-                <button class="section-menu-toggle" aria-label="Abrir menú">
-                    ☰
-                </button>
-                <ul class="section-menu">
-                    <li>
-                        <button class="section-close-menu" aria-label="Cerrar menú">✖</button>
-                    </li>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li>
-                        <a href="historia.html">kung-Fu<i class="fa fa-sort-down"></i></a>
-                        <ul class="section-submenu">
-                            <li><a href="historia.html">Historia</a></li>
-                            <li><a href="estilos-de-kung-fu.html">Estilos</a></li>
-                            <li><a href="escuela-de-kung-fu.html">Escuela</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="taichi.html">Taichi</a></li>
-                    <li><a href="defensa.html">Defensa personal</a></li>
-                    <li>
-                        <a href="galeria.html">Medios<i class="fa fa-sort-down"></i></a>
-                        <ul class="section-submenu">
-                            <li><a href="galeria.html">Galeria</a></li>
-                            <li><a href="video.html">Video</a></li>
-                            <li><a href="descargas.html">Descargas</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contacto.html">Contacto</a></li>  
+<!-- inicio MENU CONTAINER -->
+<div class="menu-container">
+    <!-- Bars menu button  -->
+    <svg class="bars" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg>
+    <nav class="main-menu">
+        <div class="nav-header">
+            <div class="nav-logo">
+                <img src="./img/logo_60px.png" alt="Logotipo Tamo">
+                <h4>Ta-Mo</h4>
+            </div> <!-- fin nav-logo -->
+            <svg class="times" xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 640 640"><path d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg> 
+        </div>  
+        <ul class="list-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+                <a class="submenu-item">
+                    Kung Fu
+                    <svg class="down" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 640"><path fill="#ffffff" d="M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z"/></svg>
+                </a>
+                <ul class="sub">
+                    <li><a href="historia-kungfu.html">Historia</a></li>
+                    <li><a href="estilos-kungfu.html">Estilos</a></li>
+                    <li><a href="escuela-kungfu.html">Escuela</a></li>
                 </ul>
-                <button class="section-cta-button">Enroll Now</button>
-            </nav>
-            <h1 class="section-main-title">Maestro <span style="color: var(--color-rojo);">Tai-Chi Mantis</span></h1>
+            </li>
+            <li><a href="taichi.html">Tai Chi</a></li>
+            <li><a href="defensa-personal.html">Defensa Personal</a></li>
+            <li>
+                <a class="submenu-item">
+                    Medios
+                    <svg class="down" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 640"><path fill="#ffffff" d="M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z"/></svg>
+                </a>
+                <ul class="sub">
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="descarga.html">Descargas</a></li>
+                </ul>
+            </li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</div><!-- fin MENU CONTAINER-->
+<header class="home-header animado header-bak">
+    <div class="principal-box header-principal-box">
+        <!-- inicio header-top-container -->
+        <div id="header-top-container">
+            <!-- inicio LOGO CONTAINER -->
+            <div class="logo-container">
+                <img src="./img/logo.png" alt="Logo" class="logo">
+                <div class="text-container">
+                    <h1 class="title">Ta-Mo</h1>
+                    <p class="subtitle">Asociación Deportiva de Artes Marciales</p>
+                </div> <!-- fin text-container -->
+            </div><!-- fin LOGO CONTAINER -->
+            <!-- inicio inyección menu-pc -->
+            <div id="nav-container-pc">
+                <!-- AQUI SE INYECTARÁ EL MENÚ PARA MODO ORDENADOR -->
+            </div>
+            <!-- fin inyección de menu-pc -->
+            <a class="btn-pc-only" href="contacto.html">Contacto</a>
+        </div> <!-- fin header-top-container -->
+        <h2 class="main-title header-h2-bak">Maestro <span class="h2-2p">CHU HUEN TAK</span></h2>
+    </div> <!-- principal-box header-principal-box -->
+</header>
+<main class="main-bak-hok">
+    <!-- MAESTRO Tai-Chi mantis -->
+    <section id="historia_intro">
+        <div class="principal-box animado">
+            <div class="contenedor_intro">
+                <!-- NOTA AGREGARLE UNA CLASE A LA IMAGEN PARA REDUCIR EL TEMAÑO DE LA IMAGEN EN EL CSS -->
+                <img src="./img/EstTangLang001-1.jpg">
+                <!-- ----------------------------- -->
+                <div class="contenedor_texto">
+                    <h2>Tai-Chi Mantis</h2>
+                    <h4 class="rojo">Origen de nuestro linaje de Kung-Fu Mantis religiosa</h4>
+                    <figure>
+                        <img src="./img/EstTangLang001-1.jpg" alt="1">
+                    </figure>
+                    <p>La escuela original de Boxeo de la Mantis Religiosa se le atribuye a Wong Long de la provincia de Shandong en los tiempos de la dinastía Song.</p>
+                    <p><span class="rojo">Wong Long</span> , pertenecía a la clase noble. Su padre, <span class="rojo">Wong Ma Tang</span> , era un gran maestro de la espada, del cual aprendió este arte y su pasión por las demás artes marciales, llegando a ingresar en el monasterio de Shaolín con el afán de mejorar su KungFu.</p>
+                    <p>En su búsqueda por perfeccionar su KungFu, un día, encontró entre unas ruinas cercanas a su casa, un libro del arte de la guerra, donde se enseñaba la práctica de un estilo de KungFu antiguo y ya olvidado en aquella época. <span class="rojo">Este estilo se llamaba “Mi Shou” (manos secretas o ocultas)</span>  un estilo que según el libro, se basaba principalmente en técnicas de ataque y defensa muy rápidas y efectivas, asimiladas al imitar las patas delanteras de un insecto cuando cazaba sus presas o se defendía de sus depredadores. Este insecto era la Mantis Religiosa.</p>
+                    <p>Existe un manuscrito (Shaolinsi Yi Bo Chen Chuan) copiado en 1762 por Shen Xiao, monje errante que visitó Shaolín, donde se explica la historia de la creación del estilo Tang Lang Chuan:</p>
+                    <!-- TEXTO OCULTO -->
+                    <div class="texto_mas">
+                        <p>El Abad del convento de Shaolín y el discípulo <span class="rojo">WongLong </span> conjuntamente con los 16 mejores maestros de KungFu de aquella época estudiaron el libro del estilo <span class="rojo">“MiShou”</span> , dando lugar a lo que hoy en día conocemos como <span class="rojo">Tang Lang Chuan (Boxeo de la Mantis Religiosa)</span> .</p>
+                        <p>De este estilo originario las escuelas que mejor lo representan son:</p>
+                        <div class="listaaa">
+                            <p>1 - <span class="rojo">Mei Hua Tang Lang</span>, Mantis Flor del Ciruelo del <span class="rojo">Gran Maestro Liang XueXiang</span>, creando sus alumnos las siguientes escuelas:</p>
+                            <ul class="liang">
+                                <li><span>Tai Ji Tang Lang</span>, Mantis Suprema del <span>Gran Maestro Sue Yuan Chang</span></li>
+                                <li><span>Tai Ji Mei Hua Tang Lang</span>, Mantis Suprema de la Flor del Ciruelo del <span>Gran Maestro Jiāng Hé Lóng</span></li>
+                                <li><span>Ba Bu Tang Lang</span>, Mantis de los 8 Pasos, también del <span>Gran Maestro Jiāng Hé Lóng</span></li>
+                            </ul>
+                        </div>
+                        <p>2 - <span>Qi Shing Tang Lang</span>, Mantis de las 7 Estrellas del  <span>Gran Maestro Li San Jian</span></p>
+                        <p>3 - <span>Liu He Tang Lang</span>, Mantis de las 6 uniones del <span>Gran Maestro Lin Shi Chun</span></p>
+                    <!-- Corregir las imagenes de tamaños -->
+                    </div>
+                    <!-- FIN DEL TEXTO OCULTO -->
+                    <button class="leer_mas cta-button">Leer Más</button>
+                </div>
+            </div>
         </div>
-    </header>  
-    
-    <main>
-    
-        <!-- MAESTRO Tai-Chi mantis -->
-        <section id="historia_intro">
-            <div class="principal-box animado">
-                <div class="contenedor_intro">
-                    <!-- NOTA AGREGARLE UNA CLASE A LA IMAGEN PARA REDUCIR EL TEMAÑO DE LA IMAGEN EN EL CSS -->
-                    <img src="../img/EstTangLang001-1.jpg">
-                    <!-- ----------------------------- -->
-                    <div class="contenedor_texto">
-                        <h2>Tai-Chi Mantis</h2>
-                        <h4 class="rojo">Origen de nuestro linaje de Kung-Fu Mantis religiosa</h4>
-                        <figure>
-                            <!-- <img src="../img/EstTangLang001-1.jpg" alt="1"> -->
-                        </figure>
-                        <p>La escuela original de Boxeo de la Mantis Religiosa se le atribuye a Wong Long de la provincia de Shandong en los tiempos de la dinastía Song.</p>
-                        <p> <strong>Wong Long</strong> , pertenecía a la clase noble. Su padre, <strong>Wong Ma Tang</strong> , era un gran maestro de la espada, del cual aprendió este arte y su pasión por las demás artes marciales, llegando a ingresar en el monasterio de Shaolín con el afán de mejorar su KungFu.</p>
-                        <p>En su búsqueda por perfeccionar su KungFu, un día, encontró entre unas ruinas cercanas a su casa, un libro del arte de la guerra, donde se enseñaba la práctica de un estilo de KungFu antiguo y ya olvidado en aquella época. <strong>Este estilo se llamaba “Mi Shou” (manos secretas o ocultas)</strong>  un estilo que según el libro, se basaba principalmente en técnicas de ataque y defensa muy rápidas y efectivas, asimiladas al imitar las patas delanteras de un insecto cuando cazaba sus presas o se defendía de sus depredadores. Este insecto era la Mantis Religiosa.</p>
-                        <p>Existe un manuscrito (Shaolinsi Yi Bo Chen Chuan) copiado en 1762 por Shen Xiao, monje errante que visitó Shaolín, donde se explica la historia de la creación del estilo Tang Lang Chuan:</p>
-                        <!-- TEXTO OCULTO -->
-                        <div class="texto_mas">
-                            <p>El Abad del convento de Shaolín y el discípulo <strong>WongLong </strong> conjuntamente con los 16 mejores maestros de KungFu de aquella época estudiaron el libro del estilo <strong>“MiShou”</strong> , dando lugar a lo que hoy en día conocemos como <strong>Tang Lang Chuan (Boxeo de la Mantis Religiosa)</strong> .</p>
-                            <p>De este estilo originario las escuelas que mejor lo representan son:</p>
-                            <p><strong>1-MeiHua TangLang</strong> , Mantis Flor del Ciruelo del <strong>Gran Maestro Liang XueXiang</strong> , creando sus alumnos las siguientes escuelas;</p>
-                            <p><strong>TaiJi TangLang</strong> , Mantis Suprema del <strong>Gran Maestro SueYuanChang</strong> .</p>
-                            <p><strong>TaiJi MeiHua TangLang</strong> , Mantis Suprema de la Flor del Ciruelo del <strong>Gran Maestro JiāngHéLóng</strong> .</p>
-                            <p><strong>BaBu TangLang</strong>, Mantis de los 8 Pasos, también del <strong>Gran Maestro JiāngHéLóng</strong> .</p>
-                            <p><strong>2-QiShing TangLang</strong>, Mantis de las 7 Estrellas del  <strong>Gran Maestro Li San Jian</strong>.</p>
-                            <p><strong>3-LiuHe TangLang</strong> , Mantis de las 6 uniones del <strong>Gran Maestro Lin Shi Chun</strong>.</p>
-                            <!-- Corregir las imagenes de tamaños -->
-                        </div><!-- FIN DEL TEXTO OCULTO -->
-                        <button class="leer_mas">Leer Más</button>
-                    </div>
+    </section>
+    <!--  -->
+    <section id="historia_origen">
+        <div class="principal-box animado">
+            <div class="contenedor_origen">
+                <div class="contenedor_texto">
+                    <h2>Los Dos pilares</h2>
+                    <p><strong> Las principales diferencias</strong> entre el estilo de Mantis de las <strong>7 Estrellas y los estilos de Mantis de la flor del ciruelo (MeiHua)</strong> , es que en el linaje MeiHua, <strong>Wang Lang</strong> (王郎) le enseñó a su discípulo <strong>Hou Chi-Yuan </strong>(侯 智 远) directamente, mientras que en  <strong>7 Estrellas</strong> se dice que un sacerdote errante taoísta llamado  <strong>Sheng Xiao</strong> (升 宵 道人) recopiló y aprendió el estilo de los monjes de la montaña Láoshān (崂山) cuando <strong>Wong Long</strong>  hacía años que había fallecido.</p>
+                    <p>De una forma u otra estas son las escuelas principales salidas del origen:</p>
+                    <p><strong>-Qi Shing (Boxeo Mantis de las 7 estrellas)</strong>, escuela surgida del origen, el monje errante <strong>Sheng Xiao</strong>  transmitió el Boxeo de la Mantis original a <strong>Li San Jian (4ªgeneración)</strong>  (1821-¿?) quien creó la escuela <strong>Qi Shing TangLang</strong>. A este G.M. se le atribuyen las formas <strong>Beng bu, Lan jié y Shi Pa Sou</strong>. Sus discípulos más destacados fueron  <strong>Wang Yun Peng</strong> y <strong>Wang Rong Sheng</strong>  de los cuales descienden todas las escuelas actuales de este estilo.</p>
                 </div>
-                </div>
-        </section>
-        <!--  -->
-                <section id="historia_origen">
-            <div class="principal-box animado">
-                <div class="contenedor_origen">
-                    <div class="contenedor_texto">
-                        <h2>Los Dos pilares</h2>
-                        <p><strong> Las principales diferencias</strong> entre el estilo de Mantis de las <strong>7 Estrellas y los estilos de Mantis de la flor del ciruelo (MeiHua)</strong> , es que en el linaje MeiHua, <strong>Wang Lang</strong> (王郎) le enseñó a su discípulo <strong>Hou Chi-Yuan </strong>(侯 智 远) directamente, mientras que en  <strong>7 Estrellas</strong> se dice que un sacerdote errante taoísta llamado  <strong>Sheng Xiao</strong> (升 宵 道人) recopiló y aprendió el estilo de los monjes de la montaña Láoshān (崂山) cuando <strong>Wong Long</strong>  hacía años que había fallecido.</p>
-                        <p>De una forma u otra estas son las escuelas principales salidas del origen:</p>
-                        <p><strong>-Qi Shing (Boxeo Mantis de las 7 estrellas)</strong>, escuela surgida del origen, el monje errante <strong>Sheng Xiao</strong>  transmitió el Boxeo de la Mantis original a <strong>Li San Jian (4ªgeneración)</strong>  (1821-¿?) quien creó la escuela <strong>Qi Shing TangLang</strong>. A este G.M. se le atribuyen las formas <strong>Beng bu, Lan jié y Shi Pa Sou</strong>. Sus discípulos más destacados fueron  <strong>Wang Yun Peng</strong> y <strong>Wang Rong Sheng</strong>  de los cuales descienden todas las escuelas actuales de este estilo.</p>
-                    </div>
-                    <!-- ARREGLAR EL TAMAÑO DE LA IMAGEN DEL FIGURE EN CSS -->
-                    <figure>
-                        <img src="../img/TAICHI-MANTIS2-e1554401286508.jpg" alt="mantis" height="500px">
-                    </figure>
-                </div>
-                <!-- TEXTO OCULTO -->
-                <div class="texto_mas">
-                    <!--  -->
-                    <p>Años más tarde los tres maestros buscan diferentes sendas. Es aquí, cuando el <strong>maestro Orsini</strong>, buscando un local para seguir trabajando y recreando su estilo en particular, se lo comenta a <strong>Fernando Mariano</strong> (mi maestro), este habla con su padre (Dr. Ferran) y le proporciona una gran sala donde poder seguir practicando kung-fu, momentáneamente.</p>
-                    <p><strong>-Mei Hua Tang Lang Chuan (Boxeo Mantis de la Flor del Ciruelo)</strong>, escuela surgida del origen, <strong>Wang Lang</strong>  (王郎) le enseñó a su discípulo <strong>Hou Chi-Yuan</strong> (侯 智 远) directamente, <strong>Hou Chi-Yuan</strong> (侯 智 远) enseñó a su hermano <strong>Hou Jie</strong> (侯 杰).</p>
-                    <p>El discípulo de <strong>Hou Jie</strong> fue <strong>Ma Qiang</strong>  (马 强), este fue un ladrón famoso (al estilo de Robin Hood) que cabalgó por la provincia de Shan Tung. En una emboscada acabó mal herido por los soldados y se recuperó gracias a un médico llamado Liang Wen Zhao (梁闻钞) padre del joven <strong>LiángXuéXiāng; (梁学香) (1790-1860)</strong>  4ª Generación. <strong>Ma Qiang</strong>, en agradecimiento por salvarle la vida enseñó al joven <strong>Liang</strong>  el estilo de la Mantis.  <strong>Liang</strong> más tarde se convirtió en el gran maestro de la mantis religiosa, creando el estilo <strong>MeiHua TangLang</strong> .</p>
-                    <p>A este Gran Maestro se le atribuye la forma <strong>Zaiyao</strong> (resumen de la flor del ciruelo), posteriormente, debido al gran número de movimientos, esta forma se dividió, según la escuela, en dos o tres formas más pequeñas para poder asimilarlas mejor. También se le atribuyen las formas <strong>Beng Bu, Lan jié y Pa Zhou</strong>, típicas de este estilo y <strong>diferentes al estilo Mantis 7 estrellas</strong>.</p>
-                    <p>Gracias a tres libros escritos por el <strong>G.M. Liang</strong> , conservados como un tesoro nacional en China, se puede confirmar el linaje de este estilo desde sus orígenes.</p>
-                    <p>De sus cuatro primeros alumnos descienden la gran mayoría de las escuelas actuales de este estilo. Estos son sus 4 primeros alumnos:</p>
-
-                    <p>1.-<strong>Su hijo, G.M.Liang Heung,</strong></p>
-                    <p>2.-<strong>su yerno G.M.Song Zi De.strong</strong></p>
-                    <p>3.- <strong>el G.M. Jiāng Hé Lóng</strong>, creador de los estilos BaBu TangLang y <strong>TaiJi MeiHua TangLang</strong>, tambien conocido por sus ejercicios internos de respiracion de LuoHan.</p>
-                    <p>4.- <strong>G.M. SueYuanChang</strong>, creador del estilo <strong>TaJi TangLang</strong> , Sus discípulos fueron  <strong>Jin Chi Shou</strong> (迟 守 进) y <strong>RènFèngRuì</strong>, (Yam Fung Sui) (任凤瑞), siendo este último también discípulo del <strong>G.M. Jiāng Hé Lóng</strong>. El <strong>G.M. Chui Chuk Kai </strong> (Zhao Zhu Xi) (赵 竹溪) fue el discípulo de los maestros <strong>Jin y Yam</strong> .</p>
-                    <p>La escuela que nos interesa es <strong>TaiJi Tang Lang</strong> del  <strong>G.M. Sue Yuan Chang</strong>, uno de los cuatro primeros alumnos del  <strong>G.M. Liang</strong>. El representante más importante de esta escuela fue el <strong>G.M. Zhao Zhu Xi (Chui Chuk Kai)</strong>  (1900-1991). El maestro <strong>Chiu</strong>  tuvo de sus alumnos más destacados al <strong>G.M. Raymond K. Wong. es este nuestro punto de partida y entorno a él giran tres de los principales estilos de nuestras escuelas</strong> , por tanto el estilo que nos interesa en este apartado por descender de él es el <strong>TaiJi Tang Lang del G.M. Zhao Zhu Xi (Chui Chuk Kai)</strong> .</p>
-                </div><!-- FIN DEL TEXTO OCULTO -->
-                <button class="leer_mas boton_esp">Leer Más</button>
+                <!-- ARREGLAR EL TAMAÑO DE LA IMAGEN DEL FIGURE EN CSS -->
+                <figure>
+                    <img src="./img/TAICHI-MANTIS2-e1554401286508.jpg" alt="mantis">
+                </figure>
             </div>
-        </section>
-            <section id="historia_intro">
-            <div class="principal-box animado">
-                <div class="contenedor_intro">
-                    <!-- NOTA AGREGARLE UNA CLASE A LA IMAGEN PARA REDUCIR EL TEMAÑO DE LA IMAGEN EN EL CSS -->
-                    <img src="../img/EstTangLang002-1.jpg">
-                    <!-- ----------------------------- -->
-                    <div class="contenedor_texto">
-                        <h2>El Gran Maestro Chiu, Biografía (中文)</h2>
-                        <p>Su verdadero nombre fue <strong>Zhao Zhu Xi</strong>, pero se le ha recordado con el nombre cantonés de <strong>Chiu Chuk Kai</strong> . El Gran Maestro <strong>Chiu </strong> nació en el camino de Wangcun (路 旺村), en la ciudad de Sha He (沙河 镇), condado de Yi (掖县), provincia de Shandong (山东 省). Su madre murió cuando él tenía 5 años. Su abuela lo cuidó durante 2 años y finalmente lo devolvió a su padre aunque este en verdad paso poco tiempo con él, fue su tío con el que mayor tiempo pasó.</p>
-                        <p>Se dice que un viejo monje que visitaba la zona se percato de su presencia, y vio en él un buen artista marcial, tras desavenencias familiares escapo de sus familiares y se convirtió en su primer discípulo en el Templo Zang Zhi, donde también aprendió con dos maestros más, el maestro <strong>QingQuan</strong> conocido con el sobre nombre de "Corriente clara" y el maestro <strong>Jué Dōng</strong>  conocido con el sobrenombre de "El sabio del Este". Con estos tres maestros aprendió:</p>
-                        <!-- TEXTO OCULTO -->
-                        <div class="texto_mas">
-                            <p><strong>Estudió "Tai Zhu Bei", boxeo del Gran Emperador"</strong>.</p>
-                            <p><strong>Estudió Shao Lin Puño Largo, Chang Chuan</strong>.</p>
-                            <p><strong>Movimientos básicos, la lucha a corta distancia, técnicas de manos, Shing I, Ba Kua, Técnicas de control, defensa, ataque, de caídas, Qi Gong, la armadura de hierro, Manejo de armas, levantamiento de pesas, equitación y tiro con arco.</strong></p>
-                            <p>Parte de lo estudiado con estos dos monjes lo aprendió durante una estancia en un templo en Corea, que estaba relacionado con el templo Zang Zhi.</p>
-                            <p><strong>Chiu</strong> pasó 10 años en el templo de la montaña hasta que fallecieron sus tres maestros, <strong>Chiu</strong> tenía 18 años. <strong>Chiu</strong> continuó su aprendizaje con otro monje taoísta llamado <strong>Cheung Man Chau </strong>del cual aprendió la <strong>Palma de TaiJi Quan de Wu Tang</strong> .</p>
-                            <p>Cuando aprendió la forma completa le preguntó a su maestro cual era su nombre, este, le comentó que era la forma de <strong>TaJi Quan de la Montaña Nubosa de Wu Tang</strong>, (más tarde el maestro <strong>Chiu</strong> introdujo esta forma de TaiJi Quan en el currículum de mantis con el nombre de "Las palmas nubosas" o "Las palmas tocan las nubes", forma de 132 movimientos difundiéndola en Vietnam y Hong-Kong).</p>
-                            <p><strong>Chiu</strong> trabajó en diferentes trabajos aunque declinó algunos de ellos pues el quería seguir mejorando su Kung-fu. Por lo tanto, él y algunos de sus amigos ricos contrataron a un famoso artista marcial, <strong>Yam Fung Sui</strong> (任丰瑞) para aprender <strong>Mantis Religiosa</strong> durante tres años, (estilo que le había fascinado en su último enfrentamiento).</p>
-                            <!-- Corregir las imagenes de tamaños y centrar -->
-                            <figure>
-                                <img src="../img/EstTangLang003-1.jpg" alt="5">
-                                <figcaption>G.M. Chiu</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="../img/EstTangLang004-1.jpg" alt="6">
-                                <figcaption>G.M. Chiu posición tipica del Estilo</figcaption>
-                            </figure>
-                        </div><!-- FIN DEL TEXTO OCULTO -->
-                        <button class="leer_mas">Leer Más</button>
-                    </div>
-                </div>
-                </div>
-        </section>
-        <section id="historia_origen">
-            <div class="principal-box animado">
-                <div class="contenedor_origen">
-                    <div class="contenedor_texto">
-                        <h2>Yam y Jin Chi Shou</h2>
-                        <p>Pasados los tres años, el maestro <strong>Yam</strong> le presentó a su amigo el Maestro <strong>Jin Chi Shou</strong> (迟 守 进) el cual acepto seguir enseñándole <strong> Mantis</strong> durante 4 años más. Como no tenía dinero suficiente para pagar las clases y como ya tenía experiencia, se puso a trabajar como guardián de las caravanas The 12 deciples of Chiu Chuk Kai de mercancías en la empresa que conjuntamente tenían los dos maestros, <strong>Yam y Jin</strong> .</p>
-                        <p>Los dos maestros de <strong>Chiu </strong> fueron la sexta generación de  <strong>TaiChi Mantis</strong>. Después de 7 años de formación, el nivel de <strong>Chiu</strong>  progresó enormemente.</p>
-                        <p><strong>Chiu</strong> volvió a Yin Tai para ayudar a su tío. Sin embargo, renunció a su cargo porque en ese momento, el ejército japonés declaró la guerra a China. Con 28 años <strong>Chiu</strong> comenzó a enseñar artes marciales en Yin Tai, con la esperanza de entrenar a algunos estudiantes para ayudar a difundir el estilo Mantis y así se supieran defender de los invasores.</p>
-                        <p>El Maestro <strong>Chiu </strong>y su alumno <strong>Keung Mut Ling</strong>  viajaron por negocios al Sur de la China y acabaron por diversos motivos trabajando de guardaespaldas de una sociedad en Guanzhou que para sorpresa de ellos resultó ser propiedad de la mafia de la región, no paso mucho tiempo que por altercados con la policía tuvieron que ir hacia Macao.</p>
-                    </div>
-                    <!-- ARREGLAR EL TAMAÑO DE LA IMAGEN DEL FIGURE EN CSS -->
-                    <figure>
-                        <img src="../img/TAICHI-MANTIS2-e1554401286508.jpg" alt="mantis" height="500px">
-                    </figure>
-                </div>
-                <!-- TEXTO OCULTO -->
-                <div class="texto_mas">
-                    <!-- CORRERGIR EL ESPACIO DE LAS IMAGENES -->
-                    <p>Allí comenzaron a dar clases de Kung-Fu en la calle, también surgieron problemas con los maestros del lugar y escuelas de los mismos.Finalmente firmaron un pacto y el maestro <strong>Chiu</strong>  con la ayuda de <strong>Kwok Man Tsai</strong> maestro del sur de China y un estilista de <strong>Wing Chung</strong>  quien inspiró al Gran Maestro <strong>Chiu</strong> para crear el <strong>formulario del muñeco de madera</strong>. <strong>Kwok</strong> fue muy respetado por su honor y lealtad y gracias a su mediación, el maestro <strong>Chiu</strong> fue aceptado en la comunidad de maestros del sur, encontrando trabajo como instructor de artes marciales en la delegación de la <strong>Asociación Ching Woo Athletic y otras escuelas de Macao.</strong> </p>
-                    <figure>
-                        <img src="../img/EstTangLang005-1.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="../img/EstTangLang006-1.jpg" alt="">
-                    </figure>
-                    <!--  -->
-                </div><!-- FIN DEL TEXTO OCULTO -->
-                <button class="leer_mas boton_esp">Leer Más</button>
-            </div>
-        </section>
-        <section id="historia_intro">
-            <div class="principal-box animado">
-                <div class="contenedor_intro">
-                    <!-- NOTA AGREGARLE UNA CLASE A LA IMAGEN PARA REDUCIR EL TEMAÑO DE LA IMAGEN EN EL CSS -->
-                    <img src="../img/EstTangLang009-1.jpg" alt="">
-                    <!-- ----------------------------- -->
-                    <div class="contenedor_texto">
-                        <h2>Sifu Chiu</h2>
-                        <p>Después de la guerra <Strong>sifu Chiu</Strong> se trasladó a Vietnam y la enseñanza continuó en la sucursal de Ching Woo en Vietnam. Vivió en Vietnam del Norte primero y luego en Vietnam del Sur. Él introdujo el <strong>TaiChi TangLang</strong> a los oficiales militares en Vietnam del Sur, donde se envió a uno de sus alumnos personales para ser el guardaespaldas del presidente de Vietnam del Sur.</p>
-                        <p>Soldados estadounidenses aprendieron la mayor parte del <strong>Tai Ji Tang Lang</strong> que hay hoy actualmente en los EE.UU. <strong>Sifu Chiu</strong> vivió en (Saigón y Choloon) por más de 10 años.</p>
-                        <p>Un alumno suyo ganó el primer puesto, compitiendo con la forma BengBu del estilo <strong>TaiChi Mantis</strong> , en el primer campeonato de WuShu celebrado en Beijing en 1957.</p>
+            <!-- TEXTO OCULTO -->
+            <div class="texto_mas">
+                <!--  -->
+                <p>Años más tarde los tres maestros buscan diferentes sendas. Es aquí, cuando el <strong>maestro Orsini</strong>, buscando un local para seguir trabajando y recreando su estilo en particular, se lo comenta a <strong>Fernando Mariano</strong> (mi maestro), este habla con su padre (Dr. Ferran) y le proporciona una gran sala donde poder seguir practicando kung-fu, momentáneamente.</p>
+                <p><strong>-Mei Hua Tang Lang Chuan (Boxeo Mantis de la Flor del Ciruelo)</strong>, escuela surgida del origen, <strong>Wang Lang</strong>  (王郎) le enseñó a su discípulo <strong>Hou Chi-Yuan</strong> (侯 智 远) directamente, <strong>Hou Chi-Yuan</strong> (侯 智 远) enseñó a su hermano <strong>Hou Jie</strong> (侯 杰).</p>
+                <p>El discípulo de <strong>Hou Jie</strong> fue <strong>Ma Qiang</strong>  (马 强), este fue un ladrón famoso (al estilo de Robin Hood) que cabalgó por la provincia de Shan Tung. En una emboscada acabó mal herido por los soldados y se recuperó gracias a un médico llamado Liang Wen Zhao (梁闻钞) padre del joven <strong>LiángXuéXiāng; (梁学香) (1790-1860)</strong>  4ª Generación. <strong>Ma Qiang</strong>, en agradecimiento por salvarle la vida enseñó al joven <strong>Liang</strong>  el estilo de la Mantis.  <strong>Liang</strong> más tarde se convirtió en el gran maestro de la mantis religiosa, creando el estilo <strong>MeiHua TangLang</strong> .</p>
+                <p>A este Gran Maestro se le atribuye la forma <strong>Zaiyao</strong> (resumen de la flor del ciruelo), posteriormente, debido al gran número de movimientos, esta forma se dividió, según la escuela, en dos o tres formas más pequeñas para poder asimilarlas mejor. También se le atribuyen las formas <strong>Beng Bu, Lan jié y Pa Zhou</strong>, típicas de este estilo y <strong>diferentes al estilo Mantis 7 estrellas</strong>.</p>
+                <p>Gracias a tres libros escritos por el <strong>G.M. Liang</strong> , conservados como un tesoro nacional en China, se puede confirmar el linaje de este estilo desde sus orígenes.</p>
+                <p>De sus cuatro primeros alumnos descienden la gran mayoría de las escuelas actuales de este estilo. Estos son sus 4 primeros alumnos:</p>
+
+                <p>1.-<strong>Su hijo, G.M.Liang Heung,</strong></p>
+                <p>2.-<strong>su yerno G.M.Song Zi De.strong</strong></p>
+                <p>3.- <strong>el G.M. Jiāng Hé Lóng</strong>, creador de los estilos BaBu TangLang y <strong>TaiJi MeiHua TangLang</strong>, tambien conocido por sus ejercicios internos de respiracion de LuoHan.</p>
+                <p>4.- <strong>G.M. SueYuanChang</strong>, creador del estilo <strong>TaJi TangLang</strong> , Sus discípulos fueron  <strong>Jin Chi Shou</strong> (迟 守 进) y <strong>RènFèngRuì</strong>, (Yam Fung Sui) (任凤瑞), siendo este último también discípulo del <strong>G.M. Jiāng Hé Lóng</strong>. El <strong>G.M. Chui Chuk Kai </strong> (Zhao Zhu Xi) (赵 竹溪) fue el discípulo de los maestros <strong>Jin y Yam</strong> .</p>
+                <p>La escuela que nos interesa es <strong>TaiJi Tang Lang</strong> del  <strong>G.M. Sue Yuan Chang</strong>, uno de los cuatro primeros alumnos del  <strong>G.M. Liang</strong>. El representante más importante de esta escuela fue el <strong>G.M. Zhao Zhu Xi (Chui Chuk Kai)</strong>  (1900-1991). El maestro <strong>Chiu</strong>  tuvo de sus alumnos más destacados al <strong>G.M. Raymond K. Wong. es este nuestro punto de partida y entorno a él giran tres de los principales estilos de nuestras escuelas</strong> , por tanto el estilo que nos interesa en este apartado por descender de él es el <strong>TaiJi Tang Lang del G.M. Zhao Zhu Xi (Chui Chuk Kai)</strong> .</p>
+            </div><!-- FIN DEL TEXTO OCULTO -->
+            <button class="leer_mas boton_esp cta-button">Leer Más</button>
+        </div>
+    </section>
+    <section id="historia_intro">
+        <div class="principal-box animado">
+            <div class="contenedor_intro">
+                <!-- NOTA AGREGARLE UNA CLASE A LA IMAGEN PARA REDUCIR EL TEMAÑO DE LA IMAGEN EN EL CSS -->
+                <img src="./img/EstTangLang002-1.jpg">
+                <!-- ----------------------------- -->
+                <div class="contenedor_texto">
+                    <h2>El Gran Maestro Chiu, Biografía (中文)</h2>
+                    <p>Su verdadero nombre fue <strong>Zhao Zhu Xi</strong>, pero se le ha recordado con el nombre cantonés de <strong>Chiu Chuk Kai</strong> . El Gran Maestro <strong>Chiu </strong> nació en el camino de Wangcun (路 旺村), en la ciudad de Sha He (沙河 镇), condado de Yi (掖县), provincia de Shandong (山东 省). Su madre murió cuando él tenía 5 años. Su abuela lo cuidó durante 2 años y finalmente lo devolvió a su padre aunque este en verdad paso poco tiempo con él, fue su tío con el que mayor tiempo pasó.</p>
+                    <p>Se dice que un viejo monje que visitaba la zona se percato de su presencia, y vio en él un buen artista marcial, tras desavenencias familiares escapo de sus familiares y se convirtió en su primer discípulo en el Templo Zang Zhi, donde también aprendió con dos maestros más, el maestro <strong>QingQuan</strong> conocido con el sobre nombre de "Corriente clara" y el maestro <strong>Jué Dōng</strong>  conocido con el sobrenombre de "El sabio del Este". Con estos tres maestros aprendió:</p>
+                    <!-- TEXTO OCULTO -->
+                    <div class="texto_mas">
+                        <p><strong>Estudió "Tai Zhu Bei", boxeo del Gran Emperador"</strong>.</p>
+                        <p><strong>Estudió Shao Lin Puño Largo, Chang Chuan</strong>.</p>
+                        <p><strong>Movimientos básicos, la lucha a corta distancia, técnicas de manos, Shing I, Ba Kua, Técnicas de control, defensa, ataque, de caídas, Qi Gong, la armadura de hierro, Manejo de armas, levantamiento de pesas, equitación y tiro con arco.</strong></p>
+                        <p>Parte de lo estudiado con estos dos monjes lo aprendió durante una estancia en un templo en Corea, que estaba relacionado con el templo Zang Zhi.</p>
+                        <p><strong>Chiu</strong> pasó 10 años en el templo de la montaña hasta que fallecieron sus tres maestros, <strong>Chiu</strong> tenía 18 años. <strong>Chiu</strong> continuó su aprendizaje con otro monje taoísta llamado <strong>Cheung Man Chau </strong>del cual aprendió la <strong>Palma de TaiJi Quan de Wu Tang</strong> .</p>
+                        <p>Cuando aprendió la forma completa le preguntó a su maestro cual era su nombre, este, le comentó que era la forma de <strong>TaJi Quan de la Montaña Nubosa de Wu Tang</strong>, (más tarde el maestro <strong>Chiu</strong> introdujo esta forma de TaiJi Quan en el currículum de mantis con el nombre de "Las palmas nubosas" o "Las palmas tocan las nubes", forma de 132 movimientos difundiéndola en Vietnam y Hong-Kong).</p>
+                        <p><strong>Chiu</strong> trabajó en diferentes trabajos aunque declinó algunos de ellos pues el quería seguir mejorando su Kung-fu. Por lo tanto, él y algunos de sus amigos ricos contrataron a un famoso artista marcial, <strong>Yam Fung Sui</strong> (任丰瑞) para aprender <strong>Mantis Religiosa</strong> durante tres años, (estilo que le había fascinado en su último enfrentamiento).</p>
+                        <!-- Corregir las imagenes de tamaños y centrar -->
                         <figure>
-                            <!-- <img src="../img/EstTangLang001-1.jpg" alt="1"> -->
+                            <img src="./img/EstTangLang003-1.jpg" alt="5">
+                            <figcaption>Gran Maestro Chiu</figcaption>
                         </figure>
-
-                        <!-- TEXTO OCULTO -->
-                        <div class="texto_mas">
-                            <p>En 1968 el Vietcong ocupa Saigong, convirtiendo la ciudad en un caos. Viendo la situación del país, <strong>Sifu Chiu</strong> decide trasladarse con su familia a Hong Kong, pero el gobierno de Vietnam no lo dejó partir hasta que transmitió todas sus enseñanzas y quedaron bien registradas, fueron tiempos difíciles para él y su familia. Al final cuando el gobierno obtuvo lo que quería dejo partir a la familia <strong>Chiu</strong>. En Vietnam el estilo de Kung Fu <strong>TaiChi Mantis</strong>  del Maestro <strong>Chiu</strong>  es considerado un Tesoro Nacional.</p>
-                            <p>A finales de los años 60 <strong>Sifu Chiu </strong>se trasladó a Hong Kong. Cuando vivía en Hong Kong, se mantuvo activo hasta sus últimos años enseñando <strong>Taichi Mantis Religiosa</strong> .</p>
-                            <!-- ARREGLAR LAS IMAGENES PARA QUE ESTEN CENTRALIZADAS EN CSS -->
-                            <figure>
-                                <img src="../img/EstTangLang007-1.jpg" alt="8">
-                            </figure>
-                            <figure>
-                                <img src="../img/EstTangLang008-1.jpg" alt="9">
-                                <figcaption>Escuela del Gran Maestro Chiu en Hong-Kong     Algunos alumnos  escuela de Hong-Kong</figcaption>
-                            </figure>
-                            <p>El 11 de junio de 1972, 20 alumnos del maestro Chiu forman una asociación para preservar las enseñanzas del Maestro.</p>
-                            <p><strong>Sifu Chiu falleció el 4 de agosto de 1991 en Hong Kong a la edad de 91 años.</strong></p>
-                            <!-- Corregir las imagenes de tamaños -->
-                        </div><!-- FIN DEL TEXTO OCULTO -->
-                        <button class="leer_mas">Leer Más</button>
-                    </div>
+                        <figure>
+                            <img src="./img/EstTangLang004-1.jpg" alt="6">
+                            <figcaption>Gran Maestro Chiu posición tipica del Estilo</figcaption>
+                        </figure>
+                    </div><!-- FIN DEL TEXTO OCULTO -->
+                    <button class="leer_mas cta-button">Leer Más</button>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section id="historia_origen">
+        <div class="principal-box animado">
+            <div class="contenedor_origen">
+                <div class="contenedor_texto">
+                    <h2>Yam y Jin Chi Shou</h2>
+                    <p>Pasados los tres años, el maestro <strong>Yam</strong> le presentó a su amigo el Maestro <strong>Jin Chi Shou</strong> (迟 守 进) el cual acepto seguir enseñándole <strong> Mantis</strong> durante 4 años más. Como no tenía dinero suficiente para pagar las clases y como ya tenía experiencia, se puso a trabajar como guardián de las caravanas The 12 deciples of Chiu Chuk Kai de mercancías en la empresa que conjuntamente tenían los dos maestros, <strong>Yam y Jin</strong> .</p>
+                    <p>Los dos maestros de <strong>Chiu </strong> fueron la sexta generación de  <strong>TaiChi Mantis</strong>. Después de 7 años de formación, el nivel de <strong>Chiu</strong>  progresó enormemente.</p>
+                    <p><strong>Chiu</strong> volvió a Yin Tai para ayudar a su tío. Sin embargo, renunció a su cargo porque en ese momento, el ejército japonés declaró la guerra a China. Con 28 años <strong>Chiu</strong> comenzó a enseñar artes marciales en Yin Tai, con la esperanza de entrenar a algunos estudiantes para ayudar a difundir el estilo Mantis y así se supieran defender de los invasores.</p>
+                    <p>El Maestro <strong>Chiu </strong>y su alumno <strong>Keung Mut Ling</strong>  viajaron por negocios al Sur de la China y acabaron por diversos motivos trabajando de guardaespaldas de una sociedad en Guanzhou que para sorpresa de ellos resultó ser propiedad de la mafia de la región, no paso mucho tiempo que por altercados con la policía tuvieron que ir hacia Macao.</p>
                 </div>
-        </section>
-    </main>
-    <script>
-        // Nativo
-        const botonLeerMas = document.querySelectorAll(".leer_mas");
-        const textoMas = document.querySelectorAll(".texto_mas");
-        const cajaIntro = document.querySelector(".contenedor_intro");
-        
-
-        
-        //para mostrar y ocultar los textos adicionales con botones leerMas
-        botonLeerMas.forEach((e,i)=>{
-            e.addEventListener("click",function(){
-                if(textoMas[i].style.maxHeight==="0px" || textoMas[i].style.maxHeight===""){
-                    textoMas[i].style.maxHeight ="initial";
-                    e.innerText="Ocultar";
-
-                }else{
-                    textoMas[i].style.maxHeight = 0;
-                    e.innerText="Leer Más";
-                }
-                
-
-            });
-
-        });
-    </script>
-
-    <footer class="fondo" ><!--div 100% ancho-->
+                <!-- ARREGLAR EL TAMAÑO DE LA IMAGEN DEL FIGURE EN CSS -->
+                <figure>
+                    <img src="./img/TAICHI-MANTIS2-e1554401286508.jpg" alt="mantis">
+                </figure>
+            </div>
+            <!-- TEXTO OCULTO -->
+            <div class="texto_mas">
+                <!-- CORRERGIR EL ESPACIO DE LAS IMAGENES -->
+                <p>Allí comenzaron a dar clases de Kung-Fu en la calle, también surgieron problemas con los maestros del lugar y escuelas de los mismos.Finalmente firmaron un pacto y el maestro <strong>Chiu</strong>  con la ayuda de <strong>Kwok Man Tsai</strong> maestro del sur de China y un estilista de <strong>Wing Chung</strong>  quien inspiró al Gran Maestro <strong>Chiu</strong> para crear el <strong>formulario del muñeco de madera</strong>. <strong>Kwok</strong> fue muy respetado por su honor y lealtad y gracias a su mediación, el maestro <strong>Chiu</strong> fue aceptado en la comunidad de maestros del sur, encontrando trabajo como instructor de artes marciales en la delegación de la <strong>Asociación Ching Woo Athletic y otras escuelas de Macao.</strong> </p>
+                <figure>
+                    <img src="./img/EstTangLang005-1.jpg" alt="">
+                </figure>
+                <figure>
+                    <img src="./img/EstTangLang006-1.jpg" alt="">
+                </figure>
+                <!--  -->
+            </div><!-- FIN DEL TEXTO OCULTO -->
+            <button class="leer_mas boton_esp cta-button">Leer Más</button>
+        </div>
+    </section>
+    <section id="historia_intro">
+        <div class="principal-box animado">
+            <div class="contenedor_intro">
+                <!-- NOTA AGREGARLE UNA CLASE A LA IMAGEN PARA REDUCIR EL TEMAÑO DE LA IMAGEN EN EL CSS -->
+                <img src="./img/EstTangLang009-1.jpg" alt="">
+                <!-- ----------------------------- -->
+                <div class="contenedor_texto">
+                    <h2>Sifu Chiu</h2>
+                    <p>Después de la guerra <Strong>sifu Chiu</Strong> se trasladó a Vietnam y la enseñanza continuó en la sucursal de Ching Woo en Vietnam. Vivió en Vietnam del Norte primero y luego en Vietnam del Sur. Él introdujo el <strong>TaiChi TangLang</strong> a los oficiales militares en Vietnam del Sur, donde se envió a uno de sus alumnos personales para ser el guardaespaldas del presidente de Vietnam del Sur.</p>
+                    <p>Soldados estadounidenses aprendieron la mayor parte del <strong>Tai Ji Tang Lang</strong> que hay hoy actualmente en los EE.UU. <strong>Sifu Chiu</strong> vivió en (Saigón y Choloon) por más de 10 años.</p>
+                    <p>Un alumno suyo ganó el primer puesto, compitiendo con la forma BengBu del estilo <strong>TaiChi Mantis</strong> , en el primer campeonato de WuShu celebrado en Beijing en 1957.</p>
+                    <figure>
+                        <img src="./img/EstTangLang001-1.jpg" alt="1">
+                    </figure>
+                    <!-- TEXTO OCULTO -->
+                    <div class="texto_mas">
+                        <p>En 1968 el Vietcong ocupa Saigong, convirtiendo la ciudad en un caos. Viendo la situación del país, <strong>Sifu Chiu</strong> decide trasladarse con su familia a Hong Kong, pero el gobierno de Vietnam no lo dejó partir hasta que transmitió todas sus enseñanzas y quedaron bien registradas, fueron tiempos difíciles para él y su familia. Al final cuando el gobierno obtuvo lo que quería dejo partir a la familia <strong>Chiu</strong>. En Vietnam el estilo de Kung Fu <strong>TaiChi Mantis</strong>  del Maestro <strong>Chiu</strong>  es considerado un Tesoro Nacional.</p>
+                        <p>A finales de los años 60 <strong>Sifu Chiu </strong>se trasladó a Hong Kong. Cuando vivía en Hong Kong, se mantuvo activo hasta sus últimos años enseñando <strong>Taichi Mantis Religiosa</strong> .</p>
+                        <!-- ARREGLAR LAS IMAGENES PARA QUE ESTEN CENTRALIZADAS EN CSS -->
+                        <figure>
+                            <img src="./img/EstTangLang007-1.jpg" alt="8">
+                        </figure>
+                        <figure>
+                            <img src="./img/EstTangLang008-1.jpg" alt="9">
+                            <figcaption>Escuela del Gran Maestro Chiu en Hong-Kong     Algunos alumnos  escuela de Hong-Kong</figcaption>
+                        </figure>
+                        <p>El 11 de junio de 1972, 20 alumnos del maestro Chiu forman una asociación para preservar las enseñanzas del Maestro.</p>
+                        <p><strong>Sifu Chiu falleció el 4 de agosto de 1991 en Hong Kong a la edad de 91 años.</strong></p>
+                        <!-- Corregir las imagenes de tamaños -->
+                    </div><!-- FIN DEL TEXTO OCULTO -->
+                    <button class="leer_mas cta-button">Leer Más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!--  ======== FOOTER ======== -->
+<footer class="fondo_2" ><!--div 100% ancho-->
     <div class="principal-box animado"> <!--div con anchura maxima con relacion al nav,con flex vertical para separar el titulo -->
-        <div class="caja-flex"><!--div con flex-->
-            <div  class="img-flex video"><!--video y iconos---->
-                <h3 class="rojo" style="font-size: 2rem;">How We Work / FAQ</h3>
-                <p class="text" style="margin:10px 0px 60px 0px ;">Lorem ipsum dolor sit amet consectetur. Molestie cum ut aliquam convallis. Lacus sed velit adipiscing diam.</p>
-                <img src="../img/imagenFAQ.jpg" alt="hombres_peleando" style="width:100%; max-width: 500px; position: relative; z-index: 11;">
-                <div class="icono-yin pc-icono" style="margin-left: -90px; z-index: 3;  inset: 25% auto auto 5% ; transform: rotate(95deg);"></div>
-                <div class="icono-yan pc-icono" style="margin-left: -90px; inset: 80% auto auto 95% ; z-index: 1" ></div>
-            </div>
-
-            <div class="caja-flex content-flex"><!--flex botones y el texto-->
-                
-                <div class="desplegable">
-                    <div class="caja-mar">
-                        <div class="flex-izq">
-                            <h3> Do I have to be in shape to get started?</h3>
-                        </div>
-                        <div class="icon-arrow">&#129131;</div>
-                    </div>
-                    <div class="acordeon">
-                        <p class="p_active">Competiciones oficiales</p>
-                    </div>
-                </div>
-
-                    <div class="desplegable">
-                        <div class="caja-mar">
-                            <div class="flex-izq">
-                                <h3>Can I get first class for free?</h3>
-                            </div>
-                            <div class="icon-arrow">&#129131;</div>
-                        </div>
-                        <div class="acordeon">
-                            <p class="p_active">Mejora la condición física y mental.Beneficios de un deporte completo ( bilateralidad, brazos-tronco-piernas).</p>
-                        </div>
-                    </div>  
-
-                    <div class="desplegable">
-                        <div class="caja-mar">
-                            <div class="flex-izq">
-                                <h3>Will I get hurt during the training?</h3>
-                            </div>
-                            <div class="icon-arrow">&#129131;</div>
-                        </div>
-                        <div class="acordeon">
-                            <p class="p_active">Practicar artes marciales permite aprender técnicas de autodefensa para protegerse en situaciones de peligro.</p>
-                        </div>
-                    </div>  
-                </div>
-        </div>
-        <div class="caja-flex text_logo">
-
-            <img src="../img/logo_250px.png" alt="logo_ta-mo" style="max-width: 300px; width: 100px;">
-            <div >
-                <h2 class="titulos" style="font-size:4rem;">Let’s Fight Together</h2>
-                <p style="padding: 0px 80px;">Lorem ipsum dolor sit amet consectetur. Molestie cum ut aliquam convallis. Lacus sed velit adipiscing diam. Donec elementum mi lobortis vulputate fringilla duis vitae tempor at.</p>
-                <button class="cta-button">Enroll Now</button>
-            </div>
-        </div>
+        <div class="caja-flex text_logo animado">
+            <img src="./img/logo_250px.png" alt="logo_ta-mo" class="logo-tamo-footer">
+            <div class="container-lets">
+                <h2 class="titulos">Luchemos Juntos</h2>
+                <p class="p-luchemos">En el camino del karate y las artes marciales no se lucha solo, cada técnica, cada caida y cada avance son parte de un proceso compartido. "Luchemos Juntos" representa la unidad, el respeto y el espíritu de superación que nos une como practicantes.</p>
+                <button class="cta-button">Inscríbete ahora</button>
+            </div> <!-- fin container-lets -->
+        </div> <!-- fin caja-flex text_logo animado -->
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/artesmarciales.tamo/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kungfutamo/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.tiktok.com/@artesmarciales_tamo"><i class="fa-brands fa-tiktok"></i></a>
+        </div> <!-- fin redes sociales -->
         <div class="footer-caja-flex">
             <ul class="foot-menu-flex">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Kung-fu</a></li>
-                <li><a href="#">Galería</a></li>
-                <li><a href="#">Tai-chi</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia-kungfu.html">Kung Fu</a></li>
+                <li><a href="taichi.html">Tai Chi</a></li>
+                <li><a href="defensa.html">Defensa Personal</a></li>
+                <li><a href="contacto.html">Contacto</a></li>  
             </ul>
             <div class="content-copy">
-                <small>Copyright © 2024 TA-MO | audioman Child por Catch Themes </small>
-            </div>
+                <small>Copyright © 2024 | TA-MO </small>
+            </div> <!-- fin content-copy -->
             <div class="circulo-fondo_foot"></div>
-        </div>
-
-    </div>
-    <!-- BOTON PARA ARRIBA -->
-        <div class="boton-arriba"><i class="fa fa-angle-up"></i></div>
-
-
-    </footer>
-    <script src="../js/script.js"></script>
-
+        </div> <!-- fin footer-caja-flex -->
+    </div> <!-- fin principal-box animado -->
+</footer>
+<!-- BOTON PARA ARRIBA -->
+<div class="boton-arriba"><i class="fa fa-angle-up"></i></div>
+<script src="./js/script.js"></script>
 </body>
 </html>

@@ -126,7 +126,6 @@ h1 {
 }
 .header-h2 {
     padding: 35px 0 15px;
-    font-family: "Protest Revolution", sans-serif;
     font-size: 3rem;
 }
 h2 > span.color-secon {
@@ -1184,29 +1183,16 @@ ul.list-benf li {
     line-height: 1.5em;
 }
 
-/*
-.seccion-tipo-imgs .caja-mar .icon-arrow {
-    
-}
-.seccion-tipo-imgs .caja-mar {
-    
-}
-.seccion-tipo-imgs .caja-mar:hover h3,  .seccion-tipo-imgs .caja-mar:hover .icon-arrow {
-    
-}
-.seccion-tipo-imgs .caja-mar h3 {
-    
-}
-.seccion-tipo-imgs p {
-    
-}
-*/
-/****************** historia-kungfu.html **********************/
-/**************************************************************/
-/** ========== ** ** HISTORIA DEL KUNG-FU ** ** ============ **/
-/**************************************************************/
-/**************************************************************/
-  
+/*****************************************************************/
+/******************** historia-kungfu.html ***********************/
+/*****************************************************************/
+/** ============ ** ** HISTORIA DEL KUNG-FU ** ** ============= **/
+/* aquí también estan los maestros del diagrama de estilos.html ***
+* BAK HOK PAI * SU YU CHANG * TAI CHI YANG * SIFU FERRAN **********
+* RAYMOND WONG * MAESTROS VENEZOLANOS * NUESTRA ESCUELA ***********
+* MIZONG LUOHAN * TAICHI MANTIS * HUNG GAR ************************
+/*****************************************************************/
+
 /************ general *************/
 header.home-header.header-historia {
     background-image: linear-gradient(
@@ -1216,7 +1202,7 @@ header.home-header.header-historia {
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
-    padding: 20px 20px 200px;
+    padding: 50px;
 }
 section.hist-kungfu:nth-child(odd) {
     background-color: #292929; /*Alternar colores de fondo*/ 
@@ -1225,9 +1211,6 @@ main.hist-kungfu {
     text-align: center;
     font-size: 18px;
     line-height: 1.5em;
-}
-.main-title.header-h2-hist-kungfu {
-    margin-bottom: 0px;
 }
 main.hist-kungfu h2 {
 /*  font-size: 36px;*/
@@ -1250,15 +1233,22 @@ iframe.hist-kungfu {
 }
 /**************************************/
 /*** * Sección Historia-Introducción * * 
- * hist kung fu * * * *****************/
+ * hist kung fu * * * maestros ********/
 /**************************************/
-#historia_intro-kungfu div.contenedor_texto-kungfu {
+
+#historia_intro .principal-box {
+    border-bottom: 1px solid #99898276;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#historia_intro div.contenedor_texto {
     padding: 20px;
 }
-#historia_intro-kungfu p {
+#historia_intro p {
     text-align: initial;
 }
-.contenedor_intro-kungfu {
+.contenedor_intro {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1266,47 +1256,51 @@ iframe.hist-kungfu {
     gap: 20px;
     padding: 20px;
 }
-.contenedor_intro-kungfu h4 {
+.contenedor_intro h4 {
     font-size: 15px !important;
 }
-.contenedor_texto-kungfu p {
+.contenedor_texto p {
     margin: 30px 0;
 }
-ul.lista-kungfu-intro {
+ul.lista-kungfu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 8px;
 }
 /******** ============== Modo TABLET *******/
-@media (min-width:768px) {
-    .contenedor_intro-kungfu {
+@media (min-width: 768px) {
+    .contenedor_intro {
         flex-direction: row-reverse;
     }
-    .contenedor_intro-kungfu iframe {
+    .contenedor_intro iframe {
     flex: 1 1 600px;
     margin: 10px;
     }
-    #historia_intro-kungfu .contenedor_texto-kungfu {
+    #historia_intro .contenedor_texto {
     padding: 0 50px;
     }
-    .contenedor_texto-kungfu {
+    .contenedor_texto {
     flex: 1 1 500px;
     }
 }
 /**************************************/
 /*** * Sección Historia-Origen * * * *
- * hist kung fu * * * *****************/
+ * hist kung fu * maestros ************/
 /**************************************/
-
-#historia_origen-kungfu .texto_mas {
+#historia_origen .principal-box {
+    border-bottom: 1px solid #99898276;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#historia_origen .texto_mas {
     display: flex;
     justify-content:center;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 50px;
 }
-#historia_origen-kungfu .texto_mas figure {
+#historia_origen .texto_mas figure {
     flex: 0 1 450px;
     margin-bottom: 10px;
     margin-top: 50px;
@@ -1314,18 +1308,21 @@ ul.lista-kungfu-intro {
     display: inline-block;
     overflow: hidden;
 }
-#historia_origen-kungfu .texto_mas img {
+#historia_origen .texto_mas img {
     width: 100%;
     max-width: 500px;
     display: block;
 }
-#historia_origen-kungfu .texto_mas p {
+.img-bak {
+    margin-bottom: 15px;
+}
+#historia_origen .texto_mas p {
     padding: 0 20px;
 }
-#historia_origen-kungfu .contenedor_origen-kungfu .contenedor_texto-kungfu {
+#historia_origen .contenedor_origen .contenedor_texto {
     padding: 0 20px;
 }
-.contenedor_origen-kungfu {
+.contenedor_origen {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1333,33 +1330,36 @@ ul.lista-kungfu-intro {
     gap: 20px;
     padding: 20px;
 }
-.contenedor_origen-kungfu h4 {
+.contenedor_origen h4 {
     font-size: 15px !important;
 }
-.contenedor_origen-kungfu figure {
+.contenedor_origen figure {
     flex: 1 1 250px;
     margin: 10px;
 }
-.contenedor_origen-kungfu figure img {
+.contenedor_origen figure img {
     width: 100%;
     max-width: 500px;
     filter: sepia(50%);
     border: none;
     border-radius: 5px; 
 }
+.imgs-ferran {
+    display: flex;
+}
 /******** ============== Modo TABLET *******/
-@media (min-width:768px) {
-    #historia_origen-kungfu .contenedor_origen-kungfu .contenedor_texto-kungfu {
+@media (min-width: 768px) {
+    #historia_origen .contenedor_origen .contenedor_texto {
         flex: 1 1 600px;
         padding: 0 50px;
     }
-    #historia_origen-kungfu .contenedor_origen-kungfu figure {
+    #historia_origen .contenedor_origen figure {
         flex: 1 1 400px;
     }
-    #historia_origen-kungfu .texto_mas figure {
+    #historia_origen .texto_mas figure {
         flex-basis: 500px;
     }
-    #historia_origen-kungfu .texto_mas p {
+    #historia_origen .texto_mas p {
         flex: 1 1 700px;
         padding: 0 50px;
     }
@@ -1369,56 +1369,56 @@ ul.lista-kungfu-intro {
  * ******** Línea de tiempo ******* * *
  * hist kung fu * * * *****************/
 /**************************************/
-#historia_evolucion-kungfu {
+#historia_evolucion {
     padding: 20px
 }
-#historia_evolucion-kungfu h4 {
+#historia_evolucion h4 {
     font-size: 15px !important;
 }
-#historia_evolucion-kungfu .texto_mas.texto_flex-kungfu {
+#historia_evolucion .texto_mas.texto_flex {
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-#historia_evolucion-kungfu .texto_mas.texto_flex-kungfu figure {
+#historia_evolucion .texto_mas.texto_flex figure {
     flex-basis: 400px;
 }
-#historia_evolucion-kungfu .texto_mas.texto_flex-kungfu img {
+#historia_evolucion .texto_mas.texto_flex img {
     width: 100%;
 }
-#historia_evolucion-kungfu .texto_mas div.mas_flex-kungfu {
+#historia_evolucion .texto_mas div.mas_flex {
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-#historia_evolucion-kungfu .texto_mas div.mas_flex-kungfu p {
+#historia_evolucion .texto_mas div.mas_flex p {
     margin: 20px 0;
 }
-.linea-kungfu {
+.linea {
     display: none; /* ocultar la línea dashed */
 }
-.contenedor_escuela-kungfu {
+.contenedor_escuela {
     margin: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
-.contenido_escuela-kungfu {
+.contenido_escuela {
     padding: 20px;
     margin: 10px;
 }
-.contenedor_img-kungfu {
+.contenedor_img {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-.contenedor_img-kungfu figure {
+.contenedor_img figure {
     flex: 1 1 250px;
     padding: 10px;
     max-width: 400px;
@@ -1426,32 +1426,32 @@ ul.lista-kungfu-intro {
     width: 250px;
     height: 167px;
 }
-.contenedor_img-kungfu figure img {
+.contenedor_img figure img {
     max-width: 100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.contenedor_indicador-kungfu {
+.contenedor_indicador {
     display: flex;
     justify-content: center;
     align-items: baseline;
     flex-wrap: wrap;
 }
-.contenido_indicador-kungfu {
+.contenido_indicador {
     color: var(--color-rojo);
     padding: 20px 0 0;
     flex: 1 1 300px;
 }
-.contenido_indicador-kungfu h3 {
+.contenido_indicador h3 {
     margin: 16px 0 0;
     color: var(--color-rojo);
 }
-.contenido_indicador-kungfu p {
+.contenido_indicador p {
     color: var(--color-gris);
     margin: 8px 0 0;
 }
-.circulo-fuera-kungfu {
+.circulo-fuera {
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -1459,7 +1459,7 @@ ul.lista-kungfu-intro {
     margin: auto;
     box-sizing: border-box;
 }
-.circulo-dentro-kungfu {
+.circulo-dentro {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -1469,19 +1469,19 @@ ul.lista-kungfu-intro {
 }
 /******** ============== Modo TABLET *******/
 @media (min-width: 768px){
-    .contenedor_img-kungfu figure {
+    .contenedor_img figure {
         flex: 1 1 350px;
     }
-    .contenedor_img-kungfu figure img {
+    .contenedor_img figure img {
         width: 100%;
     }
-    .contenedor_indicador-kungfu {
+    .contenedor_indicador {
         flex-wrap: nowrap;
     }
-    .caja_indicador-kungfu {
+    .caja_indicador {
         position: relative;
     }
-    .linea-kungfu {
+    .linea {
         display: block; /* aparecer la línea dashed */
         border-bottom: 1px dashed var(--color-rojo);
         position: absolute;
@@ -1490,10 +1490,10 @@ ul.lista-kungfu-intro {
         left: 14%;
     }    
 }
+/**************************************************************/
 /******************* estilos-kungfu.html **********************/
 /**************************************************************/
 /** =========== ** ** ESTILOS DE KUNG-FU ** ** ============= **/
-/**************************************************************/
 /**************************************************************/
 
 /****** Todo excepto el diagrama ******/
@@ -1574,133 +1574,10 @@ main.main-etlKF p {
         margin: 15px 15px 20px 15px;
     }
 }
-/**************************/
-/*** maestros / estilos ***/
-/*** en esta parte están los 
-maestros del diagrama 
-* BAK HOK PAI 
-* SU YU CHANG
-* TAI CHI YANG
-* SIFU FERRAN
-* RAYMOND WONG
-* MAESTROS VENEZOLANOS
-* NUESTRA ESCUELA
-* MIZONG LUOHAN
-* TAICHI MANTIS
-* HUNG GAR
-*************************/
-#historia_intro .principal-box {
-    border-bottom: 1px solid #99898276;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-#historia_intro .contenedor_texto {
-    padding: 0 20px;
-}
-#historia_intro p {
-    text-align: initial;
-}
-.contenedor_intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.contenedor_intro h4 {
-        font-size: 15px !important;
-    }
-
-.contenedor_texto p {
-    margin: 30px 0;
-}
-@media (min-width: 768px) {
-    .contenedor_intro iframe {
-    flex: 1 1 600px;
-    margin: 10px;
-    }
-    #historia_intro .contenedor_texto {
-    padding: 0 50px;
-    }
-    .contenedor_texto {
-    flex: 1 1 500px;
-    }
-}
-#historia_origen .principal-box {
-    border-bottom: 1px solid #99898276;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-#historia_origen .texto_mas {
-    display: flex;
-    justify-content:center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 50px;
-}
-#historia_origen .texto_mas figure {
-    flex: 0 1 450px;
-    margin-bottom: 10px;
-    margin-top: 50px;
-    border-radius: 5px; 
-    display: inline-block;
-    overflow: hidden;
-}
-#historia_origen .texto_mas img {
-    width: 100%;
-    max-width: 500px;
-    display: block;
-}
-.img-bak {
-    margin-bottom: 15px;
-}
-#historia_origen .texto_mas p {
-    padding: 0 20px;
-}
-#historia_origen .contenedor_origen .contenedor_texto {
-    padding: 0 20px;
-}
-.contenedor_origen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.contenedor_origen h4 {
-    font-size: 15px !important;
-}
-.contenedor_origen figure {
-    flex: 1 1 250px;
-    margin: 10px;
-}
-.contenedor_origen figure img {
-    width: 100%;
-    max-width: 500px;
-    filter: sepia(50%);
-    border: none;
-    border-radius: 5px; 
-}
-@media (min-width: 768px) {
-    #historia_origen .contenedor_origen .contenedor_texto {
-        flex:1 1 600px;
-        padding: 0 50px;
-    }
-    #historia_origen .contenedor_origen figure {
-        flex: 1 1 400px;
-    }
-    #historia_origen .texto_mas figure {
-        flex-basis: 500px;
-    }
-    #historia_origen .texto_mas p {
-        flex: 1 1 700px;
-        padding: 0 50px;
-    }
-}
+/*************************************************************/
 /******************* escuela-kungfu.html *********************/
 /*************************************************************/
 /** =========== ** ** ESCUELA DE KUNG-FU ** ** ============ **/
-/*************************************************************/
 /*************************************************************/
 
 /************ header / general *********/
@@ -1756,10 +1633,11 @@ header.home-header.header-escuela {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-    ), url(img/emblema-mantis.jpg);
+    ), url(../img/emblema-mantis.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 50px;
 }
 
 #escuela-kungfu {
@@ -2075,30 +1953,21 @@ ul.slider-nucleo {
     left: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+div.listaa ul.liang li {
+    list-style: disc !important;
+}
+.img-flex img {
+    max-width: 150px;
+}
+.img-flex {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: auto;
+}
+.img-block {
+    display: block;
+}
 
 
 
@@ -2122,10 +1991,8 @@ header.home-header.header-defensaP {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    padding-bottom: 100px;
-}
-header.home-header.header-defensaP h2 {
-    font-size: 5rem;
+    padding-bottom: 50px;
+    font-size: 3rem;
 }
 /******* GENERAL *******/
 
