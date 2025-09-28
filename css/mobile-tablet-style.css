@@ -410,7 +410,7 @@ main .cta-button {
     display: block;
     margin-right: 50px;
 }
-.section-enroll-btn2, .enroll-btn2 {
+.enroll-btn2 {
     transition: background-color 0.3s ease, transform 0.2s ease;
     color: var(--color-negro);
     text-decoration: none;
@@ -419,7 +419,6 @@ main .cta-button {
     margin: 10px 10px;
     font-size: 14px;
     cursor: pointer;
-    color: white;
 }
 .section-enroll-btn2:hover, .enroll-btn2:hover {
     border: 1px solid var(--color-blanco);
@@ -1045,8 +1044,8 @@ h2.aportan, p.aportan-concep {
 }
 .image-cover {
     object-fit: cover; /* Ajusta la imagen a las dimensiones del contenedor */
-    width: 100%;
-    height: auto;
+    width: 160px;
+    height: 160px;
     object-position: top;
     transition: transform 1s, opacity 1s; /* Optimizado para que ambas transiciones tengan la misma duración */
 }

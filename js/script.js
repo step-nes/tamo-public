@@ -140,6 +140,7 @@ $(document).ready(function () {
         
         // Cierra todos
         $texto_mas.css("max-height", "0px");
+        $(this).text("Ocultar");
         
         // Abre el actual
         $texto_mas.eq(i).css({
@@ -159,6 +160,7 @@ $(document).ready(function () {
       } else {
         // Si ya está abierto, lo cierra
         $texto_mas.eq(i).css("max-height", "0px");
+        $(this).text("Leer más");
         $flecha_dos.eq(i).css("transform", "rotate(360deg)");
       }
     });
