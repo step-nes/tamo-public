@@ -9,7 +9,7 @@ $(document).ready(function(){
       $('.main-menu').toggleClass('open');
     });
 
-                // Submenús
+            // Submenús
     $('.submenu-item').click(function() {
       const arrow = $(this).find('.down');
       const submenu = $(this).next('.sub');
@@ -18,7 +18,7 @@ $(document).ready(function(){
       submenu.toggleClass('open');
     });
 });
-            // Menú ordenador (Inyección)
+        // Menú ordenador (Inyección)
 $(document).ready(function(){
     $("#nav-container-pc").html(`
         <nav class="main-menu-pc">
@@ -53,7 +53,7 @@ $(document).ready(function(){
     );
 });
 
-            // Submenús
+        // Submenús
 
 $(document).ready(function(){
     // Seleccionamos cada elemento de la lista que tiene un submenú
@@ -74,10 +74,93 @@ $(document).ready(function(){
     );
 });
 
-
 /////////////////////////////////////////////////////////////////////
+//Para MOSTRAR y OCULTAR los textos adicionales con botones leerMas
+
+$(document).ready(function () {
+  const $texto_mas = $(".texto_mas");
+  const $boton_leer_mas = $(".leer_mas, .leer_mas2");
+  const $flecha_dos = $(".leer_mas .fa-caret-down, .leer_mas2 .fa-caret-down");
+
+  $boton_leer_mas.each(function (i) {
+    $(this).on("click", function () {
+      if ($texto_mas.eq(i).css("max-height") === "0px" || $texto_mas.eq(i).css("max-height") === "none") {
+        
+        // Cierra todos
+        $texto_mas.css("max-height", "0px");
+        $(this).text("Ocultar");
+        
+        // Abre el actual
+        $texto_mas.eq(i).css({
+          "max-height": "1200px",
+          "transition": "max-height 1s ease"
+        });
+
+        // Rotar todas las flechas a posición inicial
+        $flecha_dos.css("transform", "rotate(360deg)");
+
+        // Rotar la flecha del actual
+        $flecha_dos.eq(i).css({
+          "transform": "rotate(180deg)",
+          "transition": "all 0.5s"
+        });
+
+      } else {
+        // Si ya está abierto, lo cierra
+        $texto_mas.eq(i).css("max-height", "0px");
+        $(this).text("Leer más");
+        $flecha_dos.eq(i).css("transform", "rotate(360deg)");
+      }
+    });
+  });
+});
+
+///////////////////////////////////////////////////
+///////////////// SLIDER HOME INDEX.HTML
+
+const homeSlider = [
+    './img/homeSlider/1.webp',
+    './img/homeSlider/2.webp',
+    './img/homeSlider/3.webp',
+    './img/homeSlider/4.webp',
+    './img/homeSlider/5.webp',
+    './img/homeSlider/6.webp',
+    './img/homeSlider/7.webp',
+    './img/homeSlider/8.webp',
+    './img/homeSlider/9.webp',
+    './img/homeSlider/10.webp',
+    './img/homeSlider/11.webp',
+    './img/homeSlider/12.webp',
+    './img/homeSlider/13.webp',
+    './img/homeSlider/14.webp',
+    './img/homeSlider/15.webp',
+    './img/homeSlider/16.webp'
+];
+
+let homeSlideIndex = 0;
+
+// Crear la imagen y agregarla al contenedor usando jQuery
+const $divHomeSlider = $('#home_slider');
+const $img = $('<img>', {
+    src: homeSlider[homeSlideIndex],
+    alt: 'Home Slider'
+});
+
+$divHomeSlider.append($img);
+
+// Cambiar la imagen cada 4 segundos
+setInterval(() => {
+    homeSlideIndex = (homeSlideIndex + 1) % homeSlider.length;
+    $img.attr('src', homeSlider[homeSlideIndex]);
+    console.log(homeSlideIndex);
+}, 4000);
+
+
+
+
+
 //////////////////////////////////////////
-        //    * SECCION *    //
+        //    * SECCIONES *    //
 $(document).ready(function() {
     const acordeon = $('.acordeon, .acordeon-benf');
     const boton = $('.desplegable, .desp-benf');
@@ -124,47 +207,6 @@ $(document).ready(function() {
             }
         });
     });
-});
-
-///////////////////////////////////////////////////
-//Para MOSTRAR y OCULTAR los textos adicionales con botones leerMas
-
-$(document).ready(function () {
-  const $texto_mas = $(".texto_mas");
-  const $boton_leer_mas = $(".leer_mas, .leer_mas2");
-  const $flecha_dos = $(".leer_mas .fa-caret-down, .leer_mas2 .fa-caret-down");
-
-  $boton_leer_mas.each(function (i) {
-    $(this).on("click", function () {
-      if ($texto_mas.eq(i).css("max-height") === "0px" || $texto_mas.eq(i).css("max-height") === "none") {
-        
-        // Cierra todos
-        $texto_mas.css("max-height", "0px");
-        $(this).text("Ocultar");
-        
-        // Abre el actual
-        $texto_mas.eq(i).css({
-          "max-height": "1200px",
-          "transition": "max-height 1s ease"
-        });
-
-        // Rotar todas las flechas a posición inicial
-        $flecha_dos.css("transform", "rotate(360deg)");
-
-        // Rotar la flecha del actual
-        $flecha_dos.eq(i).css({
-          "transform": "rotate(180deg)",
-          "transition": "all 0.5s"
-        });
-
-      } else {
-        // Si ya está abierto, lo cierra
-        $texto_mas.eq(i).css("max-height", "0px");
-        $(this).text("Leer más");
-        $flecha_dos.eq(i).css("transform", "rotate(360deg)");
-      }
-    });
-  });
 });
 
 ///////////////////////////////////////////
@@ -305,28 +347,6 @@ $(document).ready(function () {
     }
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

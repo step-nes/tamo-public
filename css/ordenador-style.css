@@ -195,6 +195,14 @@
     h3.desp {
         margin:30px 0 60px 0;
     }
+/***** SILUETAS *****/  
+    .content-siluetas > li {
+        flex: 1 1 100px;
+    }
+    .silueta {
+        max-width: initial;
+        max-height: 150px;
+    }
 /*** ===== TITULACIONES ===     */
     .titulaciones-flex {
         display: flex;

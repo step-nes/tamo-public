@@ -106,7 +106,7 @@ h1 {
     animation-delay: 0.5s;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    filter: drop-shadow(-10px 5px 10px #f002);
+    filter: drop-shadow(-10px 5px 10px #000);
 }
 @keyframes header_img_animation {
     0% {
@@ -589,7 +589,7 @@ main i {
     color: var(--color-rojo);
 }
 /**************************************/
-/*********** caja de imagenes *********/
+/******** caja de imagenes/video ******/
 /**************************************/
 .video.img-flex {
     width: 100%;
@@ -740,7 +740,7 @@ footer p {
     padding: 10px 0;
     font-size: 15px;
 }
-            /******* footer-logo ******/
+        /******* footer-logo ******/
 footer .caja-flex.text_logo {
     justify-content: center;
     padding: 49px 0;
@@ -751,7 +751,7 @@ footer .caja-flex.text_logo {
 footer .text_logo {
     text-align: center;
 }
-            /****** footer-copy ******/
+        /****** footer-copy ******/
 .footer-caja-flex {
     border-top: 1px solid var(--color-texto);
     padding: 70px 0px;
@@ -788,7 +788,7 @@ footer .text_logo {
     height: 200px;
     left: 40%;  
 }
-            /****** footer-boton ******/
+        /****** footer-boton ******/
 
 footer .cta-button {
    margin: 10px 0 0 0;
@@ -933,24 +933,14 @@ h2.aportan, p.aportan-concep {
     padding: 10px 0;
 }
 /**************************************/
-/***** * * SECCION SOBRE TAMO * * INDEX *****/
+/**** * SECCION SOBRE TAMO * INDEX ****/
 /**************************************/
 #seccion-sobreTa-mo {
     padding: 50px;
 }
-.seccion-tipo-video {
-    padding: 20px 0;
-}
 .caja2-flex {
     margin: 0;
     padding: 0 0 30px;
-}
-.seccion-tipo-video .content-flex {
-    padding-bottom: 20px;
-    line-height: 30px;
-}
-.seccion-tipo-video h2 {
-    margin-bottom: 10px;
 }
 .cel-titulo {
     display:block;
@@ -970,6 +960,16 @@ h2.aportan, p.aportan-concep {
     /*margin-bottom: 10px;
     margin-top: 10px;*/
 }
+.seccion-tipo-video {
+    padding: 20px 0;
+}
+.seccion-tipo-video .content-flex {
+    padding-bottom: 20px;
+    line-height: 30px;
+}
+.seccion-tipo-video h2 {
+    margin-bottom: 10px;
+}
 .seccion-tipo-video .content-flex p {
     color: var(--color-texto);
     padding: 10px 0 20px;
@@ -979,6 +979,14 @@ h2.aportan, p.aportan-concep {
     font-size: 18px;
     margin: 0;
 } /*esta p se queda aqui*/
+#home_slider img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: -10px 10px 10px black;
+}
 .desp {
     display: none;
 }
@@ -996,6 +1004,31 @@ h2.aportan, p.aportan-concep {
     inset: 70% auto auto 85%;
     z-index: 1;
 }
+/* SILUETAS */ 
+.content-siluetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+.content-siluetas > li {
+    flex: 1 1 50px;
+}
+.silueta {
+    max-width: 50px;
+    max-height: 200px;
+    opacity: .5;
+    cursor: pointer;
+}
+.silueta:hover {
+    transition: .5s;
+    opacity: 1;
+    filter: drop-shadow(-5px 5px 5px red);
+    transform: rotate(2deg);
+}
+.silueta:active {
+    transform: rotateY(180deg);
+} 
 /**************************************/
 /*** SECCION2 / Maestros / Docentes ** INDEX ****/
 /**************************************/
