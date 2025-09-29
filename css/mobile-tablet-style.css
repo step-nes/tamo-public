@@ -419,6 +419,7 @@ main .cta-button {
     margin: 10px 10px;
     font-size: 14px;
     cursor: pointer;
+    border: 1px solid var(--transparente);
 }
 .section-enroll-btn2:hover, .enroll-btn2:hover {
     border: 1px solid var(--color-blanco);
@@ -979,6 +980,9 @@ h2.aportan, p.aportan-concep {
     font-size: 18px;
     margin: 0;
 } /*esta p se queda aqui*/
+#home_slider {
+    flex: 1 1 300px;
+}
 #home_slider img {
     position: relative;
     width: 100%;
@@ -997,11 +1001,11 @@ h2.aportan, p.aportan-concep {
     font-size:1.2rem;
 }
 #seccion-sobreTa-mo .yin-sect-tamo {
-    inset: -45% auto auto 156%;
-    transform: rotateX(180deg) rotateY(180deg);
+    inset: 40% auto auto 20%;
+    z-index: -3;
 }
 #seccion-sobreTa-mo .yan-sect-tamo {
-    inset: 70% auto auto 85%;
+    inset: 21% auto auto 95%;
     z-index: 1;
 }
 /* SILUETAS */ 
@@ -1215,15 +1219,15 @@ ul.list-benf li {
     line-height: 1.5em;
 }
 
-/*****************************************************************/
-/******************** historia-kungfu.html ***********************/
-/*****************************************************************/
-/** ============ ** ** HISTORIA DEL KUNG-FU ** ** ============= **/
-/* aquí también estan los maestros del diagrama de estilos.html ***
-* BAK HOK PAI * SU YU CHANG * TAI CHI YANG * SIFU FERRAN **********
-* RAYMOND WONG * MAESTROS VENEZOLANOS * NUESTRA ESCUELA ***********
-* MIZONG LUOHAN * TAICHI MANTIS * HUNG GAR ************************
-/*****************************************************************/
+/*******************************************************/
+/**************** historia-kungfu.html *****************/
+/*******************************************************/
+/** ======= ** ** HISTORIA DEL KUNG-FU ** ** ======== **/
+/***** aquí también estan los maestros del diagrama *****
+* BAK HOK PAI * SU YU CHANG * TAI CHI YANG * HUNG GAR * *
+* SIFU FERRAN * RAYMOND WONG * MAESTROS VENEZOLANOS * ***
+* NUESTRA ESCUELA * MIZONG LUOHAN * TAICHI MANTIS * *****
+/*******************************************************/
 
 /************ general *************/
 header.home-header.header-historia {
@@ -1332,6 +1336,9 @@ ul.lista-kungfu {
     flex-wrap: wrap;
     gap: 50px;
 }
+#historia_origen p {
+    text-align: initial;
+}
 #historia_origen .texto_mas figure {
     flex: 0 1 450px;
     margin-bottom: 10px;
@@ -1406,6 +1413,9 @@ ul.lista-kungfu {
 }
 #historia_evolucion h4 {
     font-size: 15px !important;
+}
+#historia_evolucion .texto_mas {
+    text-align: initial;
 }
 #historia_evolucion .texto_mas.texto_flex {
     display: flex;
@@ -1806,11 +1816,11 @@ header.home-header.header-escuela {
     }
 }
 
-/**************************************************************/
-/************************* taichi.html ************************/
-/**************************************************************/
-/** =================== ** ** TAI CHI ** ** ================ **/
-/**************************************************************/
+/****************************************************/
+/******************** taichi.html *******************/
+/****************************************************/
+/** ============== ** ** TAI CHI ** ** =========== **/
+/****************************************************/
 
 header.home-header.header-taichi {
     background-image:linear-gradient(
@@ -1870,7 +1880,7 @@ main.main-taichi .fondo_2 {
     background-color: var(--color-rojo);
     color: var(--color-blanco);
     /*flex: 1 1 228px;*/
-    flex: 1 1 270px;
+    flex: 1 1 228px;
     margin: auto;
     max-width: none;
 }

@@ -141,26 +141,6 @@
         padding-left: 5px; /* espacio para la flecha */
     }
 
-    /* Estado inicial: sin flecha visible 
-    .despliegue-secundario > li::before {
-      content: "➤";           /* flecha 
-      position: absolute;
-      left: 0;                /* a la izquierda del texto 
-      top: 50%;
-      transform: translateY(-50%);
-      opacity: 0;
-      color: var(--color-rojo); /* color de la flecha 
-      font-size: 0.8em;
-      transition: opacity 0.3s ease;
-      
-    }*/
-    /* Al hacer hover: aparece la flecha 
-    .despliegue-secundario > li:hover::before {
-      opacity: 1;
-      
-    }*/
-
-    
 /*** ===== Numero de personas ===    */
     .section-media-num, .media-num {
         display: block;
@@ -195,6 +175,7 @@
     h3.desp {
         margin:30px 0 60px 0;
     }
+
 /***** SILUETAS *****/  
     .content-siluetas > li {
         flex: 1 1 100px;
@@ -390,7 +371,7 @@
         align-items: center;
         text-align: left;
     }
-    .caja-flex.programs{
+    .caja-flex.programs {
         text-align: center;
     }
     .enroll-btn2.btn2-taichi {
