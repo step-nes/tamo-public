@@ -23,7 +23,6 @@ $(document).ready(function(){
     $("#nav-container-pc").html(`
         <nav class="main-menu-pc">
             <ul class="list-menu-pc">
-                <li><a href="index.html">Inicio</a></li>
                 <li class="li-despliegue">
                     <a class="submenu-item-pc">
                         Kung Fu
@@ -160,7 +159,7 @@ setInterval(() => {
 
 
 //////////////////////////////////////////
-        //    * SECCIONES *    //
+    //    * SECCIONES con acordeon *    //
 $(document).ready(function() {
     const acordeon = $('.acordeon, .acordeon-benf');
     const boton = $('.desplegable, .desp-benf');
@@ -347,8 +346,6 @@ $(document).ready(function () {
     }
   });
 });
-
-
 
 
 
