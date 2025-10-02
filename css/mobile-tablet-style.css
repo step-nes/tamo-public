@@ -442,7 +442,7 @@ main .cta-button {
 }
 .circulo-fondo {
     background-color: var(--color-rojo);
-     filter: blur(240px); 
+    ilter: blur(240px); 
     border-radius: 100%;
     width: 300px;
     height: 300px;
@@ -451,6 +451,20 @@ main .cta-button {
     bottom: auto;
     left: 0;
     z-index: -1;
+}
+.circulo-fondo_centro {
+    overflow: auto;
+    background-color: var(--color-rojo);
+    filter: blur(200px); 
+    border-radius: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 50%;
 }
 /**************************************/
 /************* CONTENIDO **************/
@@ -884,6 +898,9 @@ div.boton-arriba:hover > i {
     position: absolute;
     z-index: 21;
 }
+.banderines {
+    padding: 0;
+}
 /**************************************/
 /* mover un poco el icono antes de ser ordenador */
 
@@ -1233,7 +1250,6 @@ header.home-header.header-historia {
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
-    padding: 50px;
 }
 section.hist-kungfu:nth-child(odd) {
     background-color: #292929; /*Alternar colores de fondo*/ 
@@ -1555,7 +1571,7 @@ header.home-header.header-estilos {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)), 
-    url(../img/estilos-kungfu.png);
+    url(../img/estilos/estilos-kungfu.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1643,7 +1659,7 @@ header.home-header.header-escuela {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 50px;
+    height: fit-content;
 }
 /************ header / general *********/
 .caja-position-escue-kungfu{
@@ -1668,7 +1684,7 @@ h2.header-h2-escue-kungfu {
     text-align: left;
     font-size: 2rem;
     margin-top: 0px;
-    padding: 40px 0;
+    padding: 40px 0 0;
 }
 .segunda-linea-main-title2 {
     display: block;
@@ -1694,7 +1710,7 @@ main.main-escuela-kungfu section p {
 /************************************/
 
 #escuela-kungfu {
-    padding: 20px 0 40px 0;
+    padding: 0 0 40px;
 }
 .seccion-salud-escue-kungfu {
     padding: 40px 0 60px;
@@ -1714,9 +1730,6 @@ main.main-escuela-kungfu section p {
     z-index: 10;
     width: 100%;
     flex: 1; 
-}
-#escuela-kungfu .img-top {
-    margin-top: 80px;
 }
 #escuela-kungfu .content-flex-text {
     flex: 1 1 350px;
@@ -1872,16 +1885,16 @@ main.main-taichi .fondo_2 {
     margin: auto;
 }
 .imagen_hrs-tai {
-    height: 380px;
-    max-width: 240px;
-    flex: 1 1 130px;
     position: relative;
     object-fit: cover;
-    width: 100%;
     overflow: hidden;
-    object-position: left; /* Mueve la imagen hacia la derecha */
-    filter: drop-shadow(1px 2px 4px black);
+    flex: 1 1 130px;
+    height: 380px;
     z-index: 10;
+    width: 100%;
+    max-width: 240px;
+    object-position: 35% 50%; /* Mueve la imagen hacia la derecha */
+    filter: drop-shadow(1px 2px 4px black);
 }
 .centro-taichi {
     padding: 20px 0 0;
@@ -1907,8 +1920,11 @@ main.main-taichi .fondo_2 {
 .desplegable.despleglable-taichi {
     margin-top: 14px;
 }
-.img-float-taichi {
-    float: right;
+img.clases-img {
+    filter: sepia(100%);
+}
+.clases-container {
+    margin: auto;
 }
 /***** taichi horarios ******/
 .centro-taichi {
@@ -1916,28 +1932,22 @@ main.main-taichi .fondo_2 {
     align-items: center;
     text-align: center;
 }
+.horari-tai-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: auto;
+}
 .horari-taichi {
     justify-content: center;
+    float: 1;;
 }
 .caja-flex.programs {
     flex: 1 1 328px;
     text-align: left;
     align-items: center;
     justify-content: space-between;
-}
-.circulo-fondo_centro {
-    overflow: auto;
-    background-color: var(--color-rojo);
-    filter: blur(200px); 
-    border-radius: 100%;
-    max-width: 300px;
-    max-height: 300px;
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    top: 0%;
-    bottom: auto;
-    left: 50%;
 }
 .caja-flex.fecha {
     gap: 10px;
@@ -1952,6 +1962,10 @@ main.main-taichi .fondo_2 {
 
 #seccionSliderTaichi {
     padding: 20px;
+}
+#seccionSliderTaichi h3 {
+    text-align: center;
+    margin-bottom: 15px;
 }
 #sliderTaichi-container {
     position: relative;

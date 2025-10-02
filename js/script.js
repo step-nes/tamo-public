@@ -6,16 +6,16 @@
 $(document).ready(function(){
     // Toggle menú principal
     $('.bars, .times').click(function() {
-      $('.main-menu').toggleClass('open');
+        $('.main-menu').toggleClass('open');
     });
 
             // Submenús
     $('.submenu-item').click(function() {
-      const arrow = $(this).find('.down');
-      const submenu = $(this).next('.sub');
+        const arrow = $(this).find('.down');
+        const submenu = $(this).next('.sub');
 
-      arrow.toggleClass('rotated');
-      submenu.toggleClass('open');
+        arrow.toggleClass('rotated');
+        submenu.toggleClass('open');
     });
 });
         // Menú ordenador (Inyección)
@@ -53,7 +53,6 @@ $(document).ready(function(){
 });
 
         // Submenús
-
 $(document).ready(function(){
     // Seleccionamos cada elemento de la lista que tiene un submenú
     $('.li-despliegue').hover(
@@ -77,41 +76,36 @@ $(document).ready(function(){
 //Para MOSTRAR y OCULTAR los textos adicionales con botones leerMas
 
 $(document).ready(function () {
-  const $texto_mas = $(".texto_mas");
-  const $boton_leer_mas = $(".leer_mas, .leer_mas2");
-  const $flecha_dos = $(".leer_mas .fa-caret-down, .leer_mas2 .fa-caret-down");
+    const $texto_mas = $(".texto_mas");
+    const $boton_leer_mas = $(".leer_mas, .leer_mas2");
+    const $flecha_dos = $(".leer_mas .fa-caret-down, .leer_mas2 .fa-caret-down");
 
-  $boton_leer_mas.each(function (i) {
-    $(this).on("click", function () {
-      if ($texto_mas.eq(i).css("max-height") === "0px" || $texto_mas.eq(i).css("max-height") === "none") {
-        
-        // Cierra todos
-        $texto_mas.css("max-height", "0px");
-        $(this).text("Ocultar");
-        
-        // Abre el actual
-        $texto_mas.eq(i).css({
-          "max-height": "1200px",
-          "transition": "max-height 1s ease"
+    $boton_leer_mas.each(function (i) {
+        $(this).on("click", function () {
+            if ($texto_mas.eq(i).css("max-height") === "0px" || $texto_mas.eq(i).css("max-height") === "none") {
+                // Cierra todos
+                $texto_mas.css("max-height", "0px");
+                $(this).text("Ocultar");
+                // Abre el actual
+                $texto_mas.eq(i).css({
+                    "max-height": "1200px",
+                    "transition": "max-height 1s ease"
+                });
+                // Rotar todas las flechas a posición inicial
+                $flecha_dos.css("transform", "rotate(360deg)");
+                // Rotar la flecha del actual
+                $flecha_dos.eq(i).css({
+                    "transform": "rotate(180deg)",
+                    "transition": "all 0.5s"
+                });
+            } else {
+                // Si ya está abierto, lo cierra
+                $texto_mas.eq(i).css("max-height", "0px");
+                $(this).text("Leer más");
+                $flecha_dos.eq(i).css("transform", "rotate(360deg)");
+            }
         });
-
-        // Rotar todas las flechas a posición inicial
-        $flecha_dos.css("transform", "rotate(360deg)");
-
-        // Rotar la flecha del actual
-        $flecha_dos.eq(i).css({
-          "transform": "rotate(180deg)",
-          "transition": "all 0.5s"
-        });
-
-      } else {
-        // Si ya está abierto, lo cierra
-        $texto_mas.eq(i).css("max-height", "0px");
-        $(this).text("Leer más");
-        $flecha_dos.eq(i).css("transform", "rotate(360deg)");
-      }
     });
-  });
 });
 
 ///////////////////////////////////////////////////
@@ -155,9 +149,6 @@ setInterval(() => {
 }, 4000);
 
 
-
-
-
 //////////////////////////////////////////
     //    * SECCIONES con acordeon *    //
 $(document).ready(function() {
@@ -172,29 +163,24 @@ $(document).ready(function() {
                 
                 // Cierra todos
                 acordeon.css('max-height', '0px');
-
                 // Abre el seleccionado
                 acordeon.eq(i).css('max-height', 'fit-content');
-
                 // Flechas
                 flecha.css({
                     'transform': 'rotate(360deg)',
                     'color': 'var(--color-rojo)'
                 });
-
                 flecha.eq(i).css({
                     'transform': 'rotate(180deg)',
                     'color': 'var(--color-blanco)',
                     'transition': 'all .5s'
                 });
-
                 // Textos
                 text.css('color', 'var(--color-rojo)');
                 text.eq(i).css('color', 'var(--color-blanco)');
             } else {
                 // Cierra el abierto
                 acordeon.eq(i).css('max-height', '0px');
-
                 // Flechas
                 flecha.eq(i).css({
                     'transform': 'rotate(360deg)',
@@ -207,11 +193,10 @@ $(document).ready(function() {
         });
     });
 });
-
+///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////
 /////////////// ESTILOS DE KUNG FU 
-
-////////// REDIMENSION DE LA IMG DEL DIAGRAMA //////////
+////////// REDIMENSION DE LA Imagen DEL DIAGRAMA //////////
 function cambiarImagen() {
     const $imagen = $("#imagenEsquema");
     const $botones = $(".botonStyle, .botonStylePequeno");
@@ -222,9 +207,9 @@ function cambiarImagen() {
     // Cambiar la imagen después de un pequeño retraso
     setTimeout(function () {
         if (window.matchMedia("(min-width: 600px)").matches) {
-          $imagen.attr("src", "./img/esquemaPc.jpg").css("min-width", "100%");
+            $imagen.attr("src", "./img/estilos/esquemaPc.jpg").css("min-width", "100%");
         } else {
-          $imagen.attr("src", "./img/esquemaMovil.jpg").css("min-width", "350px");
+            $imagen.attr("src", "./img/estilos/esquemaMovil.jpg").css("min-width", "350px");
         }
 
         // Mostrar de nuevo
@@ -240,7 +225,7 @@ function cambiarImagen() {
 
         $(this).css({
             "padding": `${paddingVertical}px ${paddingHorizontal}px`,
-         "font-size": `${fontSize}px`
+            "font-size": `${fontSize}px`
         });
     });
 }
@@ -248,12 +233,12 @@ function cambiarImagen() {
 cambiarImagen();
 $(window).on("resize", cambiarImagen);
 ///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
 ////////////////////// SLIDER TAICHI.HTML
 $(document).ready(function(){
     const $items = $('.slider-nucleo li');
     let currentIndex = 0;
     let intervalo_slider = null;
-
     function showImage(index) {
         $items.stop(true, true).fadeOut(300);
         return $items.eq(index).stop(true, true).fadeIn(300);
@@ -272,7 +257,6 @@ $(document).ready(function(){
     $('.btn-taichi.sldr-before').click(function(){
         imgAnt();
     });
-
     function startSlider(){
         if (!intervalo_slider) {
             return intervalo_slider = setInterval(imgSig, 3000);
@@ -296,58 +280,52 @@ $(document).ready(function(){
 ////////////////// DEFENSA PERSONAL
 
 $(document).ready(function () {
-  $(".btn_leer_mas-defP").on("click", function () {
-    var $btn = $(this);
-    // buscamos el contenedor del bloque (asegura que cada botón actúe sobre su bloque)
-    var $root = $btn.closest(".texto-defensaP");
-
-    // elementos habituales dentro del root
-    var $textoMas = $root.find(".texto_mas-defP");
-    var $susp = $root.find(".suspensivos");
-
-    // buscamos el span.inyect-susp:
-    // preferimos el que esté inmediatamente después del span.suspensivos
-    var $inyect = $();
-    if ($susp.length) {
-      $inyect = $susp.first().nextAll(".inyect-susp").first();
-    }
-    // fallback: buscar dentro del root (por si lo colocaste ahí)
-    if (!$inyect.length) {
-      $inyect = $root.find(".inyect-susp").first();
-    }
-    // último recurso: buscar global (no recomendado, pero para asegurar)
-    if (!$inyect.length) {
-      $inyect = $(".inyect-susp").first();
-    }
-
-    // debug opcional (descomenta si no se encuentra el span)
-    // if (!$inyect.length) console.warn("inyect-susp no encontrado para este bloque", $root);
-
-    // toggle del contenido y de los spans/puntos susp.
-    if ($textoMas.is(":visible")) {
-      // Cerrar
-      $textoMas.slideUp(300);
-      if ($inyect.length) $inyect.hide();
-      if ($susp.length) $susp.show();
-      $btn.html('Leer más <i class="fa fa-caret-down"></i>');
-      $btn.find("i").css({ transform: "rotate(360deg)", transition: "all .3s" });
-    } else {
-      // Abrir
-      $textoMas.slideDown(400);
-      if ($susp.length) $susp.hide();
-      if ($inyect.length) {
-        // si el span inyect tiene un salto/espacio al principio y no quieres que se muestre salto,
-        // puedes quitar solo saltos iniciales con replace (opcional):
-        // $inyect.html($inyect.html().replace(/^\s+/, ''));
-        $inyect.show();
-      }
-      $btn.html('Leer menos <i class="fa fa-caret-up"></i>');
-      $btn.find("i").css({ transform: "rotate(180deg)", transition: "all .3s" });
-    }
-  });
+    $(".btn_leer_mas-defP").on("click", function () {
+        var $btn = $(this);
+        // buscamos el contenedor del bloque (asegura que cada botón actúe sobre su bloque)
+        var $root = $btn.closest(".texto-defensaP");
+        // elementos habituales dentro del root
+        var $textoMas = $root.find(".texto_mas-defP");
+        var $susp = $root.find(".suspensivos");
+        // buscamos el span.inyect-susp:
+        // preferimos el que esté inmediatamente después del span.suspensivos
+        var $inyect = $();
+        if ($susp.length) {
+            $inyect = $susp.first().nextAll(".inyect-susp").first();
+        }
+        // fallback: buscar dentro del root (por si lo colocaste ahí)
+        if (!$inyect.length) {
+            $inyect = $root.find(".inyect-susp").first();
+        }
+        // último recurso: buscar global (no recomendado, pero para asegurar)
+        if (!$inyect.length) {
+            $inyect = $(".inyect-susp").first();
+        }
+        // debug opcional (descomenta si no se encuentra el span)
+        // if (!$inyect.length) console.warn("inyect-susp no encontrado para este bloque", $root);
+        // toggle del contenido y de los spans/puntos susp.
+        if ($textoMas.is(":visible")) {
+            // Cerrar
+            $textoMas.slideUp(300);
+            if ($inyect.length) $inyect.hide();
+            if ($susp.length) $susp.show();
+            $btn.html('Leer más <i class="fa fa-caret-down"></i>');
+            $btn.find("i").css({ transform: "rotate(360deg)", transition: "all .3s" });
+        } else {
+            // Abrir
+            $textoMas.slideDown(400);
+            if ($susp.length) $susp.hide();
+            if ($inyect.length) {
+                // si el span inyect tiene un salto/espacio al principio y no quieres que se muestre salto,
+                // puedes quitar solo saltos iniciales con replace (opcional):
+                // $inyect.html($inyect.html().replace(/^\s+/, ''));
+                $inyect.show();
+            }
+            $btn.html('Leer menos <i class="fa fa-caret-up"></i>');
+            $btn.find("i").css({ transform: "rotate(180deg)", transition: "all .3s" });
+        }
+    });
 });
-
-
 
 ///////////////////////////////////////////////////
 //          * BOTON SECCION CONTACTO HORARIO *          //
@@ -356,12 +334,10 @@ $(document).ready(function () {
     $("#btn-horario").click(function() {
         $("#myModal").show();
     });
-
     // Al hacer clic en el botón de cerrar (la 'x'), oculta la ventana
     $("#btn-cerrar-hor").click(function() {
         $("#myModal").hide();
     });
-
     // Al hacer clic fuera de la ventana, también la oculta
     $(window).click(function(event) {
         if ($(event.target).is("#myModal")) {
@@ -389,7 +365,7 @@ $('.animado').each(function () {
         // $(window).scrollTop() obtiene la distancia desde el borde superior de la ventana hasta el punto donde se encuentra el scroll.
         // $(window).height() obtiene la altura de la ventana del navegador.
         /* Si la posición superior del elemento es menor que la posición del scroll + la altura de la ventana,
-         significa que el elemento es visible o ya ha pasado por la ventana de visualización.*/
+        significa que el elemento es visible o ya ha pasado por la ventana de visualización.*/
 
         $(this).addClass('active');
         // Si la condición es verdadera (el elemento es visible en la ventana),
@@ -407,7 +383,7 @@ $(window).on('scroll', function () {
 
         if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
             // Verificamos si el elemento es visible en la ventana (como ya explicamos antes).
-           
+
             $(this).addClass('active');
             // Si el elemento es visible en la ventana, le agregamos la clase 'active'.
             // Esto activa la animación o el estilo definido en el CSS.
@@ -431,17 +407,6 @@ $(".boton-arriba").fadeOut();
         $("html").animate({scrollTop:0},
     500);
 });
+
 //////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-  //////////////////////////////////////////
+//////////////////////////////////////////
