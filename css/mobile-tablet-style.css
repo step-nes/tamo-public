@@ -345,7 +345,7 @@ nav.main-menu li > ul {
     text-decoration: none;
     padding: 20px;
     border-radius: 5px;
-    margin: 10px 10px;
+    margin: 10px;
     font-size: 14px;
     cursor: pointer;
     color: white;
@@ -1192,7 +1192,7 @@ h3.posicion {
     cursor: pointer;
     width: 100%;
     background-color: var(--desplegable);
-    padding: 30px 20px;
+    padding: 25px 15px;
 }
 .caja-mar-benf {
     color: var(--color-rojo);
@@ -2155,15 +2155,16 @@ div#defensa_ventaja h3 {
     border: 1px solid var(--color-rojo);
     border-radius: 5px;
     text-decoration: none;
-    padding: 5px 15px;
-    margin: 15px 0;
-    font-size: 10px;
+    padding: 20px;
+    margin: 10px;
+    font-size: 14px;
     cursor: pointer;
     color: white;
+    text-align: center;
 }
 .suspensivos,
 .inyect-susp {
-  display: inline;
+    display: inline;
 }
 .inyect-susp,
 .texto_mas-defP {
@@ -2286,18 +2287,6 @@ div#defensa_horario a:hover .fa-arrow-right {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /***************** contacto.html ******************/
 /**************************************************/
 /** ======== ** ** ** CONTACTO ** ** ** ======== **/
@@ -2315,7 +2304,7 @@ header.home-header.header-contact {
 }
 h2.titulo-contact {
     color: var(--color-blanco);
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-align: center;
     padding: 50px 0;
     margin: 30px auto;
@@ -2337,7 +2326,7 @@ h2.titulo-contact {
 }
 .tarjeta-contacto {
     background-color: var(--colorFondo1);
-    padding: 20px;
+    padding: 25px;
     border-radius: 5px;
     height: 350px;
     max-width: 420px;
