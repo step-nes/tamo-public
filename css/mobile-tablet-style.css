@@ -152,13 +152,14 @@ y el MENU -- */
     margin: auto;
     position: relative;
 }
-.section-logo-container, .logo-container {
+.logo-container {
     align-items: center;
     display: flex;
     width: fit-content;
+    justify-content: center;
+    gap: 5px;
 }
-.section-logo, .logo {
-    margin-right: 10px;
+.logo {
     width: 50px;
     height: 50px;
 }
@@ -910,7 +911,7 @@ div.boton-arriba:hover > i {
  * SOBRE NOSOTROS * * INDEX ***********/
 /**************************************/
 #seccion-beneficios {
-    padding: 0 50px 50px;
+    margin-bottom: 50px;
     background-color: var(--fondo1);
 }
 .sobre-nos {
@@ -924,7 +925,7 @@ h2.aportan, p.aportan-concep {
 /**** * SECCION SOBRE TAMO * INDEX ****/
 /**************************************/
 #seccion-sobreTa-mo {
-    padding: 50px;
+    padding: 30px;
 }
 .caja2-flex {
     margin: 0;
@@ -940,11 +941,11 @@ h2.aportan, p.aportan-concep {
 }
 .subtitulo-cel-sobre-t {
     color: var(--color-blanco);
-    text-transform: capitalize;
-    padding: 30px 0 40px;
-    font-size: 2.8rem;
+    padding: 10px 0 20px;
+    font-size: 2.5rem;
     font-weight: 400;
-    margin: 0;  
+    margin: 0;
+    margin-bottom: 10px;
     /*margin-bottom: 10px;
     margin-top: 10px;*/
 }
@@ -991,12 +992,12 @@ div.animo-flex {
     font-size: 1.2rem;
 }
 #seccion-sobreTa-mo .yin-sect-tamo {
-    inset: 32% auto auto 22%;
+    inset: 30% auto auto 28%;
     z-index: -3;
 }
 #seccion-sobreTa-mo .yan-sect-tamo {
-    inset: 18% auto auto 95%;
-    z-index: 1;
+    inset: 13% auto auto 97%;
+    z-index: -1;
 }
 /* SILUETAS */ 
 .content-siluetas {
@@ -1097,6 +1098,9 @@ h3.posicion {
     color: var(--color-texto);
 }
             /****    ===== TITULACIONES =====    ****/
+.titulaciones {
+    padding: 15px;
+}
 .titulaciones h2 {
     color: var(--color-rojo);
     padding-top: 20px;
