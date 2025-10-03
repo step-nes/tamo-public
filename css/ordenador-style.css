@@ -251,6 +251,11 @@
 
     .flex-invertido {
         flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    div.benf-flex-2 {
+        gap: 55px;
     }
 /*****************************************/
 /* ============ historia-kungfu.html === */
