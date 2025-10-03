@@ -1148,7 +1148,7 @@ h3.posicion {
 /*** SECCION 3 / Beneficios * INDEX ***/
 /**************************************/
 #beneficios-final {
-   background-color: var(--colorFondo1);
+    background-color: var(--colorFondo1);
 }
 .flex-invertido {
     display: flex;
@@ -1176,7 +1176,6 @@ h3.posicion {
 .benf-flex-2 {
     height: 100%;
     flex: 1 1 328px;
-    text-align: center;
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
