@@ -115,7 +115,7 @@ h1.title a {
     }
     100% {
         opacity: 1;
-        right: 0%;
+        right: -5%;
     }
 }
 .caja-titulo h2.header-h2 {
