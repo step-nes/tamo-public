@@ -90,7 +90,10 @@ h1.title a {
 .caja-titulo {
     padding-right: 0;
 }
-#header_img {
+#header_img_pc {
+    display: none;
+}
+.header_img {
     position: absolute;
     top: -50px;
     right: -30px;
@@ -112,7 +115,7 @@ h1.title a {
     }
     100% {
         opacity: 1;
-        right: -30%;
+        right: 0%;
     }
 }
 .caja-titulo h2.header-h2 {

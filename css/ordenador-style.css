@@ -29,7 +29,13 @@
         font-weight: 700;
         font-size: 6rem;
     }
-    #header_img {
+    #header_img_mobile {
+        display: none;
+    }
+    #header_img_pc {
+        display: block;
+    }
+    .header_img {
         top: 40px;
         right: -100%;
         max-width: 1000px;
