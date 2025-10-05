@@ -255,7 +255,13 @@
         align-items: center;
     }
     div.benf-flex-2 {
-        gap: 55px;
+        gap: 60px;
+    }
+    .text-benf {
+        max-width: 80%;
+    }
+    .text-benf:last-of-type {
+        margin-bottom: 0;
     }
 /*****************************************/
 /* ============ historia-kungfu.html === */
@@ -428,6 +434,9 @@
         overflow: hidden;
         object-position:center ; /* Mueve la imagen hacia la derecha */
         filter: drop-shadow(1px 2px 4px black);
+    }
+    .image-contain {
+        max-width: 200px;
     }
 /**************************************************/
 /** ========== defensa-personal.html =========== **/

@@ -445,7 +445,7 @@ main .cta-button {
 }
 .circulo-fondo {
     background-color: var(--color-rojo);
-    ilter: blur(240px); 
+    filter: blur(240px); 
     border-radius: 100%;
     width: 300px;
     height: 300px;
@@ -474,7 +474,7 @@ main .cta-button {
 /**************************************/
 .titulos {
     font-weight: 400;
-    font-size: 2.8rem;
+    font-size: 2rem;
     color: var(--color-blanco);
     padding: 10px 0;
     /*
@@ -509,6 +509,50 @@ main .cta-button {
     transition: .5s;
 }
 /**************************************/
+/****** * * HORARIOS CLASES * * *******/
+/**************************************/
+div.horario-container {
+    display: flex;
+}
+
+.horarios-xdia {
+    display: flex;
+    margin: 10px 0;
+}
+.horario-contenedor-dia,
+.horario-contenedor-hora {
+    display: flex;
+    flex: 0 1 100px;
+}
+img.img-icon-horario {
+    width: 32px !important;
+    max-width: 32px;
+    margin: 10px;
+    flex: 1 1 32px;
+}
+.horario-clases .horario_texto {
+    width: 70px;
+    flex: 1 1 70px;
+    display: flex;
+    align-items: center;
+}
+.horario-clases .horario_texto p {
+    color: var(--color-blanco);
+
+}
+/* ============== TABLET y ordenador */
+@media (min-width: 480px) {
+    .horario-clases .horario_texto {
+        width: 100px;
+        flex: 1 1 100px;
+    }
+    .horario-clases {
+        display: flex;
+        flex: initial;
+    }
+}
+
+/**************************************/
 /***** * * flex y cajas de dos * * ****/
 /**************************************/
 .caja-flex {
@@ -521,7 +565,6 @@ main .cta-button {
 }
 .content-flex {
     flex: 1 1 350px; /* flex: 450px 1 1; hist kung fu */
-    text-align: center;
 }
 /**************************************/
 /***** * * caja de imagenes * * *******/
@@ -680,7 +723,7 @@ main i {
     filter: contrast(0.5);
     margin: auto;
     object-fit: contain;
-    max-width: 200px;
+    max-width: 140px;
 }
 /* rotación del icono */
 .section-rotate {
@@ -954,11 +997,6 @@ h2.aportan, p.aportan-concep {
 .cel-titulo {
     display:block;
 }
-.titulo-cel-sobre-t {
-    color: var(--color-rojo);
-    margin: 0;
-    font-weight: 400;
-}
 .subtitulo-cel-sobre-t {
     color: var(--color-blanco);
     padding: 10px 0 20px;
@@ -1163,7 +1201,6 @@ h3.posicion {
 .benf-tit-img {
     text-align: center;
     width: 100%;
-
     position: relative;
     flex: 1 1 400px;
 }
@@ -1261,7 +1298,6 @@ main.hist-kungfu {
     line-height: 1.5em;
 }
 main.hist-kungfu h2 {
-/*  font-size: 36px;*/
     font-size: 2em;
     margin: 20px 0px;
     color: var(--color-blanco);
@@ -1865,6 +1901,11 @@ main.main-taichi .fondo_2 {
     position: relative;
     padding-bottom: 30px;
 }
+main.main-taichi h2 {
+    font-size: 2em;
+    margin: 20px 0px;
+    color: var(--color-blanco);
+}
 /****** TAICHI INTRO ******/
 
 #taichi-intro h2 {
@@ -1876,6 +1917,7 @@ main.main-taichi .fondo_2 {
 #taichi-intro p {
     margin-bottom: 20px;
     font-size: 1.13rem;
+    text-align: initial !important;
 }
 #taichi-intro .rojo {
     font-weight: 400;
@@ -1918,6 +1960,7 @@ main.main-taichi .fondo_2 {
 #seccion-clases-taichi p {
     margin-bottom: 20px;
     color: var(--color-texto);
+    text-align: initial;
 }
 .desplegable.despleglable-taichi {
     margin-top: 14px;
@@ -2130,7 +2173,7 @@ main.main-defensaPer h2 {
 /* 
 Esta sección tiene 4 partes: 
 div#defensa_esp, 
-div#defensa_programa(con div#defensa_horario), 
+div#defensa_programa(div.defensa_horario arriba en generales), 
 div#defensa_aprendizaje, 
 div#defensa_ventaja 
 */
@@ -2196,65 +2239,37 @@ div#defensa_ventaja h3 {
     border-radius: 5px;
 }
 /******Para la parte: defensa_horario*******/
-div#defensa_horario .promocion-defensaP {
+div.promocion-defensaP {
     margin-top: 20px;
     border: 1px dashed var(--color-rojo) ;
     width: 100%;
     padding: 20px;
     background-color: #E6394619;
 }
-div#defensa_horario span {
+div.promocion-defensaP p {
     font-weight: 700;
     color: var(--color-blanco);
 }
-div#defensa_horario a {
+div.promocion-defensaP a {
     display: block;
     text-decoration: none;
     color: var(--color-blanco);
     padding-top: 20px;
 }
-div#defensa_horario a:hover {
+div.promocion-defensaP a:hover {
     color: var(--color-rojo-hover);
 }
-div#defensa_horario.fa-arrow-right {
+div.promocion-defensaP.fa-arrow-right {
     font-size: 20px;
     color: var(--color-rojo);
     margin-left: 10px;
 }
-div#defensa_horario a:hover .fa-arrow-right {
+div.promocion-defensaP a:hover .fa-arrow-right {
     color: var(--color-blanco);
-}
-.horarios-defensaP {
-    display: flex;
-    margin: 10px 0;
-}
-.horario-defensaP {
-    display: flex;
-    flex: 0 1 100px;
-}
-.horario-defensaP img {
-    width: 32px !important;
-    margin: 10px;
-    flex: 1 1 32px;
-}
-.horario-defensaP .horario_texto-defensaP {
-    width: 60px;
-    flex: 1 1 60px;
-    color: var(--color-blanco);
-    display: flex;
-    align-items: center;
 }
 /* ============== TABLET y ordenador */
 @media (min-width: 480px) {
-    .horario-defensaP .horario_texto-defensaP {
-        width: 100px;
-        flex: 1 1 100px;
-    }
-    .horario-defensaP {
-        display: flex;
-        flex: initial;
-    }
-    div#defensa_horario .promocion-defensaP {
+    div.promocion-defensaP {
         width: 320px;
     }
 }
