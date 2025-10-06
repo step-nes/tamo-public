@@ -1360,7 +1360,7 @@ main.main-ray h4 {
 }
 .figure-ray img {
     vertical-align: middle;
-    max-width: 60px;
+    max-width: 50px;
 }
 /******** ============== Modo TABLET *******/
 @media (min-width: 768px) {
@@ -1667,7 +1667,7 @@ main.main-etlKF p {
     margin-top: 10px;
 }
 ul.lista-estilos {
-    padding: 10px;
+    padding-left: 15px;
 }
 ul.lista-estilos li {
     list-style: disc !important;
