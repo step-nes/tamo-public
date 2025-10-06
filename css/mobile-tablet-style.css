@@ -1360,7 +1360,7 @@ main.main-ray h4 {
 }
 .figure-ray img {
     vertical-align: middle;
-    max-width: 70px;
+    max-width: 60px;
 }
 /******** ============== Modo TABLET *******/
 @media (min-width: 768px) {
