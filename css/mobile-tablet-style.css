@@ -1279,7 +1279,7 @@ header.home-header.header-historia {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)), 
-    url(../img/historia/ming.jpg);
+    url(../img/historia/historia-header.png);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
@@ -1311,9 +1311,7 @@ iframe.hist-kungfu {
 /*** * Sección Historia-Introducción * * 
  * hist kung fu * * * maestros ********/
 /**************************************/
-
 .historia_intro .principal-box {
-    border-bottom: 1px solid #99898276;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -1357,6 +1355,13 @@ ul.lista-kungfu {
     max-width: 100px;
     display: none;
 }
+main.main-ray h4 {
+    text-transform: uppercase;
+}
+.figure-ray img {
+    vertical-align: middle;
+    max-width: 100px;
+}
 /******** ============== Modo TABLET *******/
 @media (min-width: 768px) {
     .contenedor_intro {
@@ -1378,16 +1383,8 @@ ul.lista-kungfu {
  * hist kung fu * maestros ************/
 /**************************************/
 .historia_origen .principal-box {
-    border-bottom: 1px solid #99898276;
     padding-top: 20px;
     padding-bottom: 20px;
-}
-.historia_origen .texto_mas {
-    display: flex;
-    justify-content:center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 50px;
 }
 .historia_origen p {
     text-align: initial;
@@ -1407,9 +1404,6 @@ ul.lista-kungfu {
 }
 .img-bak {
     margin-bottom: 15px;
-}
-.historia_origen .texto_mas p {
-    padding: 0 20px;
 }
 .historia_origen .contenedor_origen .contenedor_texto {
     padding: 0 20px;
@@ -1442,6 +1436,16 @@ ul.lista-kungfu {
 .logo-venezolano {
     max-width: 500px;
 }
+.origen_ray figure.ray-foto-cont {
+    height: initial;
+    width: initial;
+    max-width: initial;
+}
+.origen_ray img.ray-foto {
+    height: 300px;
+    width: initial;
+    max-width: initial;
+}
 /******** ============== Modo TABLET *******/
 @media (min-width: 768px) {
     .historia_origen .contenedor_origen .contenedor_texto {
@@ -1454,10 +1458,7 @@ ul.lista-kungfu {
     .historia_origen .texto_mas figure {
         flex-basis: 500px;
     }
-    .historia_origen .texto_mas p {
-        flex: 1 1 700px;
-        padding: 0 50px;
-    }
+    
 }
 /**************************************/
 /*** * Sección Historia-Evolución * * *
@@ -1665,13 +1666,16 @@ main.main-etlKF p {
 .main-etlKF ul li {
     margin-top: 10px;
 }
+ul.lista-estilos {
+    padding: 10px;
+}
 ul.lista-estilos li {
-    list-style: disc;
+    list-style: disc !important;
     margin-top: 10px;
 }
 ul.lista-estilos li::marker {
   color: var(--color-rojo);   /* Color del bullet */
-  font-size: 1.2em; /* Opcional: tamaño del bullet */
+    font-size: 1.2em;
 }
 ol.lista-ordenada {
     list-style-type: decimal !important;
