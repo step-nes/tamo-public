@@ -43,8 +43,7 @@ $(document).ready(function(){
                     </a>
                     <ul class="despliegue-secundario">
                         <li><a href="galeria.html">Galeria</a></li>
-                        <li><a href="video.html">Video</a></li>
-                        <li><a href="descarga.html">Descargas</a></li>
+                        <li><a href="https://www.youtube.com/@asociacionta-mo3564">Video</a></li>
                     </ul>
                 </li>
             </ul>

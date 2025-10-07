@@ -1281,7 +1281,7 @@ header.home-header.header-historia {
         rgba(0, 0, 0, 0.5)), 
     url(../img/historia/historia-header.png);
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: center;
     background-size: cover;
 }
 section.hist-kungfu:nth-child(odd) {
@@ -1296,6 +1296,9 @@ main.hist-kungfu h3 {
     margin: 10px 0px;
 }
 main.hist-kungfu h4 {
+    text-transform: uppercase;
+}
+main.main-nuestra-escue h4 {
     text-transform: uppercase;
 }
 iframe.hist-kungfu {
@@ -1361,6 +1364,27 @@ main.main-ray h4 {
 .figure-ray img {
     vertical-align: middle;
     max-width: 65px;
+}
+figure.migracion img {
+    margin-bottom: 20px;
+}
+.ajustar_intro {
+    width: 300px;
+}
+.figura-exp {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.figura-exp img {
+    max-height: 200px;
+}
+.figura-exp p {
+    line-height: 2.5rem;
+}
+main.main-mizong h4 {
+    text-transform: uppercase;
 }
 /******** ============== Modo TABLET *******/
 @media (min-width: 768px) {
