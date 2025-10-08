@@ -1371,6 +1371,9 @@ figure.migracion img {
 .ajustar_intro {
     width: 300px;
 }
+.ajustar_intro2 {
+    width: 200px;
+}
 .figura-exp {
     display: flex;
     justify-content: space-around;
@@ -1384,6 +1387,9 @@ figure.migracion img {
     line-height: 2.5rem;
 }
 main.main-mizong h4 {
+    text-transform: uppercase;
+}
+main.main-mantis h4 {
     text-transform: uppercase;
 }
 /******** ============== Modo TABLET *******/
