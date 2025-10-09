@@ -87,7 +87,7 @@ $(document).ready(function () {
                 $(this).text("Ocultar");
                 // Abre el actual
                 $texto_mas.eq(i).css({
-                    "max-height": "1200px",
+                    "max-height": "1500px",
                     "transition": "max-height 1s ease"
                 });
                 // Rotar todas las flechas a posición inicial
@@ -108,46 +108,6 @@ $(document).ready(function () {
 });
 
 ///////////////////////////////////////////////////
-///////////////// SLIDER HOME INDEX.HTML
-
-const homeSlider = [
-    './img/homeSlider/1.webp',
-    './img/homeSlider/2.webp',
-    './img/homeSlider/3.webp',
-    './img/homeSlider/4.webp',
-    './img/homeSlider/5.webp',
-    './img/homeSlider/6.webp',
-    './img/homeSlider/7.webp',
-    './img/homeSlider/8.webp',
-    './img/homeSlider/9.webp',
-    './img/homeSlider/10.webp',
-    './img/homeSlider/11.webp',
-    './img/homeSlider/12.webp',
-    './img/homeSlider/13.webp',
-    './img/homeSlider/14.webp',
-    './img/homeSlider/15.webp',
-    './img/homeSlider/16.webp'
-];
-
-let homeSlideIndex = 0;
-
-// Crear la imagen y agregarla al contenedor usando jQuery
-const $divHomeSlider = $('#home_slider');
-const $img = $('<img>', {
-    src: homeSlider[homeSlideIndex],
-    alt: 'Home Slider'
-});
-
-$divHomeSlider.append($img);
-
-// Cambiar la imagen cada 4 segundos
-setInterval(() => {
-    homeSlideIndex = (homeSlideIndex + 1) % homeSlider.length;
-    $img.attr('src', homeSlider[homeSlideIndex]);
-    console.log(homeSlideIndex);
-}, 4000);
-
-
 //////////////////////////////////////////
     //    * SECCIONES con acordeon *    //
 $(document).ready(function() {

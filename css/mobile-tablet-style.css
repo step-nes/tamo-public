@@ -567,6 +567,12 @@ img.img-icon-horario {
 .img-flex {
     flex: 1 1 310px;
 }
+.img-flex2{
+    float: 1 1 400px;
+}
+.img-flex2 img {
+    max-height: 350px;
+}
 .content-flex {
     flex: 1 1 350px; /* flex: 450px 1 1; hist kung fu */
 }
@@ -1020,16 +1026,21 @@ h2.aportan, p.aportan-concep {
     font-size: 18px;
     margin: 0;
 } /*esta p se queda aqui*/
-#home_slider {
+.video_home-container {
     flex: 1 1 300px;
+    height: 350px;
+    width: 100%;
+    margin: auto;
 }
-#home_slider img {
+.video_home {
+    border: none;
+    filter: sepia(100%);
+    border-radius: 15px;
+    box-shadow: -10px 10px 10px black;
     position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px;
-    box-shadow: -10px 10px 10px black;
 }
 .desp {
     display: none;
@@ -1344,20 +1355,6 @@ ul.lista-kungfu {
     justify-content: space-between;
     gap: 8px;
 }
-.subtitulo {
-    background-image: linear-gradient(#0005, #0005), url(../img/bak/grulla-blanca.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-}
-.subtitulo h2 {
-    padding: 20px;
-    color: var(--color-negro);
-}
-.grulla {
-    max-width: 100px;
-    display: none;
-}
 main.main-ray h4 {
     text-transform: uppercase;
 }
@@ -1369,7 +1366,7 @@ figure.migracion img {
     margin-bottom: 20px;
 }
 .ajustar_intro {
-    width: 300px;
+    width: 200px;
 }
 .ajustar_intro2 {
     width: 200px;
@@ -1390,6 +1387,12 @@ main.main-mizong h4 {
     text-transform: uppercase;
 }
 main.main-mantis h4 {
+    text-transform: uppercase;
+}
+main.main-bak-hok h4 {
+    text-transform: uppercase;
+}
+main.main-hung h4 {
     text-transform: uppercase;
 }
 /******** ============== Modo TABLET *******/
@@ -1925,6 +1928,9 @@ main.main-taichi h2 {
 main.main-taichi h4 {
     text-transform: uppercase;
 }
+main.main-maestros-vzl h4 {
+    text-transform: uppercase;
+}
 /****** TAICHI INTRO ******/
 
 #taichi-intro h2 {
@@ -1959,8 +1965,30 @@ main.main-taichi h4 {
     object-position: 35% 50%; /* Mueve la imagen hacia la derecha */
     filter: drop-shadow(1px 2px 4px black);
 }
+.tai-caracteristicas p {
+    margin-bottom: 15px;
+}
 .centro-taichi {
     padding: 20px 0 0;
+}
+.container-chikung-img {
+    width: 80%;
+    margin: 50px auto;
+}
+.img-primer {
+    margin: auto;
+    text-align: center;
+}
+.img-primer img {
+    max-width: 100px;
+}
+.img-segundo {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.img-segundo img {
+    max-width: 100px;
 }
 .enroll-btn2.btn2-taichi {
     height: 100%;
@@ -2101,9 +2129,6 @@ div.listaa ul.liang li {
 }
 
 
-
-
-
 /**************************************************************/
 /*************** defensa-personal.html ************************/
 /**************************************************************/
@@ -2156,20 +2181,19 @@ main.main-defensaPer h2 {
     align-items: center;
 }
 .contenedor_flex-defensaP .texto-defensaP {
-    flex: 1 1 400px;
+    flex: 1 1 300px;
     padding: 20px;
 }
 .contenedor_flex-defensaP figure {
-    flex: 1 1 400px;
+    flex: 1 1 300px;
     margin: 20px auto;
     padding: 20px;
 }
 .contenedor_flex-defensaP img {
     width: 100%;
-    max-width: 800px;
 }
 #defensa_intro .contenedor_flex-defensaP .texto-defensaP {
-    flex: 1 1 400px;
+    flex: 1 1 300px;
 }
 
 /* ***************  Modo Tablet ********** */
@@ -2235,8 +2259,24 @@ div#defensa_ventaja
 #defensa_femenina img:hover {
     transform: scale(1.1);
 }
-#defensa_ventaja ul {
-    padding: 10px;
+.def-def {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.def-def .texto-defensaP {
+    flex: 1 1 300px;
+    padding: 20px;
+}
+.def-def figure {
+    flex: 1 1 300px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.def-def img {
+    width: 100%;
 }
 /*****Para separarse entre si cada parte****/
 .lineaBottom-defensaP {
@@ -2330,10 +2370,10 @@ h2.titulo-contact {
     margin: 30px auto;
 }
 #seccion-contacto {
-    display: flex
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start
+    align-items: flex-start;
     padding: 30px 30px 50px;
     color: var(--color-texto);
 }

@@ -63,7 +63,7 @@
         margin-top: 20px;
     }
 /*** ===== Contenedor principal ===    */
-    .principal-box, .section-principal-box {
+    .principal-box {
         padding: 20px;
     }
 /*** ===== MENU PARA PC ===    */
@@ -179,11 +179,11 @@
     .caja-titulo {
         padding-right: 300px;
     }
+    .video_home-container {
+        height: 450px;
+    }
     .desp {
         display: block;
-    }
-    h3.desp {
-        margin:30px 0 60px 0;
     }
     .animo1 {
         display: none;
@@ -191,7 +191,7 @@
     div.animo-flex {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .animo2 {
         color: var(--color-rojo);
@@ -438,6 +438,28 @@
     .image-contain {
         max-width: 200px;
     }
+    .flex-taichi-chi {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 30px;
+    }
+    .container-chikung-img {
+        width: initial;
+        flex: 1 1 30%;
+    }
+    .texto-tai-chikung {
+        flex: 1 1 70%;
+    }
+    .img-primer {
+        margin-bottom: 20px;
+    }
+    .img-segundo {
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
 /**************************************************/
 /** ========== defensa-personal.html =========== **/
 /**************************************************/
@@ -445,7 +467,7 @@
         flex-wrap: nowrap;
     }
     .contenedor_flex-defensaP figure {
-    margin: 20px 10px;
+        margin: 20px 10px;
     }
     #defensa_tec figure {
         margin-right: 0px;
@@ -472,7 +494,37 @@
     .lineaBottom {
         margin-bottom: 50px;
     }
-
+    .def-def {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .def-def .texto-defensaP {
+        flex: 1 1 300px;
+        padding: 20px;
+    }
+    .def-def figure {
+        flex: 1 1 300px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    .def-def img {
+        width: 100%;
+    }
+    .listas-vent {
+        display: flex;
+    }
+    .lista1 {
+        width: initial;
+        flex: 1 1 50%;
+    }
+    .lista2 {
+        width: initial;
+        flex: 1 1 50%;
+    }
 
 /*****************************************/
 /* ============ contacto.html ========== */
