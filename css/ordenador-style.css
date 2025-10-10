@@ -516,6 +516,7 @@
     }
     .listas-vent {
         display: flex;
+        gap: 20px;
     }
     .lista1 {
         width: initial;
