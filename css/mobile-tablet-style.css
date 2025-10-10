@@ -1327,8 +1327,7 @@ iframe.hist-kungfu {
 .flex-part1-2 {
     display: flex;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
 }
 /**************************************/
 /*** * Sección Historia-Introducción * * 
