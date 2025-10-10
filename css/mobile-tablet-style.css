@@ -1321,6 +1321,15 @@ iframe.hist-kungfu {
     border-radius: 5px; 
     box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4); /* Agrega una sombra sutil */
 }
+.p-margen {
+    margin-bottom: 10px;
+}
+.flex-part1-2 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
 /**************************************/
 /*** * Sección Historia-Introducción * * 
  * hist kung fu * * * maestros ********/
