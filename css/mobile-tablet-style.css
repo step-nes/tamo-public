@@ -139,8 +139,75 @@ h2 > span.color-secon {
     padding: 15px 0 30px;
     font-size: 0.9rem;
     max-width: 300px;
-    line-height: 1.5;
-    
+    line-height: 1.5rem;
+}
+        /******* BACKGROUNDS ********/
+/***** header historia *****/
+header.home-header.header-historia {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)), 
+    url(../img/historia/historia-header.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 80px;
+}
+/***** header estilos *****/
+header.home-header.header-estilos {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)), 
+    url(../img/estilos/estilos-kungfu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 80px;
+}
+/***** header escuela *****/
+header.home-header.header-escuela {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(../img/escuela/emblema-mantis.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 80px;
+    height: fit-content;
+}
+/***** header taichi *****/
+header.home-header.header-taichi {
+    background-image:linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(../img/pose77.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 100px;
+}
+/***** header defensa personal *****/
+header.home-header.header-defensaP {
+    background-image: linear-gradient(#0006, #0006),
+        url(../img/defensaPersonal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    font-size: 3rem;
+}
+/***** header maestros venezolanos *****/
+header.home-header.header-maesVen {
+    background-image: linear-gradient(#0006, #0006),
+        url(../img/maestrosvzl/maestrosvzl-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding-bottom: 80px;
+}
+/***** header contacto *****/
+header.home-header.header-contact {
+    background-image: none;
 }
 /**************************************/
 /**** * * CONTENEDOR PRINCIPAL * * ****/
@@ -151,7 +218,6 @@ de cada sección -- es decir, cada sección
 tiene un contendor principal --- */
 /* -- El nav contiene adentro el LOGO (dentro del logo está el h1)
 y el MENU -- */
-
 .principal-box {
     max-width: 1200px;
     padding: 10px;
@@ -312,7 +378,6 @@ nav.main-menu li > ul {
 /**************************************/
 /******** * * ROTAR ICONO * * *********/
 /**************************************/
-
 .rotate {
     transition: transform 0.3s ease;
     transform: rotate(180deg);
@@ -438,7 +503,6 @@ main .cta-button {
     max-height:0 ;
     overflow: hidden;
 }
-
 /**************************************/
 /******** * * * * FONDO * * * * *******/
 /**************************************/
@@ -555,7 +619,6 @@ img.img-icon-horario {
         flex: initial;
     }
 }
-
 /**************************************/
 /***** * * flex y cajas de dos * * ****/
 /**************************************/
@@ -1286,15 +1349,6 @@ ul.list-benf li {
 /*******************************************************/
 
 /************ general *************/
-header.home-header.header-historia {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)), 
-    url(../img/historia/historia-header.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 section.hist-kungfu:nth-child(odd) {
     background-color: #292929; /*Alternar colores de fondo*/ 
 }
@@ -1329,42 +1383,15 @@ iframe.hist-kungfu {
     gap: 20px;
     flex-wrap: wrap;
 }
-/**************************************/
-/*** * Sección Historia-Introducción * * 
- * hist kung fu * * * maestros ********/
-/**************************************/
-.historia_intro .principal-box {
+.texto-part1 {
+    margin-bottom: 25px;
+}
+.texto-part1-mas {
     padding-top: 20px;
-    padding-bottom: 20px;
+    text-align: center;
 }
-.historia_intro div.contenedor_texto {
-    padding: 20px;
-}
-.historia_intro p {
-    text-align: initial;
-}
-.contenedor_intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-}
-.contenedor_intro h4 {
-    font-size: 15px !important;
-}
-.contenedor_texto p {
-    margin: 15px 0;
-}
-ul.lista-kungfu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 8px;
-}
-main.main-ray h4 {
-    text-transform: uppercase;
+.figure-ray {
+    text-align: center;
 }
 .figure-ray img {
     vertical-align: middle;
@@ -1372,6 +1399,26 @@ main.main-ray h4 {
 }
 figure.migracion img {
     margin-bottom: 20px;
+}
+.ray-foto-cont {
+    text-align: center;
+}
+.flex-fig1-2, .fig-2 {
+    margin-top: 20px;
+}
+.fig-linaje-1, 
+.fig-linaje-2, 
+.fig-linaje-3 {
+    text-align: center;
+}
+.fig-linaje-2 img,
+.fig-linaje-3 img {
+    max-width: 300px;
+}
+.revista_ray {
+    max-width: 200px !important;
+    display: flex;
+    justify-content: center;
 }
 .ajustar_intro {
     width: 200px;
@@ -1401,6 +1448,51 @@ main.main-bak-hok h4 {
     text-transform: uppercase;
 }
 main.main-hung h4 {
+    text-transform: uppercase;
+}
+/**************************************/
+/*** * Sección Historia-Introducción * * 
+ * hist kung fu * * * maestros ********/
+/**************************************/
+.historia_intro .principal-box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.historia_intro div.contenedor_texto {
+    padding: 20px;
+}
+.historia_intro p {
+    text-align: initial;
+}
+.contenedor_intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.contenedor_intro_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.contenedor_intro h4 {
+    font-size: 15px !important;
+}
+.contenedor_texto p {
+    margin: 10px 0;
+}
+ul.lista-kungfu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+main.main-ray h4 {
     text-transform: uppercase;
 }
 /******** ============== Modo TABLET *******/
@@ -1528,15 +1620,18 @@ main.main-hung h4 {
 .historia_evolucion .texto_mas.texto_flex img {
     width: 100%;
 }
-.historia_evolucion .texto_mas div.mas_flex {
+.linea-tiempo-concept {
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-.historia_evolucion .texto_mas div.mas_flex p {
-    margin: 20px 0;
+.linea-tiempo-concept div.mccclxviii,
+.linea-tiempo-concept div.mdcxliv,
+.linea-tiempo-concept div.mcmlvi,
+.linea-tiempo-concept div.mcmlx {
+    margin: 10px 0;
 }
 .linea {
     display: none; /* ocultar la línea dashed */
@@ -1639,16 +1734,6 @@ main.main-hung h4 {
 /**************************************************************/
 
 /****** Todo excepto el diagrama ******/
-header.home-header.header-estilos {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)), 
-    url(../img/estilos/estilos-kungfu.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-bottom: 80px;
-}
 h2.header-h2-etlKF {
     padding-top: 80px;
     padding-bottom: 100px;
@@ -1735,17 +1820,6 @@ ol.lista-ordenada {
 /** =========== ** ** ESCUELA DE KUNG-FU ** ** ============ **/
 /*************************************************************/
 
-/****** Generales ******/
-header.home-header.header-escuela {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-    ), url(../img/escuela/emblema-mantis.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: fit-content;
-}
 /************ header / general *********/
 .caja-position-escue-kungfu{
     display: flex;
@@ -1911,16 +1985,6 @@ main.main-escuela-kungfu section p {
 /** ============== ** ** TAI CHI ** ** =========== **/
 /****************************************************/
 
-header.home-header.header-taichi {
-    background-image:linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-    ), url(../img/pose77.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 100px;
-}
 header.home-header.header-taichi h2 {
     font-size: 5rem;
 }
@@ -2136,7 +2200,6 @@ div.listaa ul.liang li {
     display: block;
 }
 
-
 /**************************************************************/
 /*************** defensa-personal.html ************************/
 /**************************************************************/
@@ -2148,18 +2211,7 @@ div.listaa ul.liang li {
 ****** #defensa_video(sólo hay un vídeo) ************* */
 /*******************************************************/
 
-/******* HEADER *******/
-header.home-header.header-defensaP {
-    background-image: linear-gradient(#0006, #0006),
-        url(../img/defensaPersonal.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-    padding-bottom: 50px;
-    font-size: 3rem;
-}
 /******* GENERAL *******/
-
 main.main-defensaPer {
     line-height: 1.5rem;
 }
@@ -2354,15 +2406,12 @@ div.promocion-defensaP a:hover .fa-arrow-right {
     box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-
 /***************** contacto.html ******************/
 /**************************************************/
 /** ======== ** ** ** CONTACTO ** ** ** ======== **/
 /**************************************************/
 /**************************************************/
-header.home-header.header-contact {
-    background-image: none;
-}
+
 .fondo-total {
     background-image: linear-gradient(#000c, #000c),url(../img/contacto/fondoContacto.jpg);
     background-position: center;

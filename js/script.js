@@ -234,58 +234,6 @@ $(document).ready(function(){
     $('.btn-taichi, #sliderTaichi-container').hover(stopSlider, startSlider);
 });
 
-
-/////////////////////////////////////////////////////////////
-////////////////// DEFENSA PERSONAL
-
-$(document).ready(function () {
-    $(".btn_leer_mas-defP").on("click", function () {
-        var $btn = $(this);
-        // buscamos el contenedor del bloque (asegura que cada botón actúe sobre su bloque)
-        var $root = $btn.closest(".texto-defensaP");
-        // elementos habituales dentro del root
-        var $textoMas = $root.find(".texto_mas-defP");
-        var $susp = $root.find(".suspensivos");
-        // buscamos el span.inyect-susp:
-        // preferimos el que esté inmediatamente después del span.suspensivos
-        var $inyect = $();
-        if ($susp.length) {
-            $inyect = $susp.first().nextAll(".inyect-susp").first();
-        }
-        // fallback: buscar dentro del root (por si lo colocaste ahí)
-        if (!$inyect.length) {
-            $inyect = $root.find(".inyect-susp").first();
-        }
-        // último recurso: buscar global (no recomendado, pero para asegurar)
-        if (!$inyect.length) {
-            $inyect = $(".inyect-susp").first();
-        }
-        // debug opcional (descomenta si no se encuentra el span)
-        // if (!$inyect.length) console.warn("inyect-susp no encontrado para este bloque", $root);
-        // toggle del contenido y de los spans/puntos susp.
-        if ($textoMas.is(":visible")) {
-            // Cerrar
-            $textoMas.slideUp(300);
-            if ($inyect.length) $inyect.hide();
-            if ($susp.length) $susp.show();
-            $btn.html('Leer más <i class="fa fa-caret-down"></i>');
-            $btn.find("i").css({ transform: "rotate(360deg)", transition: "all .3s" });
-        } else {
-            // Abrir
-            $textoMas.slideDown(400);
-            if ($susp.length) $susp.hide();
-            if ($inyect.length) {
-                // si el span inyect tiene un salto/espacio al principio y no quieres que se muestre salto,
-                // puedes quitar solo saltos iniciales con replace (opcional):
-                // $inyect.html($inyect.html().replace(/^\s+/, ''));
-                $inyect.show();
-            }
-            $btn.html('Leer menos <i class="fa fa-caret-up"></i>');
-            $btn.find("i").css({ transform: "rotate(180deg)", transition: "all .3s" });
-        }
-    });
-});
-
 //////////////////////////////////////////
         //    * ANIMADO *    //
 

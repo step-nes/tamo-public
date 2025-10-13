@@ -11,9 +11,7 @@
 /*********************************/
 /*********************************/
 
-
 @media (min-width: 996px) {
-
 /*****************************************/
 /* * * * *   GENERALES e INDEX   * * * * */
 /*****************************************/
@@ -74,9 +72,10 @@
         display: flex;
         gap: 10px;
         justify-content: space-between;
+        align-items: center;
         background-color: var(--transparente); /* para que se vea la imagen de fondo */
         margin-bottom: 30px;
-        height: 52px;
+        height: auto;
     }
     a.btn-pc-only {
         display: inline-block;
@@ -93,10 +92,6 @@
     nav.main-menu-pc li {
         width: fit-content;
     }
-    .down {
-        color: var(--color-blanco);
-        font-size: 1.3rem;
-    }
     li.li-despliegue {
         position: relative;
     }
@@ -105,19 +100,28 @@
         display: inline-block;
         text-align: center;
         align-content: center;
-        padding: 10px;
-        width: 100%;
-        height: 100%;
+        padding: 8px;
+        width: auto;
+        height: auto;
         font-size: 1rem;
         border-left: 2px solid var(--transparente);
     }
     a.submenu-item-pc {
         width: initial;
+        display: flex; /* para alinear texto e icono en línea */
+        align-items: center; /* centra verticalmente el texto y la flecha */
+        gap: 5px;/* separación entre texto y flecha */
+        color: #fff;
+        text-decoration: none;
+    }
+    a.submenu-item-pc .down {
+        text-align: start;
+        color: var(--color-blanco);
+        font-size: 1.3rem;
     }
     nav.main-menu-pc a:hover {
         color: var(--color-rojo);
         border-left: 2px solid var(--color-rojo);
-        
     }
         /* para el despliegue del submenu */
     ul.list-menu-pc > li {
@@ -141,14 +145,22 @@
     }
     ul.despliegue-secundario > li {
         position: relative;
-        
     }
     ul.despliegue-secundario li a {
         position: relative;
-        width: 100%;
-        height: 100%
+        display: block;
+        width: auto;
+        height: auto;
         /*left: 13px;*/
         transition: transform 0.3s ease, color 0.3s ease;
+    }
+    ul.list-menu-pc > li > a {
+        display: flex;           /* para poder alinear texto + icono verticalmente */
+        align-items: center;     /* centra el icono con el texto */
+        gap: 5px;                /* espacio entre texto e ícono */
+        padding: 10px 15px;      /* altura uniforme */
+        width: auto;
+        height: auto;
     }
 
 /*** ===== Numero de personas ===    */
@@ -241,14 +253,9 @@
     .content-copy {
         text-align: initial;
     }
-
     .content-flex {
         text-align: initial;
     }
-    .horari {
-        justify-content: initial;
-    }
-
     .flex-invertido {
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -319,10 +326,6 @@
         flex-basis: 500px;
         padding: 0px;
     }
-    .historia_origen .boton_esp {
-        /*margin: -50px 0px 20px -50%;*/
-    }
-    
 /****** seccion historia evolucion  ***/
     .historia_evolucion .texto_mas.texto_flex {
         flex-wrap: nowrap;
@@ -335,10 +338,13 @@
     .historia_evolucion .texto_mas p {
         text-align: left;
     }
-    .historia_evolucion .texto_mas div.mas_flex {
+    .mas_flex.linea-tiempo-concept {
         align-items: baseline;
     }
-    .historia_evolucion .texto_mas div.mas_flex p {
+    .linea-tiempo-concept div.mccclxviii,
+    .linea-tiempo-concept div.mdcxliv,
+    .linea-tiempo-concept div.mcmlvi,
+    .linea-tiempo-concept div.mcmlx {
         flex-wrap: nowrap;
         flex: 1 1 250px;
     }
@@ -364,12 +370,105 @@
         flex: 1 1 40%;
     }
 /************ MAESTROS ***************/
-    .para-flex-part1-2 {
+    .migracion-flex {
         display: flex;
         gap: 20px;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .flex-part1-2-inner {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .flex-part1-2-inner-reverse {
+        display: flex;
+        gap: 20px;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .texto-part1 {
+        flex: 1 1 40%;
+    }
+    .texto-part2 {
+        flex: 1 1 60%;
+    }
+    .flex-textomas {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+    .flex-textomas-reverse {
+        display: flex;
+        gap: 10px;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .flex-textomas-reverse .texto-part1-mas {
+        flex: 1 1 30%;
+    }
+    .flex-textomas-reverse .texto-part2-mas {
+        flex: 1 1 70%;
+    }
+    .flex-fig1-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        max-width: 800px;
+        gap: 30px;
+    }
+    .fig-1 img, .fig-2 img {
+        height: auto;
+    }
+    .fig-linaje-2,
+    .fig-linaje-3 {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    .fig-linaje-2 {
+        padding-top: 15px;
+    }
+    .fig-linaje-3 {
+        flex-direction: row-reverse;
+        padding-bottom: 15px;
+    }
+    .fig-linaje-2 img,
+    .fig-linaje-3 img {
+        max-width: 400px;
+        flex: 1 1 60%;
+    }
+    .fig-linaje-2 figcaption,
+    .fig-linaje-3 figcaption {
+        flex: 1 1 40%;
+    }
+    .flex-part1-2-pc {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    .texto-part1-revis {
+        flex: 1 1 60%;
+    }
+    .texto-part2-revis {
+        flex: 1 1 40%;
+        display: flex;
+        justify-content: center;
+    }
+    .fig-homenaje {
+        padding-top: 12px;
     }
 
-
+    .fig-espadas {
+        display: flex;
+        justify-content: center;
+    }
+    .fig-espadas img {
+        max-width: 300px;
+    }
 /*****************************************/
 /* ============ estilos-kungfu.html === */
 /*****************************************/
@@ -399,7 +498,7 @@
     }
     h2.header-h2-escue-kungfu { 
         font-size: 3rem;
-        padding: 0 0 40px;
+        padding: 0 0 20px;
     }
     .segunda-linea-main-title2 {
         font-size: 3.5rem;
@@ -480,6 +579,9 @@
 /**************************************************/
 /** ========== defensa-personal.html =========== **/
 /**************************************************/
+    .main-defensaPer p {
+        text-align: justify;
+    }
     .contenedor_flex-defensaP {
         flex-wrap: nowrap;
     }
@@ -547,11 +649,6 @@
 /*****************************************/
 /* ============ contacto.html ========== */
 /*****************************************/
-    .contenido-horario {
-        padding: 20px;
-        width: 50%;
-        max-width: 400px;
-    }
 
 /******* formulario *******/
     #contacto-form.form {
@@ -581,6 +678,32 @@
 
 
 
+    /* === ARREGLO DEL MENÚ EN DEFENSA PERSONAL === */
+
+    .menu-container {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    nav.main-menu-pc {
+        margin: 0;
+        padding: 0;
+    }
+    .list-menu-pc {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .list-menu-pc li {
+        margin: 0;
+        padding: 0;
+    }
+
+    header.home-header h1,
+    header.home-header h2,
+    header.home-header h3 {
+        margin-top: 0;
+    }
 
 
 }
