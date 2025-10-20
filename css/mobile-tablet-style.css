@@ -1366,6 +1366,24 @@ main.hist-kungfu h4 {
 main.main-nuestra-escue h4 {
     text-transform: uppercase;
 }
+main.main-maestros-vzl h4 {
+    text-transform: uppercase;
+}
+main.main-mizong h4 {
+    text-transform: uppercase;
+}
+main.main-mantis h4 {
+    text-transform: uppercase;
+}
+main.main-bak-hok h4 {
+    text-transform: uppercase;
+}
+main.main-hung h4 {
+    text-transform: uppercase;
+}
+.fondo-negro {
+    background-color: #151515 !important;
+}
 iframe.hist-kungfu {
     width: 100%;
     margin: auto;
@@ -1420,6 +1438,17 @@ figure.migracion img {
     display: flex;
     justify-content: center;
 }
+.centrar-imagen {
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    max-width: initial !important;
+    margin-bottom: 20px !important;
+}
+.ajustar_2 {
+    max-width: 200px !important;
+}
 .ajustar_intro {
     width: 200px;
 }
@@ -1432,23 +1461,32 @@ figure.migracion img {
     gap: 20px;
     margin-bottom: 30px;
 }
-.figura-exp img {
-    max-height: 200px;
-}
 .figura-exp p {
     line-height: 2.5rem;
 }
-main.main-mizong h4 {
-    text-transform: uppercase;
+.imgs-ferran {
+    display: flex;
 }
-main.main-mantis h4 {
-    text-transform: uppercase;
+.logo-venezolano {
+    max-width: 500px;
 }
-main.main-bak-hok h4 {
-    text-transform: uppercase;
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
-main.main-hung h4 {
-    text-transform: uppercase;
+.origen_ray figure.ray-foto-cont {
+    height: initial;
+    width: initial;
+    max-width: initial;
+}
+.origen_ray img.ray-foto {
+    height: 300px;
+    width: initial;
+    max-width: initial;
+}
+.img-bak {
+    margin-bottom: 15px;
 }
 /**************************************/
 /*** * Sección Historia-Introducción * * 
@@ -1501,14 +1539,14 @@ main.main-ray h4 {
         flex-direction: row-reverse;
     }
     .contenedor_intro iframe {
-    flex: 1 1 600px;
-    margin: 10px;
+        flex: 1 1 600px;
+        margin: 10px;
     }
     .historia_intro .contenedor_texto {
-    padding: 0 20px;
+        padding: 0 20px;
     }
     .contenedor_texto {
-    flex: 1 1 500px;
+        flex: 1 1 500px;
     }
 }
 /**************************************/
@@ -1538,9 +1576,6 @@ main.main-ray h4 {
     max-width: 500px;
     display: block;
 }
-.img-bak {
-    margin-bottom: 15px;
-}
 .contenedor_origen {
     display: flex;
     justify-content: center;
@@ -1563,22 +1598,6 @@ main.main-ray h4 {
     border: none;
     border-radius: 5px; 
 }
-.imgs-ferran {
-    display: flex;
-}
-.logo-venezolano {
-    max-width: 500px;
-}
-.origen_ray figure.ray-foto-cont {
-    height: initial;
-    width: initial;
-    max-width: initial;
-}
-.origen_ray img.ray-foto {
-    height: 300px;
-    width: initial;
-    max-width: initial;
-}
 /******** ============== Modo TABLET *******/
 @media (min-width: 768px) {
     .historia_origen .contenedor_origen .contenedor_texto {
@@ -1591,7 +1610,6 @@ main.main-ray h4 {
     .historia_origen .texto_mas figure {
         flex-basis: 500px;
     }
-    
 }
 /**************************************/
 /*** * Sección Historia-Evolución * * *
@@ -1998,9 +2016,6 @@ main.main-taichi h2 {
     color: var(--color-blanco);
 }
 main.main-taichi h4 {
-    text-transform: uppercase;
-}
-main.main-maestros-vzl h4 {
     text-transform: uppercase;
 }
 /****** TAICHI INTRO ******/
