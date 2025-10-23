@@ -452,8 +452,6 @@
     }
     .texto-part2-revis {
         flex: 1 1 40%;
-        display: flex;
-        justify-content: center;
     }
     .fig-homenaje {
         padding-top: 12px;
