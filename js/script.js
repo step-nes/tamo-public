@@ -87,7 +87,7 @@ $(document).ready(function () {
                 $(this).text("Ocultar");
                 // Abre el actual
                 $texto_mas.eq(i).css({
-                    "max-height": "2500px",
+                    "max-height": "4500px",
                     "transition": "max-height 1s ease"
                 });
                 // Rotar todas las flechas a posición inicial
