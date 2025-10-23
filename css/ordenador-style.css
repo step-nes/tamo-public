@@ -467,6 +467,10 @@
     .ajustar_3 {
         text-align: center;
     }
+    .ajustar_4 {
+        max-width: initial !important;
+        max-height: 460px !important;
+    }
     .ajustar_contenedor2 {
         max-width: 500px !important;
     }

@@ -1510,6 +1510,9 @@ figure.tresImagenes-img img {
 .ajustar_2 {
     max-width: 200px !important;
 }
+.ajustar_4 {
+    max-width: 200px !important;
+}
 .ajustar_altura {
     max-height: 500px !important;
 }
@@ -1523,7 +1526,7 @@ figure.tresImagenes-img img {
     max-width: 357px !important;
 }
 .ajustar_contenedor2 {
-    max-width: 400px !important;
+    max-width: 380px !important;
 }
 .imagen-ajustable {
     max-width: 100%;
