@@ -1491,7 +1491,6 @@ figure.tresImagenes-img img {
     display: flex;
     justify-content: center;
 }
-
 .ajustar_altura-container {
     max-height: 400px;
 }
@@ -1517,14 +1516,28 @@ figure.tresImagenes-img img {
 }
 .figura-exp {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px;
+    margin: 0 auto;
+    max-width: 80%;
+}
+.figura-exp figure {
+    flex: 0 1 30%;              /* ocupa el 40% del ancho */
+    margin: 0;
 }
 .figura-exp img {
     max-height: 200px;
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 200px;
+    object-fit: contain;
 }
 .figura-exp p {
     line-height: 2.5rem;
+    flex: 1;               /* opcional, según tu diseño */
+    max-width: 500px;
 }
 .imgs-ferran {
     display: flex;
