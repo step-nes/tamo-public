@@ -1408,6 +1408,14 @@ iframe.hist-kungfu {
     padding-top: 20px;
     text-align: center;
 }
+.flex-part1-2-inner-reverse {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .figure-ray {
     text-align: center;
 }
@@ -1509,7 +1517,7 @@ figure.tresImagenes-img img {
     width: 200px;
 }
 .ajustar_contenedor {
-    max-width: 357px;
+    max-width: 357px !important;
 }
 .imagen-ajustable {
     max-width: 100%;
@@ -1543,9 +1551,6 @@ figure.tresImagenes-img img {
 }
 .imgs-ferran {
     display: flex;
-}
-.logo-venezolano {
-    max-width: 500px;
 }
 .flex-column {
     display: flex;

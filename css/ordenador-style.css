@@ -376,11 +376,7 @@
         justify-self: center;
     }
     .flex-part1-2-inner-reverse {
-        display: flex;
-        gap: 20px;
         flex-direction: row-reverse;
-        align-items: center;
-        justify-content: center;
     }
     .texto-part1 {
         flex: 1 1 30%;
