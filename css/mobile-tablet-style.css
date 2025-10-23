@@ -1477,6 +1477,7 @@ figure.tresImagenes-img img {
     margin-bottom: 20px !important;
     flex-direction: column !important;
     padding-top: 15px;
+    margin: 0 auto !important;
 }
 .texto-part2-revis {
     display: flex;
@@ -1519,10 +1520,17 @@ figure.tresImagenes-img img {
 .ajustar_contenedor {
     max-width: 357px !important;
 }
+.ajustar_contenedor2 {
+    max-width: 400px !important;
+}
 .imagen-ajustable {
     max-width: 100%;
     height: auto;
     max-height: 200px;
+}
+.imagen-ajustable2 {
+    max-width: 100%;
+    height: auto;
 }
 .figura-exp {
     display: flex;
@@ -1556,11 +1564,6 @@ figure.tresImagenes-img img {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-.origen_ray figure.ray-foto-cont {
-    height: initial;
-    width: initial;
-    max-width: initial;
 }
 .origen_ray img.ray-foto {
     height: 300px;
