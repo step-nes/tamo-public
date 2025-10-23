@@ -257,7 +257,9 @@ h2.main-title {
 /*.section-main-title span {
     color: var(--color-rojo);
 }*/
-
+figcaption {
+    padding-top: 10px;
+}
 /**************************************/
 /****** * * * * * MENU * * * * * ******/
 /**************************************/
@@ -1549,7 +1551,6 @@ figure.tresImagenes-img img {
     width: 100%;
     height: auto;
     display: block;
-    max-height: 200px;
     object-fit: contain;
 }
 .figura-exp p {
