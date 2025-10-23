@@ -551,7 +551,7 @@ main .cta-button {
     font-weight: 500;
     font-size: 1.2rem;
     color: var(--color-blanco);
-    margin: 15px 0px;
+    margin: 0 0 15px 0px;
 }
 .blanco {
     color: var(--color-blanco);
@@ -1415,8 +1415,61 @@ iframe.hist-kungfu {
     vertical-align: middle;
     max-width: 65px;
 }
-figure.migracion img {
+.dosImagenes-flex {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+figure.dosImagenes-img img {
     margin-bottom: 20px;
+}
+.tresImagenes-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    max-width: initial !important;
+}
+.tresImagenes-flex figure {
+    flex: 1 1 300px !important;
+}
+figure.tresImagenes-img img {
+    flex: 1 1 70% !important;
+}
+.dosImagenes-flex2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.dosImagenes-flex2 img {
+    flex: 1 1 200px !important;
+}
+.centrar-imagen {
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    max-width: initial !important;
+    margin-bottom: 20px !important;
+    flex-direction: column !important;
+    padding-top: 15px;
+}
+.centrar-imagen2 {
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    max-width: initial !important;
+    margin-bottom: 20px !important;
+    flex-direction: column !important;
+    padding-top: 15px;
 }
 .ray-foto-cont {
     text-align: center;
@@ -1438,16 +1491,15 @@ figure.migracion img {
     display: flex;
     justify-content: center;
 }
-.centrar-imagen {
-    text-align: center !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    max-width: initial !important;
-    margin-bottom: 20px !important;
+
+.ajustar_altura-container {
+    max-height: 400px;
 }
 .ajustar_2 {
     max-width: 200px !important;
+}
+.ajustar_altura {
+    max-height: 500px !important;
 }
 .ajustar_intro {
     width: 200px;
@@ -1455,11 +1507,21 @@ figure.migracion img {
 .ajustar_intro2 {
     width: 200px;
 }
+.ajustar_contenedor {
+    max-width: 357px;
+}
+.imagen-ajustable {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+}
 .figura-exp {
     display: flex;
     justify-content: space-around;
     gap: 20px;
-    margin-bottom: 30px;
+}
+.figura-exp img {
+    max-height: 200px;
 }
 .figura-exp p {
     line-height: 2.5rem;
@@ -1566,7 +1628,6 @@ main.main-ray h4 {
 .historia_origen .texto_mas figure {
     flex: 0 1 450px;
     margin-bottom: 10px;
-    margin-top: 50px;
     border-radius: 5px; 
     display: inline-block;
     overflow: hidden;
@@ -1811,7 +1872,7 @@ main.main-etlKF p {
     margin-top: 10px;
 }
 ul.lista-estilos {
-    padding-left: 15px;
+    padding-left: 30px;
 }
 ul.lista-estilos li {
     list-style: disc !important;
@@ -1825,12 +1886,6 @@ ol.lista-ordenada {
     list-style-type: decimal !important;
     list-style-position: outside;
     padding-left: 2rem;  /* ← esto es lo clave */
-}
-/* ============= TABLET === */
-@media (min-width: 768px){
-    .texto-etlKF {
-        margin: 15px 15px 20px 15px;
-    }
 }
 /*************************************************************/
 /******************* escuela-kungfu.html *********************/
@@ -1906,7 +1961,6 @@ main.main-escuela-kungfu section p {
     height: 470px;
     z-index: 10;
     width: 100%;
-    flex: 1; 
 }
 #escuela-kungfu .content-flex-text {
     flex: 1 1 350px;

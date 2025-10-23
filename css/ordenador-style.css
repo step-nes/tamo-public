@@ -370,29 +370,23 @@
         flex: 1 1 40%;
     }
 /************ MAESTROS ***************/
-    .migracion-flex {
-        display: flex;
-        gap: 20px;
-        align-items: flex-start;
-        justify-content: center;
-        margin-top: 50px;
-    }
     .flex-part1-2-inner {
         display: flex;
-        gap: 20px;
         align-items: center;
+        justify-self: center;
     }
     .flex-part1-2-inner-reverse {
         display: flex;
         gap: 20px;
         flex-direction: row-reverse;
         align-items: center;
+        justify-content: center;
     }
     .texto-part1 {
-        flex: 1 1 40%;
+        flex: 1 1 30%;
     }
     .texto-part2 {
-        flex: 1 1 60%;
+        flex: 1 1 70%;
     }
     .flex-textomas {
         display: flex;
@@ -418,7 +412,6 @@
         justify-content: center;
         margin: auto;
         max-width: 800px;
-        gap: 30px;
     }
     .fig-1 img, .fig-2 img {
         height: auto;
@@ -436,7 +429,10 @@
         flex-direction: row-reverse;
         padding-bottom: 15px;
     }
-    .fig-linaje-2 img,
+    .fig-linaje-2 img {
+        max-width: 300px;
+        flex: 1 1 60%;
+    }
     .fig-linaje-3 img {
         max-width: 400px;
         flex: 1 1 60%;
@@ -462,13 +458,18 @@
     .fig-homenaje {
         padding-top: 12px;
     }
-
     .fig-espadas {
         display: flex;
         justify-content: center;
     }
     .fig-espadas img {
         max-width: 300px;
+    }
+    .tresImagenes-flex {
+        max-width: initial !important;
+    }
+    .ajustar_3 {
+        max-width: 400px !important;
     }
 /*****************************************/
 /* ============ estilos-kungfu.html === */
