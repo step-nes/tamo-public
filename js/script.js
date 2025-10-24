@@ -166,9 +166,9 @@ function cambiarImagen() {
     // Cambiar la imagen después de un pequeño retraso
     setTimeout(function () {
         if (window.matchMedia("(min-width: 600px)").matches) {
-            $imagen.attr("src", "./img/estilos/esquemaPc.jpg").css("min-width", "100%");
+            $imagen.attr("src", "./img/estilos/esquemaPc.webp").css("min-width", "100%");
         } else {
-            $imagen.attr("src", "./img/estilos/esquemaMovil.jpg").css("min-width", "350px");
+            $imagen.attr("src", "./img/estilos/esquemaMovil.webp").css("min-width", "350px");
         }
 
         // Mostrar de nuevo
