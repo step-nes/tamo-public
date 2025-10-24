@@ -1451,6 +1451,9 @@ figure.dosImagenes-img img {
 figure.tresImagenes-img img {
     flex: 1 1 70% !important;
 }
+.p-tresImagenes {
+    flex: 1 1 200px !important;
+}
 .dosImagenes-flex2 {
     display: flex;
     flex-wrap: wrap;
