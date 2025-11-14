@@ -46,6 +46,25 @@
         0% { opacity: 0; right: -100%; } 
         100% { opacity: 1; right: 0; } 
     }
+    header.home-header.header-mizong {
+        height: 70vh;
+    }
+    /********* ADAPTACION DE HEADERS POR PAGINAS *******/
+        /***** header historia *****/
+    header.home-header.header-historia, 
+    header.home-header.header-estilos,
+    header.home-header.header-escuela,
+    header.home-header.header-taichi,
+    header.home-header.header-defensaP,
+    header.home-header.header-contact,
+    header.home-header.header-raymond,
+    header.home-header.header-maesVen,
+    header.home-header.header-nuestra,
+    header.home-header.header-mizong,
+    header.home-header.header-mantis,
+    header.home-header.header-hung {
+        height: 70vh;
+    }
     .caja-titulo p {
         font-size: 1.4rem;
         max-width: 560px;
@@ -501,13 +520,11 @@
         width: 450px;
         height: 300px;
     }
-    h2.header-h2-escue-kungfu { 
+    h2.main-title {
         font-size: 3rem;
-        padding: 0 0 20px;
     }
-    .segunda-linea-main-title2 {
-        font-size: 3.5rem;
-        color: var(--color-rojo);  
+    h2.header-h2-escue-kungfu {
+        padding: 0 0 20px;
     }
     .texto-escue-kungfu {
         margin:15px;
@@ -703,12 +720,9 @@
         margin: 0;
         padding: 0;
     }
-
     header.home-header h1,
     header.home-header h2,
     header.home-header h3 {
         margin-top: 0;
     }
-
-
 }

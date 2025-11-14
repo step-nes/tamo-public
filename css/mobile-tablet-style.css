@@ -196,19 +196,73 @@ header.home-header.header-defensaP {
     background-position: 50% 50%;
     font-size: 3rem;
 }
-/***** header maestros venezolanos *****/
-header.home-header.header-maesVen {
+/***** header contacto *****/
+header.home-header.header-contact {
+    background-image: none;
+}
+/******* APARTADOS DE HEADER ESTILOS BOTONES *******/
+/***** header Raymond *****/
+header.home-header.header-raymond {
     background-image: linear-gradient(#0006, #0006),
-        url(../img/maestrosvzl/maestrosvzl-header.jpg);
+        url(../img/raymond/.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     padding-bottom: 80px;
 }
-/***** header contacto *****/
-header.home-header.header-contact {
-    background-image: none;
+/***** header maestros venezolanos *****/
+header.home-header.header-maesVen {
+    background-image: linear-gradient(#0006, #0006),
+        url(../img/maestrosvzl/maestrosvzl-header.jpg);
+    background-repeat: no-repeat;
+    background-size: 96%;
+    background-position: top;
+    padding-bottom: 80px;
 }
+/***** header nuestra escuela *****/
+header.home-header.header-nuestra {
+    background-image: linear-gradient(#0006, #0006),
+        url(../img/nuestra/nuestra-header.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 80px;
+    height: 35vh;
+}
+/***** header mizong luo han *****/
+header.home-header.header-mizong {
+    background-image: linear-gradient(#0006, #0006),
+        url(../img/mizong/mizong-header.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 40% 10%;
+    padding-bottom: 80px;
+}
+/***** header taichi mantis *****/
+header.home-header.header-mantis {
+    background-image: linear-gradient(#0006, #0006),
+        url(../img/mantis/mantis-header.jpeg);
+    background-repeat: no-repeat;
+    background-size: 96%;
+    background-position: 50% 10%;
+    height: 35vh;
+}
+/***** header hung gar *****/
+header.home-header.header-hung {
+    background-image: linear-gradient(#0006, #0006),
+        url(../img/hung/hung-header.jpeg);
+    background-repeat: no-repeat;
+    background-size: 96%;
+    background-position: 50% 10%;
+    height: 35vh;
+}
+
+
+
+
+
+
+
 /**************************************/
 /**** * * CONTENEDOR PRINCIPAL * * ****/
 /**************************************/
@@ -1813,6 +1867,12 @@ main.main-ray h4 {
     margin: auto;
     box-sizing: border-box;
 }
+.evo-final p:first-of-type {
+    margin-top: 25px;
+}
+.evo-final p {
+    margin-bottom: 28px;
+}
 /******** ============== Modo TABLET *******/
 @media (min-width: 768px){
     .contenedor_img figure {
@@ -1948,12 +2008,6 @@ h2.header-h2-escue-kungfu {
     margin-top: 0px;
     padding: 40px 0 0;
 }
-.segunda-linea-main-title2 {
-    display: block;
-    font-size: 3rem;
-    color: var(--color-rojo);
-    text-align: left; 
-}
 main.main-escuela-kungfu section p {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -2041,7 +2095,6 @@ main.main-escuela-kungfu section p {
     align-items: center;
     display: flex;
 }
-
 /*** * Sección grandes bloques * * *
 *** escuela kung fu * * * *************/
 /**************************************/
