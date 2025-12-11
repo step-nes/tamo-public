@@ -1,6 +1,3 @@
-
-////////////////////        HEADER     ///////////////////////////
-
 //////////////////////////////////////////
         //    * MENU *    //
 $(document).ready(function(){
@@ -9,7 +6,7 @@ $(document).ready(function(){
         $('.main-menu').toggleClass('open');
     });
 
-            // Submenús
+        // Submenús
     $('.submenu-item').click(function() {
         const arrow = $(this).find('.down');
         const submenu = $(this).next('.sub');
@@ -42,7 +39,7 @@ $(document).ready(function(){
                         <i class="fa-solid fa-sort-down down"></i>
                     </a>
                     <ul class="despliegue-secundario">
-                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="galeria-tamo.html">Galeria</a></li>
                         <li><a href="https://www.youtube.com/@asociacionta-mo3564">Video</a></li>
                     </ul>
                 </li>
@@ -232,6 +229,175 @@ $(document).ready(function(){
 
     startSlider();
     $('.btn-taichi, #sliderTaichi-container').hover(stopSlider, startSlider);
+});
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////// GALERIA /////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+$(document).ready(function () {
+
+    // 1. Creo la variables globales (para todo el modal general)
+    const modal = $("#modal-galeria-general");
+    const carrusel = $("#carrusel-dinamico");
+    const indicadoresContainer = carrusel.find(".carrusel-indicadores");
+    const innerContainer = carrusel.find(".carrusel-inner");
+    const tituloModal = $("#modal-titulo-galeria");
+    let carruselInterval = null;
+    let currentIndex = 0;
+    let totalSlides = 0;
+
+    // 2. Función para DETENER la rotación automática
+    function detenerRotacion() {
+        if (carruselInterval) {
+            clearInterval(carruselInterval);
+            carruselInterval = null;
+        }
+    }
+
+    // 3. Función para INICIAR rotación automática
+    function iniciarRotacion() {
+    	// Primero que no haya otro temporizador corriendo
+        detenerRotacion();
+        carruselInterval = setInterval(() => {
+            cambiarSlide(1); // Ir a la siguiente foto
+        }, 4000);
+    }
+
+    // 4. Función cambiar de SLIDE
+    function cambiarSlide(direccion, targetIndex = null) {
+        const items = innerContainer.find('.carrusel-item');
+        const indicators = indicadoresContainer.find('button');
+
+        if (targetIndex !== null) {
+            currentIndex = targetIndex;
+        } else {
+            currentIndex = (currentIndex + direccion + items.length) % items.length;
+        }
+
+        // Remover 'active' de todos
+        items.removeClass('active');
+        indicators.removeClass('active');
+
+        // Añadir 'active' al nuevo índice
+        items.eq(currentIndex).addClass('active');
+        indicators.eq(currentIndex).addClass('active');
+    }
+
+    // 5. Función de construcción y apertura del modal (busca todas las cajitas con la clase 'abrir-modal')
+    $(".abrir-modal").on('click', function(e) {
+        e.preventDefault(); // Evita la navegación por si hay un href="#"
+
+        // A. Obtener datos de la cajita clicada
+        const $cajita = $(this);
+        const rutasFotosString = $cajita.data('fotos'); 
+        const titulo = $cajita.data('titulo');
+        // Salir si no hay fotos
+        if (!rutasFotosString) return; 
+        // Transforma la cadena en una lista (Array) de rutas
+        const rutasFotos = rutasFotosString.split(',').map(ruta => ruta.trim()); //Estoy usando trim() por el salto de línea en el html
+
+        // B. Limpiar el contenido anterior
+        indicadoresContainer.empty();
+        innerContainer.empty();
+        tituloModal.text(titulo);
+
+        // C. Reiniciar índice actual
+        currentIndex = 0;
+        totalSlides = rutasFotos.length;
+
+        // D. Construir el nuevo carrusel
+        rutasFotos.forEach((ruta, index) => {
+            // Determina si es el primer elemento para la clase 'active'
+            const activeClass = index === 0 ? 'active' : '';
+
+            // Creación del INDICADOR (rallitas en la parte inferior)
+            const indicador = `
+                <button type="button"
+                    data-bs-slider-to="${index}" 
+                    class="${activeClass}" 
+                    aria-current="${index === 0}">
+                </button>
+            `;
+            indicadoresContainer.append(indicador);
+
+            // Creación del ÍTEM DEL CARRUSEL (La foto)
+            const item = `
+                <div class="carrusel-item ${activeClass}">
+                    <img src="${ruta}" alt="Foto ${index + 1}">
+                </div>
+            `;
+            innerContainer.append(item);
+        });
+
+        // E. Mostrar el modal (uso flex para centrar)
+        modal.css('display', 'flex');
+
+        // F. Iniciar rotación automática
+        iniciarRotacion();
+    });
+    
+    // 6. Cierre del modal 
+    // Al hacer clic en la 'X'
+    $("#btn-cerrar-modal").on('click', function() {
+        detenerRotacion();
+        modal.hide();
+    });
+    // Al hacer clic fuera de la ventana (el fondo oscuro)
+    $(window).click(function(event) {
+        if ($(event.target).is("#modal-galeria-general")) {
+            detenerRotacion();
+            modal.hide();
+        }
+    });
+    
+    // 7. BOTONES cambiar fotos (siguiente/anterior/indicadores)
+    // Botón foto anterior
+    carrusel.find('.carrusel-anterior').on('click', function() {
+        detenerRotacion(); // Detener al interactuar
+        cambiarSlide(-1); // -1 para ir hacia atrás
+        setTimeout(iniciarRotacion, 5000); // Reinicia después de 5 segundos
+    });
+    // Botón foto siguiente
+    carrusel.find('.carrusel-siguiente').on('click', function() {
+        detenerRotacion(); // Detener al interactuar
+        cambiarSlide(1); // 1 para ir hacia adelante
+        setTimeout(iniciarRotacion, 5000); // Reinicia después de 5 segundos
+    });
+    // Indicadores (rallitas en la parte de abajo)
+    carrusel.on('click', '.carrusel-indicadores button', function() {
+        detenerRotacion();
+        const index = $(this).data('bs-slider-to');
+        cambiarSlide(0, index);
+        setTimeout(iniciarRotacion, 5000); // Reinicia después de 5 segundos
+    });
+
+    // 8. Cambiar fotos con TECLADO
+    $(document).keydown(function(event) {
+        // Verificar si el modal está visible (si está abierto)
+        if (modal.css('display') === 'flex') {
+            // tecla siguiente foto
+            if (event.which === 39) {
+                detenerRotacion(); // Detener al interactuar con teclado
+                carrusel.find('.carrusel-siguiente').click();
+                event.preventDefault(); // Detiene el scroll de la página
+                setTimeout(iniciarRotacion, 5000); // Reinicia después de 5 segundos
+            }
+            // Tecla anterior foto
+            else if (event.which === 37) {
+                detenerRotacion(); // Detener al interactuar con teclado
+                carrusel.find('.carrusel-anterior').click();
+                event.preventDefault(); // Detiene el scroll de la página
+                setTimeout(iniciarRotacion, 5000); // Reinicia después de 5 segundos
+            }
+            // Tecla esc para cerrar el modal
+            else if (event.which === 27) {
+                modal.hide();
+                detenerRotacion();
+            }
+        }
+    });
 });
 
 //////////////////////////////////////////

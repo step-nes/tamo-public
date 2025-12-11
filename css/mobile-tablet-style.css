@@ -141,7 +141,7 @@ h2 > span.color-secon {
     max-width: 300px;
     line-height: 1.5rem;
 }
-        /******* BACKGROUNDS ********/
+        /******* BACKGROUNDS HEADERS ********/
 /***** header historia *****/
 header.home-header.header-historia {
     background-image: linear-gradient(
@@ -181,7 +181,7 @@ header.home-header.header-taichi {
     background-image:linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-    ), url(../img/pose77.png);
+    ), url(../img/taichi/taichi-header.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -190,7 +190,7 @@ header.home-header.header-taichi {
 /***** header defensa personal *****/
 header.home-header.header-defensaP {
     background-image: linear-gradient(#0006, #0006),
-        url(../img/defensaPersonal.png);
+        url(../img/defensa/defensa-header.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -201,24 +201,35 @@ header.home-header.header-contact {
     background-image: none;
 }
 /******* APARTADOS DE HEADER ESTILOS BOTONES *******/
+/**************************************/
 /***** header Raymond *****/
 header.home-header.header-raymond {
     background-image: linear-gradient(#0006, #0006),
-        url(../img/raymond/.jpg);
+        url(../img/raymond/raymond-header.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50% 5%;
     padding-bottom: 80px;
+    height: 40vh;
 }
+.main-title.header-h2-ray {
+    padding: 150px 0 0 !important;
+}
+/**************************************/
 /***** header maestros venezolanos *****/
 header.home-header.header-maesVen {
     background-image: linear-gradient(#0006, #0006),
         url(../img/maestrosvzl/maestrosvzl-header.jpg);
     background-repeat: no-repeat;
-    background-size: 96%;
+    background-size: cover;
     background-position: top;
     padding-bottom: 80px;
+    height: 40vh;
 }
+.header-h2-maesVen {
+    padding: 170px 0 0 !important;
+}
+/**************************************/
 /***** header nuestra escuela *****/
 header.home-header.header-nuestra {
     background-image: linear-gradient(#0006, #0006),
@@ -227,42 +238,105 @@ header.home-header.header-nuestra {
     background-size: cover;
     background-position: center;
     padding-bottom: 80px;
-    height: 35vh;
+    height: 40vh;
 }
+.header-h2-nuestra {
+    padding: 150px 0 0 !important;
+}
+/**************************************/
 /***** header mizong luo han *****/
 header.home-header.header-mizong {
     background-image: linear-gradient(#0006, #0006),
         url(../img/mizong/mizong-header.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 40% 10%;
-    padding-bottom: 80px;
+    background-position: 10% 5%;
+    height: 40vh;
 }
+.main-title.header-h2-mizong {
+    padding: 150px 0 0 !important;
+}
+/**************************************/
 /***** header taichi mantis *****/
 header.home-header.header-mantis {
     background-image: linear-gradient(#0006, #0006),
         url(../img/mantis/mantis-header.jpeg);
     background-repeat: no-repeat;
-    background-size: 96%;
-    background-position: 50% 10%;
-    height: 35vh;
+    background-size: cover;
+    background-position: 50% 55%;
+    height: 40vh;
 }
+.header-h2-mantis {
+    padding: 150px 0 0 !important;
+}
+/**************************************/
 /***** header hung gar *****/
 header.home-header.header-hung {
     background-image: linear-gradient(#0006, #0006),
         url(../img/hung/hung-header.jpeg);
     background-repeat: no-repeat;
-    background-size: 96%;
-    background-position: 50% 10%;
-    height: 35vh;
+    background-size: cover;
+    background-position: 50% 5%;
+    height: 40vh;
 }
-
-
-
-
-
-
-
+.header-h2-hung {
+    padding: 150px 0 0 !important;
+}
+/**************************************/
+/***** header hung gar *****/
+header.home-header.header-hung {
+    background-image: linear-gradient(#0006, #0006),
+        url(../img/hung/hung-header.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 5%;
+    height: 40vh;
+}
+.header-h2-hung {
+    padding: 150px 0 0 !important;
+}
+/**************************************/
+/***** header Bak Hok Pai *****/
+header.home-header.header-bak {
+    background-image: linear-gradient(#0006, #0006),
+        url(../img/bak/bak-header.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 5%;
+    height: 40vh;
+}
+.header-h2-bak {
+    padding: 150px 0 0 !important;
+}
+/**************************************/
+/***** header Su Yu Chang *****/
+header.home-header.header-chang {
+    background-image: linear-gradient(#0006, #0006),
+        url(../img/chang/chang-header.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 5%;
+    height: 40vh;
+}
+.header-h2-chang {
+    padding: 150px 0 0 !important;
+}
+/**************************************/
+/***** header Tai Chi Yang *****/
+header.home-header.header-yang {
+    background-image: linear-gradient(#0006, #0006),
+        url(../img/yang/yang-header.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% 5%;
+    height: 40vh;
+}
+.header-h2-yang {
+    padding: 150px 0 0 !important;
+}
+.yang-extraPad {
+    padding: 30px 0 0 !important;
+}
 /**************************************/
 /**** * * CONTENEDOR PRINCIPAL * * ****/
 /**************************************/
@@ -636,46 +710,6 @@ main .cta-button {
     transition: .5s;
 }
 /**************************************/
-/****** * * HORARIOS CLASES * * *******/
-/**************************************/
-div.horario-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: auto;
-}
-.horarios-xdia {
-    display: flex;
-    gap: 50px;
-    justify-content: space-between;
-    margin: 10px 0;
-}
-.horario-contenedor-dia,
-.horario-contenedor-hora {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    justify-content: center;
-}
-img.img-icon-horario {
-    width: 32px !important;
-    max-width: 32px !important;
-    flex: 1 1 32px;
-}
-.horario_texto {
-    color: var(--color-blanco) !important;
-    margin: 0 !important;
-    width: auto !important;
-}
-/* ============== TABLET y ordenador */
-@media (min-width: 480px) {
-    .horario-contenedor-dia,
-    .horario-contenedor-horas {
-        display: flex;
-        flex: initial;
-    }
-}
-/**************************************/
 /***** * * flex y cajas de dos * * ****/
 /**************************************/
 .caja-flex {
@@ -686,14 +720,14 @@ img.img-icon-horario {
 .img-flex {
     flex: 1 1 310px;
 }
-.img-flex2{
+.img-flex2 {
     float: 1 1 400px;
 }
 .img-flex2 img {
     max-height: 350px;
 }
 .content-flex {
-    flex: 1 1 350px; /* flex: 450px 1 1; hist kung fu */
+    flex: 1 1 350px;
 }
 /**************************************/
 /***** * * caja de imagenes * * *******/
@@ -1398,6 +1432,7 @@ ul.list-benf li {
 /**************** historia-kungfu.html *****************/
 /*******************************************************/
 /** ======= ** ** HISTORIA DEL KUNG-FU ** ** ======== **/
+/*******************************************************/
 /***** aquí también estan los maestros del diagrama *****
 * BAK HOK PAI * SU YU CHANG * TAI CHI YANG * HUNG GAR * *
 * SIFU FERRAN * RAYMOND WONG * MAESTROS VENEZOLANOS * ***
@@ -1655,6 +1690,9 @@ figure.tresImagenes-img img {
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+}
+.contenedor_intro-taichi {
+    flex-wrap: wrap !important;
 }
 .contenedor_intro_inner {
     display: flex;
@@ -2177,17 +2215,48 @@ main.main-taichi h4 {
     justify-content: center;
     margin: auto;
 }
-.imagen_hrs-tai {
-    position: relative;
-    object-fit: cover;
-    overflow: hidden;
-    flex: 1 1 130px;
-    height: 380px;
-    z-index: 10;
+.taichiGrid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    row-gap: 15px;
+    column-gap: 10;
+    width: 90%;
+    margin: 0 auto;
+}
+.imgGridTai {
+    display: block;
+    height: auto;
+}
+.imgGridTai img {
     width: 100%;
-    max-width: 240px;
-    object-position: 35% 50%; /* Mueve la imagen hacia la derecha */
-    filter: drop-shadow(1px 2px 4px black);
+    height: auto;
+    display: block;
+}
+.taichiGrid-img1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-start;
+}
+.taichiGrid-img2 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: flex-end;
+}
+.taichiGrid-img3 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: flex-start;
+}
+.caja-flex.programs {
+    flex: 1 1 328px;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
 }
 .tai-caracteristicas p {
     margin-bottom: 15px;
@@ -2233,49 +2302,56 @@ main.main-taichi h4 {
     color: var(--color-texto);
     text-align: initial;
 }
+.imagen-horario-flex2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
 .desplegable.despleglable-taichi {
     margin-top: 14px;
 }
 img.clases-img {
     filter: sepia(100%);
 }
-.clases-container {
-    margin: auto;
-}
 /***** taichi horarios ******/
-.centro-taichi {
-    margin:auto;
-    align-items: center;
-    text-align: center;
-}
-.horari-tai-container {
+div.horario-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-    margin: auto;
+    width: auto;
 }
-.horari-taichi {
-    justify-content: center;
-    float: 1;;
-}
-.caja-flex.programs {
-    flex: 1 1 328px;
-    text-align: left;
-    align-items: center;
+.horarios-xdia {
+    display: flex;
+    gap: 50px;
     justify-content: space-between;
+    margin: 10px 0;
 }
-.caja-flex.fecha {
+.horario-contenedor-dia {
+    display: flex;
     gap: 10px;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: center;
 }
-#seccion-clases .caja-flex.fecha p {
-    font-size: 0.9rem;
+img.img-icon-horario {
+    width: 32px !important;
+    max-width: 32px !important;
+    flex: 1 1 32px;
+}
+.horario_texto {
+    color: var(--color-blanco) !important;
+    margin: 0 !important;
+    width: auto !important;
+}
+/* ============== TABLET y ordenador */
+@media (min-width: 480px) {
+    .horario-contenedor-dia,
+    .horario-contenedor-horas {
+        display: flex;
+        flex: initial;
+    }
 }
 /***** TAICHI SLIDER - CARRUSEL *****/
-
 #seccionSliderTaichi {
     padding: 20px;
 }
@@ -2817,33 +2893,220 @@ footer .imagen-faq {
     margin: auto;
 }
 
+/***************** galeria.html ******************/
+/**************************************************/
+/** ======== ** ** ** GALERIA ** ** ** ======== **/
+/**************************************************/
+/**************************************************/
 
-
-
-
-
-
-
-
-
-
-/***************************************/
-.galeria {
-    margin-top: 20px;
-    padding-top: 20px;
+.seccion-galeria {
+    padding: 60px 20px;
+}
+.seccion-galeria p {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.cajita-galeria {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.cajita-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    filter: brightness(85%);
+}
+.cajita-galeria:hover img {
+    transform: scale(1.05);
+    filter: brightness(100%);
+}
+.titulo-cajita {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    text-align: left;
+}
+.titulo-cajita p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+/* * * * * * * * * * emergente * * * * * * */
+/* ESTILOS DEL MODAL */
+/* Modal completo */
+#modal-galeria-general { /* ID ÚNICO y GENERAL */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.contenido-modal {
+    position: relative;
+    background-color: #000;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-blanco);
+    margin: auto;
+}
+/* Título del modal */
+#modal-titulo-galeria {
+    color: white;
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 1.7rem;
+    flex-shrink: 0;
+}
+.cerrar-modal { /* Estilo del botón de cerrar */
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    z-index: 20;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    line-height: 1;
+}
+.cerrar-modal:hover {
+    color: var(--color-rojo-hover);
+}
+#carrusel-dinamico {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* ir viendo */
+    overflow: hidden;
+    border-radius: 5px;
+    flex-grow: 1; /* para ocupar el espacio disponible */
+    
+}
+/* Contenedor interno del carrusel */
+.carrusel-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Cada slide del carrusel */
+.carrusel-item {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+.carrusel-item.active {
+    display: flex !important;
+}
+.carrusel-item img {
+    /* Que la imagen nunca exceda el ancho o el alto de su contenedor */
+    max-width: 100%; 
+    max-height: 100%; 
+    /* Que ocupe todo el espacio disponible para que max-height funcione */
+    height: auto;
+    width: auto;
+    /* Se encoje para caber sin cortarse y manteniendo su proporción */
+    object-fit: contain !important; 
+    object-position: center;
+    display: block;
+}
+/* Botones para cambiar las fotos */
+.carrusel-siguiente, 
+.carrusel-anterior {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: .5;
+    transition: opacity .15s ease;
+    width: 15%;
+    background: 0 0;
+    border: none;
+}
+.carrusel-anterior {
+    left: 0;
+}
+.carrusel-siguiente {
+    right: 0;
+}
+.carrusel-anterior:hover i,
+.carrusel-siguiente:hover i {
+    color: var(--color-rojo-hover);
+}
+.carrusel-indicadores {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    list-style: none;
+    flex-shrink: 0;
+}
+.carrusel-indicadores button {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px; /*largura de los indicadores*/
+    height: 4px; /*grosura de los indicadores*/
+    padding: 0;
+    background-clip: padding-box;
+    background-color: #fff;
+    cursor: pointer;
+    border: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+.carrusel-indicadores button.active { 
+    opacity: 1;
+}
+.carrusel-indicadores button:hover {
+    opacity: 1;
+    background-color: var(--color-rojo-hover);
+}
+.fa-chevron-left, .fa-chevron-right{
+    font-size: 48px;
+    color: #fff;
 }
 /***************************************/
-
-/*.titulo {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 100px;
-}*/
-
-
-
-
-
-
-
-

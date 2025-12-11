@@ -1,6 +1,21 @@
 /*** Excepciones ***/
-
 /*********************************/
+
+/* imagenes taichi aplicaciones */
+@media (min-width: 768px) {
+    .taichiGrid-container {
+        row-gap: 20px;
+        width: 600px;
+        margin: initial;
+    }
+    .imgGridTai {
+        width: 100%;
+        max-width: 400px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 /* esuela-kung-fu secc salud *****/
 @media (min-width: 980px) {
     .icono-yin-secc-salud {
@@ -46,9 +61,6 @@
         0% { opacity: 0; right: -100%; } 
         100% { opacity: 1; right: 0; } 
     }
-    header.home-header.header-mizong {
-        height: 70vh;
-    }
     /********* ADAPTACION DE HEADERS POR PAGINAS *******/
         /***** header historia *****/
     header.home-header.header-historia, 
@@ -62,8 +74,22 @@
     header.home-header.header-nuestra,
     header.home-header.header-mizong,
     header.home-header.header-mantis,
-    header.home-header.header-hung {
+    header.home-header.header-hung,
+    header.home-header.header-bak,
+    header.home-header.header-chang,
+    header.home-header.header-yang {
         height: 70vh;
+    }
+    .main-title.header-h2-ray,
+    .main-title.header-h2-maesVen,
+    .main-title.header-h2-nuestra,
+    .main-title.header-h2-mizong,
+    .main-title.header-h2-mantis,
+    .main-title.header-h2-hung,
+    .main-title.header-h2-bak,
+    .main-title.header-h2-chang,
+    .main-title.header-h2-yang {
+        padding: 300px 0 0 !important;
     }
     .caja-titulo p {
         font-size: 1.4rem;
@@ -539,39 +565,17 @@
         width: 163px;
         height: 123px;
     }
-
 /**********************************************/
 /** ============== taichi.html ============= **/
 /**********************************************/
-    .horari-taichi {
-        display: flex;
-        gap: 20px;
-        justify-content: initial;
-        width: 100%;
-        flex-wrap: wrap;
-    }
     .centro-tai {
         margin: initial;
         align-items: center;
         text-align: left;
     }
-    .caja-flex.programs {
-        text-align: center;
-    }
     .enroll-btn2.btn2-taichi {
-        max-width: 300px;
+        max-width: 400px;
         margin: initial;
-    }
-    .imagen_hrs-tai{
-        height: 470px;
-        max-width: 140px;
-        flex: 130px 1 1;
-        position: relative;
-        object-fit: cover;
-        width: 100%;
-        overflow: hidden;
-        object-position:center ; /* Mueve la imagen hacia la derecha */
-        filter: drop-shadow(1px 2px 4px black);
     }
     .image-contain {
         max-width: 200px;
@@ -597,6 +601,9 @@
         margin: auto;
         text-align: center;
         align-items: center;
+    }
+    .caja-flex.programs {
+        justify-content: center;
     }
 /**************************************************/
 /** ========== defensa-personal.html =========== **/
@@ -631,7 +638,7 @@
         margin-top: 40px;
         flex: 350px 1 1;
     }
-/*****Para separarse entre si cada parte****/
+/***** Para separarse entre si cada parte ****/
     .lineaBottom {
         margin-bottom: 50px;
     }
@@ -693,15 +700,8 @@
     .titulo-form {
         width: initial;
     }
-    
-
-
-
-
-
 
     /* === ARREGLO DEL MENÚ EN DEFENSA PERSONAL === */
-
     .menu-container {
         margin: 0;
         padding: 0;
@@ -725,4 +725,14 @@
     header.home-header h3 {
         margin-top: 0;
     }
+/**************************************************/
+/** ============ galeria-tamo.html ============= **/
+/**************************************************/
+    .contenido-modal {
+        padding: 20px;
+        width: 80%;
+        max-width: 700px;
+    }
+
+
 }
