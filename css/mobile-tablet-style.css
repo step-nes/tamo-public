@@ -3002,7 +3002,7 @@ footer .imagen-faq {
 #carrusel-dinamico {
     position: relative;
     width: 100%;
-    height: 90vh; /* ir viendo */
+    height: 60vh; /* ir viendo */
     overflow: hidden;
     border-radius: 5px;
     flex-grow: 1; /* para ocupar el espacio disponible */
