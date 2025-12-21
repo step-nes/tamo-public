@@ -2078,8 +2078,8 @@ main.main-escuela-kungfu section p {
 .imagen_hrs-escue-kungfu {
     position: relative;
     object-fit: cover;
-    overflow: hidden;
-    flex: 1 1 240px;
+    object-position: 75% 50%;
+    flex: 1 1 220px;
     height: 470px;
     z-index: 10;
     width: 100%;
@@ -2969,7 +2969,7 @@ footer .imagen-faq {
     padding: 20px;
     width: 90%;
     max-width: 800px;
-    max-height: 90vh;
+    max-height: 60vh;
     display: flex;
     flex-direction: column;
     border: 1px solid var(--color-blanco);

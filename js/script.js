@@ -373,7 +373,7 @@ $(document).ready(function () {
         setTimeout(iniciarRotacion, 5000); // Reinicia después de 5 segundos
     });
 
-    // 8. Cambiar fotos con TECLADO
+    // 8. Cambiar fotos con el TECLADO
     $(document).keydown(function(event) {
         // Verificar si el modal está visible (si está abierto)
         if (modal.css('display') === 'flex') {
